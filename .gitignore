@@ -1,16 +1,20 @@
-# Python stuff
+# Python junk
 __pycache__/
 *.py[cod]
-venv/
+*$py.class
+
+# Virtual Environments (The Heavy Stuff!)
 env/
+venv/
 .env
 
-# Database (We use a real one on the server, not this file)
+# Database (We use the server's DB, not this file)
 db.sqlite3
 
-# Node.js stuff (Tailwind is heavy, we install it on the server instead)
+# Node.js (Tailwind stuff - also heavy)
 node_modules/
 package-lock.json
 
 # Static files
 staticfiles/
+media/
