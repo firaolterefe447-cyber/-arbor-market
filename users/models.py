@@ -1,13 +1,8 @@
 """
 User Models Configuration.
 
-This module defines the custom authentication system based on Phone Numbers
-instead of Usernames. It includes:
-1. Custom User Manager (Phone-based auth).
-2. Custom User Model (Roles: Farmer, Buyer, Supplier, Delivery).
-3. Social Features (Following Farmers).
-4. Logistics Profiles (Driver verification & Vehicle info).
-5. Dedicated Employee Proxy (For HR/Admin organization).
+This module defines the custom authentication system.
+UPDATED: Includes automatic synchronization between Driver Status and User Verification.
 """
 
 from django.db import models
@@ -56,7 +51,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     """
     The central User model.
-    Replaces 'username' with 'phone_number' and adds role-based fields.
+    Replaces 'username' with 'phone_number'.
     """
 
     # Disable standard fields
@@ -81,6 +76,8 @@ class CustomUser(AbstractUser):
     last_name = models.CharField(max_length=30)
     location = models.CharField(max_length=100, blank=True)
     profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+
+    # THIS IS THE FIELD THAT CONTROLS LOGIN ACCESS
     is_verified = models.BooleanField(default=False)
 
     # --- Business & Financial ---
@@ -103,9 +100,6 @@ class CustomUser(AbstractUser):
 # ==========================================
 
 class FarmerFollow(models.Model):
-    """
-    Relationship allowing buyers to 'follow' or 'like' specific farmers.
-    """
     buyer = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='following')
     farmer = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='followers')
     created_at = models.DateTimeField(auto_now_add=True)
@@ -124,10 +118,6 @@ class FarmerFollow(models.Model):
 # ==========================================
 
 class DriverProfile(models.Model):
-    """
-    Extended profile for users with user_type='delivery'.
-    Handles CDN verification, vehicle details, and reliability scores.
-    """
     WORKFORCE_TYPES = (
         ('CDN', 'CDN - Independent Contractor'),
         ('DEDICATED', 'Dedicated Fleet - Employee'),
@@ -143,15 +133,14 @@ class DriverProfile(models.Model):
 
     # --- Operational Configuration ---
     workforce_type = models.CharField(max_length=20, choices=WORKFORCE_TYPES, default='CDN')
+
+    # THIS STATUS MUST SYNC WITH USER.IS_VERIFIED
     status = models.CharField(max_length=20, choices=VERIFICATION_STATUS, default='pending')
+
     reliability_score = models.DecimalField(max_digits=3, decimal_places=2, default=3.00)
 
     # --- Legal & Compliance (KYC) ---
-    national_id_image = models.ImageField(
-        upload_to='driver_documents/ids/',
-        blank=True, null=True,
-        help_text="National ID (Kebele ID) Front"
-    )
+    national_id_image = models.ImageField(upload_to='driver_documents/ids/', blank=True, null=True)
     license_number = models.CharField(max_length=50, blank=True, null=True)
     license_image = models.ImageField(upload_to='driver_documents/licenses/', blank=True, null=True)
 
@@ -162,21 +151,43 @@ class DriverProfile(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Driver: {self.user.first_name} [{self.workforce_type}]"
+        return f"Driver: {self.user.first_name} [{self.status}]"
 
 
 # ==========================================
-# 5. SIGNALS
+# 5. SIGNALS (AUTOMATION)
 # ==========================================
 
 @receiver(post_save, sender=CustomUser)
 def create_driver_profile(sender, instance, created, **kwargs):
     """
-    Automated Trigger:
-    If a user is created with type 'delivery', create an empty DriverProfile for them.
+    1. If a new user is created as 'delivery', give them a blank Profile.
     """
     if created and instance.user_type == 'delivery':
         DriverProfile.objects.create(user=instance)
+
+# --- NEW SIGNAL ADDED HERE ---
+@receiver(post_save, sender=DriverProfile)
+def sync_driver_verification(sender, instance, **kwargs):
+    """
+    2. AUTOMATIC SYNC:
+    When Admin changes DriverProfile status to 'approved',
+    automatically set User.is_verified = True.
+    """
+    user = instance.user
+    if instance.status == 'approved':
+        # If Admin says Approved, we verify the user
+        if not user.is_verified:
+            user.is_verified = True
+            user.save()
+            print(f"✅ Auto-verified user {user.phone_number} based on Driver Profile approval.")
+
+    elif instance.status == 'rejected' or instance.status == 'pending':
+        # If Admin rejects or sets back to pending, we un-verify the user
+        if user.is_verified:
+            user.is_verified = False
+            user.save()
+            print(f"⛔ Auto-locked user {user.phone_number} based on Driver Profile status.")
 
 
 # ==========================================
@@ -184,11 +195,6 @@ def create_driver_profile(sender, instance, created, **kwargs):
 # ==========================================
 
 class DedicatedEmployee(CustomUser):
-    """
-    Proxy model to allow HR/Admins to manage Full-Time Employees separately
-    from general users in the Admin Interface.
-    """
-
     class Meta:
         proxy = True
         verbose_name = "👨‍✈️ Dedicated Employee"

@@ -8,8 +8,8 @@
 <head>
     <!--
         =======================================================================
-        ARBOR MARKETPLACE - IMPERIAL SOVEREIGN EDITION v12.6
-        "Text Label Navigation Update"
+        ARBOR MARKETPLACE - IMPERIAL SOVEREIGN EDITION v12.7
+        "Delivery Logic Update"
         =======================================================================
     -->
     <meta charset="UTF-8">
@@ -218,7 +218,6 @@
                         </form>
 
                         <!-- 2. ROLE SPECIFIC DASHBOARD/CART (PILL BUTTON) -->
-                        <!-- NOTE: 'hidden md:inline' ensures text shows ONLY on bigger screens, keeping mobile safe -->
                         {% if request.user.user_type == 'farmer' %}
                             <a href="{% url 'dashboard' %}" class="flex items-center gap-2 px-3 py-2 md:px-5 md:py-2 rounded-full bg-white/10 hover:bg-white hover:text-green-900 text-white border border-white/20 transition shadow-sm font-bold text-xs uppercase tracking-wide">
                                 <i class="fas fa-chart-pie text-sm md:text-base"></i>
@@ -230,10 +229,18 @@
                                 <span class="hidden md:inline">{% trans "Dashboard" %}</span>
                             </a>
                         {% elif request.user.user_type == 'delivery' %}
-                            <a href="{% url 'delivery_dashboard' %}" class="flex items-center gap-2 px-3 py-2 md:px-5 md:py-2 rounded-full bg-white hover:bg-red-50 text-red-700 border border-red-200 transition shadow-sm font-bold text-xs uppercase tracking-wide">
-                                <i class="fas fa-shipping-fast text-sm md:text-base"></i>
-                                <span class="hidden md:inline">{% trans "Dashboard" %}</span>
-                            </a>
+                            <!-- !!! UPDATED LOGIC: CHECK VERIFICATION STATUS !!! -->
+                            {% if request.user.is_verified %}
+                                <a href="{% url 'delivery_dashboard' %}" class="flex items-center gap-2 px-3 py-2 md:px-5 md:py-2 rounded-full bg-white hover:bg-red-50 text-red-700 border border-red-200 transition shadow-sm font-bold text-xs uppercase tracking-wide">
+                                    <i class="fas fa-shipping-fast text-sm md:text-base"></i>
+                                    <span class="hidden md:inline">{% trans "Dashboard" %}</span>
+                                </a>
+                            {% else %}
+                                <a href="{% url 'delivery_pending' %}" class="flex items-center gap-2 px-3 py-2 md:px-5 md:py-2 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 transition shadow-sm font-bold text-xs uppercase tracking-wide">
+                                    <i class="fas fa-clock text-sm md:text-base"></i>
+                                    <span class="hidden md:inline">{% trans "Approval Pending" %}</span>
+                                </a>
+                            {% endif %}
                         {% else %}
                             <!-- BUYER CART (Green Pill) -->
                             <a href="{% url 'my_orders' %}" class="flex items-center gap-2 px-3 py-2 md:px-5 md:py-2 rounded-full bg-stone-100 hover:bg-green-600 hover:text-white text-stone-600 border border-stone-200 transition shadow-sm relative font-bold text-xs uppercase tracking-wide group">
@@ -366,12 +373,23 @@
                         <i class="fas fa-store"></i> {% trans "View Input Market" %}
                     </a>
                 {% elif request.user.user_type == 'delivery' %}
-                    <a href="{% url 'delivery_dashboard' %}" class="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full font-bold text-sm shadow-xl shadow-red-600/30 transition transform hover:-translate-y-1 hover:shadow-2xl flex items-center justify-center gap-2 glass-shine">
-                        <span>{% trans "View Routes" %}</span> <i class="fas fa-map-marked-alt"></i>
-                    </a>
-                    <a href="#orders" class="bg-white border border-stone-200 text-stone-700 hover:text-red-700 hover:border-red-300 px-10 py-4 rounded-full font-bold text-sm shadow-sm transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                        <i class="fas fa-list"></i> {% trans "Active Orders" %}
-                    </a>
+
+                    <!-- !!! UPDATED LOGIC: CHECK VERIFICATION STATUS !!! -->
+                    {% if request.user.is_verified %}
+                        <!-- APPROVED: VIEW AVAILABLE ORDERS -->
+                        <a href="{% url 'delivery_dashboard' %}" class="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full font-bold text-sm shadow-xl shadow-red-600/30 transition transform hover:-translate-y-1 hover:shadow-2xl flex items-center justify-center gap-2 glass-shine">
+                            <span>{% trans "View Available Orders" %}</span> <i class="fas fa-box-open"></i>
+                        </a>
+                        <a href="#orders" class="bg-white border border-stone-200 text-stone-700 hover:text-red-700 hover:border-red-300 px-10 py-4 rounded-full font-bold text-sm shadow-sm transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <i class="fas fa-list"></i> {% trans "Active Orders" %}
+                        </a>
+                    {% else %}
+                        <!-- NOT APPROVED: STATUS CHECK -->
+                        <a href="{% url 'delivery_pending' %}" class="bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-full font-bold text-sm shadow-xl shadow-amber-500/30 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <span>{% trans "Check Application Status" %}</span> <i class="fas fa-hourglass-half"></i>
+                        </a>
+                    {% endif %}
+
                 {% else %}
                     <a href="#market" class="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white px-10 py-4 rounded-full font-bold text-sm shadow-xl shadow-orange-600/30 transition transform hover:-translate-y-1 hover:shadow-2xl flex items-center justify-center gap-2 glass-shine">
                         <span>{% trans "Start Shopping" %}</span> <i class="fas fa-shopping-basket"></i>

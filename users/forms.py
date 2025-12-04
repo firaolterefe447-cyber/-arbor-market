@@ -1,19 +1,13 @@
 """
 User Registration and Profile Forms.
 
-This module defines the forms for registering different user types:
-- Farmers (with Location)
-- Buyers (Simple)
-- Suppliers (Business Name)
-- Delivery Personnel (Vehicle & License info)
-- Profile Updates (Banking & Personal info)
+This module defines the forms for registering different user types.
 """
 
 from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from .models import CustomUser
-
 
 # ==========================================
 # 1. FARMER REGISTRATION
@@ -77,7 +71,7 @@ class FarmerRegistrationForm(forms.ModelForm):
         user.set_password(self.cleaned_data["password"])
         user.user_type = 'farmer'
         user.location = self.cleaned_data.get('location')
-        user.is_verified = False
+        user.is_verified = False # Farmers might need verification too
         if commit:
             user.save()
         return user
@@ -134,7 +128,7 @@ class BuyerRegistrationForm(forms.ModelForm):
         user = super().save(commit=False)
         user.set_password(self.cleaned_data["password"])
         user.user_type = 'buyer'
-        user.is_verified = True
+        user.is_verified = True # Buyers are auto-verified
         if commit:
             user.save()
         return user
@@ -202,10 +196,11 @@ class SupplierRegistrationForm(forms.ModelForm):
 
 
 # ==========================================
-# 4. DELIVERY REGISTRATION
+# 4. DELIVERY REGISTRATION (FIXED)
 # ==========================================
 
 class DeliveryRegistrationForm(forms.ModelForm):
+    # 1. User Account Fields
     password = forms.CharField(label=_("Create PIN"), widget=forms.PasswordInput(attrs={
         'class': 'w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-red-500 focus:ring-red-500',
         'placeholder': '4-digit PIN',
@@ -213,27 +208,43 @@ class DeliveryRegistrationForm(forms.ModelForm):
         'inputmode': 'numeric'
     }))
 
-    # Extra fields for DriverProfile (handled in view usually, but form accepts them here)
-    vehicle_type = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-red-500',
-        'placeholder': 'e.g. Isuzu FSR'
+    # 2. Profile Specific Fields (Explicitly defined here, NOT in Meta)
+    # These will be accessed via form.cleaned_data in the View
+    vehicle_type = forms.ChoiceField(
+        choices=[
+            ('motorcycle', 'Motorcycle'),
+            ('van', 'Minivan'),
+            ('isuzu', 'Isuzu/Truck')
+        ],
+        widget=forms.Select(attrs={
+        'class': 'w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-red-500 bg-white',
     }))
+
     max_capacity_kg = forms.IntegerField(widget=forms.NumberInput(attrs={
         'class': 'w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-red-500',
-        'placeholder': 'e.g. 500'
+        'placeholder': 'Capacity in KG (e.g. 500)'
     }))
+
     license_number = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-red-500',
-        'placeholder': 'License #'
+        'placeholder': 'License Number'
     }))
-    national_id = forms.ImageField(widget=forms.FileInput(attrs={'class': 'text-xs'}))
-    license_image = forms.ImageField(widget=forms.FileInput(attrs={'class': 'text-xs'}))
+
+    # Image fields
+    national_id = forms.ImageField(widget=forms.FileInput(attrs={
+        'class': 'block w-full text-sm text-stone-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-red-50 file:text-red-700 hover:file:bg-red-100'
+    }))
+
+    license_image = forms.ImageField(widget=forms.FileInput(attrs={
+        'class': 'block w-full text-sm text-stone-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-red-50 file:text-red-700 hover:file:bg-red-100'
+    }))
 
     class Meta:
         model = CustomUser
+        # IMPORTANT: Only include fields that exist on the CustomUser model here.
+        # Do NOT include vehicle_type, license_number, etc. here.
         fields = [
-            'first_name', 'last_name', 'phone_number', 'password',
-            'vehicle_type', 'max_capacity_kg', 'license_number', 'national_id', 'license_image'
+            'first_name', 'last_name', 'phone_number', 'password'
         ]
         widgets = {
             'first_name': forms.TextInput(attrs={
@@ -257,21 +268,15 @@ class DeliveryRegistrationForm(forms.ModelForm):
         return password
 
     def save(self, commit=True):
+        # 1. Save the User part
         user = super().save(commit=False)
         user.set_password(self.cleaned_data["password"])
         user.user_type = 'delivery'
+        user.is_verified = False # Delivery ALWAYS starts as unverified
 
-        # We attach these temporary attributes to the user object
-        # The View MUST handle creating the DriverProfile using these attributes
-        user.vehicle_type = self.cleaned_data.get('vehicle_type')
-        user.max_capacity_kg = self.cleaned_data.get('max_capacity_kg')
-        user.license_number = self.cleaned_data.get('license_number')
-        user.national_id = self.cleaned_data.get('national_id')
-        user.license_image = self.cleaned_data.get('license_image')
-
-        user.is_verified = False
         if commit:
             user.save()
+
         return user
 
 

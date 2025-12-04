@@ -1,7 +1,7 @@
 """
 Marketplace View Definitions.
 
-This module handles the core logic for the Arbor Marketplace, including:
+This module handles:
 - Dashboard rendering for different user types.
 - Product listings, searching, and management.
 - Order processing, checkout, and payments.
@@ -119,8 +119,14 @@ def delivery_dashboard(request):
     """
     Dashboard for Logistics Personnel (Dedicated Fleet & CDN).
     """
+    # 1. Check if they have a profile
     if not hasattr(request.user, 'driver_profile'):
         return redirect('home')
+
+    # 2. SECURITY CHECK: If not verified, kick them back to pending page
+    # This fixes the issue where unverified users might try to access the URL directly
+    if not request.user.is_verified:
+        return redirect('delivery_pending')
 
     profile = request.user.driver_profile
     context = {
@@ -138,17 +144,20 @@ def delivery_dashboard(request):
 
     else:
         # CDN Logic: Global View
+
+        # A. Jobs currently held by this driver
         my_jobs = Order.objects.filter(driver=request.user).exclude(
             status='delivered'
         ).exclude(status='cancelled').order_by('-created_at')
 
         my_trips = DriverTrip.objects.filter(driver=request.user)
 
-        # Global Feed: All active orders
-        all_orders = Order.objects.exclude(status='cancelled').order_by('-created_at')
+        # B. AVAILABLE ORDERS (The Pool)
+        # Only show orders that are 'pending' (waiting for a driver)
+        available_orders = Order.objects.filter(status='pending').order_by('-created_at')
 
-        context['all_orders'] = all_orders
-        context['job_offers'] = all_orders  # Fallback for legacy templates
+        context['all_orders'] = available_orders  # Use this variable in your HTML template
+        context['job_offers'] = available_orders  # Fallback for legacy templates
         context['my_jobs'] = my_jobs
         context['my_trips'] = my_trips
 
@@ -489,12 +498,14 @@ def post_trip(request):
 def accept_job(request, order_id):
     order = get_object_or_404(Order, id=order_id)
 
+    # CHECK: Logic to prevent stealing active jobs
     if order.status != 'pending':
-        messages.error(request, "This job is already taken!")
+        messages.error(request, "This job is already taken or processed!")
         return redirect('delivery_dashboard')
 
+    # Assign Driver
     order.driver = request.user
-    order.driver_name = request.user.first_name
+    order.driver_name = f"{request.user.first_name} {request.user.last_name}"
     order.driver_phone = request.user.phone_number
     order.status = 'assigned'
     order.save()

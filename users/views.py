@@ -22,7 +22,6 @@ from .forms import (
     ProfileUpdateForm
 )
 
-
 # ==========================================
 # 1. LANDING & NAVIGATION
 # ==========================================
@@ -68,17 +67,21 @@ def login_view(request):
             user = authenticate(request, phone_number=phone, password=pin)
 
         if user is not None:
-            # 🛑 LOGISTICS GATEKEEPER CHECK
+            # 1. LOG THEM IN FIRST (Important!)
+            # We log them in so 'request.user' works on the pending page.
+            login(request, user)
+
+            # 2. CHECK DELIVERY STATUS
             if user.user_type == 'delivery':
                 if not user.is_verified:
+                    # Not verified? Send to the waiting room (but keep them logged in)
                     return redirect('delivery_pending')
                 else:
-                    login(request, user)
+                    # Verified? Send to Home
                     messages.success(request, "🎉 You are verified! Welcome to the Logistics Team.")
                     return redirect('home')
 
             # Standard Login for Farmers/Buyers/Suppliers
-            login(request, user)
             return redirect('home')
         else:
             messages.error(request, "Invalid Phone Number or PIN")
@@ -134,7 +137,6 @@ def register_buyer(request):
 def register_delivery(request):
     """
     Registers a Driver and populates the specific DriverProfile.
-    Redirects to 'Pending' page instead of Home.
     """
     if request.method == 'POST':
         form = DeliveryRegistrationForm(request.POST, request.FILES)
@@ -160,6 +162,10 @@ def register_delivery(request):
 
             profile.save()
 
+            # 3. Log them in IMMEDIATELY
+            login(request, user)
+
+            # 4. Send to pending check
             return redirect('delivery_pending')
     else:
         form = DeliveryRegistrationForm()
@@ -167,10 +173,27 @@ def register_delivery(request):
     return render(request, 'register_delivery.html', {'form': form})
 
 
+@login_required(login_url='login')
+@login_required(login_url='login')
 def delivery_pending(request):
-    """Static page telling drivers to wait for approval."""
-    return render(request, 'delivery_pending.html')
+    """
+    Checks if the admin has approved the user.
+    If yes -> Redirect Home.
+    If no -> Show pending message.
+    """
+    user = request.user
 
+    # 1. IMPORTANT: Ignore the session cache and check the REAL database
+    # If you changed the status in Admin, this line detects it.
+    user.refresh_from_db()
+
+    # 2. Check logic
+    if user.is_verified:
+        messages.success(request, "✅ Account Approved! Welcome aboard.")
+        return redirect('home')
+
+    # 3. If still not verified, show the waiting page
+    return render(request, 'delivery_pending.html')
 
 # ==========================================
 # 4. PROFILE MANAGEMENT

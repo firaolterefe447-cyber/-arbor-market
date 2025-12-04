@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌳 Arbor: The Farmer-to-Buyer Connection Platform (DEMO)
 
 ## 💡 Overview
@@ -104,3 +105,4 @@ Firaol Terefe - firaolterefe447@gmail.com
 Phone: +251952687749
 
 Project Link: https://github.com/firaolterefe447-cyber/agri-market-link.git
+

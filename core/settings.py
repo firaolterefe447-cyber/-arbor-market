@@ -1,6 +1,6 @@
 """
 Django settings for the Core Project.
-SMART CONFIGURATION: Works locally AND on Render.com automatically.
+Final Version: Database + Cloudinary (Images safe forever)
 """
 
 import os
@@ -12,30 +12,24 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- SECURITY ---
-# If on Server: Get the secret key from Environment Variables
-# If Local: Use a default insecure key
-SECRET_KEY = os.environ.get('SECRET_KEY', "django-insecure-v4$=k#8nbf(fzki5(ob8pmykn&(63oz2s8gs%k6^*wniqzzbs(")
-
-# If on Server (RENDER): DEBUG is False (Secure)
-# If Local: DEBUG is True (For fixing errors)
+SECRET_KEY = os.environ.get('SECRET_KEY', "django-insecure-local-key")
 DEBUG = 'RENDER' not in os.environ
-
 ALLOWED_HOSTS = ['*']
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+INTERNAL_IPS = ["127.0.0.1"]
 
 # --- APPS ---
 INSTALLED_APPS = [
-    # Third-Party
     'jazzmin',
     'tailwind',
     'theme',
     'django_browser_reload',
     'widget_tweaks',
 
-    # Django Core
+    # Cloudinary (Must be before django.contrib.staticfiles)
+    'cloudinary_storage',
+    'cloudinary',
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -44,14 +38,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'django.contrib.humanize',
 
-    # Local Apps
     'users.apps.UsersConfig',
     'marketplace.apps.MarketplaceConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # 👈 KEEPS CSS WORKING ON SERVER
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -82,9 +75,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "core.wsgi.application"
 
-# --- DATABASE (The Magic Part for Free Database) ---
-# If on Render: Connects to the Free PostgreSQL Database automatically
-# If Local: Connects to your db.sqlite3 file
+# --- DATABASE ---
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///' + str(BASE_DIR / 'db.sqlite3'),
@@ -102,7 +93,6 @@ TIME_ZONE = 'Africa/Nairobi'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
 LANGUAGES = [
     ('en', _('English')),
     ('am', _('Amharic')),
@@ -110,22 +100,31 @@ LANGUAGES = [
     ('so', _('Somali')),
     ('ti', _('Tigrinya')),
 ]
+LOCALE_PATHS = [BASE_DIR / 'locale']
 
-LOCALE_PATHS = [
-    BASE_DIR / 'locale',
-]
-
-# --- STATIC FILES ---
-STATIC_URL = "static/"
+# --- STATIC FILES (CSS/JS) ---
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
-
+# --- MEDIA FILES (IMAGES - CLOUDINARY) ---
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# If on Server: Use Cloudinary for images
+if 'RENDER' in os.environ:
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+else:
+    # If Local: Use computer folder
+    DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+# Cloudinary Configuration (Read from Environment)
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+}
 
 # --- TAILWIND ---
 TAILWIND_APP_NAME = 'theme'
@@ -134,7 +133,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 if 'RENDER' in os.environ:
     NPM_BIN_PATH = 'npm'
 else:
-    # ⚠️ CHANGE THIS if your local path is different
     NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd"
 
 # --- TELEBIRR ---
