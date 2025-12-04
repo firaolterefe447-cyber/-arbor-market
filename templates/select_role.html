@@ -1,0 +1,232 @@
+{% load static tailwind_tags i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" class="scroll-smooth" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% trans "Select Your Role | Arbor" %}</title>
+
+    <!-- ASSETS -->
+    {% tailwind_css %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-soil: #fafaf9;
+            --color-text: #1c1917;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-soil);
+            color: var(--color-text);
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* ANIMATIONS */
+        @keyframes floatOrb {
+            0% { transform: translate(0,0); }
+            33% { transform: translate(30px, -30px); }
+            66% { transform: translate(-20px, 20px); }
+            100% { transform: translate(0,0); }
+        }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-pop-in { animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+        /* Card Hover Effects */
+        .role-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        @media (hover: hover) {
+            .role-card:hover { transform: translateY(-8px) scale(1.02); z-index: 10; }
+        }
+        .role-card:active { transform: scale(0.98); }
+
+        /* Role Gradients & Hovers */
+        .gradient-farmer { background: linear-gradient(135deg, #059669, #15803d); }
+        .border-farmer:hover { border-color: #4ade80; box-shadow: 0 15px 30px -5px rgba(21, 128, 61, 0.2); }
+
+        .gradient-buyer { background: linear-gradient(135deg, #ea580c, #ca8a04); }
+        .border-buyer:hover { border-color: #fcd34d; box-shadow: 0 15px 30px -5px rgba(234, 88, 12, 0.2); }
+
+        .gradient-supplier { background: linear-gradient(135deg, #2563eb, #4f46e5); }
+        .border-supplier:hover { border-color: #60a5fa; box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.2); }
+
+        .gradient-delivery { background: linear-gradient(135deg, #dc2626, #be123c); }
+        .border-delivery:hover { border-color: #f87171; box-shadow: 0 15px 30px -5px rgba(220, 38, 38, 0.2); }
+
+        /* Hide Scrollbar for Horizontal Scroll */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .safe-pb { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen relative">
+
+    <!-- 1. BACKGROUND ENGINE -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <!-- RTL: Flipped positions for background orbs for symmetry in RTL layouts -->
+        <div class="absolute -top-[10%] -left-[10%] rtl:left-auto rtl:-right-[10%] w-[50vh] h-[50vh] md:w-[800px] md:h-[800px] bg-green-200/40 rounded-full blur-[60px] md:blur-[100px] animate-[floatOrb_25s_infinite_ease-in-out]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] rtl:right-auto rtl:-left-[10%] w-[40vh] h-[40vh] md:w-[700px] md:h-[700px] bg-blue-100/50 rounded-full blur-[80px] md:blur-[120px] animate-[floatOrb_30s_infinite_ease-in-out_reverse]"></div>
+    </div>
+
+    <!-- 2. HEADER WITH LANGUAGE SELECTOR -->
+    <nav class="relative w-full z-50 pt-4 pb-2 md:py-6">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+                <!-- Top Row: Logo & Login (Mobile Layout) -->
+                <div class="flex justify-between items-center w-full md:w-auto">
+                    <!-- Logo -->
+                    <a href="{% url 'home' %}" class="flex items-center gap-2 group">
+                        <div class="bg-white/80 p-1.5 md:p-2 rounded-xl border border-white/50 shadow-sm group-hover:scale-105 transition">
+                            <span class="text-xl md:text-2xl">🌱</span>
+                        </div>
+                        <span class="text-lg md:text-xl font-black text-stone-800 tracking-widest uppercase hidden sm:block">{% trans "Arbor" %}</span>
+                    </a>
+
+                    <!-- Login Link (Visible on Mobile right side) -->
+                    <a href="{% url 'login' %}" class="md:hidden text-stone-600 text-sm font-bold hover:text-green-700 transition flex items-center gap-2 bg-white/60 px-3 py-1.5 rounded-full border border-stone-200/50 backdrop-blur-sm">
+                        {% trans "Login" %} <i class="fas fa-sign-in-alt rtl:rotate-180"></i>
+                    </a>
+                </div>
+
+                <!-- 🌍 LANGUAGE SELECTOR (Center Desktop / Bottom Mobile) -->
+                <div class="w-full md:w-auto overflow-x-auto no-scrollbar">
+                    <form action="{% url 'set_language' %}" method="post" class="flex gap-2 md:gap-3 items-center justify-start md:justify-center px-1 py-1">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.path }}">
+                        {% get_available_languages as LANGUAGES %}
+                        {% for lang_code, lang_name in LANGUAGES %}
+                            <button type="submit" name="language" value="{{ lang_code }}"
+                                class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 shadow-sm border-2
+                                {% if lang_code == LANGUAGE_CODE %}
+                                    bg-emerald-600 text-white border-emerald-600 shadow-emerald-200 scale-105
+                                {% else %}
+                                    bg-white text-emerald-800 border-emerald-100 hover:border-amber-400 hover:bg-amber-50 hover:text-amber-700
+                                {% endif %}">
+                                {% if lang_code == 'en' %}🇺🇸{% elif lang_code == 'am' %}🇪🇹{% elif lang_code == 'or' %}🌳{% elif lang_code == 'ti' %}⛰️{% else %}🌍{% endif %}
+                                {{ lang_name }}
+                            </button>
+                        {% endfor %}
+                    </form>
+                </div>
+
+                <!-- Login Link (Desktop Only) -->
+                <a href="{% url 'login' %}" class="hidden md:flex text-stone-600 text-base font-bold hover:text-green-700 transition items-center gap-2 bg-white/50 px-4 py-2 rounded-full border border-stone-200/50 backdrop-blur-sm">
+                    {% trans "Have an account?" %} <span class="text-green-600">{% trans "Login" %}</span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. MAIN SELECTION GRID -->
+    <main class="flex-grow flex items-center justify-center py-10 md:py-16 relative z-10 px-4 sm:px-6 safe-pb">
+        <div class="w-full max-w-7xl mx-auto">
+
+            <!-- Headlines -->
+            <div class="text-center mb-8 md:mb-12 animate-pop-in">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-stone-900 mb-3 md:mb-4 tracking-tight leading-tight">
+                    {% trans "Join the" %} <br class="sm:hidden" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-amber-500">{% trans "Digital Harvest" %}</span>
+                </h1>
+                <p class="text-sm sm:text-base md:text-lg text-stone-500 max-w-xl mx-auto font-medium px-4">
+                    {% trans "Connect directly with Ethiopia's agricultural ecosystem. Choose your path to start growing." %}
+                </p>
+            </div>
+
+            <!-- Role Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+
+                <!-- 1. FARMER -->
+                <a href="{% url 'register' %}" class="role-card group relative bg-white rounded-2xl md:rounded-3xl border border-stone-100 p-1 border-farmer h-full flex flex-col animate-pop-in cursor-pointer" style="animation-delay: 0.1s;">
+                    <div class="relative z-10 bg-stone-50/50 rounded-[12px] md:rounded-[20px] p-5 md:p-6 h-full flex flex-col items-center text-center overflow-hidden">
+                        <div class="w-16 h-16 md:w-20 md:h-20 rounded-full gradient-farmer flex items-center justify-center text-white text-2xl md:text-3xl shadow-lg mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ring-4 ring-green-50">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-stone-800 mb-2 group-hover:text-green-700 transition">{% trans "Farmer" %}</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
+                            {% trans "List your crops, manage your harvest, and sell directly to buyers with zero middlemen." %}
+                        </p>
+                        <div class="mt-auto w-full py-2.5 md:py-3 rounded-xl bg-white border border-stone-200 text-stone-600 font-bold text-xs md:text-sm group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-colors shadow-sm">
+                            {% trans "Join as Farmer" %}
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 2. BUYER -->
+                <a href="{% url 'register_buyer' %}" class="role-card group relative bg-white rounded-2xl md:rounded-3xl border border-stone-100 p-1 border-buyer h-full flex flex-col animate-pop-in cursor-pointer" style="animation-delay: 0.2s;">
+                    <div class="relative z-10 bg-stone-50/50 rounded-[12px] md:rounded-[20px] p-5 md:p-6 h-full flex flex-col items-center text-center overflow-hidden">
+                        <div class="w-16 h-16 md:w-20 md:h-20 rounded-full gradient-buyer flex items-center justify-center text-white text-2xl md:text-3xl shadow-lg mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ring-4 ring-orange-50">
+                            <i class="fas fa-shopping-basket"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-stone-800 mb-2 group-hover:text-orange-600 transition">{% trans "Buyer" %}</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
+                            {% trans "Access fresh produce at fair prices. Buy individually or start a Group Buy with neighbors." %}
+                        </p>
+                        <div class="mt-auto w-full py-2.5 md:py-3 rounded-xl bg-white border border-stone-200 text-stone-600 font-bold text-xs md:text-sm group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500 transition-colors shadow-sm">
+                            {% trans "Join as Buyer" %}
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 3. SUPPLIER -->
+                <a href="{% url 'register_supplier' %}" class="role-card group relative bg-white rounded-2xl md:rounded-3xl border border-stone-100 p-1 border-supplier h-full flex flex-col animate-pop-in cursor-pointer" style="animation-delay: 0.3s;">
+                    <div class="relative z-10 bg-stone-50/50 rounded-[12px] md:rounded-[20px] p-5 md:p-6 h-full flex flex-col items-center text-center overflow-hidden">
+                        <div class="w-16 h-16 md:w-20 md:h-20 rounded-full gradient-supplier flex items-center justify-center text-white text-2xl md:text-3xl shadow-lg mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ring-4 ring-blue-50">
+                            <i class="fas fa-boxes-packing"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-stone-800 mb-2 group-hover:text-blue-600 transition">{% trans "Supplier" %}</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
+                            {% trans "Sell fertilizers, seeds, and equipment directly to thousands of Ethiopian farmers." %}
+                        </p>
+                        <div class="mt-auto w-full py-2.5 md:py-3 rounded-xl bg-white border border-stone-200 text-stone-600 font-bold text-xs md:text-sm group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-colors shadow-sm">
+                            {% trans "Join as Supplier" %}
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 4. DELIVERY -->
+                <a href="{% url 'register_delivery' %}" class="role-card group relative bg-white rounded-2xl md:rounded-3xl border border-stone-100 p-1 border-delivery h-full flex flex-col animate-pop-in cursor-pointer" style="animation-delay: 0.4s;">
+                    <div class="relative z-10 bg-stone-50/50 rounded-[12px] md:rounded-[20px] p-5 md:p-6 h-full flex flex-col items-center text-center overflow-hidden">
+                        <div class="w-16 h-16 md:w-20 md:h-20 rounded-full gradient-delivery flex items-center justify-center text-white text-2xl md:text-3xl shadow-lg mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ring-4 ring-red-50">
+                            <i class="fas fa-truck-fast"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-stone-800 mb-2 group-hover:text-red-600 transition">{% trans "Logistics" %}</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
+                            {% trans "Manage fleets, accept delivery jobs, and bridge the gap between farm and table." %}
+                        </p>
+                        <div class="mt-auto w-full py-2.5 md:py-3 rounded-xl bg-white border border-stone-200 text-stone-600 font-bold text-xs md:text-sm group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-colors shadow-sm">
+                            {% trans "Join Logistics" %}
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 4. FOOTER -->
+    <footer class="bg-stone-50 border-t border-stone-200 py-6 relative z-20">
+        <div class="container mx-auto px-6 text-center text-xs text-stone-400">
+            <p class="mb-2">&copy; {% now "Y" %} {% trans "Arbor Marketplace" %}.</p>
+            <div class="flex justify-center flex-wrap gap-4">
+                <a href="#" class="hover:text-green-600">{% trans "Terms" %}</a>
+                <span class="hidden sm:inline">&bull;</span>
+                <a href="#" class="hover:text-green-600">{% trans "Privacy" %}</a>
+                <span class="hidden sm:inline">&bull;</span>
+                <a href="#" class="hover:text-green-600">{% trans "Help" %}</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

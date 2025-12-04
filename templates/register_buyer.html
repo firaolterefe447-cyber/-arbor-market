@@ -1,0 +1,200 @@
+{% load static tailwind_tags widget_tweaks i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" class="scroll-smooth" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% trans "Join as Buyer | Arbor" %}</title>
+
+    {% tailwind_css %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-soil: #fafaf9;
+            --color-text: #1c1917;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-soil);
+            color: var(--color-text);
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* ANIMATIONS */
+        @keyframes floatOrb {
+            0% { transform: translate(0,0); }
+            33% { transform: translate(30px, -30px); }
+            66% { transform: translate(-20px, 20px); }
+            100% { transform: translate(0,0); }
+        }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.95) translateY(10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-pop-in { animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+        /* Glass Panel */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            /* Orange Shadow for Buyers */
+            box-shadow: 0 25px 50px -12px rgba(234, 88, 12, 0.15);
+        }
+
+        /* Custom Form Inputs */
+        .input-field {
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15); /* Amber Ring */
+            border-color: #d97706; /* Amber-600 */
+        }
+
+        .safe-pb { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen relative">
+
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute -top-[10%] -left-[10%] rtl:left-auto rtl:-right-[10%] w-[600px] h-[600px] bg-orange-200/40 rounded-full blur-[80px] animate-[floatOrb_25s_infinite_ease-in-out]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] rtl:right-auto rtl:-left-[10%] w-[700px] h-[700px] bg-amber-100/50 rounded-full blur-[100px] animate-[floatOrb_30s_infinite_ease-in-out_reverse]"></div>
+    </div>
+
+    <nav class="relative w-full z-50 py-4 md:py-6">
+        <div class="container mx-auto px-4 sm:px-6 flex justify-between items-center">
+
+            <a href="{% url 'select_role' %}" class="flex items-center gap-2 group">
+                <div class="bg-white/80 p-2 rounded-xl border border-white/50 shadow-sm group-hover:scale-105 transition text-amber-700">
+                    <i class="fas fa-arrow-left rtl:rotate-180"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold text-stone-400 uppercase tracking-widest leading-none">{% trans "Back to" %}</span>
+                    <span class="text-sm font-black text-stone-800 uppercase leading-none">{% trans "Roles" %}</span>
+                </div>
+            </a>
+
+            <form action="{% url 'set_language' %}" method="post" class="relative group">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.path }}">
+                <div class="relative overflow-hidden bg-white/60 hover:bg-white border border-stone-200 hover:border-amber-300 rounded-full px-4 py-2 transition flex items-center gap-2 cursor-pointer shadow-sm group-hover:shadow-md">
+                    <i class="fas fa-globe text-amber-600 text-sm"></i>
+                    <span class="text-xs font-bold text-stone-600 uppercase">{{ LANGUAGE_CODE }}</span>
+                    <select name="language" onchange="this.form.submit()" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+                        {% get_available_languages as LANGUAGES %}
+                        {% for lang_code, lang_name in LANGUAGES %}
+                            <option value="{{ lang_code }}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
+                                {{ lang_code|upper }} - {{ lang_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </form>
+
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center py-8 relative z-10 px-4 sm:px-6 safe-pb">
+
+        <div class="glass-panel w-full max-w-lg rounded-[2rem] p-6 md:p-10 animate-pop-in relative overflow-hidden">
+
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500"></div>
+
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 bg-orange-50 rounded-full mx-auto flex items-center justify-center mb-4 border border-orange-100 shadow-inner group">
+                    <i class="fas fa-shopping-basket text-3xl text-orange-500 group-hover:scale-110 transition-transform duration-300"></i>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-black text-stone-900 tracking-tight mb-1">{% trans "Buyer Registration" %}</h1>
+                <p class="text-sm text-stone-500 font-medium">{% trans "Access farm-fresh prices directly." %}</p>
+            </div>
+
+            <form method="post" class="space-y-5">
+                {% csrf_token %}
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold text-stone-500 uppercase tracking-wider ml-1 rtl:ml-0 rtl:mr-1">{% trans "First Name" %}</label>
+                        <div class="relative">
+                            <span class="absolute left-3 rtl:left-auto rtl:right-3 top-3.5 text-stone-400"><i class="fas fa-user"></i></span>
+                            <!-- FIX: Replaced complex filter with simple string "Selam" -->
+                            {% render_field form.first_name class="input-field w-full pl-9 pr-4 rtl:pl-4 rtl:pr-9 py-3 bg-stone-50 border border-stone-200 rounded-xl text-stone-800 placeholder-stone-400 text-sm font-bold focus:outline-none focus:bg-white" placeholder="Selam" %}
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold text-stone-500 uppercase tracking-wider ml-1 rtl:ml-0 rtl:mr-1">{% trans "Last Name" %}</label>
+                        <div class="relative">
+                            <span class="absolute left-3 rtl:left-auto rtl:right-3 top-3.5 text-stone-400"><i class="fas fa-user"></i></span>
+                            <!-- FIX: Replaced complex filter with simple string "Tesfaye" -->
+                            {% render_field form.last_name class="input-field w-full pl-9 pr-4 rtl:pl-4 rtl:pr-9 py-3 bg-stone-50 border border-stone-200 rounded-xl text-stone-800 placeholder-stone-400 text-sm font-bold focus:outline-none focus:bg-white" placeholder="Tesfaye" %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-[10px] font-bold text-stone-500 uppercase tracking-wider ml-1 rtl:ml-0 rtl:mr-1">{% trans "Phone Number" %}</label>
+                    <div class="relative group">
+                        <span class="absolute left-3 rtl:left-auto rtl:right-3 top-3.5 text-stone-400 group-focus-within:text-orange-500 transition"><i class="fas fa-phone"></i></span>
+                        {% render_field form.phone_number class="input-field w-full pl-9 pr-4 rtl:pl-4 rtl:pr-9 py-3 bg-stone-50 border border-stone-200 rounded-xl text-stone-800 placeholder-stone-400 text-sm font-bold focus:outline-none focus:bg-white" placeholder="0911..." %}
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold text-stone-500 uppercase tracking-wider ml-1 rtl:ml-0 rtl:mr-1">{% trans "PIN (4 Digits)" %}</label>
+                        <div class="relative group">
+                            <span class="absolute left-3 rtl:left-auto rtl:right-3 top-3.5 text-stone-400 group-focus-within:text-orange-500 transition"><i class="fas fa-lock"></i></span>
+                            {% render_field form.password type="password" maxlength="4" inputmode="numeric" class="input-field w-full pl-9 pr-4 rtl:pl-4 rtl:pr-9 py-3 bg-stone-50 border border-stone-200 rounded-xl text-stone-800 placeholder-stone-400 text-sm font-bold focus:outline-none focus:bg-white tracking-widest" placeholder="****" %}
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold text-stone-500 uppercase tracking-wider ml-1 rtl:ml-0 rtl:mr-1">{% trans "Confirm PIN" %}</label>
+                        <div class="relative group">
+                            <span class="absolute left-3 rtl:left-auto rtl:right-3 top-3.5 text-stone-400 group-focus-within:text-orange-500 transition"><i class="fas fa-check-circle"></i></span>
+                            {% render_field form.confirm_password type="password" maxlength="4" inputmode="numeric" class="input-field w-full pl-9 pr-4 rtl:pl-4 rtl:pr-9 py-3 bg-stone-50 border border-stone-200 rounded-xl text-stone-800 placeholder-stone-400 text-sm font-bold focus:outline-none focus:bg-white tracking-widest" placeholder="****" %}
+                        </div>
+                    </div>
+                </div>
+
+                {% if form.errors %}
+                    <div class="bg-red-50 border-l-4 border-red-500 rtl:border-l-0 rtl:border-r-4 p-3 rounded-r-lg rtl:rounded-r-none rtl:rounded-l-lg">
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <p class="text-xs text-red-600 font-bold flex items-center gap-1"><i class="fas fa-exclamation-circle"></i> {{ error }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                        {% for error in form.non_field_errors %}
+                            <p class="text-xs text-red-600 font-bold flex items-center gap-1"><i class="fas fa-exclamation-circle"></i> {{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/30 transform active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 mt-4">
+                    <span>{% trans "Start Shopping" %}</span>
+                    <i class="fas fa-arrow-right rtl:rotate-180"></i>
+                </button>
+
+            </form>
+
+            <div class="mt-6 pt-6 border-t border-stone-100 text-center">
+                <p class="text-stone-400 text-xs mb-2">{% trans "Already have an account?" %}</p>
+                <a href="{% url 'login' %}" class="inline-block text-sm font-bold text-orange-600 hover:text-orange-700 transition decoration-2 underline-offset-4 hover:underline">
+                    {% trans "Login Here" %}
+                </a>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-6 text-center w-full pointer-events-none">
+            <p class="text-[10px] font-bold text-stone-300 uppercase tracking-[0.2em]">{% trans "Fair Prices • Farm Direct" %}</p>
+        </div>
+
+    </main>
+
+</body>
+</html>

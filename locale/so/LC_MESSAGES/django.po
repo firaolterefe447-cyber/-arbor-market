@@ -1,0 +1,3798 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-02 22:11+0300\n"
+"PO-Revision-Date: 2025-12-03 00:00+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Somali <LL@li.org>\n"
+"Language: so\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\core\settings.py:95
+msgid "English"
+msgstr "Ingiriisi"
+
+#: .\core\settings.py:96
+msgid "Amharic"
+msgstr "Amxaari"
+
+#: .\core\settings.py:97
+msgid "Afaan Oromoo"
+msgstr "Afaan Oromo"
+
+#: .\core\settings.py:98
+msgid "Somali"
+msgstr "Soomaali"
+
+#: .\core\settings.py:99
+msgid "Tigrinya"
+msgstr "Tigrinya"
+
+#: .\env\Lib\site-packages\click\_termui_impl.py:613
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr "{editor}: Tafatirku waa fashilmay"
+
+#: .\env\Lib\site-packages\click\_termui_impl.py:617
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr "{editor}: Tafatirku waa fashilmay: {e}"
+
+#: .\env\Lib\site-packages\click\core.py:1114
+#: .\env\Lib\site-packages\click\core.py:1151
+#, python-brace-format
+msgid "{text} {deprecated_message}"
+msgstr "{text} {deprecated_message}"
+
+#: .\env\Lib\site-packages\click\core.py:1170
+msgid "Options"
+msgstr "Xulashooyinka"
+
+#: .\env\Lib\site-packages\click\core.py:1245
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] "Waxaa la helay dood dheeri ah oo aan la fileyn ({args})"
+msgstr[1] "Waxaa la helay doodo dheeri ah oo aan la fileyn ({args})"
+
+#: .\env\Lib\site-packages\click\core.py:1264
+msgid "DeprecationWarning: The command {name!r} is deprecated.{extra_message}"
+msgstr "Digniin Gabow: Amarka {name!r} waa mid duugoobay.{extra_message}"
+
+#: .\env\Lib\site-packages\click\core.py:1448
+msgid "Aborted!"
+msgstr "Waa la joojiyay!"
+
+#: .\env\Lib\site-packages\click\core.py:1822
+msgid "Commands"
+msgstr "Amarada"
+
+#: .\env\Lib\site-packages\click\core.py:1853
+msgid "Missing command."
+msgstr "Amarka waa maqan yahay."
+
+#: .\env\Lib\site-packages\click\core.py:1931
+msgid "No such command {name!r}."
+msgstr "Ma jiro amar noocaan ah {name!r}."
+
+#: .\env\Lib\site-packages\click\core.py:2355
+msgid "Value must be an iterable."
+msgstr "Qiimuhu waa inuu ahaadaa mid la celcelin karo."
+
+#: .\env\Lib\site-packages\click\core.py:2378
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] "Wuxuu qaataa {nargs} qiimo laakiin 1 ayaa la bixiyay."
+msgstr[1] "Wuxuu qaataa {nargs} qiimo laakiin {len} ayaa la bixiyay."
+
+#: .\env\Lib\site-packages\click\core.py:2567
+msgid ""
+"DeprecationWarning: The {param_type} {name!r} is deprecated.{extra_message}"
+msgstr ""
+"Digniin Gabow: {param_type} {name!r} waa mid duugoobay.{extra_message}"
+
+#: .\env\Lib\site-packages\click\core.py:3015
+#, python-brace-format
+msgid "env var: {var}"
+msgstr "env var: {var}"
+
+#: .\env\Lib\site-packages\click\core.py:3018
+#, python-brace-format
+msgid "default: {default}"
+msgstr "asalka: {default}"
+
+#: .\env\Lib\site-packages\click\core.py:3082
+msgid "(dynamic)"
+msgstr "(firfircoon)"
+
+#: .\env\Lib\site-packages\click\decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr "%(prog)s, nooca %(version)s"
+
+#: .\env\Lib\site-packages\click\decorators.py:522
+msgid "Show the version and exit."
+msgstr "Muuji nooca oo ka bax."
+
+#: .\env\Lib\site-packages\click\decorators.py:548
+msgid "Show this message and exit."
+msgstr "Muuji farriintan oo ka bax."
+
+#: .\env\Lib\site-packages\click\exceptions.py:50
+#: .\env\Lib\site-packages\click\exceptions.py:89
+#, python-brace-format
+msgid "Error: {message}"
+msgstr "Khalad: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:81
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr "Isku day '{command} {option}' wixii caawimaad ah."
+
+#: .\env\Lib\site-packages\click\exceptions.py:130
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr "Qiimo khaldan: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:132
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr "Qiimo khaldan ee {param_hint}: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:190
+msgid "Missing argument"
+msgstr "Dood maqan"
+
+#: .\env\Lib\site-packages\click\exceptions.py:192
+msgid "Missing option"
+msgstr "Xulasho maqan"
+
+#: .\env\Lib\site-packages\click\exceptions.py:194
+msgid "Missing parameter"
+msgstr "Halbeeg maqan"
+
+#: .\env\Lib\site-packages\click\exceptions.py:196
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr "{param_type} maqan"
+
+#: .\env\Lib\site-packages\click\exceptions.py:203
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr "Halbeeg maqan: {param_name}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:223
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr "Ma jirto xulasho noocaas ah: {name}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:235
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] "Ma waxaad ula jeedday {possibility}?"
+msgstr[1] "(Xulashooyinka suurtagalka ah: {possibilities})"
+
+#: .\env\Lib\site-packages\click\exceptions.py:282
+msgid "unknown error"
+msgstr "khalad aan la garanayn"
+
+#: .\env\Lib\site-packages\click\exceptions.py:289
+msgid "Could not open file {filename!r}: {message}"
+msgstr "Lama furi karin faylka {filename!r}: {message}"
+
+#: .\env\Lib\site-packages\click\formatting.py:156
+msgid "Usage:"
+msgstr "Isticmaalka:"
+
+#: .\env\Lib\site-packages\click\parser.py:199
+msgid "Argument {name!r} takes {nargs} values."
+msgstr "Doodda {name!r} waxay qaadataa {nargs} qiimo."
+
+#: .\env\Lib\site-packages\click\parser.py:381
+msgid "Option {name!r} does not take a value."
+msgstr "Xulashada {name!r} ma qaadato qiimo."
+
+#: .\env\Lib\site-packages\click\parser.py:444
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] "Xulashada {name!r} waxay u baahan tahay dood."
+msgstr[1] "Xulashada {name!r} waxay u baahan tahay {nargs} dood."
+
+#: .\env\Lib\site-packages\click\shell_completion.py:332
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr "Dhameystirka Shell lama taageero noocyada Bash ka weyn 4.4."
+
+#: .\env\Lib\site-packages\click\shell_completion.py:339
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr "Lama ogaan karin nooca Bash, dhameystirka shell lama taageero."
+
+#: .\env\Lib\site-packages\click\termui.py:165
+msgid "Repeat for confirmation"
+msgstr "Ku celi xaqiijin"
+
+#: .\env\Lib\site-packages\click\termui.py:181
+msgid "Error: The value you entered was invalid."
+msgstr "Khalad: Qiimaha aad gelisay waa mid aan sax ahayn."
+
+#: .\env\Lib\site-packages\click\termui.py:183
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr "Khalad: {e.message}"
+
+#: .\env\Lib\site-packages\click\termui.py:194
+msgid "Error: The two entered values do not match."
+msgstr "Khalad: Labada qiimo ee la geliyay isma waafaqsana."
+
+#: .\env\Lib\site-packages\click\termui.py:253
+msgid "Error: invalid input"
+msgstr "Khalad: gelinta aan sax ahayn"
+
+#: .\env\Lib\site-packages\click\termui.py:872
+msgid "Press any key to continue..."
+msgstr "Riix fure kasta si aad u sii wadato..."
+
+#: .\env\Lib\site-packages\click\types.py:332
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+"Ka dooro:\n"
+"\t{choices}"
+
+#: .\env\Lib\site-packages\click\types.py:369
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] "{value!r} maahan {choice}."
+msgstr[1] "{value!r} maahan mid ka mid ah {choices}."
+
+#: .\env\Lib\site-packages\click\types.py:460
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] "{value!r} lama mid aha qaabka {format}."
+msgstr[1] "{value!r} lama mid aha qaababka {formats}."
+
+#: .\env\Lib\site-packages\click\types.py:482
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} maahan {number_type} sax ah."
+
+#: .\env\Lib\site-packages\click\types.py:538
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr "{value} kuma jiro inta u dhaxaysa {range}."
+
+#: .\env\Lib\site-packages\click\types.py:719
+msgid "{value!r} is not a valid boolean. Recognized values: {states}"
+msgstr ""
+"{value!r} maahan boolean sax ah. Qiimayaasha la aqoonsan yahay: {states}"
+
+#: .\env\Lib\site-packages\click\types.py:747
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} maahan UUID sax ah."
+
+#: .\env\Lib\site-packages\click\types.py:937
+msgid "file"
+msgstr "fayl"
+
+#: .\env\Lib\site-packages\click\types.py:939
+msgid "directory"
+msgstr "hagaha"
+
+#: .\env\Lib\site-packages\click\types.py:941
+msgid "path"
+msgstr "waddo"
+
+#: .\env\Lib\site-packages\click\types.py:988
+msgid "{name} {filename!r} does not exist."
+msgstr "{name} {filename!r} ma jiro."
+
+#: .\env\Lib\site-packages\click\types.py:997
+msgid "{name} {filename!r} is a file."
+msgstr "{name} {filename!r} waa fayl."
+
+#: .\env\Lib\site-packages\click\types.py:1005
+msgid "{name} {filename!r} is a directory."
+msgstr "{name} {filename!r} waa hagaha (directory)."
+
+#: .\env\Lib\site-packages\click\types.py:1014
+msgid "{name} {filename!r} is not readable."
+msgstr "{name} {filename!r} lama akhrin karo."
+
+#: .\env\Lib\site-packages\click\types.py:1023
+msgid "{name} {filename!r} is not writable."
+msgstr "{name} {filename!r} lama qori karo."
+
+#: .\env\Lib\site-packages\click\types.py:1032
+msgid "{name} {filename!r} is not executable."
+msgstr "{name} {filename!r} lama fulin karo."
+
+#: .\env\Lib\site-packages\click\types.py:1099
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] "{len_type} qiimo ayaa loo baahan yahay, laakiin {len_value} ayaa la bixiyay."
+msgstr[1] "{len_type} qiimayaal ayaa loo baahan yahay, laakiin {len_value} ayaa la bixiyay."
+
+#: .\env\Lib\site-packages\django\contrib\messages\apps.py:16
+msgid "Messages"
+msgstr "Farriimaha"
+
+#: .\env\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr "Khariidadaha Goobta"
+
+#: .\env\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr "Faylasha aan isbeddelin"
+
+#: .\env\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr "Isku xidhka wararka"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: .\env\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr "…"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:32
+msgid "That page number is not an integer"
+msgstr "Lambarka boggaas maahan tiro idil"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:33
+msgid "That page number is less than 1"
+msgstr "Lambarka boggaas wuxuu ka yar yahay 1"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:34
+msgid "That page contains no results"
+msgstr "Boggaas kuma jiraan wax natiijo ah"
+
+#: .\env\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr "Geli qiimo sax ah."
+
+#: .\env\Lib\site-packages\django\core\validators.py:70
+msgid "Enter a valid domain name."
+msgstr "Geli magac domain sax ah."
+
+#: .\env\Lib\site-packages\django\core\validators.py:153
+#: .\env\Lib\site-packages\django\forms\fields.py:775
+msgid "Enter a valid URL."
+msgstr "Geli URL sax ah."
+
+#: .\env\Lib\site-packages\django\core\validators.py:200
+msgid "Enter a valid integer."
+msgstr "Geli tiro idil oo sax ah."
+
+#: .\env\Lib\site-packages\django\core\validators.py:211
+msgid "Enter a valid email address."
+msgstr "Geli cinwaan email sax ah."
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\env\Lib\site-packages\django\core\validators.py:289
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"Geli “slug” sax ah oo ka kooban xarfo, lambaro, xariiq hoosaad ama xariiq dhexe."
+
+#: .\env\Lib\site-packages\django\core\validators.py:297
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+"Geli “slug” sax ah oo ka kooban xarfo Unicode, lambaro, xariiq hoosaad, ama "
+"xariiq dhexe."
+
+#: .\env\Lib\site-packages\django\core\validators.py:309
+#: .\env\Lib\site-packages\django\core\validators.py:318
+#: .\env\Lib\site-packages\django\core\validators.py:332
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2220
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr "Geli cinwaan %(protocol)s sax ah."
+
+#: .\env\Lib\site-packages\django\core\validators.py:311
+msgid "IPv4"
+msgstr "IPv4"
+
+#: .\env\Lib\site-packages\django\core\validators.py:320
+#: .\env\Lib\site-packages\django\utils\ipv6.py:43
+msgid "IPv6"
+msgstr "IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:334
+msgid "IPv4 or IPv6"
+msgstr "IPv4 ama IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:375
+msgid "Enter only digits separated by commas."
+msgstr "Geli kaliya lambaro ay u dhexeyso hakad."
+
+#: .\env\Lib\site-packages\django\core\validators.py:381
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr "Hubi in qiimahan yahay %(limit_value)s (waa %(show_value)s)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:416
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Hubi in qiimahan ka yar yahay ama la mid yahay %(limit_value)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:425
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Hubi in qiimahan ka weyn yahay ama la mid yahay %(limit_value)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:434
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "Hubi in qiimahan yahay dhufan tallaabo %(limit_value)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:441
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+"Hubi in qiimahan yahay dhufan tallaabo %(limit_value)s, laga bilaabo "
+"%(offset)s, tusaale. %(offset)s, %(valid_value1)s, %(valid_value2)s, iwm."
+
+#: .\env\Lib\site-packages\django\core\validators.py:473
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Hubi in qiimahan leeyahay ugu yaraan %(limit_value)d xaraf (wuxuu leeyahay "
+"%(show_value)d)."
+msgstr[1] ""
+"Hubi in qiimahan leeyahay ugu yaraan %(limit_value)d xarfood (wuxuu leeyahay "
+"%(show_value)d)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:491
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Hubi in qiimahan leeyahay ugu badnaan %(limit_value)d xaraf (wuxuu leeyahay "
+"%(show_value)d)."
+msgstr[1] ""
+"Hubi in qiimahan leeyahay ugu badnaan %(limit_value)d xarfood (wuxuu leeyahay "
+"%(show_value)d)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:514
+#: .\env\Lib\site-packages\django\forms\fields.py:366
+#: .\env\Lib\site-packages\django\forms\fields.py:405
+msgid "Enter a number."
+msgstr "Geli lambar."
+
+#: .\env\Lib\site-packages\django\core\validators.py:516
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] "Hubi inaanay jirin wax ka badan %(max)s lambar guud ahaan."
+msgstr[1] "Hubi inaanay jirin wax ka badan %(max)s lambar guud ahaan."
+
+#: .\env\Lib\site-packages\django\core\validators.py:521
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] "Hubi inaanay jirin wax ka badan %(max)s meel tobanle."
+msgstr[1] "Hubi inaanay jirin wax ka badan %(max)s meelood tobanle."
+
+#: .\env\Lib\site-packages\django\core\validators.py:526
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+"Hubi inaanay jirin wax ka badan %(max)s lambar ka hor barta tobanlaha."
+msgstr[1] ""
+"Hubi inaanay jirin wax ka badan %(max)s lambar ka hor barta tobanlaha."
+
+#: .\env\Lib\site-packages\django\core\validators.py:597
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+"Nooca faylka “%(extension)s” lama oggola. Noocyada la oggol yahay waa: "
+"%(allowed_extensions)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:659
+msgid "Null characters are not allowed."
+msgstr "Xarfaha madhan lama oggola."
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1600
+#: .\env\Lib\site-packages\django\forms\models.py:908
+msgid "and"
+msgstr "iyo"
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1602
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(model_name)s leh %(field_labels)s kan mar hore ayuu jiraa."
+
+#: .\env\Lib\site-packages\django\db\models\constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr "Xannibaadda “%(name)s” waa lagu xadgudbay."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "Qiimaha %(value)r maahan xulasho sax ah."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:135
+msgid "This field cannot be null."
+msgstr "Goobtani ma noqon karto eber."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:136
+msgid "This field cannot be blank."
+msgstr "Goobtani ma noqon karto bannaan."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "%(model_name)s leh %(field_label)s kan mar hore ayuu jiraa."
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"%(field_label)s waa inay noqotaa mid gaar u ah %(date_field_label)s %(lookup_type)s."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "Nooca goobta: %(field_type)s"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1162
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr "“%(value)s” qiimuhu waa inuu ahaadaa Run ama Been."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1163
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "“%(value)s” qiimuhu waa inuu ahaadaa Run, Been, ama Eber."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1165
+msgid "Boolean (Either True or False)"
+msgstr "Boolean (Ama Run ama Been)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1215
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "Qoraal (ilaa %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1217
+msgid "String (unlimited)"
+msgstr "Qoraal (aan xadidnayn)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1326
+msgid "Comma-separated integers"
+msgstr "Tirooyin idil oo hakad u dhexeeyo"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1427
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+"“%(value)s” qiimuhu wuxuu leeyahay qaab taariikh khaldan. Waa inuu ahaadaa "
+"qaabka YYYY-MM-DD."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1431
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1566
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+"“%(value)s” qiimuhu wuxuu leeyahay qaab sax ah (YYYY-MM-DD) laakiin waa "
+"taariikh khaldan."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1435
+msgid "Date (without time)"
+msgstr "Taariikh (wakhti la'aan)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1562
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
+msgstr ""
+"“%(value)s” qiimuhu wuxuu leeyahay qaab khaldan. Waa inuu ahaadaa qaabka "
+"YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1570
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+"“%(value)s” qiimuhu wuxuu leeyahay qaab sax ah (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) laakiin waa taariikh/wakhti khaldan."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1575
+msgid "Date (with time)"
+msgstr "Taariikh (leh wakhti)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1702
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr "“%(value)s” qiimuhu waa inuu ahaadaa lambar tobanle."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1704
+msgid "Decimal number"
+msgstr "Lambar tobanle"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1864
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
+msgstr ""
+"“%(value)s” qiimuhu wuxuu leeyahay qaab khaldan. Waa inuu ahaadaa qaabka [DD] "
+"[[HH:]MM:]ss[.uuuuuu]."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1868
+msgid "Duration"
+msgstr "Muddada"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1920
+msgid "Email address"
+msgstr "Cinwaanka emailka"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1945
+msgid "File path"
+msgstr "Waddada faylka"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2023
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr "“%(value)s” qiimuhu waa inuu ahaadaa float."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2025
+msgid "Floating point number"
+msgstr "Lambar dhibic sabaynaysa"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2065
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr "“%(value)s” qiimuhu waa inuu ahaadaa tiro idil."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2067
+msgid "Integer"
+msgstr "Tiro idil"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2163
+msgid "Big (8 byte) integer"
+msgstr "Tiro idil weyn (8 byte)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2180
+msgid "Small integer"
+msgstr "Tiro idil yar"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2188
+msgid "IPv4 address"
+msgstr "Cinwaanka IPv4"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2219
+msgid "IP address"
+msgstr "Cinwaanka IP"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2310
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2311
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr "“%(value)s” qiimuhu waa inuu ahaadaa Eber, Run ama Been."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2313
+msgid "Boolean (Either True, False or None)"
+msgstr "Boolean (Ama Run, Been ama Eber)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2364
+msgid "Positive big integer"
+msgstr "Tiro idil togan oo weyn"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2379
+msgid "Positive integer"
+msgstr "Tiro idil togan"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2394
+msgid "Positive small integer"
+msgstr "Tiro idil togan oo yar"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2410
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Slug (ilaa %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2446
+msgid "Text"
+msgstr "Qoraal"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2526
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+"“%(value)s” qiimuhu wuxuu leeyahay qaab khaldan. Waa inuu ahaadaa qaabka HH:MM[:ss[.uuuuuu]]."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2530
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+"“%(value)s” qiimuhu wuxuu leeyahay qaab sax ah (HH:MM[:ss[.uuuuuu]]) laakiin waa "
+"wakhti khaldan."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2534
+msgid "Time"
+msgstr "Wakhti"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2642
+msgid "URL"
+msgstr "URL"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2666
+msgid "Raw binary data"
+msgstr "Xogta binary cayriin"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2731
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr "“%(value)s” maahan UUID sax ah."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2733
+msgid "Universally unique identifier"
+msgstr "Aqoonsi gaar ah oo caalami ah"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:244
+msgid "File"
+msgstr "Fayl"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:420
+msgid "Image"
+msgstr "Sawir"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:24
+msgid "A JSON object"
+msgstr "Shay JSON ah"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:26
+msgid "Value must be valid JSON."
+msgstr "Qiimuhu waa inuu ahaadaa JSON sax ah."
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:979
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
+msgstr "%(model)s tusaale leh %(field)s %(value)r maahan xulasho sax ah."
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:982
+msgid "Foreign Key (type determined by related field)"
+msgstr "Furaha Shisheeye (nooca waxaa go'aamiya goobta la xidhiidha)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1276
+msgid "One-to-one relationship"
+msgstr "Xidhiidh hal-ilaa-hal ah"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1333
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "%(from)s-%(to)s xidhiidh"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1335
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "%(from)s-%(to)s xidhiidho"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1383
+msgid "Many-to-many relationship"
+msgstr "Xidhiidh badan-ilaa-badan ah"
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: .\env\Lib\site-packages\django\forms\boundfield.py:185
+msgid ":?.!"
+msgstr ":?.!"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:95
+msgid "This field is required."
+msgstr "Goobtani waa loo baahan yahay."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:315
+msgid "Enter a whole number."
+msgstr "Geli tiro buuxda."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:486
+#: .\env\Lib\site-packages\django\forms\fields.py:1267
+msgid "Enter a valid date."
+msgstr "Geli taariikh sax ah."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:509
+#: .\env\Lib\site-packages\django\forms\fields.py:1268
+msgid "Enter a valid time."
+msgstr "Geli wakhti sax ah."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:536
+msgid "Enter a valid date/time."
+msgstr "Geli taariikh/wakhti sax ah."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:570
+msgid "Enter a valid duration."
+msgstr "Geli muddo sax ah."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:571
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr "Tirada maalmaha waa inay u dhexeyso {min_days} iyo {max_days}."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:640
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr "Wax fayl ah lama soo gudbin. Hubi nooca encoding ee foomka."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:641
+msgid "No file was submitted."
+msgstr "Wax fayl ah lama soo gudbin."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:642
+msgid "The submitted file is empty."
+msgstr "Faylka la soo gudbiyay waa madhan yahay."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:644
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+"Hubi in magaca faylkan leeyahay ugu badnaan %(max)d xaraf (wuxuu leeyahay %(length)d)."
+msgstr[1] ""
+"Hubi in magaca faylkan leeyahay ugu badnaan %(max)d xarfood (wuxuu leeyahay %(length)d)."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:649
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr "Fadlan soo gudbi fayl ama sax sanduuqa nadiifinta, labadaba maya."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:717
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+"Soo geli sawir sax ah. Faylka aad soo gelisay ma ahayn sawir ama wuxuu ahaa "
+"sawir ciladaysan."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:889
+#: .\env\Lib\site-packages\django\forms\fields.py:975
+#: .\env\Lib\site-packages\django\forms\models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "Dooro xulasho sax ah. %(value)s maahan mid ka mid ah xulashooyinka la heli karo."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:977
+#: .\env\Lib\site-packages\django\forms\fields.py:1096
+#: .\env\Lib\site-packages\django\forms\models.py:1590
+msgid "Enter a list of values."
+msgstr "Geli liis qiimayaal ah."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1097
+msgid "Enter a complete value."
+msgstr "Geli qiimo dhamaystiran."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1339
+msgid "Enter a valid UUID."
+msgstr "Geli UUID sax ah."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1369
+msgid "Enter a valid JSON."
+msgstr "Geli JSON sax ah."
+
+#. Translators: This is the default suffix added to form field labels
+#: .\env\Lib\site-packages\django\forms\forms.py:97
+msgid ":"
+msgstr ":"
+
+#: .\env\Lib\site-packages\django\forms\forms.py:239
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(Goob qarsoon %(name)s) %(error)s"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+"Xogta ManagementForm waa maqan tahay ama waa la fara-galiyay. Goobaha maqan: "
+"%(field_names)s. Waxaa laga yaabaa inaad u baahato inaad gudbiso warbixin khalad haddii arrintu sii socoto."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] "Fadlan soo gudbi ugu badnaan %(num)d foom."
+msgstr[1] "Fadlan soo gudbi ugu badnaan %(num)d foomam."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] "Fadlan soo gudbi ugu yaraan %(num)d foom."
+msgstr[1] "Fadlan soo gudbi ugu yaraan %(num)d foomam."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:484
+#: .\env\Lib\site-packages\django\forms\formsets.py:491
+#: .\templates\dashboard.html:85
+msgid "Order"
+msgstr "Dalab"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:499
+#: .\templates\dashboard.html:182
+msgid "Delete"
+msgstr "Tirtir"
+
+#: .\env\Lib\site-packages\django\forms\models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "Fadlan sax xogta nuqulaysan ee %(field)s."
+
+#: .\env\Lib\site-packages\django\forms\models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr "Fadlan sax xogta nuqulaysan ee %(field)s, taas oo ah inay noqoto mid gaar ah."
+
+#: .\env\Lib\site-packages\django\forms\models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+"Fadlan sax xogta nuqulaysan ee %(field_name)s taas oo ah inay noqoto mid gaar ah "
+"ee %(lookup)s ee ku jirta %(date_field)s."
+
+#: .\env\Lib\site-packages\django\forms\models.py:922
+msgid "Please correct the duplicate values below."
+msgstr "Fadlan sax qiimayaasha nuqulaysan ee hoose."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr "Qiimaha gudaha kuma habboona tusaalaha waalidka."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1450
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "Dooro xulasho sax ah. Xulashadaas maahan mid ka mid ah kuwa la heli karo."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1594
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr "“%(pk)s” maahan qiimo sax ah."
+
+#: .\env\Lib\site-packages\django\forms\utils.py:229
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+"%(datetime)s laguma macnayn karin aaga wakhtiga %(current_timezone)s; "
+"laga yaabee inay mugdi ku jirto ama ayna jirin."
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:527
+#: .\templates\home.html:422
+msgid "Clear"
+msgstr "Nadiifi"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:528
+msgid "Currently"
+msgstr "Hadda"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:529
+msgid "Change"
+msgstr "Beddel"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:866
+msgid "Unknown"
+msgstr "Aan la aqoon"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:867
+msgid "Yes"
+msgstr "Haa"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:868
+msgid "No"
+msgstr "Maya"
+
+#. Translators: Please do not add spaces around commas.
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr "haa,maya,laga yaabaa"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:903
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] "%(size)d byte"
+msgstr[1] "%(size)d bytes"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr "%s KB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr "%s TB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr "%s PB"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:74
+msgid "p.m."
+msgstr "g.d."
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:75
+msgid "a.m."
+msgstr "g.h."
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:80
+msgid "PM"
+msgstr "GD"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:81
+msgid "AM"
+msgstr "GH"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:153
+msgid "midnight"
+msgstr "saq dhexe"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:155
+msgid "noon"
+msgstr "duhur"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr "Isniin"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr "Salaaso"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr "Arbaco"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr "Khamiis"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr "Jimco"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:12
+msgid "Saturday"
+msgstr "Sabti"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr "Axad"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr "Isn"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr "Sal"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr "Arb"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr "Kha"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr "Jim"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:21
+msgid "Sat"
+msgstr "Sab"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr "Axa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:25
+msgid "January"
+msgstr "Jannaayo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:26
+msgid "February"
+msgstr "Febraayo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:27
+msgid "March"
+msgstr "Maarso"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:28
+msgid "April"
+msgstr "Abriil"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:29
+msgid "May"
+msgstr "Maajo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:30
+msgid "June"
+msgstr "Juun"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:31
+msgid "July"
+msgstr "Luulyo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:32
+msgid "August"
+msgstr "Ogoosto"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:33
+msgid "September"
+msgstr "Sebtembar"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:34
+msgid "October"
+msgstr "Oktoobar"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:35
+msgid "November"
+msgstr "Nofembar"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:36
+msgid "December"
+msgstr "Desembar"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:39
+msgid "jan"
+msgstr "jan"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:40
+msgid "feb"
+msgstr "feb"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:41
+msgid "mar"
+msgstr "mar"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:42
+msgid "apr"
+msgstr "apr"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:43
+msgid "may"
+msgstr "may"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:44
+msgid "jun"
+msgstr "jun"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:45
+msgid "jul"
+msgstr "jul"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr "aug"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:47
+msgid "sep"
+msgstr "sep"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:48
+msgid "oct"
+msgstr "oct"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:49
+msgid "nov"
+msgstr "nov"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:50
+msgid "dec"
+msgstr "dec"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "Jan."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "Feb."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "Maarso"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "Abriil"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "Maajo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "Juun"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "Luulyo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "Ogo."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "Seb."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "Okt."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "Nof."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "Des."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr "Jannaayo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr "Febraayo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr "Maarso"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr "Abriil"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr "Maajo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr "Juun"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr "Luulyo"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr "Ogoosto"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr "Sebtembar"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr "Oktoobar"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr "Nofembar"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr "Desembar"
+
+#: .\env\Lib\site-packages\django\utils\ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr "Kani maahan cinwaan IPv6 sax ah."
+
+#: .\env\Lib\site-packages\django\utils\text.py:76
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr "%(truncated_text)s…"
+
+#: .\env\Lib\site-packages\django\utils\text.py:287
+msgid "or"
+msgstr "ama"
+
+#. Translators: This string is used as a separator between list elements
+#: .\env\Lib\site-packages\django\utils\text.py:306
+#: .\env\Lib\site-packages\django\utils\timesince.py:135
+msgid ", "
+msgstr ", "
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] "%(num)d sano"
+msgstr[1] "%(num)d sano"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] "%(num)d bil"
+msgstr[1] "%(num)d bilood"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] "%(num)d toddobaad"
+msgstr[1] "%(num)d toddobaad"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] "%(num)d maalin"
+msgstr[1] "%(num)d maalmood"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] "%(num)d saacad"
+msgstr[1] "%(num)d saacadood"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] "%(num)d daqiiqad"
+msgstr[1] "%(num)d daqiiqadood"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:29
+msgid "Forbidden"
+msgstr "Waa mamnuuc"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr "Xaqiijinta CSRF waa fashilantay. Codsigii waa la joojiyay."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+"Waxaad arkaysaa farriintan sababtoo ah boggan HTTPS wuxuu u baahan yahay "
+"“Referer header” inuu soo diro biraawsarkaaga, laakiin midna lama soo dirin. "
+"Tani waxaa loo baahan yahay sababo ammaan, si loo hubiyo in biraawsarkaaga aanay "
+"afduuban dhinacyo saddexaad."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+"Haddii aad u habaysay biraawsarkaaga inuu damiyo “Referer” headers, fadlan "
+"dib u shid, ugu yaraan boggan, ama xidhiidhada HTTPS, ama codsiyada “same-origin”."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+"Haddii aad isticmaalayso <meta name=\"referrer\" content=\"no-referrer\"> tag ama "
+"kuma jirto “Referrer-Policy: no-referrer” header, fadlan ka saar. Ilaalinta "
+"CSRF waxay u baahan tahay “Referer” header si loo sameeyo hubin adag. "
+"Haddii aad ka welwelsan tahay sirta, isticmaal beddelaadyo sida <a "
+"rel=\"noreferrer\" …> xidhiidhada bogagga dhinac saddexaad."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+"Waxaad arkaysaa farriintan sababtoo ah boggan wuxuu u baahan yahay CSRF cookie markaad "
+"gudbinayso foomamka. Cookie-gan waxaa loo baahan yahay sababo ammaan, si loo hubiyo "
+"in biraawsarkaaga aanay afduuban dhinacyo saddexaad."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+"Haddii aad u habaysay biraawsarkaaga inuu damiyo cookies, fadlan dib u shid, "
+"ugu yaraan boggan, ama codsiyada “same-origin”."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr "Macluumaad dheeraad ah ayaa la heli karaa marka DEBUG=True."
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:44
+msgid "No year specified"
+msgstr "Sanad lama cayimin"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:64
+#: .\env\Lib\site-packages\django\views\generic\dates.py:115
+#: .\env\Lib\site-packages\django\views\generic\dates.py:214
+msgid "Date out of range"
+msgstr "Taariikhdu way ka baxsan tahay xadka"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:94
+msgid "No month specified"
+msgstr "Bil lama cayimin"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:147
+msgid "No day specified"
+msgstr "Maalin lama cayimin"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:194
+msgid "No week specified"
+msgstr "Toddobaad lama cayimin"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:353
+#: .\env\Lib\site-packages\django\views\generic\dates.py:384
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "Ma jiro %(verbose_name_plural)s la heli karo"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:680
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
+msgstr ""
+"%(verbose_name_plural)s mustaqbalka lama heli karo sababtoo ah "
+"%(class_name)s.allow_future waa False."
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:720
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr "Taariikh qoraal khaldan “%(datestr)s” oo leh qaabka “%(format)s”"
+
+#: .\env\Lib\site-packages\django\views\generic\detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr "Lama helin %(verbose_name)s u dhigma weydiinta"
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr "Boggu maahan “last”, lamana beddeli karo int."
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr "Bog khaldan (%(page_number)s): %(message)s"
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:173
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr "Liis madhan iyo “%(class_name)s.allow_empty” waa False."
+
+#: .\env\Lib\site-packages\django\views\static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr "Tusmooyinka Hagaha lama oggola halkan."
+
+#: .\env\Lib\site-packages\django\views\static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr "“%(path)s” ma jiro"
+
+#: .\env\Lib\site-packages\django\views\static.py:68
+#: .\env\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\env\Lib\site-packages\django\views\templates\directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "Tusmada %(directory)s"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr "Rakibaadda way shaqaysay si guul leh! Hambalyo!"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+"Eeg <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">qoraalada sii deynta</a> ee Django %(version)s"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+"Waxaad arkaysaa boggan sababtoo ah <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> ayaa ku jirta faylkaaga settings-ka mana aadan "
+"habaynin wax URLs ah."
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:217
+msgid "Django Documentation"
+msgstr "Dukumentiyada Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr "Mawduucyada, tixraacyada, &amp; sida loo sameeyo"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr "Tababarka: App-ka Codbixinta"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:227
+msgid "Get started with Django"
+msgstr "Ku bilow Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:235
+msgid "Django Community"
+msgstr "Bulshada Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr "Ku xidhnow, hel caawimo, ama wax ku biiri"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:14
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:54
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:62
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:72
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:82
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:86
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:118
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:137
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:364
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:369
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:379
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:399
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:416
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:435
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:441
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:458
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:470
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:478
+msgid "title"
+msgstr "cinwaan"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:18
+msgid "password"
+msgstr "erayga sirta"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:245
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:264
+msgid "title a"
+msgstr "cinwaan a"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:249
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:275
+msgid "title b"
+msgstr "cinwaan b"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:253
+msgid "title c"
+msgstr "cinwaan c"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:257
+msgid "title d"
+msgstr "cinwaan d"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:380
+msgid "visits"
+msgstr "booqashooyinka"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\translation.py:62
+msgid "Sorry, translation is not available."
+msgstr "Waan ka xunnahay, tarjumaad lama heli karo."
+
+#: .\env\Lib\site-packages\modeltranslation\widgets.py:32
+msgid "None"
+msgstr "Eber"
+
+#: .\marketplace\models.py:23 .\templates\add_crop.html:59
+#: .\templates\add_input.html:57 .\templates\supplier_dashboard.html:74
+msgid "Product Name"
+msgstr "Magaca Badeecada"
+
+#: .\templates\add_crop.html:10
+msgid "Upload Harvest | Arbor"
+msgstr "Geli Dalagga | Arbor"
+
+#: .\templates\add_crop.html:31
+msgid "Upload Harvest"
+msgstr "Geli Dalagga"
+
+#: .\templates\add_crop.html:48
+msgid "Take a Photo"
+msgstr "Sawir Qaad"
+
+#: .\templates\add_crop.html:52
+msgid "Tap to select image"
+msgstr "Guji si aad u doorato sawir"
+
+#: .\templates\add_crop.html:59
+msgid "Optional"
+msgstr "Ikhtiyaari"
+
+#: .\templates\add_crop.html:62
+msgid "If you don't know the English name, leave it blank. Admin will fix it."
+msgstr "Haddii aadan aqoon magaca Ingiriisiga, bannaan uga tag. Maamulka ayaa hagaajin doona."
+
+#: .\templates\add_crop.html:70 .\templates\add_input.html:65
+#: .\templates\edit_crop.html:34
+msgid "Price (ETB)"
+msgstr "Qiimaha (Birr)"
+
+#: .\templates\add_crop.html:75 .\templates\home.html:533
+msgid "/kg"
+msgstr "/kg"
+
+#: .\templates\add_crop.html:83 .\templates\checkout.html:94
+#: .\templates\group_buy_market.html:187
+msgid "Quantity"
+msgstr "Tirada"
+
+#: .\templates\add_crop.html:88 .\templates\buyer_dashboard.html:106
+#: .\templates\dashboard.html:162 .\templates\group_buy_market.html:196
+msgid "kg"
+msgstr "kg"
+
+#: .\templates\add_crop.html:97 .\templates\register.html:174
+msgid "Farm Location"
+msgstr "Goobta Beerta"
+
+#: .\templates\add_crop.html:105
+msgid "List on Market"
+msgstr "Ku dar Suuqa"
+
+#: .\templates\add_input.html:10
+msgid "Add Inventory - Arbor"
+msgstr "Ku dar Keydka - Arbor"
+
+#: .\templates\add_input.html:45
+msgid "Add Inventory"
+msgstr "Ku dar Keydka"
+
+#: .\templates\add_input.html:48 .\templates\checkout.html:45
+#: .\templates\confirm_purchase.html:72 .\templates\create_group.html:89
+#: .\templates\edit_order.html:43 .\templates\join_group.html:45
+#: .\templates\my_orders.html:224 .\templates\post_trip.html:53
+msgid "Cancel"
+msgstr "Jooji"
+
+#: .\templates\add_input.html:71
+msgid "Stock Qty"
+msgstr "Tirada Keydka"
+
+#: .\templates\add_input.html:79
+msgid "Photo (Optional)"
+msgstr "Sawir (Ikhtiyaari)"
+
+#: .\templates\add_input.html:86
+msgid "Add to Store"
+msgstr "Ku dar Bakhaarka"
+
+#: .\templates\bank_transfer.html:9
+msgid "Complete Payment"
+msgstr "Dhamaystir Bixinta Lacagta"
+
+#: .\templates\bank_transfer.html:24
+msgid "Complete Transfer"
+msgstr "Dhamaystir Xawilaadda"
+
+#: .\templates\bank_transfer.html:26
+msgid "Please send"
+msgstr "Fadlan dir"
+
+#: .\templates\bank_transfer.html:26 .\templates\buyer_dashboard.html:106
+#: .\templates\checkout.html:81 .\templates\checkout.html:147
+#: .\templates\confirm_purchase.html:36 .\templates\create_group.html:171
+#: .\templates\dashboard.html:88 .\templates\delivery_dashboard.html:206
+#: .\templates\edit_order.html:27 .\templates\farmer_storefront.html:65
+#: .\templates\group_buy_market.html:296 .\templates\home.html:531
+#: .\templates\input_market.html:219 .\templates\my_orders.html:167
+#: .\templates\order_detail.html:91 .\templates\order_detail.html:100
+#: .\templates\order_detail.html:109 .\templates\order_detail.html:126
+#: .\templates\order_detail.html:133 .\templates\order_detail.html:137
+#: .\templates\order_detail.html:141 .\templates\product_detail.html:131
+#: .\templates\product_detail.html:199 .\templates\supplier_dashboard.html:95
+#: .\templates\supplier_dashboard.html:136 .\templates\telebirr_pay.html:34
+msgid "ETB"
+msgstr "Birr"
+
+#: .\templates\bank_transfer.html:31
+msgid "Transfer to Seller:"
+msgstr "Ku wareeji Iibiyaha:"
+
+#: .\templates\bank_transfer.html:33
+msgid "Bank:"
+msgstr "Bangiga:"
+
+#: .\templates\bank_transfer.html:34
+msgid "CBE (Commercial Bank)"
+msgstr "CBE (Bangiga Ganacsiga)"
+
+#: .\templates\bank_transfer.html:37
+msgid "Account Name:"
+msgstr "Magaca Koontada:"
+
+#: .\templates\bank_transfer.html:42
+msgid "Copy"
+msgstr "Nuqul"
+
+#: .\templates\bank_transfer.html:48
+msgid "Upload Screenshot / Receipt"
+msgstr "Soo geli Sawirka / Rasiidka"
+
+#: .\templates\bank_transfer.html:52
+msgid "I have sent the money"
+msgstr "Waan diray lacagta"
+
+#: .\templates\buyer_dashboard.html:10
+msgid "Fresh Market - Arbor"
+msgstr "Suuqa Cusub - Arbor"
+
+#: .\templates\buyer_dashboard.html:65 .\templates\product_detail.html:9
+msgid "Arbor Market"
+msgstr "Suuqa Arbor"
+
+#: .\templates\buyer_dashboard.html:68
+msgid "Welcome,"
+msgstr "Soo dhowow,"
+
+#: .\templates\buyer_dashboard.html:69 .\templates\dashboard.html:52
+#: .\templates\dedicated_manifest.html:43 .\templates\home.html:271
+#: .\templates\input_market.html:127 .\templates\my_orders.html:87
+msgid "Logout"
+msgstr "Ka bax"
+
+#: .\templates\buyer_dashboard.html:80
+msgid "Fresh Organic Food"
+msgstr "Cunto Cusub oo Dabiici ah"
+
+#: .\templates\buyer_dashboard.html:81
+msgid "Direct from Ethiopia's Best Farmers"
+msgstr "Si toos ah uga timid Beeraleyda ugu fiican Itoobiya"
+
+#: .\templates\buyer_dashboard.html:88
+msgid "Now"
+msgstr "Hadda"
+
+#: .\templates\buyer_dashboard.html:89
+msgid "Available Harvests"
+msgstr "Dalagga la heli karo"
+
+#: .\templates\buyer_dashboard.html:119
+msgid "kg Stock"
+msgstr "kg Keyd"
+
+#: .\templates\buyer_dashboard.html:123 .\templates\product_detail.html:168
+msgid "Buy Now"
+msgstr "Iibso Hadda"
+
+#: .\templates\buyer_dashboard.html:131
+msgid "No crops listed yet. Farmers are planting! 🌱"
+msgstr "Weli ma jiro dalag la diiwaangeliyay. Beeraleydu way beerayaan! 🌱"
+
+#: .\templates\checkout.html:10
+msgid "Checkout - Arbor"
+msgstr "Bixinta Lacagta - Arbor"
+
+#: .\templates\checkout.html:40 .\templates\create_group.html:78
+#: .\templates\group_buy_market.html:74 .\templates\home.html:201
+#: .\templates\home.html:656 .\templates\input_market.html:102
+#: .\templates\input_market.html:291 .\templates\liked_farmers.html:74
+#: .\templates\login.html:72 .\templates\my_orders.html:64
+#: .\templates\select_role.html:92
+msgid "Arbor"
+msgstr "Arbor"
+
+#: .\templates\checkout.html:43
+msgid "Checkout"
+msgstr "Bixinta Lacagta"
+
+#: .\templates\checkout.html:56
+msgid "Review Order"
+msgstr "Dib u eeg Dalabka"
+
+#: .\templates\checkout.html:70 .\templates\product_detail.html:147
+msgid "Sold by"
+msgstr "Waxaa iibiyay"
+
+#: .\templates\checkout.html:80 .\templates\confirm_purchase.html:35
+msgid "Unit Price"
+msgstr "Qiimaha Halkii Xabbo"
+
+#: .\templates\checkout.html:87
+msgid "Order Details"
+msgstr "Faahfaahinta Dalabka"
+
+#: .\templates\checkout.html:99
+msgid "MAX"
+msgstr "Ugu Badnaan"
+
+#: .\templates\checkout.html:106
+msgid "Select Payment Method"
+msgstr "Dooro Habka Lacag Bixinta"
+
+#: .\templates\checkout.html:114
+msgid "Cash on Delivery"
+msgstr "Lacag bixinta marka la keeno"
+
+#: .\templates\checkout.html:125
+msgid "Telebirr / M-Pesa"
+msgstr "Telebirr / M-Pesa"
+
+#: .\templates\checkout.html:136
+msgid "Mobile Banking"
+msgstr "Bangiga Mobaylka"
+
+#: .\templates\checkout.html:146
+msgid "Total to Pay"
+msgstr "Wadarta la bixinayo"
+
+#: .\templates\checkout.html:151 .\templates\confirm_purchase.html:27
+msgid "Confirm Order"
+msgstr "Xaqiiji Dalabka"
+
+#: .\templates\confirm_purchase.html:10
+msgid "Confirm Purchase"
+msgstr "Xaqiiji Iibsiga"
+
+#: .\templates\confirm_purchase.html:28
+msgid "Review details before payment"
+msgstr "Dib u eeg faahfaahinta ka hor bixinta"
+
+#: .\templates\confirm_purchase.html:32
+msgid "Product"
+msgstr "Badeecada"
+
+#: .\templates\confirm_purchase.html:44
+msgid "Quantity Needed"
+msgstr "Tirada Loo Baahan Yahay"
+
+#: .\templates\confirm_purchase.html:53
+msgid "Choose Payment Method"
+msgstr "Dooro Habka Lacag Bixinta"
+
+#: .\templates\confirm_purchase.html:59
+msgid "Mobile Money"
+msgstr "Lacagta Mobaylka"
+
+#: .\templates\confirm_purchase.html:66
+msgid "Pay Cash on Delivery"
+msgstr "Ku bixi Lacag Caddaana markaad hesho"
+
+#: .\templates\create_group.html:9
+msgid "Start Group Buy - Arbor"
+msgstr "Bilow Iibsi Wadareed - Arbor"
+
+#: .\templates\create_group.html:84 .\templates\create_group.html:189
+msgid "Launch Group"
+msgstr "Bilow Kooxda"
+
+#: .\templates\create_group.html:109
+msgid "Start New Group"
+msgstr "Bilow Koox Cusub"
+
+#: .\templates\create_group.html:115
+msgid "Urban Group:"
+msgstr "Kooxda Magaalada:"
+
+#: .\templates\create_group.html:115
+msgid "Fresh Food"
+msgstr "Cunto Cusub"
+
+#: .\templates\create_group.html:117
+msgid "Farmer Co-op:"
+msgstr "Iskaashatada Beeraleyda:"
+
+#: .\templates\create_group.html:117
+msgid "Farm Inputs"
+msgstr "Agabka Beeraha"
+
+#: .\templates\create_group.html:128
+msgid "Group Name"
+msgstr "Magaca Kooxda"
+
+#: .\templates\create_group.html:136
+msgid "Drop-off Location (For Buyers)"
+msgstr "Goobta Dejinta (Ee Iibsadayaasha)"
+
+#: .\templates\create_group.html:138
+msgid "Collection Warehouse (For Farmers)"
+msgstr "Bakhaarka Ururinta (Ee Beeraleyda)"
+
+#: .\templates\create_group.html:151
+msgid "Where will the truck unload the food?"
+msgstr "Xagee gaarigu ku dejinayaa cuntada?"
+
+#: .\templates\create_group.html:153
+msgid "Where will the truck drop the fertilizer?"
+msgstr "Xagee gaarigu ku dejinayaa bacrimiyaha?"
+
+#: .\templates\create_group.html:161
+msgid "Target Goal"
+msgstr "Yoolka La Higsanayo"
+
+#: .\templates\create_group.html:164
+msgid "Units"
+msgstr "Unugyo"
+
+#: .\templates\create_group.html:169
+msgid "Target Price"
+msgstr "Qiimaha La Higsanayo"
+
+#: .\templates\create_group.html:181
+msgid "Deadline Date"
+msgstr "Taariikhda Ugu Dambaysa"
+
+#: .\templates\create_group.html:193
+msgid "Cancel & Return Home"
+msgstr "Jooji & Ku noqo Hoyga"
+
+#: .\templates\create_group.html:202
+msgid "Arbor Marketplace. Connecting communities."
+msgstr "Suuqa Arbor. Isku xidhka bulshooyinka."
+
+#: .\templates\dashboard.html:10
+msgid "Farmer Dashboard - Arbor"
+msgstr "Guddiga Beeraleyda - Arbor"
+
+#: .\templates\dashboard.html:38 .\templates\product_detail.html:72
+msgid "Market"
+msgstr "Suuqa"
+
+#: .\templates\dashboard.html:42
+msgid "My Farm Command"
+msgstr "Xarunta Maamulka Beerta"
+
+#: .\templates\dashboard.html:71
+msgid "Payment Verification Needed"
+msgstr "Xaqiijinta Lacag Bixinta Ayaa Loo Baahan Yahay"
+
+#: .\templates\dashboard.html:72
+msgid "Buyers have sent money via Mobile Banking. Please check receipts."
+msgstr "Iibsadayaashu waxay lacag ku soo direen Bangiga Mobaylka. Fadlan hubi rasiidhada."
+
+#: .\templates\dashboard.html:98
+msgid "View Receipt"
+msgstr "Eeg Rasiidka"
+
+#: .\templates\dashboard.html:107
+msgid "Confirm Receipt"
+msgstr "Xaqiiji Rasiidka"
+
+#: .\templates\dashboard.html:109
+msgid "Report Issue"
+msgstr "Ka Warbixi Arrin"
+
+#: .\templates\dashboard.html:126
+msgid "Your Harvest"
+msgstr "Dalaggaaga"
+
+#: .\templates\dashboard.html:127
+msgid "Manage your active listings and stock."
+msgstr "Maaree liisaskaaga firfircoon iyo keydka."
+
+#: .\templates\dashboard.html:130
+msgid "List New Crop"
+msgstr "Diiwaangeli Dalag Cusub"
+
+#: .\templates\dashboard.html:140
+msgid "Active Inventory"
+msgstr "Keydka Firfircoon"
+
+#: .\templates\dashboard.html:160
+msgid "ETB/kg"
+msgstr "Birr/kg"
+
+#: .\templates\dashboard.html:162
+msgid "Stock:"
+msgstr "Keyd:"
+
+#: .\templates\dashboard.html:164 .\templates\home.html:543
+msgid "Sold Out"
+msgstr "Waa la iibsaday dhamaan"
+
+#: .\templates\dashboard.html:166 .\templates\delivery_dashboard.html:176
+#: .\templates\supplier_dashboard.html:99
+msgid "Active"
+msgstr "Firfircoon"
+
+#: .\templates\dashboard.html:175 .\templates\edit_crop.html:9
+#: .\templates\my_orders.html:221
+msgid "Edit"
+msgstr "Wax ka beddel"
+
+#: .\templates\dashboard.html:179
+msgid "Are you sure you want to delete this crop? This cannot be undone."
+msgstr "Ma hubtaa inaad rabto inaad tirtirto dalaggan? Tan lagama noqon karo."
+
+#: .\templates\dashboard.html:193
+msgid "Your fields are empty."
+msgstr "Beerahaagu waa madhan yihiin."
+
+#: .\templates\dashboard.html:194
+msgid "List a crop to start selling!"
+msgstr "Diiwaangeli dalag si aad u bilowdo iibinta!"
+
+#: .\templates\dashboard.html:195
+msgid "Start Listing"
+msgstr "Bilow Diiwaangelinta"
+
+#: .\templates\dashboard.html:213
+msgid "Need Supplies?"
+msgstr "Ma u baahan tahay Agab?"
+
+#: .\templates\dashboard.html:214
+msgid "Buy Fertilizers, Seeds, and Tools from verified suppliers."
+msgstr "Ka iibso Bacrimiyeyaasha, Abuurka, iyo Qalabka alaab-qeybiyeyaal la hubiyay."
+
+#: .\templates\dashboard.html:216
+msgid "Open Material Store"
+msgstr "Fur Dukaanka Agabka"
+
+#: .\templates\dashboard.html:224
+msgid "Market Trends"
+msgstr "Isbeddellada Suuqa"
+
+#: .\templates\dashboard.html:243
+msgid "No market data available."
+msgstr "Xog suuq oo la heli karo ma jirto."
+
+#: .\templates\dedicated_manifest.html:10
+msgid "Fleet Manifest - Arbor"
+msgstr "Liiska Shixnadda Gaadiidka - Arbor"
+
+#: .\templates\dedicated_manifest.html:32
+msgid "Arbor Fleet"
+msgstr "Gaadiidka Arbor"
+
+#: .\templates\dedicated_manifest.html:33
+msgid "Official Logistics"
+msgstr "Saadka Rasmiga ah"
+
+#: .\templates\dedicated_manifest.html:39
+msgid "Driver ID:"
+msgstr "Aqoonsiga Darawalka:"
+
+#: .\templates\dedicated_manifest.html:55
+msgid "Daily Route"
+msgstr "Jidka Maalinlaha ah"
+
+#: .\templates\dedicated_manifest.html:59
+msgid "Assignments"
+msgstr "Shaqooyinka"
+
+#: .\templates\dedicated_manifest.html:92
+#: .\templates\delivery_dashboard.html:89
+#: .\templates\delivery_dashboard.html:166
+msgid "Order #"
+msgstr "Dalabka #"
+
+#: .\templates\dedicated_manifest.html:92 .\templates\my_orders.html:159
+#: .\templates\product_detail.html:131
+msgid "KG"
+msgstr "KG"
+
+#: .\templates\dedicated_manifest.html:101
+msgid "Pickup From"
+msgstr "Ka soo qaad"
+
+#: .\templates\dedicated_manifest.html:111
+msgid "Deliver To"
+msgstr "Gaarsii"
+
+#: .\templates\dedicated_manifest.html:124 .\templates\order_detail.html:209
+msgid "Confirm Pickup"
+msgstr "Xaqiiji Qaadista"
+
+#: .\templates\dedicated_manifest.html:132
+msgid "Enter Buyer Code"
+msgstr "Geli Koodhka Iibsadaha"
+
+#: .\templates\dedicated_manifest.html:135
+msgid "Verify"
+msgstr "Xaqiiji"
+
+#: .\templates\dedicated_manifest.html:142
+msgid "Completed"
+msgstr "La Dhammaystiray"
+
+#: .\templates\dedicated_manifest.html:157
+msgid "All Clear"
+msgstr "Dhamaan Waa Nadiif"
+
+#: .\templates\dedicated_manifest.html:158
+msgid "Your manifest is empty."
+msgstr "Liiskaaga shixnaddu waa madhan yahay."
+
+#: .\templates\delivery_dashboard.html:11
+msgid "Logistics Dashboard - Arbor"
+msgstr "Guddiga Saadka (Logistics) - Arbor"
+
+#: .\templates\delivery_dashboard.html:37
+msgid "Dispatch"
+msgstr "Dirid"
+
+#: .\templates\delivery_dashboard.html:46
+msgid "SCORE"
+msgstr "DHIBAALAHA"
+
+#: .\templates\delivery_dashboard.html:75
+msgid "Your Manifest"
+msgstr "Liiskaaga Shixnadda"
+
+#: .\templates\delivery_dashboard.html:105
+#: .\templates\delivery_dashboard.html:209
+msgid "View Details"
+msgstr "Eeg Faahfaahinta"
+
+#: .\templates\delivery_dashboard.html:111
+msgid "No active manifest."
+msgstr "Ma jiro liis shixnad oo firfircoon."
+
+#: .\templates\delivery_dashboard.html:126
+msgid "Total"
+msgstr "Wadarta"
+
+#: .\templates\delivery_dashboard.html:130
+msgid "My Jobs"
+msgstr "Shaqooyinkayga"
+
+#: .\templates\delivery_dashboard.html:134
+msgid "Post Trip"
+msgstr "Diiwaangeli Safar"
+
+#: .\templates\delivery_dashboard.html:139
+msgid "Order Feed"
+msgstr "Liiska Dalabyada"
+
+#: .\templates\delivery_dashboard.html:163
+msgid "Assigned to you"
+msgstr "Lagugu qoray"
+
+#: .\templates\delivery_dashboard.html:172
+msgid "Open"
+msgstr "Furan"
+
+#: .\templates\delivery_dashboard.html:180
+msgid "Done"
+msgstr "La qabtay"
+
+#: .\templates\delivery_dashboard.html:184
+msgid "Taken"
+msgstr "La qaatay"
+
+#: .\templates\delivery_dashboard.html:192
+msgid "From"
+msgstr "Ka timid"
+
+#: .\templates\delivery_dashboard.html:199
+msgid "To"
+msgstr "Ku socota"
+
+#: .\templates\delivery_dashboard.html:217
+msgid "No orders found."
+msgstr "Lama helin wax dalab ah."
+
+#: .\templates\delivery_dashboard.html:218
+msgid "Wait for new requests."
+msgstr "Sug codsiyo cusub."
+
+#: .\templates\delivery_pending.html:9
+msgid "Application Received - Arbor"
+msgstr "Codsiga Waa La Helay - Arbor"
+
+#: .\templates\delivery_pending.html:24
+msgid "Application Pending"
+msgstr "Codsiga Waa La Sugayaa"
+
+#: .\templates\delivery_pending.html:27
+msgid "We have received your application."
+msgstr "Waxaan helnay codsigaaga."
+
+#: .\templates\delivery_pending.html:28
+msgid "Please wait for Admin approval."
+msgstr "Fadlan sug oggolaanshaha Maamulka."
+
+#: .\templates\delivery_pending.html:32
+msgid "Status:"
+msgstr "Xaaladda:"
+
+#: .\templates\delivery_pending.html:32
+msgid "In Review..."
+msgstr "Dib u eegis ku socota..."
+
+#: .\templates\delivery_pending.html:34
+msgid ""
+"An admin must verify your account before you can access the Delivery "
+"Dashboard."
+msgstr ""
+"Maamule waa inuu xaqiijiyaa koontadaada ka hor inta aadan geli karin Guddiga "
+"Gaarsiinta."
+
+#: .\templates\delivery_pending.html:40
+msgid "Check Status (Login)"
+msgstr "Hubi Xaaladda (Soo gal)"
+
+#: .\templates\delivery_pending.html:44
+msgid "Back to Home Page"
+msgstr "Ku noqo Bogga Hore"
+
+#: .\templates\edit_crop.html:20
+msgid "Edit Product"
+msgstr "Wax ka beddel Badeecada"
+
+#: .\templates\edit_crop.html:28
+msgid "Crop Name"
+msgstr "Magaca Dalagga"
+
+#: .\templates\edit_crop.html:38
+msgid "Stock (kg)"
+msgstr "Keyd (kg)"
+
+#: .\templates\edit_crop.html:44
+msgid "Update Photo"
+msgstr "Cusbooneysii Sawirka"
+
+#: .\templates\edit_crop.html:49
+msgid "Save Changes"
+msgstr "Keydi Isbeddelada"
+
+#: .\templates\edit_order.html:9
+msgid "Edit Order #"
+msgstr "Wax ka beddel Dalabka #"
+
+#: .\templates\edit_order.html:21
+msgid "Edit Order"
+msgstr "Wax ka beddel Dalabka"
+
+#: .\templates\edit_order.html:27
+msgid "Current Total:"
+msgstr "Wadarta Hadda:"
+
+#: .\templates\edit_order.html:34
+msgid "New Quantity"
+msgstr "Tirada Cusub"
+
+#: .\templates\edit_order.html:40
+msgid "Update Order"
+msgstr "Cusbooneysii Dalabka"
+
+#: .\templates\farmer_storefront.html:10
+msgid "'s Farm - Arbor"
+msgstr "'s Beerta - Arbor"
+
+#: .\templates\farmer_storefront.html:23
+msgid "Back to Market"
+msgstr "Ku noqo Suuqa"
+
+#: .\templates\farmer_storefront.html:25
+msgid "Farm Profile"
+msgstr "Profile-ka Beerta"
+
+#: .\templates\farmer_storefront.html:45
+msgid "Active Listings"
+msgstr "Liiska Firfircoon"
+
+#: .\templates\farmer_storefront.html:51
+msgid "Full Harvest List"
+msgstr "Liiska Dalagga oo Dhan"
+
+#: .\templates\farmer_storefront.html:72
+msgid "kg left"
+msgstr "kg haray"
+
+#: .\templates\farmer_storefront.html:73 .\templates\home.html:541
+#: .\templates\input_market.html:230
+msgid "In Stock"
+msgstr "La Hayo"
+
+#: .\templates\farmer_storefront.html:81
+msgid "This farmer has no other active listings."
+msgstr "Beeraleygan ma laha liis kale oo firfircoon."
+
+#: .\templates\group_buy_market.html:10
+msgid "Community Hub - Arbor"
+msgstr "Xarunta Bulshada - Arbor"
+
+#: .\templates\group_buy_market.html:65 .\templates\liked_farmers.html:65
+msgid "My Farm"
+msgstr "Beertayda"
+
+#: .\templates\group_buy_market.html:66 .\templates\liked_farmers.html:66
+msgid "Command Center"
+msgstr "Xarunta Amarka"
+
+#: .\templates\group_buy_market.html:81
+msgid "Community Hub"
+msgstr "Xarunta Bulshada"
+
+#: .\templates\group_buy_market.html:89
+msgid "Sell"
+msgstr "Iibi"
+
+#: .\templates\group_buy_market.html:93 .\templates\home.html:246
+#: .\templates\my_orders.html:78 .\templates\order_detail.html:24
+msgid "Dashboard"
+msgstr "Guddiga"
+
+#: .\templates\group_buy_market.html:99 .\templates\liked_farmers.html:88
+msgid "Groups"
+msgstr "Kooxaha"
+
+#: .\templates\group_buy_market.html:104 .\templates\my_orders.html:81
+msgid "Orders"
+msgstr "Dalabyada"
+
+#: .\templates\group_buy_market.html:111 .\templates\home.html:265
+#: .\templates\liked_farmers.html:98 .\templates\supplier_dashboard.html:45
+msgid "Profile"
+msgstr "Profile"
+
+#: .\templates\group_buy_market.html:115 .\templates\liked_farmers.html:102
+#: .\templates\supplier_dashboard.html:48
+msgid "Sign Out"
+msgstr "Ka bax"
+
+#: .\templates\group_buy_market.html:140
+msgid "Group Buying Center"
+msgstr "Xarunta Iibsiga Wadareed"
+
+#: .\templates\group_buy_market.html:141
+msgid "Join forces with neighbors. Buy together. Save together."
+msgstr "Midooba deriska. Wada iibsada. Wada kaydsada."
+
+#: .\templates\group_buy_market.html:151
+msgid "Groups You Manage"
+msgstr "Kooxaha Aad Maamusho"
+
+#: .\templates\group_buy_market.html:164
+msgid "Delivery:"
+msgstr "Gaarsiinta:"
+
+#: .\templates\group_buy_market.html:180 .\templates\my_groups.html:54
+msgid "Member List"
+msgstr "Liiska Xubnaha"
+
+#: .\templates\group_buy_market.html:185 .\templates\register_delivery.html:177
+msgid "Name"
+msgstr "Magaca"
+
+#: .\templates\group_buy_market.html:186 .\templates\my_groups.html:62
+msgid "Phone"
+msgstr "Telefoon"
+
+#: .\templates\group_buy_market.html:188 .\templates\my_groups.html:64
+msgid "Action"
+msgstr "Ficil"
+
+#: .\templates\group_buy_market.html:199
+msgid "Kick this member?"
+msgstr "Ma saartaa xubinkan?"
+
+#: .\templates\group_buy_market.html:200
+msgid "Kick"
+msgstr "Saar"
+
+#: .\templates\group_buy_market.html:203
+msgid "Locked"
+msgstr "Xiran"
+
+#: .\templates\group_buy_market.html:208
+msgid "No members yet."
+msgstr "Weli xubno ma jiraan."
+
+#: .\templates\group_buy_market.html:218
+msgid "Total Order:"
+msgstr "Wadarta Dalabka:"
+
+#: .\templates\group_buy_market.html:220 .\templates\my_groups.html:98
+msgid "Goal"
+msgstr "Yoolka"
+
+#: .\templates\group_buy_market.html:225
+msgid "Finalize order?"
+msgstr "Ma dhamaystirtaa dalabka?"
+
+#: .\templates\group_buy_market.html:226 .\templates\my_groups.html:104
+msgid "Place Final Order"
+msgstr "Gudbi Dalabka Kama Dambaysta ah"
+
+#: .\templates\group_buy_market.html:229 .\templates\my_groups.html:108
+msgid "Waiting for members..."
+msgstr "Sugaya xubnaha..."
+
+#: .\templates\group_buy_market.html:233
+msgid "Order Placed"
+msgstr "Dalabka waa la gudbiyay"
+
+#: .\templates\group_buy_market.html:248
+msgid "Available Groups to Join"
+msgstr "Kooxaha la heli karo in lagu biiro"
+
+#: .\templates\group_buy_market.html:259
+msgid "Input Co-op"
+msgstr "Iskaashatada Agabka"
+
+#: .\templates\group_buy_market.html:259
+msgid "Urban Group"
+msgstr "Kooxda Magaalada"
+
+#: .\templates\group_buy_market.html:266
+msgid "Leader:"
+msgstr "Hogaamiyaha:"
+
+#: .\templates\group_buy_market.html:274
+msgid "Pickup Location"
+msgstr "Goobta Laga Qaadayo"
+
+#: .\templates\group_buy_market.html:282
+msgid "committed"
+msgstr "loo ballan qaaday"
+
+#: .\templates\group_buy_market.html:283 .\templates\join_group.html:23
+msgid "Target:"
+msgstr "Yoolka:"
+
+#: .\templates\group_buy_market.html:293
+msgid "Group Price"
+msgstr "Qiimaha Kooxda"
+
+#: .\templates\group_buy_market.html:300 .\templates\join_group.html:21
+msgid "Join"
+msgstr "Ku biir"
+
+#: .\templates\group_buy_market.html:308
+msgid "No active groups found."
+msgstr "Lama helin kooxo firfircoon."
+
+#: .\templates\group_buy_market.html:309
+msgid "Be the first to start a community group!"
+msgstr "Noqo qofka ugu horreeya ee bilaaba koox bulsho!"
+
+#: .\templates\group_buy_market.html:324 .\templates\liked_farmers.html:213
+msgid "Official Payment Partners"
+msgstr "Wada-hawlgalayaasha Lacag Bixinta ee Rasmiga ah"
+
+#: .\templates\group_buy_market.html:325 .\templates\liked_farmers.html:214
+msgid "Secure transactions via Ethiopia's trusted financial institutions."
+msgstr "Xawilaado ammaan ah iyadoo loo marayo hay'adaha maaliyadeed ee lagu kalsoon yahay ee Itoobiya."
+
+#: .\templates\group_buy_market.html:362 .\templates\liked_farmers.html:231
+msgid "Arbor Marketplace. All Rights Reserved."
+msgstr "Suuqa Arbor. Xuquuqda oo dhan way dhowran tahay."
+
+#: .\templates\home.html:20
+msgid "Arbor - The Grand Market | Farm Direct"
+msgstr "Arbor - Suuqa Weyn | Si Toos ah Beerta"
+
+#: .\templates\home.html:21
+msgid ""
+"Ethiopia's premier farm-to-table marketplace. Buy fresh, sell direct, and "
+"grow together."
+msgstr ""
+"Suuqa ugu horreeya ee Itoobiya ee beerta-ilaa-miiska. Iibso wax cusub, si toos ah u iibi, oo "
+"wada kora."
+
+#: .\templates\home.html:160
+msgid "Cultivating..."
+msgstr "Beerashada..."
+
+#: .\templates\home.html:214
+msgid "Type to pop up products..."
+msgstr "Qor si aad u soo saarto badeecadaha..."
+
+#: .\templates\home.html:250
+msgid "Supplier Dashboard"
+msgstr "Guddiga Alaab-qeybiyaha"
+
+#: .\templates\home.html:254
+msgid "Delivery Dashboard"
+msgstr "Guddiga Gaarsiinta"
+
+#: .\templates\home.html:258
+msgid "Cart"
+msgstr "Gaariga Iibsiga"
+
+#: .\templates\home.html:277 .\templates\input_market.html:129
+#: .\templates\select_role.html:97 .\templates\select_role.html:124
+msgid "Login"
+msgstr "Soo gal"
+
+#: .\templates\home.html:280 .\templates\input_market.html:130
+msgid "Join Now"
+msgstr "Ku biir Hadda"
+
+#: .\templates\home.html:292
+msgid "Search..."
+msgstr "Raadi..."
+
+#: .\templates\home.html:314
+msgid "Live Market • Addis Ababa"
+msgstr "Suuqa Tooska ah • Addis Ababa"
+
+#: .\templates\home.html:319
+msgid "The Heart of"
+msgstr "Wadnaha"
+
+#: .\templates\home.html:320
+msgid "Ethiopia's Harvest"
+msgstr "Goynta Itoobiya"
+
+#: .\templates\home.html:325
+msgid ""
+"Direct from the soil to your table. We connect you with local farmers for "
+"the freshest produce at fair, transparent prices."
+msgstr ""
+"Si toos ah uga timid ciidda ilaa miiskaaga. Waxaan kugu xidhnaynaa beeraleyda maxalliga ah "
+"si aad u hesho dalagga ugu cusub qiimo macquul ah oo daah-furan."
+
+#: .\templates\home.html:334
+msgid "List Harvest"
+msgstr "Diiwaangeli Dalagga"
+
+#: .\templates\home.html:337
+msgid "Buy Inputs"
+msgstr "Iibso Agabka Beeraha"
+
+#: .\templates\home.html:343
+msgid "List Material"
+msgstr "Diiwaangeli Agab"
+
+#: .\templates\home.html:346
+msgid "View Input Market"
+msgstr "Eeg Suuqa Agabka"
+
+#: .\templates\home.html:352
+msgid "View Routes"
+msgstr "Eeg Jidadka"
+
+#: .\templates\home.html:355
+msgid "Active Orders"
+msgstr "Dalabyada Firfircoon"
+
+#: .\templates\home.html:361 .\templates\my_orders.html:251
+#: .\templates\register_buyer.html:192
+msgid "Start Shopping"
+msgstr "Bilow Iibsiga"
+
+#: .\templates\home.html:364
+msgid "Join Group Buy"
+msgstr "Ku biir Iibsiga Wadareed"
+
+#: .\templates\home.html:374
+msgid "Select Your Language / ቋንቋ ይምረጡ"
+msgstr "Dooro Luuqaddaada / ቋንቋ ይምረጡ"
+
+#: .\templates\home.html:415
+msgid "Filtering by:"
+msgstr "Shaandheynta:"
+
+#: .\templates\home.html:417
+msgid "Browse by Category"
+msgstr "Ka raadi Qeybta"
+
+#: .\templates\home.html:454
+msgid "All"
+msgstr "Dhamaan"
+
+#: .\templates\home.html:523
+msgid "Fresh Harvest"
+msgstr "Goyn Cusub"
+
+#: .\templates\home.html:563 .\templates\input_market.html:241
+msgid "Buy"
+msgstr "Iibso"
+
+#: .\templates\home.html:572 .\templates\input_market.html:244
+msgid "Group"
+msgstr "Koox"
+
+#: .\templates\home.html:582
+msgid "Marketplace Empty"
+msgstr "Suuqa Waa Madhan Yahay"
+
+#: .\templates\home.html:583
+msgid "Check back soon!"
+msgstr "Dib u soo eeg dhawaan!"
+
+#: .\templates\home.html:590
+msgid "Load More Harvests"
+msgstr "Soo rar Dalagyo Dheeraad ah"
+
+#: .\templates\home.html:602
+msgid "Farm to Table in 3 Steps"
+msgstr "Beerta ilaa Miiska 3 Tallaabo"
+
+#: .\templates\home.html:603
+msgid "Simple, Transparent, and Fast."
+msgstr "Fudud, Daah-furan, oo Degdeg ah."
+
+#: .\templates\home.html:609
+msgid "Choose Fresh"
+msgstr "Dooro Wax Cusub"
+
+#: .\templates\home.html:610
+msgid ""
+"Browse hundreds of daily listings directly from verified Ethiopian farmers."
+msgstr ""
+"Ka eeg boqolaal liis maalinle ah oo toos uga yimid beeraleyda Itoobiya ee la hubiyay."
+
+#: .\templates\home.html:615
+msgid "Group & Save"
+msgstr "Koox & Kaydso"
+
+#: .\templates\home.html:616
+msgid ""
+"Buy individually or join a Group Buy to unlock wholesale prices with "
+"neighbors."
+msgstr ""
+"Si gaar ah u iibso ama ku biir Iibsiga Wadareed si aad u hesho qiimaha jumlo adiga iyo "
+"deriska."
+
+#: .\templates\home.html:621
+msgid "Fast Delivery"
+msgstr "Gaarsiin Degdeg ah"
+
+#: .\templates\home.html:622
+msgid "We collect from the farm and deliver to your doorstep within 24 hours."
+msgstr "Waxaan ka soo ururinaa beerta oo aan kuu keennaa albaabkaaga 24 saacadood gudahood."
+
+#: .\templates\home.html:638 .\templates\input_market.html:272
+msgid "Join the Harvest"
+msgstr "Ku biir Goynta"
+
+#: .\templates\home.html:639 .\templates\input_market.html:273
+msgid ""
+"Get weekly market price updates, seasonal alerts, and exclusive group-buying "
+"deals delivered to your inbox."
+msgstr ""
+"Hel wararka cusub ee qiimaha suuqa toddobaadlaha ah, digniinaha xilliyeed, iyo "
+"heshiisyada gaarka ah ee iibsiga kooxeed ee laguugu soo diro sanduuqaaga."
+
+#: .\templates\home.html:642 .\templates\input_market.html:276
+msgid "your@email.com"
+msgstr "emailkaaga@email.com"
+
+#: .\templates\home.html:644 .\templates\input_market.html:278
+msgid "Subscribe"
+msgstr "Is-diiwaangeli"
+
+#: .\templates\home.html:657 .\templates\input_market.html:292
+#: .\templates\my_orders.html:65
+msgid "Grand Market"
+msgstr "Suuqa Weyn"
+
+#: .\templates\home.html:660
+msgid "Empowering Ethiopia's farmers through digital sovereignty."
+msgstr "Awood siinta beeraleyda Itoobiya iyada oo loo marayo madax-bannaanida dhijitaalka ah."
+
+#: .\templates\home.html:668 .\templates\input_market.html:307
+msgid "Marketplace"
+msgstr "Suuqa"
+
+#: .\templates\home.html:670 .\templates\input_market.html:309
+msgid "All Products"
+msgstr "Dhamaan Badeecadaha"
+
+#: .\templates\home.html:671 .\templates\input_market.html:310
+msgid "Fresh Vegetables"
+msgstr "Khudaar Cusub"
+
+#: .\templates\home.html:675 .\templates\input_market.html:317
+msgid "Support"
+msgstr "Caawimaad"
+
+#: .\templates\home.html:677 .\templates\input_market.html:319
+msgid "Help Center"
+msgstr "Xarunta Caawinta"
+
+#: .\templates\home.html:678 .\templates\input_market.html:320
+msgid "Track Order"
+msgstr "Raadraac Dalabka"
+
+#: .\templates\home.html:682 .\templates\input_market.html:326
+msgid "Legal"
+msgstr "Sharci"
+
+#: .\templates\home.html:684 .\templates\input_market.html:328
+msgid "Privacy Policy"
+msgstr "Siyaasadda Asturnaanta"
+
+#: .\templates\home.html:685 .\templates\input_market.html:329
+msgid "Terms of Service"
+msgstr "Shuruudaha Adeegga"
+
+#: .\templates\home.html:691 .\templates\input_market.html:337
+msgid "All rights reserved."
+msgstr "Xuquuqda oo dhan way dhowran tahay."
+
+#: .\templates\input_market.html:19
+msgid "Arbor - Input Supplies | Farm Materials"
+msgstr "Arbor - Agabka Beeraha | Qalabka Beeraha"
+
+#: .\templates\input_market.html:82
+msgid "Loading Supplies..."
+msgstr "Soo raraya Agabka..."
+
+#: .\templates\input_market.html:112
+msgid "Search fertilizers, seeds, tools..."
+msgstr "Raadi bacrimiyeyaasha, abuurka, qalabka..."
+
+#: .\templates\input_market.html:139
+msgid "Search inputs..."
+msgstr "Raadi agabka..."
+
+#: .\templates\input_market.html:155
+msgid "Certified Inputs"
+msgstr "Agab la Hubiyay"
+
+#: .\templates\input_market.html:160
+msgid "Fuel Your"
+msgstr "Kobci"
+
+#: .\templates\input_market.html:161
+msgid "Farm's Growth"
+msgstr "Koritaanka Beertaada"
+
+#: .\templates\input_market.html:166
+msgid ""
+"Premium seeds, fertilizers, and machinery from verified suppliers. Delivered "
+"directly to your cooperative."
+msgstr ""
+"Abuur tayo sare leh, bacrimiyeyaal, iyo mashiinno ka yimid alaab-qeybiyeyaal la hubiyay. "
+"Si toos ah loogu keenay iskaashatadaada."
+
+#: .\templates\input_market.html:173
+msgid "List New Material"
+msgstr "Diiwaangeli Agab Cusub"
+
+#: .\templates\input_market.html:185
+msgid "Available Supplies"
+msgstr "Agabka La Heli Karo"
+
+#: .\templates\input_market.html:206 .\templates\select_role.html:187
+msgid "Supplier"
+msgstr "Alaab-qeybiye"
+
+#: .\templates\input_market.html:214
+msgid "General"
+msgstr "Guud"
+
+#: .\templates\input_market.html:221
+msgid "/unit"
+msgstr "/xabbo"
+
+#: .\templates\input_market.html:224
+msgid "left"
+msgstr "haray"
+
+#: .\templates\input_market.html:232
+msgid "Restocking"
+msgstr "Dib u buuxinta keydka"
+
+#: .\templates\input_market.html:251
+msgid "No Supplies Found"
+msgstr "Lama Helin Wax Agab Ah"
+
+#: .\templates\input_market.html:252
+msgid "Try searching for a different item."
+msgstr "Isku day inaad raadiso shay kale."
+
+#: .\templates\input_market.html:296
+msgid ""
+"Empowering Ethiopia's farmers through digital sovereignty. Direct farm-to-"
+"table connections, fair prices, and community-driven commerce."
+msgstr ""
+"Awood siinta beeraleyda Itoobiya iyada oo loo marayo madax-bannaanida dhijitaalka ah. "
+"Xidhiidh toos ah oo beerta-ilaa-miiska, qiimo macquul ah, iyo ganacsi bulshadu waddo."
+
+#: .\templates\input_market.html:311
+msgid "Fruits & Berries"
+msgstr "Miraha & Berry-ga"
+
+#: .\templates\input_market.html:312
+msgid "Bulk Grains"
+msgstr "Badarka Jumlo"
+
+#: .\templates\input_market.html:321
+msgid "Become a Farmer"
+msgstr "Noqo Beeraley"
+
+#: .\templates\input_market.html:338
+msgid "Made with 💚 for Ethiopia."
+msgstr "Waxaa lagu sameeyay 💚 Itoobiya."
+
+#: .\templates\join_group.html:9
+msgid "Join Group - Arbor"
+msgstr "Ku biir Kooxda - Arbor"
+
+#: .\templates\join_group.html:22
+msgid "ETB / unit"
+msgstr "Birr / xabbo"
+
+#: .\templates\join_group.html:23 .\templates\my_groups.html:72
+#: .\templates\supplier_dashboard.html:96
+msgid "units"
+msgstr "xabbo"
+
+#: .\templates\join_group.html:29
+msgid "collected so far"
+msgstr "la ururiyay ilaa hadda"
+
+#: .\templates\join_group.html:36
+msgid "How much do you want?"
+msgstr "Imisa ayaad rabtaa?"
+
+#: .\templates\join_group.html:42
+msgid "Commit to Buy"
+msgstr "Ballan qaad Iibsiga"
+
+#: .\templates\liked_farmers.html:10
+msgid "My Favorite Farmers - Arbor"
+msgstr "Beeraleyda aan Jeclahay - Arbor"
+
+#: .\templates\liked_farmers.html:81
+msgid "Trusted Growers"
+msgstr "Beeraleyda La Aaminsan Yahay"
+
+#: .\templates\liked_farmers.html:93
+msgid "Likes"
+msgstr "Jeceyl"
+
+#: .\templates\liked_farmers.html:126
+msgid "Your Trusted Growers"
+msgstr "Beeraleydaada La Aaminsan Yahay"
+
+#: .\templates\liked_farmers.html:127
+msgid "Support the hands that feed you."
+msgstr "Taageer gacmaha ku quudiya."
+
+#: .\templates\liked_farmers.html:161
+msgid "Currently Growing"
+msgstr "Hadda Beeraya"
+
+#: .\templates\liked_farmers.html:170
+msgid "No crops listed currently."
+msgstr "Ma jiro dalag hadda la diiwaangeliyay."
+
+#: .\templates\liked_farmers.html:178
+msgid "Unfollow"
+msgstr "Ha raacin"
+
+#: .\templates\liked_farmers.html:183
+msgid "View Shop"
+msgstr "Eeg Dukaanka"
+
+#: .\templates\liked_farmers.html:187
+msgid "Empty Shop"
+msgstr "Dukaan Madhan"
+
+#: .\templates\liked_farmers.html:196
+msgid "No favorites yet"
+msgstr "Weli ma jiraan kuwa la jecel yahay"
+
+#: .\templates\liked_farmers.html:197
+msgid "Follow farmers to see their latest harvest here."
+msgstr "Raac beeraleyda si aad u aragto dalaggoodii ugu dambeeyay halkan."
+
+#: .\templates\liked_farmers.html:199
+msgid "Browse the Market"
+msgstr "Ka dhex raadi Suuqa"
+
+#: .\templates\login.html:10
+msgid "Login | Arbor"
+msgstr "Soo gal | Arbor"
+
+#: .\templates\login.html:105
+msgid "Welcome Back"
+msgstr "Soo Dhowow Mar Kale"
+
+#: .\templates\login.html:106
+msgid "Enter your credentials to access your account."
+msgstr "Geli aqoonsigaaga si aad u gasho koontadaada."
+
+#: .\templates\login.html:131 .\templates\register.html:164
+#: .\templates\register_buyer.html:151 .\templates\register_delivery.html:189
+msgid "Phone Number"
+msgstr "Lambarka Telefoonka"
+
+#: .\templates\login.html:141
+msgid "4-Digit PIN"
+msgstr "PIN 4-God ah"
+
+#: .\templates\login.html:151
+msgid "Sign In"
+msgstr "Soo Gal"
+
+#: .\templates\login.html:159
+msgid "Don't have an account?"
+msgstr "Miyaadan lahayn koonto?"
+
+#: .\templates\login.html:161
+msgid "Create New Account"
+msgstr "Sameyso Koonto Cusub"
+
+#: .\templates\login.html:171 .\templates\my_orders.html:272
+#: .\templates\product_detail.html:214 .\templates\select_role.html:220
+msgid "Arbor Marketplace"
+msgstr "Suuqa Arbor"
+
+#: .\templates\my_groups.html:9
+msgid "Manage My Groups"
+msgstr "Maaree Kooxahayga"
+
+#: .\templates\my_groups.html:21 .\templates\profile.html:19
+msgid "Home"
+msgstr "Hoyga"
+
+#: .\templates\my_groups.html:22
+msgid "My Managed Groups"
+msgstr "Kooxaha aan Maamulo"
+
+#: .\templates\my_groups.html:37
+msgid "Deliver to:"
+msgstr "Gaarsii:"
+
+#: .\templates\my_groups.html:41
+msgid "Current Status"
+msgstr "Xaaladda Hadda"
+
+#: .\templates\my_groups.html:61
+msgid "Member Name"
+msgstr "Magaca Xubinka"
+
+#: .\templates\my_groups.html:63
+msgid "Committed Qty"
+msgstr "Tirada La Ballanqaaday"
+
+#: .\templates\my_groups.html:75
+msgid "Kick this member out?"
+msgstr "Ma saartaa xubinkan?"
+
+#: .\templates\my_groups.html:76
+msgid "Remove"
+msgstr "Ka saar"
+
+#: .\templates\my_groups.html:85
+msgid "No members have joined yet."
+msgstr "Weli xubno ma ku soo biirin."
+
+#: .\templates\my_groups.html:96
+msgid "Total Quantity:"
+msgstr "Wadarta Tirada:"
+
+#: .\templates\my_groups.html:103
+msgid "This will finalize the group and send the order to delivery. Proceed?"
+msgstr "Tani waxay dhamaystiri doontaa kooxda waxayna u diri doontaa dalabka gaarsiinta. Ma sii wadaa?"
+
+#: .\templates\my_groups.html:113
+msgid "Sent to Delivery"
+msgstr "Loo diray Gaarsiinta"
+
+#: .\templates\my_groups.html:122
+msgid "You haven't created any groups yet."
+msgstr "Weli ma aadan samaynin wax kooxo ah."
+
+#: .\templates\my_orders.html:9
+msgid "My Orders | Arbor Market"
+msgstr "Dalabyadayda | Suuqa Arbor"
+
+#: .\templates\my_orders.html:72
+msgid "My Orders"
+msgstr "Dalabyadayda"
+
+#: .\templates\my_orders.html:80 .\templates\product_detail.html:171
+msgid "Group Buy"
+msgstr "Iibsiga Wadareed"
+
+#: .\templates\my_orders.html:112
+msgid "Order History"
+msgstr "Taariikhda Dalabka"
+
+#: .\templates\my_orders.html:113
+msgid "Track your farm-fresh deliveries in real-time."
+msgstr "Raadraac gaarsiintaada cusub ee beerta waqtiga dhabta ah."
+
+#: .\templates\my_orders.html:120
+#, python-format
+msgid "%(count)s Active Order"
+msgid_plural "%(count)s Active Orders"
+msgstr[0] "%(count)s Dalab Firfircoon"
+msgstr[1] "%(count)s Dalabyo Firfircoon"
+
+#: .\templates\my_orders.html:137
+msgid "Pending"
+msgstr "La sugayo"
+
+#: .\templates\my_orders.html:139
+msgid "Assigned"
+msgstr "La qoray"
+
+#: .\templates\my_orders.html:141
+msgid "On Way"
+msgstr "Jidka ku soo jira"
+
+#: .\templates\my_orders.html:143
+msgid "Delivered"
+msgstr "La gaarsiiyay"
+
+#: .\templates\my_orders.html:166
+msgid "Total Cost"
+msgstr "Wadarta Kharashka"
+
+#: .\templates\my_orders.html:170
+msgid "Placed On"
+msgstr "La sameeyay"
+
+#: .\templates\my_orders.html:181
+msgid "Delivery To"
+msgstr "Gaarsiinta Ku socota"
+
+#: .\templates\my_orders.html:195
+msgid "Driver"
+msgstr "Darawal"
+
+#: .\templates\my_orders.html:208
+msgid "Secure Delivery PIN"
+msgstr "PIN-ka Gaarsiinta Ammaan"
+
+#: .\templates\my_orders.html:212
+#, python-format
+msgid "Give this code to %(name)s"
+msgstr "Sii koodhkan %(name)s"
+
+#: .\templates\my_orders.html:223
+msgid "Cancel this order?"
+msgstr "Jooji dalabkan?"
+
+#: .\templates\my_orders.html:248
+msgid "No active orders"
+msgstr "Ma jiraan dalabyo firfircoon"
+
+#: .\templates\my_orders.html:249
+msgid ""
+"Fresh produce is waiting. Start exploring the market to fill your basket."
+msgstr ""
+"Badeecado cusub ayaa ku sugaya. Bilow sahaminta suuqa si aad u buuxiso dambiishaada."
+
+#: .\templates\my_orders.html:263
+msgid "Trusted Payments"
+msgstr "Lacag Bixin La Aaminsan Yahay"
+
+#: .\templates\my_orders.html:264
+msgid "Secured by Ethiopia's financial network."
+msgstr "Waxaa ilaaliya shabakadda maaliyadeed ee Itoobiya."
+
+#: .\templates\order_detail.html:9
+#, python-format
+msgid "Manifest #%(id)s - Arbor"
+msgstr "Liiska Shixnadda #%(id)s - Arbor"
+
+#: .\templates\order_detail.html:26
+#, python-format
+msgid "Manifest #%(id)s"
+msgstr "Liiska Shixnadda #%(id)s"
+
+#: .\templates\order_detail.html:54
+msgid "Ordered On"
+msgstr "La dalbaday"
+
+#: .\templates\order_detail.html:67 .\templates\supplier_dashboard.html:77
+msgid "Status"
+msgstr "Xaaladda"
+
+#: .\templates\order_detail.html:85
+msgid "CASH HANDLING INSTRUCTIONS"
+msgstr "TILMAAMAHA QABASHADA LACAGTA CAD"
+
+#: .\templates\order_detail.html:90
+msgid "Step 1: Collect from Buyer"
+msgstr "Tallaabada 1: Ka qaad Iibsadaha"
+
+#: .\templates\order_detail.html:92
+msgid "Total Order Value"
+msgstr "Wadarta Qiimaha Dalabka"
+
+#: .\templates\order_detail.html:99
+msgid "Step 2: Pay to Seller"
+msgstr "Tallaabada 2: Sii Iibiyaha"
+
+#: .\templates\order_detail.html:101
+msgid "Hand this cash to Farmer"
+msgstr "Gacanta u geli lacagtan Beeraleyda"
+
+#: .\templates\order_detail.html:108
+msgid "Step 3: Platform Fee"
+msgstr "Tallaabada 3: Kharashka Madal"
+
+#: .\templates\order_detail.html:110
+msgid "Keep for Arbor Office"
+msgstr "U hay Xafiiska Arbor"
+
+#: .\templates\order_detail.html:115
+msgid ""
+"⚠️ IMPORTANT: Do not give the full amount to the seller. Only give the 'Pay "
+"to Seller' amount."
+msgstr ""
+"⚠️ MUHIIM: Ha siin iibiyaha wadarta buuxda. Kaliya sii lacagta 'Sii "
+"Iibiyaha'."
+
+#: .\templates\order_detail.html:123
+msgid "Cargo Details"
+msgstr "Faahfaahinta Shixnadda"
+
+#: .\templates\order_detail.html:124
+msgid "Item:"
+msgstr "Shayga:"
+
+#: .\templates\order_detail.html:125
+msgid "Quantity:"
+msgstr "Tirada:"
+
+#: .\templates\order_detail.html:125
+msgid "unit(s)"
+msgstr "xabbo"
+
+#: .\templates\order_detail.html:126
+msgid "Value:"
+msgstr "Qiimaha:"
+
+#: .\templates\order_detail.html:130
+msgid "Payout Details"
+msgstr "Faahfaahinta Bixinta"
+
+#: .\templates\order_detail.html:132
+msgid "Total Paid:"
+msgstr "Wadarta La Bixiyay:"
+
+#: .\templates\order_detail.html:136
+#, python-format
+msgid "Platform Fee (5%%):"
+msgstr "Kharashka Madal (5%%):"
+
+#: .\templates\order_detail.html:140
+msgid "Your Earnings:"
+msgstr "Dakhligaaga:"
+
+#: .\templates\order_detail.html:148
+msgid "Payment & Notes"
+msgstr "Lacag Bixinta & Xusuus-qor"
+
+#: .\templates\order_detail.html:149
+msgid "Method:"
+msgstr "Habka:"
+
+#: .\templates\order_detail.html:150
+msgid "Note:"
+msgstr "Xusuus:"
+
+#: .\templates\order_detail.html:150
+msgid "Handle with care."
+msgstr "Si taxaddar leh u qabo."
+
+#: .\templates\order_detail.html:164
+msgid "Origin (Seller)"
+msgstr "Asalka (Iibiye)"
+
+#: .\templates\order_detail.html:184
+msgid "Transport"
+msgstr "Gaadiidka"
+
+#: .\templates\order_detail.html:216
+msgid "Enter Buyer PIN"
+msgstr "Geli PIN-ka Iibsadaha"
+
+#: .\templates\order_detail.html:234
+msgid "Verify & Complete"
+msgstr "Xaqiiji & Dhamaystir"
+
+#: .\templates\order_detail.html:237
+msgid "Ask Buyer for 4-digit code"
+msgstr "Weydiiso Iibsadaha koodh 4-god ah"
+
+#: .\templates\order_detail.html:242
+msgid "Job Complete"
+msgstr "Shaqada Waa La Dhammeeyay"
+
+#: .\templates\order_detail.html:251
+msgid "No Driver"
+msgstr "Darawal Ma Jiro"
+
+#: .\templates\order_detail.html:252
+msgid "Waiting for assignment..."
+msgstr "Sugaya qorista..."
+
+#: .\templates\order_detail.html:256
+msgid "Assign to Me"
+msgstr "Ii qor"
+
+#: .\templates\order_detail.html:258
+msgid "Auto-fill my details"
+msgstr "Si otomaatig ah u buuxi faahfaahintayda"
+
+#: .\templates\order_detail.html:265
+msgid "Destination (Buyer)"
+msgstr "Goobta loo socdo (Iibsade)"
+
+#: .\templates\post_trip.html:8
+msgid "Post a Trip - Arbor CDN"
+msgstr "Diiwaangeli Safar - Arbor CDN"
+
+#: .\templates\post_trip.html:20
+msgid "Post a Trip"
+msgstr "Diiwaangeli Safar"
+
+#: .\templates\post_trip.html:21
+msgid "Tell us where you are going to get matched."
+msgstr "Noo sheeg halka aad u socoto si laguu waafajiyo."
+
+#: .\templates\post_trip.html:29
+msgid "Origin"
+msgstr "Asalka"
+
+#: .\templates\post_trip.html:33
+msgid "Destination"
+msgstr "Goobta loo socdo"
+
+#: .\templates\post_trip.html:39
+msgid "Available Capacity (KG)"
+msgstr "Awoodda La Heli Karo (KG)"
+
+#: .\templates\post_trip.html:44
+msgid "Departure Date/Time"
+msgstr "Taariikhda/Waqtiga Baxitaanka"
+
+#: .\templates\post_trip.html:50
+msgid "Publish Trip"
+msgstr "Daabac Safarka"
+
+#: .\templates\product_detail.html:131
+msgid "Unit"
+msgstr "Xabbo"
+
+#: .\templates\product_detail.html:147
+msgid "Grown by"
+msgstr "Waxaa beeray"
+
+#: .\templates\product_detail.html:159
+msgid "Visit Farm"
+msgstr "Booqasho Beerta"
+
+#: .\templates\product_detail.html:182
+msgid "You might also like"
+msgstr "Waxa laga yaabaa inaad sidoo kale jeclaato"
+
+#: .\templates\profile.html:8
+msgid "My Profile - Arbor"
+msgstr "Profile-kayga - Arbor"
+
+#: .\templates\profile.html:21
+msgid "My Profile Settings"
+msgstr "Habaynta Profile-kayga"
+
+#: .\templates\profile.html:37
+msgid "Profile Picture"
+msgstr "Sawirka Profile-ka"
+
+#: .\templates\profile.html:55
+msgid "No Location Set"
+msgstr "Goob Lama Dejin"
+
+#: .\templates\profile.html:59
+msgid "Banking Info:"
+msgstr "Macluumaadka Bangiga:"
+
+#: .\templates\profile.html:64
+msgid "⚠️ No bank details added."
+msgstr "⚠️ Wax faahfaahin bangi ah laguma darin."
+
+#: .\templates\profile.html:73
+msgid "Edit Details"
+msgstr "Wax ka beddel Faahfaahinta"
+
+#: .\templates\profile.html:81
+msgid "Personal Information"
+msgstr "Macluumaadka Shakhsiga"
+
+#: .\templates\profile.html:84 .\templates\register.html:145
+#: .\templates\register_buyer.html:134 .\templates\register_delivery.html:176
+#: .\templates\register_supplier.html:164
+msgid "First Name"
+msgstr "Magaca Koowaad"
+
+#: .\templates\profile.html:88 .\templates\register.html:153
+#: .\templates\register_buyer.html:141 .\templates\register_delivery.html:181
+#: .\templates\register_supplier.html:171
+msgid "Last Name"
+msgstr "Magaca Dambe"
+
+#: .\templates\profile.html:95
+msgid "Location / Address"
+msgstr "Goobta / Cinwaanka"
+
+#: .\templates\profile.html:100
+msgid "Change Photo"
+msgstr "Beddel Sawirka"
+
+#: .\templates\profile.html:110
+msgid "Banking Details"
+msgstr "Faahfaahinta Bangiga"
+
+#: .\templates\profile.html:112
+msgid "Buyers will see this to transfer money to you via Mobile Banking."
+msgstr "Iibsadayaashu waxay arki doonaan tan si ay lacag kuugu soo diraan Bangiga Mobaylka."
+
+#: .\templates\profile.html:116
+msgid "Bank Name"
+msgstr "Magaca Bangiga"
+
+#: .\templates\profile.html:120
+msgid "Account Number"
+msgstr "Lambarka Koontada"
+
+#: .\templates\profile.html:128
+msgid "Save Changes 💾"
+msgstr "Keydi Isbeddelada 💾"
+
+#: .\templates\register.html:9
+msgid "Join as Farmer | Arbor"
+msgstr "Ku biir sidii Beeraley | Arbor"
+
+#: .\templates\register.html:89 .\templates\register_buyer.html:84
+#: .\templates\register_delivery.html:105 .\templates\register_supplier.html:88
+msgid "Back to"
+msgstr "Ku noqo"
+
+#: .\templates\register.html:90 .\templates\register_buyer.html:85
+#: .\templates\register_delivery.html:106 .\templates\register_supplier.html:89
+msgid "Roles"
+msgstr "Doorka"
+
+#: .\templates\register.html:134
+msgid "Farmer Registration"
+msgstr "Diiwaangelinta Beeraleyda"
+
+#: .\templates\register.html:135
+msgid "Join the network. Sell your harvest."
+msgstr "Ku biir shabakadda. Iibi dalaggaaga."
+
+#: .\templates\register.html:148
+msgid "Abebe"
+msgstr "Abebe"
+
+#: .\templates\register.html:156
+msgid "Kebede"
+msgstr "Kebede"
+
+#: .\templates\register.html:177
+msgid "e.g. Bishoftu"
+msgstr "tusaale. Bishoftu"
+
+#: .\templates\register.html:186
+msgid "PIN"
+msgstr "PIN"
+
+#: .\templates\register.html:193
+msgid "Confirm"
+msgstr "Xaqiiji"
+
+#: .\templates\register.html:217
+msgid "Register Farm"
+msgstr "Diiwaangeli Beerta"
+
+#: .\templates\register.html:225 .\templates\register_buyer.html:200
+#: .\templates\register_delivery.html:291
+#: .\templates\register_supplier.html:230
+msgid "Already have an account?"
+msgstr "Hore ma u lahayd koonto?"
+
+#: .\templates\register.html:227 .\templates\register_buyer.html:202
+#: .\templates\register_delivery.html:293
+#: .\templates\register_supplier.html:232
+msgid "Login Here"
+msgstr "Soo gal Halkan"
+
+#: .\templates\register.html:235
+msgid "Secure & Verified"
+msgstr "Ammaan & La Hubiyay"
+
+#: .\templates\register_buyer.html:9
+msgid "Join as Buyer | Arbor"
+msgstr "Ku biir sidii Iibsade | Arbor"
+
+#: .\templates\register_buyer.html:123
+msgid "Buyer Registration"
+msgstr "Diiwaangelinta Iibsadaha"
+
+#: .\templates\register_buyer.html:124
+msgid "Access farm-fresh prices directly."
+msgstr "Hel qiimaha beerta-cusub si toos ah."
+
+#: .\templates\register_buyer.html:161 .\templates\register_supplier.html:191
+msgid "PIN (4 Digits)"
+msgstr "PIN (4 God)"
+
+#: .\templates\register_buyer.html:168 .\templates\register_supplier.html:198
+msgid "Confirm PIN"
+msgstr "Xaqiiji PIN-ka"
+
+#: .\templates\register_buyer.html:210
+msgid "Fair Prices • Farm Direct"
+msgstr "Qiimo Macquul ah • Si Toos ah Beerta"
+
+#: .\templates\register_delivery.html:9
+msgid "Join Logistics | Arbor"
+msgstr "Ku biir Saadka | Arbor"
+
+#: .\templates\register_delivery.html:122
+#: .\templates\register_supplier.html:106
+msgid "Language"
+msgstr "Luuqadda"
+
+#: .\templates\register_delivery.html:159
+msgid "Delivery Partner"
+msgstr "Wada-hawlgalayaasha Gaarsiinta"
+
+#: .\templates\register_delivery.html:160
+msgid "Join the Crowd-Delivery Network."
+msgstr "Ku biir Shabakadda Gaarsiinta Bulshada."
+
+#: .\templates\register_delivery.html:171
+msgid "Personal Details"
+msgstr "Faahfaahinta Shakhsiga"
+
+#: .\templates\register_delivery.html:182
+msgid "Surname"
+msgstr "Magaca Aabaha"
+
+#: .\templates\register_delivery.html:196
+msgid "Create PIN"
+msgstr "Samee PIN"
+
+#: .\templates\register_delivery.html:209
+msgid "Vehicle Information"
+msgstr "Macluumaadka Gaadiidka"
+
+#: .\templates\register_delivery.html:214
+msgid "Vehicle Model"
+msgstr "Nooca Gaadiidka"
+
+#: .\templates\register_delivery.html:218
+msgid "Type your vehicle (e.g. Isuzu FSR)"
+msgstr "Qor nooca gaarigaaga (tusaale. Isuzu FSR)"
+
+#: .\templates\register_delivery.html:222
+msgid "Please type the specific name of your vehicle."
+msgstr "Fadlan qor magaca gaarka ah ee gaarigaaga."
+
+#: .\templates\register_delivery.html:226
+msgid "Capacity (KG)"
+msgstr "Awoodda (KG)"
+
+#: .\templates\register_delivery.html:239
+msgid "Legal Verification"
+msgstr "Xaqiijinta Sharciga"
+
+#: .\templates\register_delivery.html:243
+msgid "Driving License Number"
+msgstr "Lambarka Liisanka Wadista"
+
+#: .\templates\register_delivery.html:244
+msgid "License #"
+msgstr "Liisanka #"
+
+#: .\templates\register_delivery.html:250
+msgid "National ID"
+msgstr "Aqoonsiga Qaranka"
+
+#: .\templates\register_delivery.html:254
+msgid "Clear photo of ID Front"
+msgstr "Sawir cad oo Aqoonsiga Hore ah"
+
+#: .\templates\register_delivery.html:258
+msgid "Driving License"
+msgstr "Liisanka Wadista"
+
+#: .\templates\register_delivery.html:262
+msgid "Clear photo of License"
+msgstr "Sawir cad oo Liisanka ah"
+
+#: .\templates\register_delivery.html:283
+msgid "Submit Application"
+msgstr "Gudbi Codsiga"
+
+#: .\templates\register_supplier.html:9
+msgid "Join as Supplier | Arbor"
+msgstr "Ku biir sidii Alaab-qeybiye | Arbor"
+
+#: .\templates\register_supplier.html:144
+msgid "Supplier Partner"
+msgstr "Wada-hawlgalayaasha Alaab-qeybiyaha"
+
+#: .\templates\register_supplier.html:145
+msgid "Connect with thousands of farmers."
+msgstr "La xiriir kumanaan beeraley ah."
+
+#: .\templates\register_supplier.html:154
+msgid "Business / Shop Name"
+msgstr "Magaca Ganacsiga / Dukaanka"
+
+#: .\templates\register_supplier.html:181
+msgid "Business Phone"
+msgstr "Telefoonka Ganacsiga"
+
+#: .\templates\register_supplier.html:222
+msgid "Join Network"
+msgstr "Ku biir Shabakadda"
+
+#: .\templates\register_supplier.html:240
+msgid "Verified Business Network"
+msgstr "Shabakadda Ganacsiga ee La Hubiyay"
+
+#: .\templates\select_role.html:9
+msgid "Select Your Role | Arbor"
+msgstr "Dooro Doorkaaga | Arbor"
+
+#: .\templates\select_role.html:124
+msgid "Have an account?"
+msgstr "Ma leedahay koonto?"
+
+#: .\templates\select_role.html:138
+msgid "Join the"
+msgstr "Ku biir"
+
+#: .\templates\select_role.html:139
+msgid "Digital Harvest"
+msgstr "Goynta Dijitaalka ah"
+
+#: .\templates\select_role.html:142
+msgid ""
+"Connect directly with Ethiopia's agricultural ecosystem. Choose your path to "
+"start growing."
+msgstr ""
+"Si toos ah ula xiriir nidaamka beeraha ee Itoobiya. Dooro waddadaada si aad "
+"u bilowdo koritaanka."
+
+#: .\templates\select_role.html:155
+msgid "Farmer"
+msgstr "Beeraley"
+
+#: .\templates\select_role.html:157
+msgid ""
+"List your crops, manage your harvest, and sell directly to buyers with zero "
+"middlemen."
+msgstr ""
+"Diiwaangeli dalagyadaada, maaree goyntaada, oo si toos ah uga iibi iibsadayaasha adigoo "
+"aan lahayn dillaaliin."
+
+#: .\templates\select_role.html:160
+msgid "Join as Farmer"
+msgstr "Ku biir sidii Beeraley"
+
+#: .\templates\select_role.html:171
+msgid "Buyer"
+msgstr "Iibsade"
+
+#: .\templates\select_role.html:173
+msgid ""
+"Access fresh produce at fair prices. Buy individually or start a Group Buy "
+"with neighbors."
+msgstr ""
+"Hel badeecado cusub qiimo macquul ah. Si gaar ah u iibso ama bilow Iibsiga Wadareed "
+"adiga iyo deriska."
+
+#: .\templates\select_role.html:176
+msgid "Join as Buyer"
+msgstr "Ku biir sidii Iibsade"
+
+#: .\templates\select_role.html:189
+msgid ""
+"Sell fertilizers, seeds, and equipment directly to thousands of Ethiopian "
+"farmers."
+msgstr ""
+"Ka iibi bacrimiyeyaasha, abuurka, iyo qalabka si toos ah kumanaan beeraley "
+"Itoobiyaan ah."
+
+#: .\templates\select_role.html:192
+msgid "Join as Supplier"
+msgstr "Ku biir sidii Alaab-qeybiye"
+
+#: .\templates\select_role.html:203
+msgid "Logistics"
+msgstr "Saadka (Logistics)"
+
+#: .\templates\select_role.html:205
+msgid ""
+"Manage fleets, accept delivery jobs, and bridge the gap between farm and "
+"table."
+msgstr ""
+"Maaree gaadiidka, aqbal shaqooyinka gaarsiinta, oo isku xir beerta iyo "
+"miiska."
+
+#: .\templates\select_role.html:208
+msgid "Join Logistics"
+msgstr "Ku biir Saadka"
+
+#: .\templates\select_role.html:222
+msgid "Terms"
+msgstr "Shuruudaha"
+
+#: .\templates\select_role.html:224
+msgid "Privacy"
+msgstr "Asturnaanta"
+
+#: .\templates\select_role.html:226
+msgid "Help"
+msgstr "Caawimaad"
+
+#: .\templates\supplier_dashboard.html:8
+msgid "Supplier Command - Arbor"
+msgstr "Xarunta Alaab-qeybiyaha - Arbor"
+
+#: .\templates\supplier_dashboard.html:33
+msgid "Main Market"
+msgstr "Suuqa Weyn"
+
+#: .\templates\supplier_dashboard.html:61
+msgid "My Warehouse"
+msgstr "Bakhaarkayga"
+
+#: .\templates\supplier_dashboard.html:62
+msgid "Manage your stock and prices."
+msgstr "Maaree keydkaaga iyo qiimayaasha."
+
+#: .\templates\supplier_dashboard.html:65
+msgid "Add Product"
+msgstr "Ku dar Badeecad"
+
+#: .\templates\supplier_dashboard.html:75
+msgid "Price / Unit"
+msgstr "Qiimaha / Xabbo"
+
+#: .\templates\supplier_dashboard.html:76
+msgid "Current Stock"
+msgstr "Keydka Hadda"
+
+#: .\templates\supplier_dashboard.html:101
+msgid "Out of Stock"
+msgstr "Waa dhamaaday"
+
+#: .\templates\supplier_dashboard.html:112
+msgid "Your warehouse is empty"
+msgstr "Bakhaarkaagu waa madhan yahay"
+
+#: .\templates\supplier_dashboard.html:113
+msgid "Start adding fertilizers or seeds to sell."
+msgstr "Bilow ku darista bacrimiyeyaasha ama abuurka si aad u iibiso."
+
+#: .\templates\supplier_dashboard.html:115
+msgid "Add First Item"
+msgstr "Ku dar Shayga Ugu Horreeya"
+
+#: .\templates\supplier_dashboard.html:124
+msgid "Market Intelligence"
+msgstr "Xogta Suuqa"
+
+#: .\templates\supplier_dashboard.html:127
+msgid "Live Farmer Prices"
+msgstr "Qiimaha Beeraleyda ee Tooska ah"
+
+#: .\templates\supplier_dashboard.html:139
+msgid "No market data available yet."
+msgstr "Weli xog suuq oo la heli karo ma jirto."
+
+#: .\templates\telebirr_pay.html:8
+msgid "Telebirr Payment"
+msgstr "Bixinta Telebirr"
+
+#: .\templates\telebirr_pay.html:28
+msgid "Telebirr Logo"
+msgstr "Astaanta Telebirr"
+
+#: .\templates\telebirr_pay.html:31
+msgid "Confirm Telebirr Payment"
+msgstr "Xaqiiji Bixinta Telebirr"
+
+#: .\templates\telebirr_pay.html:33
+#, python-format
+msgid "Amount Due for Order #%(id)s:"
+msgstr "Qadarka Laga Rabo Dalabka #%(id)s:"
+
+#: .\templates\telebirr_pay.html:42
+msgid "Enter Telebirr PIN"
+msgstr "Geli PIN-ka Telebirr"
+
+#: .\templates\telebirr_pay.html:57
+msgid "Pay Now & Verify"
+msgstr "Bixi Hadda & Xaqiiji"
+
+#: .\templates\telebirr_pay.html:64
+msgid "Cancel Transaction"
+msgstr "Jooji Xawilaadda"

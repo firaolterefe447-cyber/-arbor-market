@@ -1,0 +1,3722 @@
+# ARBOR MARKETPLACE TRANSLATION.
+# Copyright (C) 2025 ARBOR
+# This file is distributed under the same license as the ARBOR package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ARBOR 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-02 22:11+0300\n"
+"PO-Revision-Date: 2025-12-03 12:00+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tigrinya <ti@li.org>\n"
+"Language: ti\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\core\settings.py:95
+msgid "English"
+msgstr "እንግሊዝኛ"
+
+#: .\core\settings.py:96
+msgid "Amharic"
+msgstr "አምሓርኛ"
+
+#: .\core\settings.py:97
+msgid "Afaan Oromoo"
+msgstr "ኦሮምኛ"
+
+#: .\core\settings.py:98
+msgid "Somali"
+msgstr "ሶማሊኛ"
+
+#: .\core\settings.py:99
+msgid "Tigrinya"
+msgstr "ትግርኛ"
+
+#: .\env\Lib\site-packages\click\_termui_impl.py:613
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr "{editor}: ምዕራይ ኣይተኻእለን"
+
+#: .\env\Lib\site-packages\click\_termui_impl.py:617
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr "{editor}: ምዕራይ ኣይተኻእለን: {e}"
+
+#: .\env\Lib\site-packages\click\core.py:1114
+#: .\env\Lib\site-packages\click\core.py:1151
+#, python-brace-format
+msgid "{text} {deprecated_message}"
+msgstr "{text} {deprecated_message}"
+
+#: .\env\Lib\site-packages\click\core.py:1170
+msgid "Options"
+msgstr "ኣማራጺታት"
+
+#: .\env\Lib\site-packages\click\core.py:1245
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] "ዘይተደልየ ተወሳኺ መረዳእታ ተረኺቡ ({args})"
+msgstr[1] "ዘይተደልዩ ተወሳኺ መረዳእታታት ተረኺቦም ({args})"
+
+#: .\env\Lib\site-packages\click\core.py:1264
+msgid "DeprecationWarning: The command {name!r} is deprecated.{extra_message}"
+msgstr "DeprecationWarning: እዚ ትእዛዝ {name!r} ግዜኡ ዝሓለፎ እዩ። {extra_message}"
+
+#: .\env\Lib\site-packages\click\core.py:1448
+msgid "Aborted!"
+msgstr "ተቋሪጹ!"
+
+#: .\env\Lib\site-packages\click\core.py:1822
+msgid "Commands"
+msgstr "ትእዛዛት"
+
+#: .\env\Lib\site-packages\click\core.py:1853
+msgid "Missing command."
+msgstr "ትእዛዝ ጎዲሉ ኣሎ።"
+
+#: .\env\Lib\site-packages\click\core.py:1931
+msgid "No such command {name!r}."
+msgstr "ከምዚ ዓይነት ትእዛዝ የለን {name!r}።"
+
+#: .\env\Lib\site-packages\click\core.py:2355
+msgid "Value must be an iterable."
+msgstr "እቲ ዋጋ ክቑጸር ዝኽእል ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\click\core.py:2378
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] "{nargs} ዋጋታት ይወስድ ግን 1 ተዋሂቡ።"
+msgstr[1] "{nargs} ዋጋታት ይወስድ ግን {len} ተዋሂቦም።"
+
+#: .\env\Lib\site-packages\click\core.py:2567
+msgid ""
+"DeprecationWarning: The {param_type} {name!r} is deprecated.{extra_message}"
+msgstr "DeprecationWarning: እዚ {param_type} {name!r} ግዜኡ ዝሓለፎ እዩ።{extra_message}"
+
+#: .\env\Lib\site-packages\click\core.py:3015
+#, python-brace-format
+msgid "env var: {var}"
+msgstr "env var: {var}"
+
+#: .\env\Lib\site-packages\click\core.py:3018
+#, python-brace-format
+msgid "default: {default}"
+msgstr "ነባሪ: {default}"
+
+#: .\env\Lib\site-packages\click\core.py:3082
+msgid "(dynamic)"
+msgstr "(ተለዋዋጢ)"
+
+#: .\env\Lib\site-packages\click\decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr "%(prog)s, ሕታም %(version)s"
+
+#: .\env\Lib\site-packages\click\decorators.py:522
+msgid "Show the version and exit."
+msgstr "ሕታም (Version) ኣርእይ እሞ ውጻእ።"
+
+#: .\env\Lib\site-packages\click\decorators.py:548
+msgid "Show this message and exit."
+msgstr "እዚ መልእኽቲ ኣርእይ እሞ ውጻእ።"
+
+#: .\env\Lib\site-packages\click\exceptions.py:50
+#: .\env\Lib\site-packages\click\exceptions.py:89
+#, python-brace-format
+msgid "Error: {message}"
+msgstr "ጌጋ: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:81
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr "ንሓገዝ '{command} {option}' ተጠቐም።"
+
+#: .\env\Lib\site-packages\click\exceptions.py:130
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr "ዘይቅቡል ዋጋ: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:132
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr "ዘይቅቡል ዋጋ ን {param_hint}: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:190
+msgid "Missing argument"
+msgstr "ዝጎደለ መረዳእታ (Argument)"
+
+#: .\env\Lib\site-packages\click\exceptions.py:192
+msgid "Missing option"
+msgstr "ዝጎደለ ምርጫ"
+
+#: .\env\Lib\site-packages\click\exceptions.py:194
+msgid "Missing parameter"
+msgstr "ዝጎደለ ፓራሜተር"
+
+#: .\env\Lib\site-packages\click\exceptions.py:196
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr "ዝጎደለ {param_type}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:203
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr "ዝጎደለ ፓራሜተር: {param_name}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:223
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr "ከምዚ ዓይነት ምርጫ የለን: {name}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:235
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] "ማለትካ ድዩ {possibility}?"
+msgstr[1] "(ክሆኑ ዝኽእሉ ምርጫታት: {possibilities})"
+
+#: .\env\Lib\site-packages\click\exceptions.py:282
+msgid "unknown error"
+msgstr "ዘይተፈልጠ ጌጋ"
+
+#: .\env\Lib\site-packages\click\exceptions.py:289
+msgid "Could not open file {filename!r}: {message}"
+msgstr "ፋይል ክኽፈት ኣይተኻእለን {filename!r}: {message}"
+
+#: .\env\Lib\site-packages\click\formatting.py:156
+msgid "Usage:"
+msgstr "አጠቓቕማ:"
+
+#: .\env\Lib\site-packages\click\parser.py:199
+msgid "Argument {name!r} takes {nargs} values."
+msgstr "Argument {name!r} {nargs} ዋጋታት ይወስድ።"
+
+#: .\env\Lib\site-packages\click\parser.py:381
+msgid "Option {name!r} does not take a value."
+msgstr "ምርጫ {name!r} ዋጋ ኣይወስድን እዩ።"
+
+#: .\env\Lib\site-packages\click\parser.py:444
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] "ምርጫ {name!r} መረዳእታ (argument) የድልዮ።"
+msgstr[1] "ምርጫ {name!r} {nargs} መረዳእታታት የድልዮ።"
+
+#: .\env\Lib\site-packages\click\shell_completion.py:332
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr "Shell completion ን Bash versions ካብ 4.4 ንታሕቲ ኣይሰርሕን እዩ።"
+
+#: .\env\Lib\site-packages\click\shell_completion.py:339
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr "ናይ Bash version ክልለ ኣይተኻእለን፣ shell completion ኣይሰርሕን እዩ።"
+
+#: .\env\Lib\site-packages\click\termui.py:165
+msgid "Repeat for confirmation"
+msgstr "ንምርግጋጽ ደጊምካ ጸሓፍ"
+
+#: .\env\Lib\site-packages\click\termui.py:181
+msgid "Error: The value you entered was invalid."
+msgstr "ጌጋ: ዘእተኻዮ ዋጋ ዘይቅቡል እዩ።"
+
+#: .\env\Lib\site-packages\click\termui.py:183
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr "ጌጋ: {e.message}"
+
+#: .\env\Lib\site-packages\click\termui.py:194
+msgid "Error: The two entered values do not match."
+msgstr "ጌጋ: እቶም ዘእተኻዮም ክልተ ዋጋታት ኣይሰማምዑን።"
+
+#: .\env\Lib\site-packages\click\termui.py:253
+msgid "Error: invalid input"
+msgstr "ጌጋ: ዘይቅቡል እታወ"
+
+#: .\env\Lib\site-packages\click\termui.py:872
+msgid "Press any key to continue..."
+msgstr "ንምቕጻል ዝኾነ ቁልፊ ጠውቕ..."
+
+#: .\env\Lib\site-packages\click\types.py:332
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+"ካብዚኦም ምረጽ:\n"
+"\t{choices}"
+
+#: .\env\Lib\site-packages\click\types.py:369
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] "{value!r} {choice} ኣይኮነን።"
+msgstr[1] "{value!r} ካብ {choices} ሓደ ኣይኮነን።"
+
+#: .\env\Lib\site-packages\click\types.py:460
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] "{value!r} ምስ {format} ኣይሰማማዕን።"
+msgstr[1] "{value!r} ምስ {formats} ኣይሰማማዕን።"
+
+#: .\env\Lib\site-packages\click\types.py:482
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} ቅቡል {number_type} ኣይኮነን።"
+
+#: .\env\Lib\site-packages\click\types.py:538
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr "{value} ኣብ ክልል {range} ውሽጢ የለን።"
+
+#: .\env\Lib\site-packages\click\types.py:719
+msgid "{value!r} is not a valid boolean. Recognized values: {states}"
+msgstr "{value!r} ቅቡል boolean ኣይኮነን። ዝፍለጡ ዋጋታት: {states}"
+
+#: .\env\Lib\site-packages\click\types.py:747
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} ቅቡል UUID ኣይኮነን።"
+
+#: .\env\Lib\site-packages\click\types.py:937
+msgid "file"
+msgstr "ፋይል"
+
+#: .\env\Lib\site-packages\click\types.py:939
+msgid "directory"
+msgstr "ማህደር"
+
+#: .\env\Lib\site-packages\click\types.py:941
+msgid "path"
+msgstr "መገዲ (path)"
+
+#: .\env\Lib\site-packages\click\types.py:988
+msgid "{name} {filename!r} does not exist."
+msgstr "{name} {filename!r} የለን።"
+
+#: .\env\Lib\site-packages\click\types.py:997
+msgid "{name} {filename!r} is a file."
+msgstr "{name} {filename!r} ፋይል እዩ።"
+
+#: .\env\Lib\site-packages\click\types.py:1005
+msgid "{name} {filename!r} is a directory."
+msgstr "{name} {filename!r} ማህደር እዩ።"
+
+#: .\env\Lib\site-packages\click\types.py:1014
+msgid "{name} {filename!r} is not readable."
+msgstr "{name} {filename!r} ክንበብ ኣይከኣልን።"
+
+#: .\env\Lib\site-packages\click\types.py:1023
+msgid "{name} {filename!r} is not writable."
+msgstr "{name} {filename!r} ክጽሓፎ ኣይከኣልን።"
+
+#: .\env\Lib\site-packages\click\types.py:1032
+msgid "{name} {filename!r} is not executable."
+msgstr "{name} {filename!r} executable ኣይኮነን።"
+
+#: .\env\Lib\site-packages\click\types.py:1099
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] "{len_type} ዋጋታት የድልዩ፣ ግን {len_value} ተዋሂቡ።"
+msgstr[1] "{len_type} ዋጋታት የድልዩ፣ ግን {len_value} ተዋሂቦም።"
+
+#: .\env\Lib\site-packages\django\contrib\messages\apps.py:16
+msgid "Messages"
+msgstr "መልእኽትታት"
+
+#: .\env\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr "ካርታ መርበብ"
+
+#: .\env\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr "Static ፋይላት"
+
+#: .\env\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr "Syndication"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr "…"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:32
+msgid "That page number is not an integer"
+msgstr "እቲ ቁጽሪ ገጽ ኢንቲጀር (integer) ኣይኮነን"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:33
+msgid "That page number is less than 1"
+msgstr "እቲ ቁጽሪ ገጽ ካብ 1 ይንእስ"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:34
+msgid "That page contains no results"
+msgstr "እቲ ገጽ ዋላ ሓደ ውጽኢት የብሉን"
+
+#: .\env\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr "ቅቡል ዋጋ የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:70
+msgid "Enter a valid domain name."
+msgstr "ቅቡል ናይ ዶሜይን ሽም የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:153
+#: .\env\Lib\site-packages\django\forms\fields.py:775
+msgid "Enter a valid URL."
+msgstr "ቅቡል URL የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:200
+msgid "Enter a valid integer."
+msgstr "ቅቡል ኢንቲጀር የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:211
+msgid "Enter a valid email address."
+msgstr "ቅቡል ኢሜይል ኣድራሻ የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:289
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"ፊደላት፣ ቁጽርታት፣ underscores ወይ hyphens ዝሓዘ ቅቡል “slug” የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:297
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+"ናይ ዩኒኮድ ፊደላት፣ ቁጽርታት፣ underscores ወይ hyphens ዝሓዘ ቅቡል “slug” የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:309
+#: .\env\Lib\site-packages\django\core\validators.py:318
+#: .\env\Lib\site-packages\django\core\validators.py:332
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2220
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr "ቅቡል %(protocol)s ኣድራሻ የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:311
+msgid "IPv4"
+msgstr "IPv4"
+
+#: .\env\Lib\site-packages\django\core\validators.py:320
+#: .\env\Lib\site-packages\django\utils\ipv6.py:43
+msgid "IPv6"
+msgstr "IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:334
+msgid "IPv4 or IPv6"
+msgstr "IPv4 ወይ IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:375
+msgid "Enter only digits separated by commas."
+msgstr "ብ ኮማ ዝተፈልዩ ቁጽርታት ጥራይ የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:381
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr "እዚ ዋጋ %(limit_value)s ምዃኑ ኣረጋግጽ (ሕጂ ዘሎ %(show_value)s እዩ)።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:416
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "እዚ ዋጋ ካብ %(limit_value)s ዝንእስ ወይ ማዕረ ምዃኑ ኣረጋግጽ።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:425
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "እዚ ዋጋ ካብ %(limit_value)s ዝዓቢ ወይ ማዕረ ምዃኑ ኣረጋግጽ።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:434
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "እዚ ዋጋ ናይ %(limit_value)s ርባሕ ምዃኑ ኣረጋግጽ።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:441
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+"እዚ ዋጋ ናይ %(limit_value)s ርባሕ ምዃኑን፣ ካብ %(offset)s ዝጅምር ምዃኑን ኣረጋግጽ።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:473
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] "እዚ ዋጋ እንተወሓደ %(limit_value)d ፊደል ክህልዎ ኣለዎ (ዘለዎ %(show_value)d)።"
+msgstr[1] "እዚ ዋጋ እንተወሓደ %(limit_value)d ፊደላት ክህልዎ ኣለዎ (ዘለዎ %(show_value)d)።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:491
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] "እዚ ዋጋ ካብ %(limit_value)d ዘይበዝሕ ፊደል ክህልዎ ኣለዎ (ዘለዎ %(show_value)d)።"
+msgstr[1] "እዚ ዋጋ ካብ %(limit_value)d ዘይበዝሑ ፊደላት ክህልዎ ኣለዎ (ዘለዎ %(show_value)d)።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:514
+#: .\env\Lib\site-packages\django\forms\fields.py:366
+#: .\env\Lib\site-packages\django\forms\fields.py:405
+msgid "Enter a number."
+msgstr "ቁጽሪ የእትው።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:516
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] "ብድምር ካብ %(max)s ዘይበዝሕ ኣሃዝ ክህሉ ኣረጋግጽ።"
+msgstr[1] "ብድምር ካብ %(max)s ዘይበዝሑ ኣሃዛት ክህልዉ ኣረጋግጽ።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:521
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] "ካብ %(max)s ዘይበዝሕ ድሕሪ ነጥቢ ዘሎ ኣሃዝ ክህሉ ኣረጋግጽ።"
+msgstr[1] "ካብ %(max)s ዘይበዝሑ ድሕሪ ነጥቢ ዘለዉ ኣሃዛት ክህልዉ ኣረጋግጽ።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:526
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] "ቅድሚ ነጥቢ ካብ %(max)s ዘይበዝሕ ኣሃዝ ክህሉ ኣረጋግጽ።"
+msgstr[1] "ቅድሚ ነጥቢ ካብ %(max)s ዘይበዝሑ ኣሃዛት ክህልዉ ኣረጋግጽ።"
+
+#: .\env\Lib\site-packages\django\core\validators.py:597
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+"ዓይነት ፋይል “%(extension)s” ኣይፍቀድን እዩ። ዝፍቀዱ ዓይነታት: %(allowed_extensions)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:659
+msgid "Null characters are not allowed."
+msgstr "Null characters ኣይፍቀዱን እዮም።"
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1600
+#: .\env\Lib\site-packages\django\forms\models.py:908
+msgid "and"
+msgstr "ከምኡውን"
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1602
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(model_name)s በዚ %(field_labels)s ድሮ ኣሎ።"
+
+#: .\env\Lib\site-packages\django\db\models\constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr "Constraint “%(name)s” ተጣሒሱ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "ዋጋ %(value)r ቅቡል ምርጫ ኣይኮነን።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:135
+msgid "This field cannot be null."
+msgstr "እዚ ቦታ ባዶ (null) ክኸውን ኣይክእልን።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:136
+msgid "This field cannot be blank."
+msgstr "እዚ ቦታ ባዶ ክኸውን ኣይክእልን።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "%(model_name)s በዚ %(field_label)s ድሮ ኣሎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"%(field_label)s ን %(date_field_label)s %(lookup_type)s ፍሉይ ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "ዓይነት ፊልድ: %(field_type)s"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1162
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr "“%(value)s” ዋጋ True ወይ False ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1163
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "“%(value)s” ዋጋ True፣ False፣ ወይ None ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1165
+msgid "Boolean (Either True or False)"
+msgstr "Boolean (True ወይ False)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1215
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "ጽሑፍ (ክሳብ %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1217
+msgid "String (unlimited)"
+msgstr "ጽሑፍ (ዘይተወሰነ)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1326
+msgid "Comma-separated integers"
+msgstr "ብ ኮማ ዝተፈልዩ ኢንቲጀራት"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1427
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+"“%(value)s” ዘይቅቡል ናይ ዕለት ኣጸሓሕፋ ኣለዎ። ብ YYYY-MM-DD ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1431
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1566
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+"“%(value)s” ቅቡል ኣጸሓሕፋ (YYYY-MM-DD) ኣለዎ ግን ዘይቅቡል ዕለት እዩ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1435
+msgid "Date (without time)"
+msgstr "ዕለት (ሰዓት ዘይብሉ)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1562
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
+msgstr ""
+"“%(value)s” ዘይቅቡል ኣጸሓሕፋ ኣለዎ። ብ YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1570
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+"“%(value)s” ቅቡል ኣጸሓሕፋ ኣለዎ ግን ዘይቅቡል ዕለት/ሰዓት እዩ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1575
+msgid "Date (with time)"
+msgstr "ዕለት (ምስ ሰዓት)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1702
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr "“%(value)s” ዋጋ ዴሲማል ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1704
+msgid "Decimal number"
+msgstr "ዴሲማል ቁጽሪ"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1864
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
+msgstr "“%(value)s” ዋጋ ዘይቅቡል ኣጸሓሕፋ ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1868
+msgid "Duration"
+msgstr "Duration"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1920
+msgid "Email address"
+msgstr "ኢሜይል ኣድራሻ"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1945
+msgid "File path"
+msgstr "መገዲ ፋይል"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2023
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr "“%(value)s” ዋጋ float ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2025
+msgid "Floating point number"
+msgstr "Floating point ቁጽሪ"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2065
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr "“%(value)s” ዋጋ ኢንቲጀር ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2067
+msgid "Integer"
+msgstr "ኢንቲጀር (Integer)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2163
+msgid "Big (8 byte) integer"
+msgstr "ዓቢ ኢንቲጀር"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2180
+msgid "Small integer"
+msgstr "ንኣሽቱ ኢንቲጀር"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2188
+msgid "IPv4 address"
+msgstr "IPv4 ኣድራሻ"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2219
+msgid "IP address"
+msgstr "IP ኣድራሻ"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2310
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2311
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr "“%(value)s” ዋጋ None, True ወይ False ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2313
+msgid "Boolean (Either True, False or None)"
+msgstr "Boolean (True, False ወይ None)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2364
+msgid "Positive big integer"
+msgstr "ፖዚቲቭ ዓቢ ኢንቲጀር"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2379
+msgid "Positive integer"
+msgstr "ፖዚቲቭ ኢንቲጀር"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2394
+msgid "Positive small integer"
+msgstr "ፖዚቲቭ ንኡስ ኢንቲጀር"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2410
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Slug (ክሳብ %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2446
+msgid "Text"
+msgstr "ጽሑፍ"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2526
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr "“%(value)s” ዘይቅቡል ኣጸሓሕፋ ኣለዎ። ብ HH:MM[:ss[.uuuuuu]] ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2530
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+"“%(value)s” ቅቡል ኣጸሓሕፋ (HH:MM[:ss[.uuuuuu]]) ኣለዎ ግን ዘይቅቡል ሰዓት እዩ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2534
+msgid "Time"
+msgstr "ሰዓት"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2642
+msgid "URL"
+msgstr "URL"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2666
+msgid "Raw binary data"
+msgstr "Raw binary data"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2731
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr "“%(value)s” ቅቡል UUID ኣይኮነን።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2733
+msgid "Universally unique identifier"
+msgstr "UUID"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:244
+msgid "File"
+msgstr "ፋይል"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:420
+msgid "Image"
+msgstr "ስእሊ"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:24
+msgid "A JSON object"
+msgstr "JSON object"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:26
+msgid "Value must be valid JSON."
+msgstr "ዋጋ ቅቡል JSON ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:979
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
+msgstr "%(model)s ብ %(field)s %(value)r ቅቡል ምርጫ ኣይኮነን።"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:982
+msgid "Foreign Key (type determined by related field)"
+msgstr "Foreign Key"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1276
+msgid "One-to-one relationship"
+msgstr "One-to-one ዝምድና"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1333
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "%(from)s-%(to)s ዝምድና"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1335
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "%(from)s-%(to)s ዝምድናታት"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1383
+msgid "Many-to-many relationship"
+msgstr "Many-to-many ዝምድና"
+
+#: .\env\Lib\site-packages\django\forms\boundfield.py:185
+msgid ":?.!"
+msgstr ":?.!"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:95
+msgid "This field is required."
+msgstr "እዚ ቦታ የድሊ እዩ።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:315
+msgid "Enter a whole number."
+msgstr "ምሉእ ቁጽሪ የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:486
+#: .\env\Lib\site-packages\django\forms\fields.py:1267
+msgid "Enter a valid date."
+msgstr "ቅቡል ዕለት የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:509
+#: .\env\Lib\site-packages\django\forms\fields.py:1268
+msgid "Enter a valid time."
+msgstr "ቅቡል ሰዓት የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:536
+msgid "Enter a valid date/time."
+msgstr "ቅቡል ዕለት/ሰዓት የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:570
+msgid "Enter a valid duration."
+msgstr "ቅቡል ቆይታ (duration) የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:571
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr "ብዝሒ መዓልታት ኣብ መንጎ {min_days} ን {max_days} ክኸውን ኣለዎ።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:640
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr "ዝኾነ ፋይል ኣይተላእከን። ናይቲ ፎርም encoding type ኣረጋግጽ።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:641
+msgid "No file was submitted."
+msgstr "ዝኾነ ፋይል ኣይተላእከን።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:642
+msgid "The submitted file is empty."
+msgstr "እቲ ዝተላእከ ፋይል ባዶ እዩ።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:644
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] "ሽም ፋይል ካብ %(max)d ዘይበዝሕ ፊደል ክህልዎ ኣረጋግጽ (ዘለዎ %(length)d)።"
+msgstr[1] "ሽም ፋይል ካብ %(max)d ዘይበዝሑ ፊደላት ክህልዎ ኣረጋግጽ (ዘለዎ %(length)d)።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:649
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr "በጃኻ ሓደ ፋይል ልኣኽ ወይ clear ሳጹን ምረጽ፣ ክልቲኡ ኣይከኣልን።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:717
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr "ቅቡል ስእሊ ጽዓን። እቲ ዝጸዓንካዮ ፋይል ስእሊ ኣይኮነን ወይ ዝተበላሸወ እዩ።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:889
+#: .\env\Lib\site-packages\django\forms\fields.py:975
+#: .\env\Lib\site-packages\django\forms\models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "ቅቡል ምርጫ ምረጽ። %(value)s ካብቶም ዘለዉ ምርጫታት ኣይኮነን።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:977
+#: .\env\Lib\site-packages\django\forms\fields.py:1096
+#: .\env\Lib\site-packages\django\forms\models.py:1590
+msgid "Enter a list of values."
+msgstr "ዝርዝር ዋጋታት የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1097
+msgid "Enter a complete value."
+msgstr "ምሉእ ዋጋ የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1339
+msgid "Enter a valid UUID."
+msgstr "ቅቡል UUID የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1369
+msgid "Enter a valid JSON."
+msgstr "ቅቡል JSON የእትው።"
+
+#: .\env\Lib\site-packages\django\forms\forms.py:97
+msgid ":"
+msgstr ":"
+
+#: .\env\Lib\site-packages\django\forms\forms.py:239
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(ሕቡእ ቦታ %(name)s) %(error)s"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr "ManagementForm ዳታ ጎዲሉ ወይ ተበላሽዩ። ዝጎደሉ ቦታታት: %(field_names)s።"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] "በጃኻ ካብ %(num)d ዘይበዝሕ ፎርም ልኣኽ።"
+msgstr[1] "በጃኻ ካብ %(num)d ዘይበዝሑ ፎርምታት ልኣኽ።"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] "በጃኻ እንተወሓደ %(num)d ፎርም ልኣኽ።"
+msgstr[1] "በጃኻ እንተወሓደ %(num)d ፎርምታት ልኣኽ።"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:484
+#: .\env\Lib\site-packages\django\forms\formsets.py:491
+#: .\templates\dashboard.html:85
+msgid "Order"
+msgstr "ትእዛዝ"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:499
+#: .\templates\dashboard.html:182
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#: .\env\Lib\site-packages\django\forms\models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "በጃኻ ነዚ %(field)s ዝተደገመ ዳታ ኣዐርዮ።"
+
+#: .\env\Lib\site-packages\django\forms\models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr "በጃኻ ነዚ %(field)s ዝተደገመ ዳታ ኣዐርዮ (ፍሉይ ክኸውን ኣለዎ)።"
+
+#: .\env\Lib\site-packages\django\forms\models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr "በጃኻ ነዚ %(field_name)s ዝተደገመ ዳታ ኣዐርዮ።"
+
+#: .\env\Lib\site-packages\django\forms\models.py:922
+msgid "Please correct the duplicate values below."
+msgstr "በጃኻ ነዞም ዝተደገሙ ዋጋታት ኣዐርዮም።"
+
+#: .\env\Lib\site-packages\django\forms\models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr "The inline value did not match the parent instance."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1450
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "ቅቡል ምርጫ ምረጽ። እቲ ዝመረጽካዮ ካብቶም ዘለዉ ምርጫታት ኣይኮነን።"
+
+#: .\env\Lib\site-packages\django\forms\models.py:1594
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr "“%(pk)s” ቅቡል ዋጋ ኣይኮነን።"
+
+#: .\env\Lib\site-packages\django\forms\utils.py:229
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr "%(datetime)s ኣብ ታይም ዞን %(current_timezone)s ክትርጎም ኣይተኻእለን።"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:527
+#: .\templates\home.html:422
+msgid "Clear"
+msgstr "ኣጽሪ"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:528
+msgid "Currently"
+msgstr "ኣብዚ ሕጂ እዋን"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:529
+msgid "Change"
+msgstr "ቀይር"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:866
+msgid "Unknown"
+msgstr "ዘይተፈልጠ"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:867
+msgid "Yes"
+msgstr "እወ"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:868
+msgid "No"
+msgstr "ኣይኮነን"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr "እወ,ኣይኮነን,ምናልባት"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:903
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] "%(size)d ባይት"
+msgstr[1] "%(size)d ባይትስ"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr "%s KB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr "%s TB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr "%s PB"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:74
+msgid "p.m."
+msgstr "ድ.ቀ."
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:75
+msgid "a.m."
+msgstr "ቅ.ቀ."
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:80
+msgid "PM"
+msgstr "PM"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:81
+msgid "AM"
+msgstr "AM"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:153
+msgid "midnight"
+msgstr "ፋርቀ ለይቲ"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:155
+msgid "noon"
+msgstr "ፋርቀ መዓልቲ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr "ሰኑይ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr "ሰሉስ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr "ረቡዕ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr "ሓሙስ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr "ዓርቢ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:12
+msgid "Saturday"
+msgstr "ቀዳም"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr "ሰንበት"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr "ሰኑ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr "ሰሉ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr "ረቡ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr "ሓሙ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr "ዓር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:21
+msgid "Sat"
+msgstr "ቀዳ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr "ሰን"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:25
+msgid "January"
+msgstr "ጃንዋሪ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:26
+msgid "February"
+msgstr "ፌብሩዋሪ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:27
+msgid "March"
+msgstr "ማርች"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:28
+msgid "April"
+msgstr "ኤፕሪል"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:29
+msgid "May"
+msgstr "ሜይ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:30
+msgid "June"
+msgstr "ጁን"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:31
+msgid "July"
+msgstr "ጁላይ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:32
+msgid "August"
+msgstr "ኦገስት"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:33
+msgid "September"
+msgstr "ሴፕቴምበር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:34
+msgid "October"
+msgstr "ኦክቶበር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:35
+msgid "November"
+msgstr "ኖቬምበር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:36
+msgid "December"
+msgstr "ዲሴምበር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:39
+msgid "jan"
+msgstr "ጃን"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:40
+msgid "feb"
+msgstr "ፌብ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:41
+msgid "mar"
+msgstr "ማር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:42
+msgid "apr"
+msgstr "ኤፕ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:43
+msgid "may"
+msgstr "ሜይ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:44
+msgid "jun"
+msgstr "ጁን"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:45
+msgid "jul"
+msgstr "ጁላ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr "ኦገ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:47
+msgid "sep"
+msgstr "ሴፕ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:48
+msgid "oct"
+msgstr "ኦክ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:49
+msgid "nov"
+msgstr "ኖቬ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:50
+msgid "dec"
+msgstr "ዲሴ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "ጃን."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "ፌብ."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "ማርች"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "ኤፕሪል"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "ሜይ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "ጁን"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "ጁላይ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "ኦገ."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "ሴፕ."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "ኦክ."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "ኖቬ."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "ዲሴ."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr "ጃንዋሪ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr "ፌብሩዋሪ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr "ማርች"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr "ኤፕሪል"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr "ሜይ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr "ጁን"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr "ጁላይ"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr "ኦገስት"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr "ሴፕቴምበር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr "ኦክቶበር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr "ኖቬምበር"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr "ዲሴምበር"
+
+#: .\env\Lib\site-packages\django\utils\ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr "እዚ ቅቡል ናይ IPv6 ኣድራሻ ኣይኮነን።"
+
+#: .\env\Lib\site-packages\django\utils\text.py:76
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr "%(truncated_text)s…"
+
+#: .\env\Lib\site-packages\django\utils\text.py:287
+msgid "or"
+msgstr "ወይ"
+
+#: .\env\Lib\site-packages\django\utils\text.py:306
+#: .\env\Lib\site-packages\django\utils\timesince.py:135
+msgid ", "
+msgstr ", "
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] "%(num)d ዓመት"
+msgstr[1] "%(num)d ዓመታት"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] "%(num)d ወርሒ"
+msgstr[1] "%(num)d ኣዋርሕ"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] "%(num)d ሰሙን"
+msgstr[1] "%(num)d ሰሙናት"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] "%(num)d መዓልቲ"
+msgstr[1] "%(num)d መዓልታት"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] "%(num)d ሰዓት"
+msgstr[1] "%(num)d ሰዓታት"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] "%(num)d ደቒቕ"
+msgstr[1] "%(num)d ደቓይቕ"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:29
+msgid "Forbidden"
+msgstr "ዝተኸልከለ"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr "CSRF verification ፈሺሉ። ጠለብ ተቋሪጹ።"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr "እዚ መልእኽቲ ትርእዩ ዘለኹም ምኽንያት እዚ HTTPS ሳይት “Referer header” ስለዘድልዮ እዩ።"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+"ብራውዘርኩም “Referer” headers ከይሰድድ ተዓጽዩ እንተሎ፣ በጃኹም ክፈትዎ (እንተወሓደ ንዚ ሳይት)።"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+"እቲ <meta name=\"referrer\" content=\"no-referrer\"> ዝብል tag ትጥቀሙ እንተለኹም፣ በጃኹም "
+"ኣውጽእዎ።"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr "እዚ ሳይት CSRF cookie ስለዘድልዮ እዩ እዚ መልእኽቲ ዝመጽእ ዘሎ።"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+"ኩኪስ (Cookies) ተዓጽዩ እንተሎ፣ በጃኹም መሊስኩም ክፈትዎ (እንተወሓደ ንዚ ሳይት)።"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr "ተወሳኺ ሓበሬታ ብ DEBUG=True ይርከብ።"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:44
+msgid "No year specified"
+msgstr "ዓመተ ምህረት ኣይተገልጸን"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:64
+#: .\env\Lib\site-packages\django\views\generic\dates.py:115
+#: .\env\Lib\site-packages\django\views\generic\dates.py:214
+msgid "Date out of range"
+msgstr "ዕለት ካብ ክልል ወጻኢ እዩ"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:94
+msgid "No month specified"
+msgstr "ወርሒ ኣይተገልጸን"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:147
+msgid "No day specified"
+msgstr "መዓልቲ ኣይተገልጸን"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:194
+msgid "No week specified"
+msgstr "ሰሙን ኣይተገልጸን"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:353
+#: .\env\Lib\site-packages\django\views\generic\dates.py:384
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "ዝኾነ %(verbose_name_plural)s የለን"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:680
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
+msgstr "ናይ መጻኢ %(verbose_name_plural)s ኣይርከብን።"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:720
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr "ዘይቅቡል ዕለት “%(datestr)s” (ፎርማት: “%(format)s”)"
+
+#: .\env\Lib\site-packages\django\views\generic\detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr "ምስቲ ጠለብ ዝሰማማዕ %(verbose_name)s ኣይተረኽበን"
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr "Page is not “last”, nor can it be converted to an int."
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr "ዘይቅቡል ገጽ (%(page_number)s): %(message)s"
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:173
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr "ዝርዝር ባዶ እዩ (“%(class_name)s.allow_empty” False እዩ)።"
+
+#: .\env\Lib\site-packages\django\views\static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr "Directory indexes ኣብዚ ኣይፍቀዱን እዮም።"
+
+#: .\env\Lib\site-packages\django\views\static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr "“%(path)s” የለን"
+
+#: .\env\Lib\site-packages\django\views\static.py:68
+#: .\env\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\env\Lib\site-packages\django\views\templates\directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "Index of %(directory)s"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr "ምጽዓን (Install) ብዓወት ተፈጺሙ! እንቋዕ ሓጎሰኩም!"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:217
+msgid "Django Documentation"
+msgstr "Django Documentation"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr "Topics, references, &amp; how-to’s"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr "Tutorial: A Polling App"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:227
+msgid "Get started with Django"
+msgstr "Get started with Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:235
+msgid "Django Community"
+msgstr "Django Community"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr "Connect, get help, or contribute"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:14
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:54
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:62
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:72
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:82
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:86
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:118
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:137
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:364
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:369
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:379
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:399
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:416
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:435
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:441
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:458
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:470
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:478
+msgid "title"
+msgstr "ኣርእስቲ"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:18
+msgid "password"
+msgstr "ፓስወርድ"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:245
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:264
+msgid "title a"
+msgstr "title a"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:249
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:275
+msgid "title b"
+msgstr "title b"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:253
+msgid "title c"
+msgstr "title c"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:257
+msgid "title d"
+msgstr "title d"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:380
+msgid "visits"
+msgstr "ዑደታት"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\translation.py:62
+msgid "Sorry, translation is not available."
+msgstr "ይቅርታ፣ ትርጉም የለን።"
+
+#: .\env\Lib\site-packages\modeltranslation\widgets.py:32
+msgid "None"
+msgstr "ዋላ ሓደ"
+
+#: .\marketplace\models.py:23 .\templates\add_crop.html:59
+#: .\templates\add_input.html:57 .\templates\supplier_dashboard.html:74
+msgid "Product Name"
+msgstr "ናይ ፍርያት ሽም"
+
+#: .\templates\add_crop.html:10
+msgid "Upload Harvest | Arbor"
+msgstr "ፍርያት ጽዓን | Arbor"
+
+#: .\templates\add_crop.html:31
+msgid "Upload Harvest"
+msgstr "ፍርያት ጽዓን"
+
+#: .\templates\add_crop.html:48
+msgid "Take a Photo"
+msgstr "ስእሊ ኣልዕል"
+
+#: .\templates\add_crop.html:52
+msgid "Tap to select image"
+msgstr "ስእሊ ንምምራጽ ጠውቕ"
+
+#: .\templates\add_crop.html:59
+msgid "Optional"
+msgstr "ኣማራጺ"
+
+#: .\templates\add_crop.html:62
+msgid "If you don't know the English name, leave it blank. Admin will fix it."
+msgstr "እንግሊዝኛ ሽሙ እንተዘይፈልጥካዮ፣ ባዶ ግደፎ። ኣድሚን ከዐርዮ እዩ።"
+
+#: .\templates\add_crop.html:70 .\templates\add_input.html:65
+#: .\templates\edit_crop.html:34
+msgid "Price (ETB)"
+msgstr "ዋጋ (ETB)"
+
+#: .\templates\add_crop.html:75 .\templates\home.html:533
+msgid "/kg"
+msgstr "/ኪሎ"
+
+#: .\templates\add_crop.html:83 .\templates\checkout.html:94
+#: .\templates\group_buy_market.html:187
+msgid "Quantity"
+msgstr "ብዝሒ"
+
+#: .\templates\add_crop.html:88 .\templates\buyer_dashboard.html:106
+#: .\templates\dashboard.html:162 .\templates\group_buy_market.html:196
+msgid "kg"
+msgstr "ኪሎ"
+
+#: .\templates\add_crop.html:97 .\templates\register.html:174
+msgid "Farm Location"
+msgstr "ቦታ ሕርሻ"
+
+#: .\templates\add_crop.html:105
+msgid "List on Market"
+msgstr "ኣብ ዕዳጋ ምዝግብ"
+
+#: .\templates\add_input.html:10
+msgid "Add Inventory - Arbor"
+msgstr "ንብረት ወስኽ - Arbor"
+
+#: .\templates\add_input.html:45
+msgid "Add Inventory"
+msgstr "ንብረት ወስኽ"
+
+#: .\templates\add_input.html:48 .\templates\checkout.html:45
+#: .\templates\confirm_purchase.html:72 .\templates\create_group.html:89
+#: .\templates\edit_order.html:43 .\templates\join_group.html:45
+#: .\templates\my_orders.html:224 .\templates\post_trip.html:53
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#: .\templates\add_input.html:71
+msgid "Stock Qty"
+msgstr "ብዝሒ ክምችት"
+
+#: .\templates\add_input.html:79
+msgid "Photo (Optional)"
+msgstr "ስእሊ (ኣማራጺ)"
+
+#: .\templates\add_input.html:86
+msgid "Add to Store"
+msgstr "ናብ መኽዘን ወስኽ"
+
+#: .\templates\bank_transfer.html:9
+msgid "Complete Payment"
+msgstr "ክፍሊት ፈጽም"
+
+#: .\templates\bank_transfer.html:24
+msgid "Complete Transfer"
+msgstr "ትራንስፈር ፈጽም"
+
+#: .\templates\bank_transfer.html:26
+msgid "Please send"
+msgstr "በጃኻ ስደድ"
+
+#: .\templates\bank_transfer.html:26 .\templates\buyer_dashboard.html:106
+#: .\templates\checkout.html:81 .\templates\checkout.html:147
+#: .\templates\confirm_purchase.html:36 .\templates\create_group.html:171
+#: .\templates\dashboard.html:88 .\templates\delivery_dashboard.html:206
+#: .\templates\edit_order.html:27 .\templates\farmer_storefront.html:65
+#: .\templates\group_buy_market.html:296 .\templates\home.html:531
+#: .\templates\input_market.html:219 .\templates\my_orders.html:167
+#: .\templates\order_detail.html:91 .\templates\order_detail.html:100
+#: .\templates\order_detail.html:109 .\templates\order_detail.html:126
+#: .\templates\order_detail.html:133 .\templates\order_detail.html:137
+#: .\templates\order_detail.html:141 .\templates\product_detail.html:131
+#: .\templates\product_detail.html:199 .\templates\supplier_dashboard.html:95
+#: .\templates\supplier_dashboard.html:136 .\templates\telebirr_pay.html:34
+msgid "ETB"
+msgstr "ብር"
+
+#: .\templates\bank_transfer.html:31
+msgid "Transfer to Seller:"
+msgstr "ናብ ሸጣይ ኣመሓላልፍ:"
+
+#: .\templates\bank_transfer.html:33
+msgid "Bank:"
+msgstr "ባንኪ:"
+
+#: .\templates\bank_transfer.html:34
+msgid "CBE (Commercial Bank)"
+msgstr "CBE (ንግዲ ባንኪ)"
+
+#: .\templates\bank_transfer.html:37
+msgid "Account Name:"
+msgstr "ሽም ሕሳብ:"
+
+#: .\templates\bank_transfer.html:42
+msgid "Copy"
+msgstr "ቅዳሕ"
+
+#: .\templates\bank_transfer.html:48
+msgid "Upload Screenshot / Receipt"
+msgstr "ስክሪን ሾት / ቅብሊት ጽዓን"
+
+#: .\templates\bank_transfer.html:52
+msgid "I have sent the money"
+msgstr "ገንዘብ ሰዲደ ኣለኹ"
+
+#: .\templates\buyer_dashboard.html:10
+msgid "Fresh Market - Arbor"
+msgstr "ፍርሽ ዕዳጋ - Arbor"
+
+#: .\templates\buyer_dashboard.html:65 .\templates\product_detail.html:9
+msgid "Arbor Market"
+msgstr "Arbor ዕዳጋ"
+
+#: .\templates\buyer_dashboard.html:68
+msgid "Welcome,"
+msgstr "እንቋዕ ብደሓን መጻእኩም፣"
+
+#: .\templates\buyer_dashboard.html:69 .\templates\dashboard.html:52
+#: .\templates\dedicated_manifest.html:43 .\templates\home.html:271
+#: .\templates\input_market.html:127 .\templates\my_orders.html:87
+msgid "Logout"
+msgstr "ውጻእ"
+
+#: .\templates\buyer_dashboard.html:80
+msgid "Fresh Organic Food"
+msgstr "ፍርሽ ኦርጋኒክ መግቢ"
+
+#: .\templates\buyer_dashboard.html:81
+msgid "Direct from Ethiopia's Best Farmers"
+msgstr "ቀጥታ ካብ ምርጥ ሓረስታይ ኢትዮጵያ"
+
+#: .\templates\buyer_dashboard.html:88
+msgid "Now"
+msgstr "ሕጂ"
+
+#: .\templates\buyer_dashboard.html:89
+msgid "Available Harvests"
+msgstr "ዘለዉ ፍርያታት"
+
+#: .\templates\buyer_dashboard.html:119
+msgid "kg Stock"
+msgstr "ኪሎ ክምችት"
+
+#: .\templates\buyer_dashboard.html:123 .\templates\product_detail.html:168
+msgid "Buy Now"
+msgstr "ሕጂ ግዛእ"
+
+#: .\templates\buyer_dashboard.html:131
+msgid "No crops listed yet. Farmers are planting! 🌱"
+msgstr "ክሳብ ሕጂ ዝተዘርዘረ ፍርያት የለን። ሓረስታይ ይዘርኡ ኣለዉ! 🌱"
+
+#: .\templates\checkout.html:10
+msgid "Checkout - Arbor"
+msgstr "Checkout - Arbor"
+
+#: .\templates\checkout.html:40 .\templates\create_group.html:78
+#: .\templates\group_buy_market.html:74 .\templates\home.html:201
+#: .\templates\home.html:656 .\templates\input_market.html:102
+#: .\templates\input_market.html:291 .\templates\liked_farmers.html:74
+#: .\templates\login.html:72 .\templates\my_orders.html:64
+#: .\templates\select_role.html:92
+msgid "Arbor"
+msgstr "ኣርቦር"
+
+#: .\templates\checkout.html:43
+msgid "Checkout"
+msgstr "ክፈሊ"
+
+#: .\templates\checkout.html:56
+msgid "Review Order"
+msgstr "ትእዛዝ ዳግም ረኣይ"
+
+#: .\templates\checkout.html:70 .\templates\product_detail.html:147
+msgid "Sold by"
+msgstr "ዝሸጠ"
+
+#: .\templates\checkout.html:80 .\templates\confirm_purchase.html:35
+msgid "Unit Price"
+msgstr "ናይ ሓደ ዋጋ"
+
+#: .\templates\checkout.html:87
+msgid "Order Details"
+msgstr "ዝርዝር ትእዛዝ"
+
+#: .\templates\checkout.html:99
+msgid "MAX"
+msgstr "ዝለዓለ"
+
+#: .\templates\checkout.html:106
+msgid "Select Payment Method"
+msgstr "አገባብ ክፍሊት ምረጽ"
+
+#: .\templates\checkout.html:114
+msgid "Cash on Delivery"
+msgstr "ምስ ተረከብካ ዝኽፈል"
+
+#: .\templates\checkout.html:125
+msgid "Telebirr / M-Pesa"
+msgstr "ቴሌብር / M-Pesa"
+
+#: .\templates\checkout.html:136
+msgid "Mobile Banking"
+msgstr "ሞባይል ባንኪንግ"
+
+#: .\templates\checkout.html:146
+msgid "Total to Pay"
+msgstr "ዝኽፈል ድምር"
+
+#: .\templates\checkout.html:151 .\templates\confirm_purchase.html:27
+msgid "Confirm Order"
+msgstr "ትእዛዝ ኣረጋግጽ"
+
+#: .\templates\confirm_purchase.html:10
+msgid "Confirm Purchase"
+msgstr "ምግዛእ ኣረጋግጽ"
+
+#: .\templates\confirm_purchase.html:28
+msgid "Review details before payment"
+msgstr "ቅድሚ ምኽፋል ዝርዝር ረኣይ"
+
+#: .\templates\confirm_purchase.html:32
+msgid "Product"
+msgstr "ፍርያት"
+
+#: .\templates\confirm_purchase.html:44
+msgid "Quantity Needed"
+msgstr "ዘድሊ ብዝሒ"
+
+#: .\templates\confirm_purchase.html:53
+msgid "Choose Payment Method"
+msgstr "አገባብ ክፍሊት ምረጽ"
+
+#: .\templates\confirm_purchase.html:59
+msgid "Mobile Money"
+msgstr "ሞባይል ገንዘብ"
+
+#: .\templates\confirm_purchase.html:66
+msgid "Pay Cash on Delivery"
+msgstr "ርክብ ምስ ፈጸምካ ብጥረ ገንዘብ ክፈሊ"
+
+#: .\templates\create_group.html:9
+msgid "Start Group Buy - Arbor"
+msgstr "ናይ ሓባር ሸመታ ጀምር - Arbor"
+
+#: .\templates\create_group.html:84 .\templates\create_group.html:189
+msgid "Launch Group"
+msgstr "ጉጅለ ጀምር"
+
+#: .\templates\create_group.html:109
+msgid "Start New Group"
+msgstr "ሓዲሽ ጉጅለ ጀምር"
+
+#: .\templates\create_group.html:115
+msgid "Urban Group:"
+msgstr "ናይ ከተማ ጉጅለ:"
+
+#: .\templates\create_group.html:115
+msgid "Fresh Food"
+msgstr "ፍርሽ መግቢ"
+
+#: .\templates\create_group.html:117
+msgid "Farmer Co-op:"
+msgstr "ማሕበር ሓረስታይ:"
+
+#: .\templates\create_group.html:117
+msgid "Farm Inputs"
+msgstr "ናይ ሕርሻ እታወታት"
+
+#: .\templates\create_group.html:128
+msgid "Group Name"
+msgstr "ሽም ጉጅለ"
+
+#: .\templates\create_group.html:136
+msgid "Drop-off Location (For Buyers)"
+msgstr "መራገፊ ቦታ (ንዓደግቲ)"
+
+#: .\templates\create_group.html:138
+msgid "Collection Warehouse (For Farmers)"
+msgstr "መአከቢ መኽዘን (ንሓረስታይ)"
+
+#: .\templates\create_group.html:151
+msgid "Where will the truck unload the food?"
+msgstr "እቲ መኪና መግቢ ኣበይ ከራግፍ እዩ?"
+
+#: .\templates\create_group.html:153
+msgid "Where will the truck drop the fertilizer?"
+msgstr "እቲ መኪና መዳበሪያ ኣበይ ከራግፍ እዩ?"
+
+#: .\templates\create_group.html:161
+msgid "Target Goal"
+msgstr "ሸቶ"
+
+#: .\templates\create_group.html:164
+msgid "Units"
+msgstr "አሃዱታት"
+
+#: .\templates\create_group.html:169
+msgid "Target Price"
+msgstr "ተደላይ ዋጋ"
+
+#: .\templates\create_group.html:181
+msgid "Deadline Date"
+msgstr "ዝውድኣሉ ዕለት"
+
+#: .\templates\create_group.html:193
+msgid "Cancel & Return Home"
+msgstr "ሰርዝ እሞ ናብ ዋና ገጽ ተመለስ"
+
+#: .\templates\create_group.html:202
+msgid "Arbor Marketplace. Connecting communities."
+msgstr "Arbor ዕዳጋ። ማሕበረሰብ የተኣሳስር።"
+
+#: .\templates\dashboard.html:10
+msgid "Farmer Dashboard - Arbor"
+msgstr "ናይ ሓረስታይ ዳሽቦርድ - Arbor"
+
+#: .\templates\dashboard.html:38 .\templates\product_detail.html:72
+msgid "Market"
+msgstr "ዕዳጋ"
+
+#: .\templates\dashboard.html:42
+msgid "My Farm Command"
+msgstr "ናይ ሕርሻይ ዳሽቦርድ"
+
+#: .\templates\dashboard.html:71
+msgid "Payment Verification Needed"
+msgstr "ክፍሊት ምርግጋጽ የድሊ"
+
+#: .\templates\dashboard.html:72
+msgid "Buyers have sent money via Mobile Banking. Please check receipts."
+msgstr "ዓደግቲ ብሞባይል ባንኪንግ ገንዘብ ሰዲዶም ኣለዉ። በጃኹም ቅብሊት ኣረጋግጹ።"
+
+#: .\templates\dashboard.html:98
+msgid "View Receipt"
+msgstr "ቅብሊት ረኣይ"
+
+#: .\templates\dashboard.html:107
+msgid "Confirm Receipt"
+msgstr "ቅብሊት ኣረጋግጽ"
+
+#: .\templates\dashboard.html:109
+msgid "Report Issue"
+msgstr "ጸገም ኣፍልጥ"
+
+#: .\templates\dashboard.html:126
+msgid "Your Harvest"
+msgstr "ፍርያትካ"
+
+#: .\templates\dashboard.html:127
+msgid "Manage your active listings and stock."
+msgstr "ንጡፋት ምዝገባታትን ስቶክን ኣመሓድር።"
+
+#: .\templates\dashboard.html:130
+msgid "List New Crop"
+msgstr "ሓዲሽ ፍርያት ምዝግብ"
+
+#: .\templates\dashboard.html:140
+msgid "Active Inventory"
+msgstr "ዘሎ ንብረት"
+
+#: .\templates\dashboard.html:160
+msgid "ETB/kg"
+msgstr "ብር/ኪሎ"
+
+#: .\templates\dashboard.html:162
+msgid "Stock:"
+msgstr "ክምችት:"
+
+#: .\templates\dashboard.html:164 .\templates\home.html:543
+msgid "Sold Out"
+msgstr "ተወዲኡ"
+
+#: .\templates\dashboard.html:166 .\templates\delivery_dashboard.html:176
+#: .\templates\supplier_dashboard.html:99
+msgid "Active"
+msgstr "ንጡፍ"
+
+#: .\templates\dashboard.html:175 .\templates\edit_crop.html:9
+#: .\templates\my_orders.html:221
+msgid "Edit"
+msgstr "ኣርትዕ (Edit)"
+
+#: .\templates\dashboard.html:179
+msgid "Are you sure you want to delete this crop? This cannot be undone."
+msgstr "ነዚ ፍርያት ክትስርዞ ርግጸኛ ዲኻ? እዚ ምምላስ ኣይከኣልን።"
+
+#: .\templates\dashboard.html:193
+msgid "Your fields are empty."
+msgstr "ቦታታትካ ባዶ እዮም።"
+
+#: .\templates\dashboard.html:194
+msgid "List a crop to start selling!"
+msgstr "ንምሻጥ ምጅማር ፍርያት ምዝግብ!"
+
+#: .\templates\dashboard.html:195
+msgid "Start Listing"
+msgstr "ምዝገባ ጀምር"
+
+#: .\templates\dashboard.html:213
+msgid "Need Supplies?"
+msgstr "ኣቕርቦት የድልየካ?"
+
+#: .\templates\dashboard.html:214
+msgid "Buy Fertilizers, Seeds, and Tools from verified suppliers."
+msgstr "መዳበሪያ፣ ዘርኢ፣ ከምኡውን መሳርሒታት ካብ ዝተረጋገጹ ኣቕረብቲ ግዛእ።"
+
+#: .\templates\dashboard.html:216
+msgid "Open Material Store"
+msgstr "ናይ ኣቕርቦት መኽዘን ክፈት"
+
+#: .\templates\dashboard.html:224
+msgid "Market Trends"
+msgstr "ኩነታት ዕዳጋ"
+
+#: .\templates\dashboard.html:243
+msgid "No market data available."
+msgstr "ናይ ዕዳጋ መረዳእታ የለን።"
+
+#: .\templates\dedicated_manifest.html:10
+msgid "Fleet Manifest - Arbor"
+msgstr "Fleet Manifest - Arbor"
+
+#: .\templates\dedicated_manifest.html:32
+msgid "Arbor Fleet"
+msgstr "Arbor ተሽከርከርቲ"
+
+#: .\templates\dedicated_manifest.html:33
+msgid "Official Logistics"
+msgstr "ኦፊሴላዊ ሎጅስቲክስ"
+
+#: .\templates\dedicated_manifest.html:39
+msgid "Driver ID:"
+msgstr "መፍለዪ መራሒ መኪና:"
+
+#: .\templates\dedicated_manifest.html:55
+msgid "Daily Route"
+msgstr "ዕለታዊ መስመር"
+
+#: .\templates\dedicated_manifest.html:59
+msgid "Assignments"
+msgstr "ምደባታት"
+
+#: .\templates\dedicated_manifest.html:92
+#: .\templates\delivery_dashboard.html:89
+#: .\templates\delivery_dashboard.html:166
+msgid "Order #"
+msgstr "ቁጽሪ ትእዛዝ #"
+
+#: .\templates\dedicated_manifest.html:92 .\templates\my_orders.html:159
+#: .\templates\product_detail.html:131
+msgid "KG"
+msgstr "ኪሎ"
+
+#: .\templates\dedicated_manifest.html:101
+msgid "Pickup From"
+msgstr "መበገሲ"
+
+#: .\templates\dedicated_manifest.html:111
+msgid "Deliver To"
+msgstr "መብጽሒ"
+
+#: .\templates\dedicated_manifest.html:124 .\templates\order_detail.html:209
+msgid "Confirm Pickup"
+msgstr "ምልዓል ኣረጋግጽ"
+
+#: .\templates\dedicated_manifest.html:132
+msgid "Enter Buyer Code"
+msgstr "ናይ ዓዳጊ ኮድ የእትው"
+
+#: .\templates\dedicated_manifest.html:135
+msgid "Verify"
+msgstr "ኣረጋግጽ"
+
+#: .\templates\dedicated_manifest.html:142
+msgid "Completed"
+msgstr "ተወዲኡ"
+
+#: .\templates\dedicated_manifest.html:157
+msgid "All Clear"
+msgstr "ኩሉ ጽሩይ"
+
+#: .\templates\dedicated_manifest.html:158
+msgid "Your manifest is empty."
+msgstr "ማኒፌስትካ ባዶ እዩ።"
+
+#: .\templates\delivery_dashboard.html:11
+msgid "Logistics Dashboard - Arbor"
+msgstr "Logistics Dashboard - Arbor"
+
+#: .\templates\delivery_dashboard.html:37
+msgid "Dispatch"
+msgstr "Dispatch"
+
+#: .\templates\delivery_dashboard.html:46
+msgid "SCORE"
+msgstr "ንጥፈት (SCORE)"
+
+#: .\templates\delivery_dashboard.html:75
+msgid "Your Manifest"
+msgstr "ናትካ ማኒፌስት"
+
+#: .\templates\delivery_dashboard.html:105
+#: .\templates\delivery_dashboard.html:209
+msgid "View Details"
+msgstr "ዝርዝር ረኣይ"
+
+#: .\templates\delivery_dashboard.html:111
+msgid "No active manifest."
+msgstr "ንጡፍ ማኒፌስት የለን።"
+
+#: .\templates\delivery_dashboard.html:126
+msgid "Total"
+msgstr "ድምር"
+
+#: .\templates\delivery_dashboard.html:130
+msgid "My Jobs"
+msgstr "ስራሓተይ"
+
+#: .\templates\delivery_dashboard.html:134
+msgid "Post Trip"
+msgstr "ጉዕዞ ምዝግብ"
+
+#: .\templates\delivery_dashboard.html:139
+msgid "Order Feed"
+msgstr "ትእዛዛት"
+
+#: .\templates\delivery_dashboard.html:163
+msgid "Assigned to you"
+msgstr "ንዓኻ ዝተመደበ"
+
+#: .\templates\delivery_dashboard.html:172
+msgid "Open"
+msgstr "ክፉት"
+
+#: .\templates\delivery_dashboard.html:180
+msgid "Done"
+msgstr "ተወዲኡ"
+
+#: .\templates\delivery_dashboard.html:184
+msgid "Taken"
+msgstr "ተወሲዱ"
+
+#: .\templates\delivery_dashboard.html:192
+msgid "From"
+msgstr "ካብ"
+
+#: .\templates\delivery_dashboard.html:199
+msgid "To"
+msgstr "ናብ"
+
+#: .\templates\delivery_dashboard.html:217
+msgid "No orders found."
+msgstr "ትእዛዛት ኣይተረኽበን።"
+
+#: .\templates\delivery_dashboard.html:218
+msgid "Wait for new requests."
+msgstr "ሓደስቲ ጠለባት ተጸበ።"
+
+#: .\templates\delivery_pending.html:9
+msgid "Application Received - Arbor"
+msgstr "ማመልከቻ ተቀቢልና - Arbor"
+
+#: .\templates\delivery_pending.html:24
+msgid "Application Pending"
+msgstr "ማመልከቻ ይረአ ኣሎ"
+
+#: .\templates\delivery_pending.html:27
+msgid "We have received your application."
+msgstr "ማመልከቻኻ ተቀቢልና ኣለና።"
+
+#: .\templates\delivery_pending.html:28
+msgid "Please wait for Admin approval."
+msgstr "በጃኻ ናይ ኣድሚን ፍቓድ ተጸበ።"
+
+#: .\templates\delivery_pending.html:32
+msgid "Status:"
+msgstr "ኩነታት:"
+
+#: .\templates\delivery_pending.html:32
+msgid "In Review..."
+msgstr "ኣብ ገምጋም..."
+
+#: .\templates\delivery_pending.html:34
+msgid ""
+"An admin must verify your account before you can access the Delivery "
+"Dashboard."
+msgstr ""
+"ኣድሚን ኣካውንትካ ቅድሚ ምርግጋጹ ናብ ዲሊቨሪ ዳሽቦርድ ክትኣቱ ኣይትኽእልን።"
+
+#: .\templates\delivery_pending.html:40
+msgid "Check Status (Login)"
+msgstr "ኩነታት ኣረጋግጽ (Login)"
+
+#: .\templates\delivery_pending.html:44
+msgid "Back to Home Page"
+msgstr "ናብ ዋና ገጽ ተመለስ"
+
+#: .\templates\edit_crop.html:20
+msgid "Edit Product"
+msgstr "ፍርያት ኣርትዕ"
+
+#: .\templates\edit_crop.html:28
+msgid "Crop Name"
+msgstr "ሽም ፍርያት"
+
+#: .\templates\edit_crop.html:38
+msgid "Stock (kg)"
+msgstr "ክምችት (ኪሎ)"
+
+#: .\templates\edit_crop.html:44
+msgid "Update Photo"
+msgstr "ስእሊ ቀይር"
+
+#: .\templates\edit_crop.html:49
+msgid "Save Changes"
+msgstr "ለውጢ አስቀምጥ"
+
+#: .\templates\edit_order.html:9
+msgid "Edit Order #"
+msgstr "ትእዛዝ ኣርትዕ #"
+
+#: .\templates\edit_order.html:21
+msgid "Edit Order"
+msgstr "ትእዛዝ ኣርትዕ"
+
+#: .\templates\edit_order.html:27
+msgid "Current Total:"
+msgstr "ናይ ሕጂ ድምር:"
+
+#: .\templates\edit_order.html:34
+msgid "New Quantity"
+msgstr "ሓዲሽ ብዝሒ"
+
+#: .\templates\edit_order.html:40
+msgid "Update Order"
+msgstr "ትእዛዝ ኣሻይሽ"
+
+#: .\templates\farmer_storefront.html:10
+msgid "'s Farm - Arbor"
+msgstr "'s ሕርሻ - Arbor"
+
+#: .\templates\farmer_storefront.html:23
+msgid "Back to Market"
+msgstr "ናብ ዕዳጋ ተመለስ"
+
+#: .\templates\farmer_storefront.html:25
+msgid "Farm Profile"
+msgstr "ናይ ሕርሻ ፕሮፋይል"
+
+#: .\templates\farmer_storefront.html:45
+msgid "Active Listings"
+msgstr "ንጡፋት ምዝገባታት"
+
+#: .\templates\farmer_storefront.html:51
+msgid "Full Harvest List"
+msgstr "ምሉእ ዝርዝር ፍርያት"
+
+#: .\templates\farmer_storefront.html:72
+msgid "kg left"
+msgstr "ኪሎ ተሪፉ"
+
+#: .\templates\farmer_storefront.html:73 .\templates\home.html:541
+#: .\templates\input_market.html:230
+msgid "In Stock"
+msgstr "ኣብ መኽዘን ዘሎ"
+
+#: .\templates\farmer_storefront.html:81
+msgid "This farmer has no other active listings."
+msgstr "እዚ ሓረስታይ ካልእ ንጡፍ ምዝገባ የብሉን።"
+
+#: .\templates\group_buy_market.html:10
+msgid "Community Hub - Arbor"
+msgstr "Community Hub - Arbor"
+
+#: .\templates\group_buy_market.html:65 .\templates\liked_farmers.html:65
+msgid "My Farm"
+msgstr "ናተይ ሕርሻ"
+
+#: .\templates\group_buy_market.html:66 .\templates\liked_farmers.html:66
+msgid "Command Center"
+msgstr "ዳሽቦርድ"
+
+#: .\templates\group_buy_market.html:81
+msgid "Community Hub"
+msgstr "ማሕበረሰብ ማእከል"
+
+#: .\templates\group_buy_market.html:89
+msgid "Sell"
+msgstr "ሽጥ"
+
+#: .\templates\group_buy_market.html:93 .\templates\home.html:246
+#: .\templates\my_orders.html:78 .\templates\order_detail.html:24
+msgid "Dashboard"
+msgstr "ዳሽቦርድ"
+
+#: .\templates\group_buy_market.html:99 .\templates\liked_farmers.html:88
+msgid "Groups"
+msgstr "ጉጅለታት"
+
+#: .\templates\group_buy_market.html:104 .\templates\my_orders.html:81
+msgid "Orders"
+msgstr "ትእዛዛት"
+
+#: .\templates\group_buy_market.html:111 .\templates\home.html:265
+#: .\templates\liked_farmers.html:98 .\templates\supplier_dashboard.html:45
+msgid "Profile"
+msgstr "ፕሮፋይል"
+
+#: .\templates\group_buy_market.html:115 .\templates\liked_farmers.html:102
+#: .\templates\supplier_dashboard.html:48
+msgid "Sign Out"
+msgstr "ውጻእ"
+
+#: .\templates\group_buy_market.html:140
+msgid "Group Buying Center"
+msgstr "ናይ ሓባር ሸመታ ማእከል"
+
+#: .\templates\group_buy_market.html:141
+msgid "Join forces with neighbors. Buy together. Save together."
+msgstr "ምስ ጎረባብቲ ተሓባበር። ብሓባር ግዛእ። ብሓባር ቆጥብ።"
+
+#: .\templates\group_buy_market.html:151
+msgid "Groups You Manage"
+msgstr "እተመሓድሮም ጉጅለታት"
+
+#: .\templates\group_buy_market.html:164
+msgid "Delivery:"
+msgstr "መባጽሒ:"
+
+#: .\templates\group_buy_market.html:180 .\templates\my_groups.html:54
+msgid "Member List"
+msgstr "ዝርዝር ኣባላት"
+
+#: .\templates\group_buy_market.html:185 .\templates\register_delivery.html:177
+msgid "Name"
+msgstr "ሽም"
+
+#: .\templates\group_buy_market.html:186 .\templates\my_groups.html:62
+msgid "Phone"
+msgstr "ስልኪ"
+
+#: .\templates\group_buy_market.html:188 .\templates\my_groups.html:64
+msgid "Action"
+msgstr "ስጉምቲ"
+
+#: .\templates\group_buy_market.html:199
+msgid "Kick this member?"
+msgstr "ነዚ ኣባል ከተውጽኦ ትደሊ?"
+
+#: .\templates\group_buy_market.html:200
+msgid "Kick"
+msgstr "ኣውጽእ"
+
+#: .\templates\group_buy_market.html:203
+msgid "Locked"
+msgstr "ተዓጽዩ"
+
+#: .\templates\group_buy_market.html:208
+msgid "No members yet."
+msgstr "ክሳብ ሕጂ ኣባላት የለዉን።"
+
+#: .\templates\group_buy_market.html:218
+msgid "Total Order:"
+msgstr "ድምር ትእዛዝ:"
+
+#: .\templates\group_buy_market.html:220 .\templates\my_groups.html:98
+msgid "Goal"
+msgstr "ሸቶ"
+
+#: .\templates\group_buy_market.html:225
+msgid "Finalize order?"
+msgstr "ትእዛዝ ትወድእ ኣለኻ?"
+
+#: .\templates\group_buy_market.html:226 .\templates\my_groups.html:104
+msgid "Place Final Order"
+msgstr "መወዳእታ ትእዛዝ ፈጽም"
+
+#: .\templates\group_buy_market.html:229 .\templates\my_groups.html:108
+msgid "Waiting for members..."
+msgstr "ኣባላት ይጽበ ኣሎ..."
+
+#: .\templates\group_buy_market.html:233
+msgid "Order Placed"
+msgstr "ትእዛዝ ተፈጺሙ"
+
+#: .\templates\group_buy_market.html:248
+msgid "Available Groups to Join"
+msgstr "ንምጽንባር ዘለዉ ጉጅለታት"
+
+#: .\templates\group_buy_market.html:259
+msgid "Input Co-op"
+msgstr "ናይ እታወታት ማሕበር"
+
+#: .\templates\group_buy_market.html:259
+msgid "Urban Group"
+msgstr "ናይ ከተማ ጉጅለ"
+
+#: .\templates\group_buy_market.html:266
+msgid "Leader:"
+msgstr "መራሒ:"
+
+#: .\templates\group_buy_market.html:274
+msgid "Pickup Location"
+msgstr "መቀበሊ ቦታ"
+
+#: .\templates\group_buy_market.html:282
+msgid "committed"
+msgstr "ኣታዊ ዝተኣተወ"
+
+#: .\templates\group_buy_market.html:283 .\templates\join_group.html:23
+msgid "Target:"
+msgstr "ሸቶ:"
+
+#: .\templates\group_buy_market.html:293
+msgid "Group Price"
+msgstr "ናይ ጉጅለ ዋጋ"
+
+#: .\templates\group_buy_market.html:300 .\templates\join_group.html:21
+msgid "Join"
+msgstr "ተሓወስ"
+
+#: .\templates\group_buy_market.html:308
+msgid "No active groups found."
+msgstr "ንጡፋት ጉጅለታት ኣይተረኽቡን።"
+
+#: .\templates\group_buy_market.html:309
+msgid "Be the first to start a community group!"
+msgstr "ናይ ማሕበረሰብ ጉጅለ ንምጅማር ቀዳማይ ኩን!"
+
+#: .\templates\group_buy_market.html:324 .\templates\liked_farmers.html:213
+msgid "Official Payment Partners"
+msgstr "ወግዓዊ መሻርኽቲ ክፍሊት"
+
+#: .\templates\group_buy_market.html:325 .\templates\liked_farmers.html:214
+msgid "Secure transactions via Ethiopia's trusted financial institutions."
+msgstr "ብናይ ኢትዮጵያ ዝተኣማመኑ ፋይናንስ ትካላት ዝተሓለወ ክፍሊት።"
+
+#: .\templates\group_buy_market.html:362 .\templates\liked_farmers.html:231
+msgid "Arbor Marketplace. All Rights Reserved."
+msgstr "Arbor Marketplace. All Rights Reserved."
+
+#: .\templates\home.html:20
+msgid "Arbor - The Grand Market | Farm Direct"
+msgstr "Arbor - ዓቢ ዕዳጋ | ቀጥታ ካብ ሕርሻ"
+
+#: .\templates\home.html:21
+msgid ""
+"Ethiopia's premier farm-to-table marketplace. Buy fresh, sell direct, and "
+"grow together."
+msgstr ""
+"ናይ ኢትዮጵያ ቀዳማይ ካብ ሕርሻ ናብ መኣዲ ዕዳጋ። ፍርሽ ግዛእ፣ ቀጥታ ሽጥ፣ ብሓባር ዓቢ።"
+
+#: .\templates\home.html:160
+msgid "Cultivating..."
+msgstr "የዳልው ኣሎ..."
+
+#: .\templates\home.html:214
+msgid "Type to pop up products..."
+msgstr "ፍርያት ንምድላይ ጽሓፍ..."
+
+#: .\templates\home.html:250
+msgid "Supplier Dashboard"
+msgstr "ናይ ኣቕራቢ ዳሽቦርድ"
+
+#: .\templates\home.html:254
+msgid "Delivery Dashboard"
+msgstr "ናይ ዲሊቨሪ ዳሽቦርድ"
+
+#: .\templates\home.html:258
+msgid "Cart"
+msgstr "ካርኒ"
+
+#: .\templates\home.html:277 .\templates\input_market.html:129
+#: .\templates\select_role.html:97 .\templates\select_role.html:124
+msgid "Login"
+msgstr "እተው (Login)"
+
+#: .\templates\home.html:280 .\templates\input_market.html:130
+msgid "Join Now"
+msgstr "ሕጂ ተሓወስ"
+
+#: .\templates\home.html:292
+msgid "Search..."
+msgstr "ድለ..."
+
+#: .\templates\home.html:314
+msgid "Live Market • Addis Ababa"
+msgstr "ቀጥታ ዕዳጋ • ኣዲስ ኣበባ"
+
+#: .\templates\home.html:319
+msgid "The Heart of"
+msgstr "ልቢ ናይ"
+
+#: .\templates\home.html:320
+msgid "Ethiopia's Harvest"
+msgstr "ናይ ኢትዮጵያ ፍርያት"
+
+#: .\templates\home.html:325
+msgid ""
+"Direct from the soil to your table. We connect you with local farmers for "
+"the freshest produce at fair, transparent prices."
+msgstr ""
+"ቀጥታ ካብ መሬት ናብ መኣድኻ። ንሕና ምስ ከባቢ ሓረስታይ ብፍትሓዊ ዋጋን ፍርሽ ፍርያትን ነራኽበኩም።"
+
+#: .\templates\home.html:334
+msgid "List Harvest"
+msgstr "ፍርያት ምዝግብ"
+
+#: .\templates\home.html:337
+msgid "Buy Inputs"
+msgstr "እታወታት ግዛእ"
+
+#: .\templates\home.html:343
+msgid "List Material"
+msgstr "ኣቕርቦት ምዝግብ"
+
+#: .\templates\home.html:346
+msgid "View Input Market"
+msgstr "ዕዳጋ እታወታት ረኣይ"
+
+#: .\templates\home.html:352
+msgid "View Routes"
+msgstr "መስመራት ረኣይ"
+
+#: .\templates\home.html:355
+msgid "Active Orders"
+msgstr "ንጡፋት ትእዛዛት"
+
+#: .\templates\home.html:361 .\templates\my_orders.html:251
+#: .\templates\register_buyer.html:192
+msgid "Start Shopping"
+msgstr "ምሽማት ጀምር"
+
+#: .\templates\home.html:364
+msgid "Join Group Buy"
+msgstr "ናብ ሓባር ሸመታ ተሓወስ"
+
+#: .\templates\home.html:374
+msgid "Select Your Language / ቋንቋ ይምረጡ"
+msgstr "ቋንቋ ይምረጡ / Select Your Language"
+
+#: .\templates\home.html:415
+msgid "Filtering by:"
+msgstr "ምጽራይ ብ:"
+
+#: .\templates\home.html:417
+msgid "Browse by Category"
+msgstr "ብዓይነት ድለ"
+
+#: .\templates\home.html:454
+msgid "All"
+msgstr "ኩሉ"
+
+#: .\templates\home.html:523
+msgid "Fresh Harvest"
+msgstr "ፍርሽ ፍርያት"
+
+#: .\templates\home.html:563 .\templates\input_market.html:241
+msgid "Buy"
+msgstr "ግዛእ"
+
+#: .\templates\home.html:572 .\templates\input_market.html:244
+msgid "Group"
+msgstr "ጉጅለ"
+
+#: .\templates\home.html:582
+msgid "Marketplace Empty"
+msgstr "ዕዳጋ ባዶ እዩ"
+
+#: .\templates\home.html:583
+msgid "Check back soon!"
+msgstr "ድሕሪ ቁሩብ ተመለስ!"
+
+#: .\templates\home.html:590
+msgid "Load More Harvests"
+msgstr "ተወሳኺ ፍርያት ኣርእይ"
+
+#: .\templates\home.html:602
+msgid "Farm to Table in 3 Steps"
+msgstr "ካብ ሕርሻ ናብ መኣዲ ብ 3 ደረጃታት"
+
+#: .\templates\home.html:603
+msgid "Simple, Transparent, and Fast."
+msgstr "ቀሊል፣ ግልጽን ቅልጡፍን።"
+
+#: .\templates\home.html:609
+msgid "Choose Fresh"
+msgstr "ፍርሽ ምረጽ"
+
+#: .\templates\home.html:610
+msgid ""
+"Browse hundreds of daily listings directly from verified Ethiopian farmers."
+msgstr ""
+"ኣብ መዓልቲ ኣማኢት ዝኾኑ ምዝገባታት ቀጥታ ካብ ዝተረጋገጹ ኢትዮጵያውያን ሓረስታይ ረኣይ።"
+
+#: .\templates\home.html:615
+msgid "Group & Save"
+msgstr "ተጋጀልን ቆጥብን"
+
+#: .\templates\home.html:616
+msgid ""
+"Buy individually or join a Group Buy to unlock wholesale prices with "
+"neighbors."
+msgstr ""
+"ብውልቂ ግዛእ ወይ ምስ ጎረባብትኻ ብምዃን ብናይ ጅምላ ዋጋ ንምግዛእ ጉጅለ ፍጠር።"
+
+#: .\templates\home.html:621
+msgid "Fast Delivery"
+msgstr "ቅልጡፍ መባጽሒ"
+
+#: .\templates\home.html:622
+msgid "We collect from the farm and deliver to your doorstep within 24 hours."
+msgstr "ካብ ሕርሻ ኣኪብና ኣብ ውሽጢ 24 ሰዓት ናብ ገዛኻ ነብጽሕ።"
+
+#: .\templates\home.html:638 .\templates\input_market.html:272
+msgid "Join the Harvest"
+msgstr "ናብቲ ፍርያት ተሓወስ"
+
+#: .\templates\home.html:639 .\templates\input_market.html:273
+msgid ""
+"Get weekly market price updates, seasonal alerts, and exclusive group-buying "
+"deals delivered to your inbox."
+msgstr ""
+"ሰሙናዊ ዋጋ ዕዳጋ፣ ወቕታዊ ሓበሬታታት፣ ከምኡውን ፍሉይ ናይ ጉጅለ ሸመታ ዕድላት ረከብ።"
+
+#: .\templates\home.html:642 .\templates\input_market.html:276
+msgid "your@email.com"
+msgstr "your@email.com"
+
+#: .\templates\home.html:644 .\templates\input_market.html:278
+msgid "Subscribe"
+msgstr "ተመዝገብ"
+
+#: .\templates\home.html:657 .\templates\input_market.html:292
+#: .\templates\my_orders.html:65
+msgid "Grand Market"
+msgstr "ዓቢ ዕዳጋ"
+
+#: .\templates\home.html:660
+msgid "Empowering Ethiopia's farmers through digital sovereignty."
+msgstr "ንሓረስታይ ኢትዮጵያ ብዲጂታል ነጻነት ምሕያል።"
+
+#: .\templates\home.html:668 .\templates\input_market.html:307
+msgid "Marketplace"
+msgstr "ዕዳጋ"
+
+#: .\templates\home.html:670 .\templates\input_market.html:309
+msgid "All Products"
+msgstr "ኩሉ ፍርያት"
+
+#: .\templates\home.html:671 .\templates\input_market.html:310
+msgid "Fresh Vegetables"
+msgstr "ፍርሽ ኣሕምልቲ"
+
+#: .\templates\home.html:675 .\templates\input_market.html:317
+msgid "Support"
+msgstr "ደገፍ"
+
+#: .\templates\home.html:677 .\templates\input_market.html:319
+msgid "Help Center"
+msgstr "ማእከል ሓገዝ"
+
+#: .\templates\home.html:678 .\templates\input_market.html:320
+msgid "Track Order"
+msgstr "ትእዛዝ ተኸታተል"
+
+#: .\templates\home.html:682 .\templates\input_market.html:326
+msgid "Legal"
+msgstr "ሕጋዊ"
+
+#: .\templates\home.html:684 .\templates\input_market.html:328
+msgid "Privacy Policy"
+msgstr "ፖሊሲ ግላዊነት"
+
+#: .\templates\home.html:685 .\templates\input_market.html:329
+msgid "Terms of Service"
+msgstr "ውል ሓለዋ"
+
+#: .\templates\home.html:691 .\templates\input_market.html:337
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+#: .\templates\input_market.html:19
+msgid "Arbor - Input Supplies | Farm Materials"
+msgstr "Arbor - እታወታት | ናይ ሕርሻ መሳርሒታት"
+
+#: .\templates\input_market.html:82
+msgid "Loading Supplies..."
+msgstr "ኣቕርቦት ይጽዕን ኣሎ..."
+
+#: .\templates\input_market.html:112
+msgid "Search fertilizers, seeds, tools..."
+msgstr "መዳበሪያ፣ ዘርኢ፣ መሳርሒታት ድለ..."
+
+#: .\templates\input_market.html:139
+msgid "Search inputs..."
+msgstr "እታወታት ድለ..."
+
+#: .\templates\input_market.html:155
+msgid "Certified Inputs"
+msgstr "ዝተረጋገጹ እታወታት"
+
+#: .\templates\input_market.html:160
+msgid "Fuel Your"
+msgstr "ን ... አሐይል"
+
+#: .\templates\input_market.html:161
+msgid "Farm's Growth"
+msgstr "ዕብየት ሕርሻ"
+
+#: .\templates\input_market.html:166
+msgid ""
+"Premium seeds, fertilizers, and machinery from verified suppliers. Delivered "
+"directly to your cooperative."
+msgstr ""
+"ምርጥ ዘርኢ፣ መዳበሪያን ማሽነሪታትን ካብ ዝተረጋገጹ ኣቕረብቲ። ቀጥታ ናብ ማሕበርኩም ይበጽሕ።"
+
+#: .\templates\input_market.html:173
+msgid "List New Material"
+msgstr "ሓዲሽ ኣቕርቦት ምዝግብ"
+
+#: .\templates\input_market.html:185
+msgid "Available Supplies"
+msgstr "ዘለዉ ኣቕርቦታት"
+
+#: .\templates\input_market.html:206 .\templates\select_role.html:187
+msgid "Supplier"
+msgstr "ኣቕራቢ"
+
+#: .\templates\input_market.html:214
+msgid "General"
+msgstr "ሓፈሻዊ"
+
+#: .\templates\input_market.html:221
+msgid "/unit"
+msgstr "/አሃዱ"
+
+#: .\templates\input_market.html:224
+msgid "left"
+msgstr "ተሪፉ"
+
+#: .\templates\input_market.html:232
+msgid "Restocking"
+msgstr "Restocking"
+
+#: .\templates\input_market.html:251
+msgid "No Supplies Found"
+msgstr "ኣቕርቦት ኣይተረኽበን"
+
+#: .\templates\input_market.html:252
+msgid "Try searching for a different item."
+msgstr "ካልእ ዓይነት ንምድላይ ፈትን።"
+
+#: .\templates\input_market.html:296
+msgid ""
+"Empowering Ethiopia's farmers through digital sovereignty. Direct farm-to-"
+"table connections, fair prices, and community-driven commerce."
+msgstr ""
+"ንሓረስታይ ኢትዮጵያ ብዲጂታል ነጻነት ምሕያል። ቀጥታ ካብ ሕርሻ ናብ መኣዲ ዝምድና፣ ፍትሓዊ ዋጋን ብማሕበረሰብ "
+"ዝምራሕ ንግድን።"
+
+#: .\templates\input_market.html:311
+msgid "Fruits & Berries"
+msgstr "ፍረታትን ቤሪስን"
+
+#: .\templates\input_market.html:312
+msgid "Bulk Grains"
+msgstr "ጥራይ እኽሊ ብጅምላ"
+
+#: .\templates\input_market.html:321
+msgid "Become a Farmer"
+msgstr "ሓረስታይ ኩን"
+
+#: .\templates\input_market.html:338
+msgid "Made with 💚 for Ethiopia."
+msgstr "Made with 💚 for Ethiopia."
+
+#: .\templates\join_group.html:9
+msgid "Join Group - Arbor"
+msgstr "ጉጅለ ተሓወስ - Arbor"
+
+#: .\templates\join_group.html:22
+msgid "ETB / unit"
+msgstr "ብር / አሃዱ"
+
+#: .\templates\join_group.html:23 .\templates\my_groups.html:72
+#: .\templates\supplier_dashboard.html:96
+msgid "units"
+msgstr "አሃዱታት"
+
+#: .\templates\join_group.html:29
+msgid "collected so far"
+msgstr "ክሳብ ሕጂ ዝተኣከበ"
+
+#: .\templates\join_group.html:36
+msgid "How much do you want?"
+msgstr "ክንደይ ትደሊ?"
+
+#: .\templates\join_group.html:42
+msgid "Commit to Buy"
+msgstr "ንምግዛእ ቃል እቶ"
+
+#: .\templates\liked_farmers.html:10
+msgid "My Favorite Farmers - Arbor"
+msgstr "ዝፈትዎም ሓረስታይ - Arbor"
+
+#: .\templates\liked_farmers.html:81
+msgid "Trusted Growers"
+msgstr "ዝተኣማመኑ ኣፍረይቲ"
+
+#: .\templates\liked_farmers.html:93
+msgid "Likes"
+msgstr "ዝፈተኽዎም"
+
+#: .\templates\liked_farmers.html:126
+msgid "Your Trusted Growers"
+msgstr "ናትካ ዝተኣማመኑ ኣፍረይቲ"
+
+#: .\templates\liked_farmers.html:127
+msgid "Support the hands that feed you."
+msgstr "ንዝምግቡኻ ኣእዳው ደግፍ።"
+
+#: .\templates\liked_farmers.html:161
+msgid "Currently Growing"
+msgstr "ሕጂ ዘፍርይዎ ዘለዉ"
+
+#: .\templates\liked_farmers.html:170
+msgid "No crops listed currently."
+msgstr "ሕጂ ዝተዘርዘረ ፍርያት የለን።"
+
+#: .\templates\liked_farmers.html:178
+msgid "Unfollow"
+msgstr "Unfollow"
+
+#: .\templates\liked_farmers.html:183
+msgid "View Shop"
+msgstr "ድኳን ረኣይ"
+
+#: .\templates\liked_farmers.html:187
+msgid "Empty Shop"
+msgstr "ባዶ ድኳን"
+
+#: .\templates\liked_farmers.html:196
+msgid "No favorites yet"
+msgstr "ክሳብ ሕጂ ዝፈተኽዎ የለን"
+
+#: .\templates\liked_farmers.html:197
+msgid "Follow farmers to see their latest harvest here."
+msgstr "ናይ ሓረስታይ ሓዲሽ ፍርያት ንምርኣይ ተኸታተሎም።"
+
+#: .\templates\liked_farmers.html:199
+msgid "Browse the Market"
+msgstr "ዕዳጋ ዳህስስ"
+
+#: .\templates\login.html:10
+msgid "Login | Arbor"
+msgstr "እተው | Arbor"
+
+#: .\templates\login.html:105
+msgid "Welcome Back"
+msgstr "እንቋዕ ብደሓን ተመለስኩም"
+
+#: .\templates\login.html:106
+msgid "Enter your credentials to access your account."
+msgstr "ናብ ኣካውንትካ ንምእታው ሓበሬታ የእትው።"
+
+#: .\templates\login.html:131 .\templates\register.html:164
+#: .\templates\register_buyer.html:151 .\templates\register_delivery.html:189
+msgid "Phone Number"
+msgstr "ቁጽሪ ስልኪ"
+
+#: .\templates\login.html:141
+msgid "4-Digit PIN"
+msgstr "4-ኣሃዝ ፒን"
+
+#: .\templates\login.html:151
+msgid "Sign In"
+msgstr "እተው"
+
+#: .\templates\login.html:159
+msgid "Don't have an account?"
+msgstr "ኣካውንት የብልካን?"
+
+#: .\templates\login.html:161
+msgid "Create New Account"
+msgstr "ሓዲሽ ኣካውንት ፍጠር"
+
+#: .\templates\login.html:171 .\templates\my_orders.html:272
+#: .\templates\product_detail.html:214 .\templates\select_role.html:220
+msgid "Arbor Marketplace"
+msgstr "Arbor Marketplace"
+
+#: .\templates\my_groups.html:9
+msgid "Manage My Groups"
+msgstr "ጉጅለታተይ ኣመሓድር"
+
+#: .\templates\my_groups.html:21 .\templates\profile.html:19
+msgid "Home"
+msgstr "ዋና ገጽ"
+
+#: .\templates\my_groups.html:22
+msgid "My Managed Groups"
+msgstr "ዘመሓድሮም ጉጅለታት"
+
+#: .\templates\my_groups.html:37
+msgid "Deliver to:"
+msgstr "መብጽሒ:"
+
+#: .\templates\my_groups.html:41
+msgid "Current Status"
+msgstr "ሕጂ ዘለዎ ኩነታት"
+
+#: .\templates\my_groups.html:61
+msgid "Member Name"
+msgstr "ሽም ኣባል"
+
+#: .\templates\my_groups.html:63
+msgid "Committed Qty"
+msgstr "ዝተኣተወ ብዝሒ"
+
+#: .\templates\my_groups.html:75
+msgid "Kick this member out?"
+msgstr "ነዚ ኣባል ከተውጽኦ ትደሊ?"
+
+#: .\templates\my_groups.html:76
+msgid "Remove"
+msgstr "ኣውጽእ"
+
+#: .\templates\my_groups.html:85
+msgid "No members have joined yet."
+msgstr "ክሳብ ሕጂ ዝተሓወሰ ኣባል የለን።"
+
+#: .\templates\my_groups.html:96
+msgid "Total Quantity:"
+msgstr "ድምር ብዝሒ:"
+
+#: .\templates\my_groups.html:103
+msgid "This will finalize the group and send the order to delivery. Proceed?"
+msgstr "እዚ ንጉጅለ ዛዚሙ ትእዛዝ ናብ ዲሊቨሪ ክሰድድ እዩ። ክቐጽል?"
+
+#: .\templates\my_groups.html:113
+msgid "Sent to Delivery"
+msgstr "ናብ ዲሊቨሪ ተላኢኹ"
+
+#: .\templates\my_groups.html:122
+msgid "You haven't created any groups yet."
+msgstr "ክሳብ ሕጂ ዝፈጠርካዮ ጉጅለ የለን።"
+
+#: .\templates\my_orders.html:9
+msgid "My Orders | Arbor Market"
+msgstr "ትእዛዛተይ | Arbor Market"
+
+#: .\templates\my_orders.html:72
+msgid "My Orders"
+msgstr "ትእዛዛተይ"
+
+#: .\templates\my_orders.html:80 .\templates\product_detail.html:171
+msgid "Group Buy"
+msgstr "ናይ ሓባር ሸመታ"
+
+#: .\templates\my_orders.html:112
+msgid "Order History"
+msgstr "ታሪኽ ትእዛዝ"
+
+#: .\templates\my_orders.html:113
+msgid "Track your farm-fresh deliveries in real-time."
+msgstr "ናይ ሕርሻ ፍርያትካ ዲሊቨሪ ብቐጥታ ተኸታተል።"
+
+#: .\templates\my_orders.html:120
+#, python-format
+msgid "%(count)s Active Order"
+msgid_plural "%(count)s Active Orders"
+msgstr[0] "%(count)s ንጡፍ ትእዛዝ"
+msgstr[1] "%(count)s ንጡፋት ትእዛዛት"
+
+#: .\templates\my_orders.html:137
+msgid "Pending"
+msgstr "Pending"
+
+#: .\templates\my_orders.html:139
+msgid "Assigned"
+msgstr "ተመዲቡ"
+
+#: .\templates\my_orders.html:141
+msgid "On Way"
+msgstr "ኣብ መገዲ"
+
+#: .\templates\my_orders.html:143
+msgid "Delivered"
+msgstr "በጺሑ"
+
+#: .\templates\my_orders.html:166
+msgid "Total Cost"
+msgstr "ድምር ወጪ"
+
+#: .\templates\my_orders.html:170
+msgid "Placed On"
+msgstr "ዝተኣዘዘሉ ዕለት"
+
+#: .\templates\my_orders.html:181
+msgid "Delivery To"
+msgstr "መብጽሒ"
+
+#: .\templates\my_orders.html:195
+msgid "Driver"
+msgstr "መራሒ መኪና"
+
+#: .\templates\my_orders.html:208
+msgid "Secure Delivery PIN"
+msgstr "ናይ ዲሊቨሪ ፒን"
+
+#: .\templates\my_orders.html:212
+#, python-format
+msgid "Give this code to %(name)s"
+msgstr "እዚ ኮድ ን %(name)s ሃቦ"
+
+#: .\templates\my_orders.html:223
+msgid "Cancel this order?"
+msgstr "እዚ ትእዛዝ ይሰረዝ?"
+
+#: .\templates\my_orders.html:248
+msgid "No active orders"
+msgstr "ንጡፍ ትእዛዝ የለን"
+
+#: .\templates\my_orders.html:249
+msgid ""
+"Fresh produce is waiting. Start exploring the market to fill your basket."
+msgstr "ፍርሽ ፍርያት ይጽበ ኣሎ። ቅርጫትካ ንምምላእ ዕዳጋ ዳህስስ።"
+
+#: .\templates\my_orders.html:263
+msgid "Trusted Payments"
+msgstr "ዝተኣማመን ክፍሊት"
+
+#: .\templates\my_orders.html:264
+msgid "Secured by Ethiopia's financial network."
+msgstr "ብናይ ኢትዮጵያ ፋይናንስ ነትወርክ ዝተሓለወ።"
+
+#: .\templates\order_detail.html:9
+#, python-format
+msgid "Manifest #%(id)s - Arbor"
+msgstr "Manifest #%(id)s - Arbor"
+
+#: .\templates\order_detail.html:26
+#, python-format
+msgid "Manifest #%(id)s"
+msgstr "Manifest #%(id)s"
+
+#: .\templates\order_detail.html:54
+msgid "Ordered On"
+msgstr "ዝተኣዘዘሉ"
+
+#: .\templates\order_detail.html:67 .\templates\supplier_dashboard.html:77
+msgid "Status"
+msgstr "ኩነታት"
+
+#: .\templates\order_detail.html:85
+msgid "CASH HANDLING INSTRUCTIONS"
+msgstr "መምርሒ ኣተሓሕዛ ገንዘብ"
+
+#: .\templates\order_detail.html:90
+msgid "Step 1: Collect from Buyer"
+msgstr "ደረጃ 1: ካብ ዓዳጊ ተቀበል"
+
+#: .\templates\order_detail.html:92
+msgid "Total Order Value"
+msgstr "ድምር ዋጋ ትእዛዝ"
+
+#: .\templates\order_detail.html:99
+msgid "Step 2: Pay to Seller"
+msgstr "ደረጃ 2: ንሸጣይ ክፈሊ"
+
+#: .\templates\order_detail.html:101
+msgid "Hand this cash to Farmer"
+msgstr "እዚ ገንዘብ ንሓረስታይ ሃብ"
+
+#: .\templates\order_detail.html:108
+msgid "Step 3: Platform Fee"
+msgstr "ደረጃ 3: ናይ ፕላትፎርም ክፍሊት"
+
+#: .\templates\order_detail.html:110
+msgid "Keep for Arbor Office"
+msgstr "ን Arbor Office ዝተርፍ"
+
+#: .\templates\order_detail.html:115
+msgid ""
+"⚠️ IMPORTANT: Do not give the full amount to the seller. Only give the 'Pay "
+"to Seller' amount."
+msgstr ""
+"⚠️ ኣገዳሲ: እቲ ምሉእ ገንዘብ ንሸጣይ ኣይትሃብ። እቲ 'ንሸጣይ ዝኽፈል' ዝብል ጥራይ ሃብ።"
+
+#: .\templates\order_detail.html:123
+msgid "Cargo Details"
+msgstr "ዝርዝር ጽዕነት"
+
+#: .\templates\order_detail.html:124
+msgid "Item:"
+msgstr "ዓይነት:"
+
+#: .\templates\order_detail.html:125
+msgid "Quantity:"
+msgstr "ብዝሒ:"
+
+#: .\templates\order_detail.html:125
+msgid "unit(s)"
+msgstr "አሃዱ(ታት)"
+
+#: .\templates\order_detail.html:126
+msgid "Value:"
+msgstr "ዋጋ:"
+
+#: .\templates\order_detail.html:130
+msgid "Payout Details"
+msgstr "ዝርዝር ክፍሊት"
+
+#: .\templates\order_detail.html:132
+msgid "Total Paid:"
+msgstr "ድምር ዝተኽፈለ:"
+
+#: .\templates\order_detail.html:136
+#, python-format
+msgid "Platform Fee (5%%):"
+msgstr "ናይ ፕላትፎርም ክፍሊት (5%%):"
+
+#: .\templates\order_detail.html:140
+msgid "Your Earnings:"
+msgstr "ናትካ ኣታዊ:"
+
+#: .\templates\order_detail.html:148
+msgid "Payment & Notes"
+msgstr "ክፍሊትን መዘከርታን"
+
+#: .\templates\order_detail.html:149
+msgid "Method:"
+msgstr "አገባብ:"
+
+#: .\templates\order_detail.html:150
+msgid "Note:"
+msgstr "መዘከርታ:"
+
+#: .\templates\order_detail.html:150
+msgid "Handle with care."
+msgstr "ብጥንቃቐ ሓዝ።"
+
+#: .\templates\order_detail.html:164
+msgid "Origin (Seller)"
+msgstr "መበገሲ (ሸጣይ)"
+
+#: .\templates\order_detail.html:184
+msgid "Transport"
+msgstr "መጓዓዝያ"
+
+#: .\templates\order_detail.html:216
+msgid "Enter Buyer PIN"
+msgstr "ናይ ዓዳጊ ፒን የእትው"
+
+#: .\templates\order_detail.html:234
+msgid "Verify & Complete"
+msgstr "ኣረጋግጽን ወድእን"
+
+#: .\templates\order_detail.html:237
+msgid "Ask Buyer for 4-digit code"
+msgstr "ንዓዳጊ 4-አሃዝ ኮድ ሕተቶ"
+
+#: .\templates\order_detail.html:242
+msgid "Job Complete"
+msgstr "ስራሕ ተወዲኡ"
+
+#: .\templates\order_detail.html:251
+msgid "No Driver"
+msgstr "መራሒ መኪና የለን"
+
+#: .\templates\order_detail.html:252
+msgid "Waiting for assignment..."
+msgstr "ምደባ ይጽበ ኣሎ..."
+
+#: .\templates\order_detail.html:256
+msgid "Assign to Me"
+msgstr "ንዓይ መድብ"
+
+#: .\templates\order_detail.html:258
+msgid "Auto-fill my details"
+msgstr "ዝርዝረይ ብባዕሉ ይምላእ"
+
+#: .\templates\order_detail.html:265
+msgid "Destination (Buyer)"
+msgstr "መብጽሒ (ዓዳጊ)"
+
+#: .\templates\post_trip.html:8
+msgid "Post a Trip - Arbor CDN"
+msgstr "Post a Trip - Arbor CDN"
+
+#: .\templates\post_trip.html:20
+msgid "Post a Trip"
+msgstr "ጉዕዞ ምዝግብ"
+
+#: .\templates\post_trip.html:21
+msgid "Tell us where you are going to get matched."
+msgstr "ኣበይ ከም እትኸይድ ንገረና እሞ ንራኽበካ።"
+
+#: .\templates\post_trip.html:29
+msgid "Origin"
+msgstr "መበገሲ"
+
+#: .\templates\post_trip.html:33
+msgid "Destination"
+msgstr "መብጽሒ"
+
+#: .\templates\post_trip.html:39
+msgid "Available Capacity (KG)"
+msgstr "ዘሎ ቦታ (ኪሎ)"
+
+#: .\templates\post_trip.html:44
+msgid "Departure Date/Time"
+msgstr "መገሻ ዕለት/ሰዓት"
+
+#: .\templates\post_trip.html:50
+msgid "Publish Trip"
+msgstr "ጉዕዞ ኣውጽእ"
+
+#: .\templates\product_detail.html:131
+msgid "Unit"
+msgstr "አሃዱ"
+
+#: .\templates\product_detail.html:147
+msgid "Grown by"
+msgstr "ዘፍረዮ"
+
+#: .\templates\product_detail.html:159
+msgid "Visit Farm"
+msgstr "ሕርሻ ዑደት ግበር"
+
+#: .\templates\product_detail.html:182
+msgid "You might also like"
+msgstr "እዚውን ክትፈትዎ ትኽእል"
+
+#: .\templates\profile.html:8
+msgid "My Profile - Arbor"
+msgstr "My Profile - Arbor"
+
+#: .\templates\profile.html:21
+msgid "My Profile Settings"
+msgstr "ናይ ፕሮፋይል ቅጥዕታት"
+
+#: .\templates\profile.html:37
+msgid "Profile Picture"
+msgstr "ስእሊ ፕሮፋይል"
+
+#: .\templates\profile.html:55
+msgid "No Location Set"
+msgstr "ቦታ ኣይተመዝገበን"
+
+#: .\templates\profile.html:59
+msgid "Banking Info:"
+msgstr "ናይ ባንኪ ሓበሬታ:"
+
+#: .\templates\profile.html:64
+msgid "⚠️ No bank details added."
+msgstr "⚠️ ናይ ባንኪ ሓበሬታ ኣይተወሰኸን።"
+
+#: .\templates\profile.html:73
+msgid "Edit Details"
+msgstr "ዝርዝር ኣርትዕ"
+
+#: .\templates\profile.html:81
+msgid "Personal Information"
+msgstr "ግላዊ ሓበሬታ"
+
+#: .\templates\profile.html:84 .\templates\register.html:145
+#: .\templates\register_buyer.html:134 .\templates\register_delivery.html:176
+#: .\templates\register_supplier.html:164
+msgid "First Name"
+msgstr "ሽም"
+
+#: .\templates\profile.html:88 .\templates\register.html:153
+#: .\templates\register_buyer.html:141 .\templates\register_delivery.html:181
+#: .\templates\register_supplier.html:171
+msgid "Last Name"
+msgstr "ሽም ኣቦ"
+
+#: .\templates\profile.html:95
+msgid "Location / Address"
+msgstr "ቦታ / ኣድራሻ"
+
+#: .\templates\profile.html:100
+msgid "Change Photo"
+msgstr "ስእሊ ቀይር"
+
+#: .\templates\profile.html:110
+msgid "Banking Details"
+msgstr "ናይ ባንኪ ዝርዝር"
+
+#: .\templates\profile.html:112
+msgid "Buyers will see this to transfer money to you via Mobile Banking."
+msgstr "ዓደግቲ ብሞባይል ባንኪንግ ገንዘብ ንምስዳድ እዚ ክርእዩ እዮም።"
+
+#: .\templates\profile.html:116
+msgid "Bank Name"
+msgstr "ሽም ባንኪ"
+
+#: .\templates\profile.html:120
+msgid "Account Number"
+msgstr "ቁጽሪ ሕሳብ"
+
+#: .\templates\profile.html:128
+msgid "Save Changes 💾"
+msgstr "ለውጢ አስቀምጥ 💾"
+
+#: .\templates\register.html:9
+msgid "Join as Farmer | Arbor"
+msgstr "ከም ሓረስታይ ተሓወስ | Arbor"
+
+#: .\templates\register.html:89 .\templates\register_buyer.html:84
+#: .\templates\register_delivery.html:105 .\templates\register_supplier.html:88
+msgid "Back to"
+msgstr "ተመለስ ናብ"
+
+#: .\templates\register.html:90 .\templates\register_buyer.html:85
+#: .\templates\register_delivery.html:106 .\templates\register_supplier.html:89
+msgid "Roles"
+msgstr "ተራ"
+
+#: .\templates\register.html:134
+msgid "Farmer Registration"
+msgstr "ምዝገባ ሓረስታይ"
+
+#: .\templates\register.html:135
+msgid "Join the network. Sell your harvest."
+msgstr "ናብቲ መርበብ ተሓወስ። ፍርያትካ ሽጥ።"
+
+#: .\templates\register.html:148
+msgid "Abebe"
+msgstr "ኣበበ"
+
+#: .\templates\register.html:156
+msgid "Kebede"
+msgstr "ከበደ"
+
+#: .\templates\register.html:177
+msgid "e.g. Bishoftu"
+msgstr "ንኣብነት ቢሾፍቱ"
+
+#: .\templates\register.html:186
+msgid "PIN"
+msgstr "ፒን"
+
+#: .\templates\register.html:193
+msgid "Confirm"
+msgstr "ኣረጋግጽ"
+
+#: .\templates\register.html:217
+msgid "Register Farm"
+msgstr "ሕርሻ መዝግብ"
+
+#: .\templates\register.html:225 .\templates\register_buyer.html:200
+#: .\templates\register_delivery.html:291
+#: .\templates\register_supplier.html:230
+msgid "Already have an account?"
+msgstr "ኣካውንት ኣለካ?"
+
+#: .\templates\register.html:227 .\templates\register_buyer.html:202
+#: .\templates\register_delivery.html:293
+#: .\templates\register_supplier.html:232
+msgid "Login Here"
+msgstr "ኣብዚ እተ"
+
+#: .\templates\register.html:235
+msgid "Secure & Verified"
+msgstr "ዝተሓለወን ዝተረጋገጸን"
+
+#: .\templates\register_buyer.html:9
+msgid "Join as Buyer | Arbor"
+msgstr "ከም ዓዳጊ ተሓወስ | Arbor"
+
+#: .\templates\register_buyer.html:123
+msgid "Buyer Registration"
+msgstr "ምዝገባ ዓዳጊ"
+
+#: .\templates\register_buyer.html:124
+msgid "Access farm-fresh prices directly."
+msgstr "ናይ ሕርሻ ፍርሽ ዋጋታት ቀጥታ ርኸብ።"
+
+#: .\templates\register_buyer.html:161 .\templates\register_supplier.html:191
+msgid "PIN (4 Digits)"
+msgstr "ፒን (4 ኣሃዝ)"
+
+#: .\templates\register_buyer.html:168 .\templates\register_supplier.html:198
+msgid "Confirm PIN"
+msgstr "ፒን ኣረጋግጽ"
+
+#: .\templates\register_buyer.html:210
+msgid "Fair Prices • Farm Direct"
+msgstr "ፍትሓዊ ዋጋ • ቀጥታ ካብ ሕርሻ"
+
+#: .\templates\register_delivery.html:9
+msgid "Join Logistics | Arbor"
+msgstr "ሎጅስቲክስ ተሓወስ | Arbor"
+
+#: .\templates\register_delivery.html:122
+#: .\templates\register_supplier.html:106
+msgid "Language"
+msgstr "ቋንቋ"
+
+#: .\templates\register_delivery.html:159
+msgid "Delivery Partner"
+msgstr "ናይ ዲሊቨሪ መሻርኽቲ"
+
+#: .\templates\register_delivery.html:160
+msgid "Join the Crowd-Delivery Network."
+msgstr "ናብ Crowd-Delivery Network ተሓወስ።"
+
+#: .\templates\register_delivery.html:171
+msgid "Personal Details"
+msgstr "ግላዊ ዝርዝር"
+
+#: .\templates\register_delivery.html:182
+msgid "Surname"
+msgstr "ሽም ኣቦሓጎ"
+
+#: .\templates\register_delivery.html:196
+msgid "Create PIN"
+msgstr "ፒን ፍጠር"
+
+#: .\templates\register_delivery.html:209
+msgid "Vehicle Information"
+msgstr "ሓበሬታ ተሽከርካሪት"
+
+#: .\templates\register_delivery.html:214
+msgid "Vehicle Model"
+msgstr "ሞዴል ተሽከርካሪት"
+
+#: .\templates\register_delivery.html:218
+msgid "Type your vehicle (e.g. Isuzu FSR)"
+msgstr "ዓይነት ተሽከርካሪት ጽሓፍ (ንኣብነት Isuzu FSR)"
+
+#: .\templates\register_delivery.html:222
+msgid "Please type the specific name of your vehicle."
+msgstr "በጃኻ ፍሉይ ሽም ተሽከርካሪትካ ጽሓፍ።"
+
+#: .\templates\register_delivery.html:226
+msgid "Capacity (KG)"
+msgstr "ዓቅሚ (ኪሎ)"
+
+#: .\templates\register_delivery.html:239
+msgid "Legal Verification"
+msgstr "ሕጋዊ ምርግጋጽ"
+
+#: .\templates\register_delivery.html:243
+msgid "Driving License Number"
+msgstr "ቁጽሪ መንጃ ፍቓድ"
+
+#: .\templates\register_delivery.html:244
+msgid "License #"
+msgstr "መንጃ ፍቓድ #"
+
+#: .\templates\register_delivery.html:250
+msgid "National ID"
+msgstr "ብሄራዊ መታወቐያ"
+
+#: .\templates\register_delivery.html:254
+msgid "Clear photo of ID Front"
+msgstr "ንጹር ስእሊ ናይ መታወቐያ (ቅድሚት)"
+
+#: .\templates\register_delivery.html:258
+msgid "Driving License"
+msgstr "መንጃ ፍቓድ"
+
+#: .\templates\register_delivery.html:262
+msgid "Clear photo of License"
+msgstr "ንጹር ስእሊ ናይ መንጃ ፍቓድ"
+
+#: .\templates\register_delivery.html:283
+msgid "Submit Application"
+msgstr "ማመልከቻ ኣእትው"
+
+#: .\templates\register_supplier.html:9
+msgid "Join as Supplier | Arbor"
+msgstr "ከም ኣቕራቢ ተሓወስ | Arbor"
+
+#: .\templates\register_supplier.html:144
+msgid "Supplier Partner"
+msgstr "ኣቕራቢ መሻርኽቲ"
+
+#: .\templates\register_supplier.html:145
+msgid "Connect with thousands of farmers."
+msgstr "ምስ ኣሽሓት ሓረስታይ ተራኸብ።"
+
+#: .\templates\register_supplier.html:154
+msgid "Business / Shop Name"
+msgstr "ሽም ንግዲ / ድኳን"
+
+#: .\templates\register_supplier.html:181
+msgid "Business Phone"
+msgstr "ናይ ስራሕ ስልኪ"
+
+#: .\templates\register_supplier.html:222
+msgid "Join Network"
+msgstr "ናብ መርበብ ተሓወስ"
+
+#: .\templates\register_supplier.html:240
+msgid "Verified Business Network"
+msgstr "ዝተረጋገጸ ናይ ንግዲ መርበብ"
+
+#: .\templates\select_role.html:9
+msgid "Select Your Role | Arbor"
+msgstr "ተራኻ ምረጽ | Arbor"
+
+#: .\templates\select_role.html:124
+msgid "Have an account?"
+msgstr "ኣካውንት ኣለካ?"
+
+#: .\templates\select_role.html:138
+msgid "Join the"
+msgstr "ናብ ... ተሓወስ"
+
+#: .\templates\select_role.html:139
+msgid "Digital Harvest"
+msgstr "ዲጂታል ፍርያት"
+
+#: .\templates\select_role.html:142
+msgid ""
+"Connect directly with Ethiopia's agricultural ecosystem. Choose your path to "
+"start growing."
+msgstr "ቀጥታ ምስ ናይ ኢትዮጵያ ሕርሻ ኢኮሲስተም ተራኸብ። ንምዕባይ መገድኻ ምረጽ።"
+
+#: .\templates\select_role.html:155
+msgid "Farmer"
+msgstr "ሓረስታይ"
+
+#: .\templates\select_role.html:157
+msgid ""
+"List your crops, manage your harvest, and sell directly to buyers with zero "
+"middlemen."
+msgstr "ፍርያትካ መዝግብ፣ ኣመሓድር፣ ከምኡውን ቀጥታ ንዓደግቲ ብዘይ ደላሎ ሽጥ።"
+
+#: .\templates\select_role.html:160
+msgid "Join as Farmer"
+msgstr "ከም ሓረስታይ ተሓወስ"
+
+#: .\templates\select_role.html:171
+msgid "Buyer"
+msgstr "ዓዳጊ"
+
+#: .\templates\select_role.html:173
+msgid ""
+"Access fresh produce at fair prices. Buy individually or start a Group Buy "
+"with neighbors."
+msgstr "ፍርሽ ፍርያት ብፍትሓዊ ዋጋ ርኸብ። ብውልቂ ግዛእ ወይ ምስ ጎረባብቲ ጉጅለ ሸመታ ጀምር።"
+
+#: .\templates\select_role.html:176
+msgid "Join as Buyer"
+msgstr "ከም ዓዳጊ ተሓወስ"
+
+#: .\templates\select_role.html:189
+msgid ""
+"Sell fertilizers, seeds, and equipment directly to thousands of Ethiopian "
+"farmers."
+msgstr "መዳበሪያ፣ ዘርኢ፣ ከምኡውን መሳርሒታት ቀጥታ ንኣሽሓት ኢትዮጵያውያን ሓረስታይ ሽጥ።"
+
+#: .\templates\select_role.html:192
+msgid "Join as Supplier"
+msgstr "ከም ኣቕራቢ ተሓወስ"
+
+#: .\templates\select_role.html:203
+msgid "Logistics"
+msgstr "ሎጅስቲክስ"
+
+#: .\templates\select_role.html:205
+msgid ""
+"Manage fleets, accept delivery jobs, and bridge the gap between farm and "
+"table."
+msgstr "ተሽከርከርቲ ኣመሓድር፣ ስራሕ ዲሊቨሪ ተቀበል፣ ኣብ መንጎ ሕርሻን መኣድን ዘሎ ክፍተት ድፈን።"
+
+#: .\templates\select_role.html:208
+msgid "Join Logistics"
+msgstr "ሎጅስቲክስ ተሓወስ"
+
+#: .\templates\select_role.html:222
+msgid "Terms"
+msgstr "ውዕላት"
+
+#: .\templates\select_role.html:224
+msgid "Privacy"
+msgstr "ግላዊነት"
+
+#: .\templates\select_role.html:226
+msgid "Help"
+msgstr "ሓገዝ"
+
+#: .\templates\supplier_dashboard.html:8
+msgid "Supplier Command - Arbor"
+msgstr "Supplier Command - Arbor"
+
+#: .\templates\supplier_dashboard.html:33
+msgid "Main Market"
+msgstr "ዋና ዕዳጋ"
+
+#: .\templates\supplier_dashboard.html:61
+msgid "My Warehouse"
+msgstr "ናተይ መኽዘን"
+
+#: .\templates\supplier_dashboard.html:62
+msgid "Manage your stock and prices."
+msgstr "ስቶክን ዋጋታትን ኣመሓድር።"
+
+#: .\templates\supplier_dashboard.html:65
+msgid "Add Product"
+msgstr "ፍርያት ወስኽ"
+
+#: .\templates\supplier_dashboard.html:75
+msgid "Price / Unit"
+msgstr "ዋጋ / አሃዱ"
+
+#: .\templates\supplier_dashboard.html:76
+msgid "Current Stock"
+msgstr "ዘሎ ስቶክ"
+
+#: .\templates\supplier_dashboard.html:101
+msgid "Out of Stock"
+msgstr "ካብ ስቶክ ተወዲኡ"
+
+#: .\templates\supplier_dashboard.html:112
+msgid "Your warehouse is empty"
+msgstr "መኽዘንካ ባዶ እዩ"
+
+#: .\templates\supplier_dashboard.html:113
+msgid "Start adding fertilizers or seeds to sell."
+msgstr "መዳበሪያ ወይ ዘርኢ ንምሻጥ ምውሳኽ ጀምር።"
+
+#: .\templates\supplier_dashboard.html:115
+msgid "Add First Item"
+msgstr "ናይ መጀመርታ ኣቕሓ ወስኽ"
+
+#: .\templates\supplier_dashboard.html:124
+msgid "Market Intelligence"
+msgstr "ናይ ዕዳጋ ሓበሬታ"
+
+#: .\templates\supplier_dashboard.html:127
+msgid "Live Farmer Prices"
+msgstr "ቀጥታ ዋጋ ሓረስታይ"
+
+#: .\templates\supplier_dashboard.html:139
+msgid "No market data available yet."
+msgstr "ክሳብ ሕጂ ናይ ዕዳጋ መረዳእታ የለን።"
+
+#: .\templates\telebirr_pay.html:8
+msgid "Telebirr Payment"
+msgstr "ቴሌብር ክፍሊት"
+
+#: .\templates\telebirr_pay.html:28
+msgid "Telebirr Logo"
+msgstr "Telebirr Logo"
+
+#: .\templates\telebirr_pay.html:31
+msgid "Confirm Telebirr Payment"
+msgstr "ቴሌብር ክፍሊት ኣረጋግጽ"
+
+#: .\templates\telebirr_pay.html:33
+#, python-format
+msgid "Amount Due for Order #%(id)s:"
+msgstr "ዝኽፈል መጠን ንትእዛዝ #%(id)s:"
+
+#: .\templates\telebirr_pay.html:42
+msgid "Enter Telebirr PIN"
+msgstr "ቴሌብር ፒን የእትው"
+
+#: .\templates\telebirr_pay.html:57
+msgid "Pay Now & Verify"
+msgstr "ሕጂ ክፈሊን ኣረጋግጽን"
+
+#: .\templates\telebirr_pay.html:64
+msgid "Cancel Transaction"
+msgstr "ክፍሊት ሰርዝ"

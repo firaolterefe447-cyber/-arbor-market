@@ -1,0 +1,50 @@
+{% load static %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Edit Order #" %}{{ order.id }}</title>
+
+    <!-- LOCAL TAILWIND CSS -->
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl border-t-8 border-yellow-500">
+
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">{% trans "Edit Order" %}</h1>
+            <span class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-bold">#{{ order.id }}</span>
+        </div>
+
+        <div class="bg-yellow-50 p-4 rounded-xl mb-6 border border-yellow-100">
+            <p class="font-bold text-yellow-800">{{ order.product_name }}</p>
+            <p class="text-sm text-yellow-600">{% trans "Current Total:" %} {{ order.total_price }} {% trans "ETB" %}</p>
+        </div>
+
+        <form method="post" class="space-y-6">
+            {% csrf_token %}
+
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">{% trans "New Quantity" %}</label>
+                <input type="number" name="quantity" value="{{ order.quantity }}" min="1" class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-yellow-500 outline-none font-bold text-lg">
+            </div>
+
+            <div class="flex gap-3">
+                <button type="submit" class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-xl shadow-lg transition">
+                    {% trans "Update Order" %}
+                </button>
+                <a href="{% url 'my_orders' %}" class="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-600 font-bold rounded-xl transition">
+                    {% trans "Cancel" %}
+                </a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+{% load static tailwind_tags humanize i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" class="scroll-smooth" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+    <!--
+        =======================================================================
+        ARBOR SUPPLIER COMMAND - INDUSTRIAL EDITION
+        "Solid Blue Theme - Matching Input Market"
+        =======================================================================
+    -->
+    <meta charset="UTF-8">
+    <title>{% trans "Supplier Command - Arbor" %}</title>
+
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* SOLID INDUSTRIAL PALETTE */
+            --color-bg: #eff6ff;         /* Blue-50 */
+            --color-card: #ffffff;       /* White */
+            --color-text: #0f172a;       /* Slate-900 */
+            --color-primary: #2563eb;    /* Blue-600 */
+            --color-border: #bfdbfe;     /* Blue-200 */
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbars (Solid Blue) */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #dbeafe; }
+        ::-webkit-scrollbar-thumb {
+            background: #2563eb;
+            border: 2px solid #dbeafe;
+            border-radius: 6px;
+        }
+
+        /* Solid Utilities */
+        .solid-panel {
+            background-color: #ffffff;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Leaf Shape (consistent with site) */
+        .leaf-shape {
+            border-top-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-top-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen relative">
+
+    <!-- 1. BACKGROUND (Solid Light Blue) -->
+    <div class="fixed inset-0 bg-blue-50 z-0 pointer-events-none"></div>
+
+    <!-- 2. NAVIGATION (Solid Vibrant Blue) -->
+    <nav class="sticky top-0 z-50 bg-blue-600 border-b-4 border-blue-700 shadow-xl">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+
+            <div class="flex items-center gap-6">
+                <!-- Back Link -->
+                <a href="{% url 'input_market' %}" class="flex items-center gap-2 text-blue-100 hover:text-white transition group font-bold text-sm">
+                    <i class="fas fa-arrow-left group-hover:-translate-x-1 rtl:group-hover:translate-x-1 rtl:rotate-180 transition"></i>
+                    <span>{% trans "Market" %}</span>
+                </a>
+
+                <div class="h-6 w-px bg-blue-400 opacity-50"></div>
+
+                <!-- Business Name -->
+                <span class="text-lg font-black tracking-wide text-white flex items-center gap-2">
+                    <div class="bg-white text-blue-700 p-1.5 rounded-lg shadow-sm">
+                        <i class="fas fa-industry text-sm"></i>
+                    </div>
+                    {{ request.user.business_name }}
+                </span>
+            </div>
+
+            <!-- User Menu -->
+            <div class="flex items-center gap-4">
+                <a href="{% url 'profile' %}" class="text-blue-100 hover:text-white transition flex flex-col items-center group">
+                    <i class="fas fa-user-circle text-lg group-hover:scale-110 transition"></i>
+                    <span class="text-[10px] uppercase font-bold mt-0.5">{% trans "Profile" %}</span>
+                </a>
+                <a href="{% url 'logout' %}" class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-1.5 rounded-lg text-xs font-bold border border-blue-500 transition shadow-sm">
+                    {% trans "Sign Out" %}
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. MAIN CONTENT -->
+    <div class="container mx-auto p-4 md:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+
+        <!-- LEFT COL: WAREHOUSE (Solid Panel) -->
+        <div class="lg:col-span-2 space-y-6">
+
+            <!-- Header & Action -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-2">
+                <div>
+                    <h2 class="text-3xl font-black text-slate-900 mb-1 flex items-center gap-2">
+                        <i class="fas fa-warehouse text-blue-600"></i> {% trans "My Warehouse" %}
+                    </h2>
+                    <p class="text-slate-500 font-medium text-sm">{% trans "Manage your stock, prices, and listings." %}</p>
+                </div>
+                <!-- Primary Action Button (Blue Theme) -->
+                <a href="{% url 'add_input' %}" class="leaf-shape bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 shadow-lg border-b-4 border-blue-800 active:border-b-0 active:translate-y-1 transition flex items-center gap-2 font-bold text-sm uppercase tracking-wide">
+                    <i class="fas fa-plus-circle"></i> {% trans "Add Product" %}
+                </a>
+            </div>
+
+            {% if my_inputs %}
+                <!-- Table Panel (Solid White) -->
+                <div class="solid-panel rounded-2xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left rtl:text-right border-collapse">
+                            <thead class="bg-blue-50 text-blue-900 uppercase text-xs font-bold border-b border-blue-100">
+                                <tr>
+                                    <th class="px-6 py-4">{% trans "Product" %}</th>
+                                    <th class="px-6 py-4">{% trans "Price" %}</th>
+                                    <th class="px-6 py-4">{% trans "Stock" %}</th>
+                                    <th class="px-6 py-4 text-center">{% trans "Status" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 bg-white">
+                                {% for item in my_inputs %}
+                                <tr class="hover:bg-blue-50/50 transition duration-150 group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-4">
+                                            <div class="h-12 w-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-400 overflow-hidden border border-slate-200">
+                                                {% if item.image %}
+                                                    <img src="{{ item.image.url }}" class="h-full w-full object-cover">
+                                                {% else %}
+                                                    <i class="fas fa-box"></i>
+                                                {% endif %}
+                                            </div>
+                                            <span class="font-bold text-slate-800 group-hover:text-blue-700 transition">{{ item.name }}</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-slate-600 font-bold font-mono">{{ item.price_per_unit|intcomma }} <small class="text-slate-400">ETB</small></td>
+                                    <td class="px-6 py-4 font-medium text-slate-500">{{ item.stock_quantity }}</td>
+                                    <td class="px-6 py-4 text-center">
+                                        {% if item.stock_quantity > 0 %}
+                                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold border border-green-200 uppercase tracking-wide">{% trans "Active" %}</span>
+                                        {% else %}
+                                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-[10px] font-bold border border-red-200 uppercase tracking-wide">{% trans "Empty" %}</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            {% else %}
+                <!-- Empty State (Solid) -->
+                <div class="bg-white rounded-2xl p-12 text-center border-2 border-dashed border-slate-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-4xl text-slate-400">
+                        <i class="fas fa-dolly"></i>
+                    </div>
+                    <h3 class="text-xl text-slate-800 font-black mb-1">{% trans "Warehouse Empty" %}</h3>
+                    <p class="text-slate-500 mb-6 text-sm">{% trans "Start adding fertilizers, machinery, or seeds to sell." %}</p>
+                    <a href="{% url 'add_input' %}" class="inline-block bg-slate-800 hover:bg-slate-700 text-white px-6 py-2.5 rounded-lg font-bold transition text-sm shadow-md">
+                        {% trans "Add First Item" %}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- RIGHT COL: MARKET INTEL (Solid Panel) -->
+        <div>
+            <div class="bg-slate-800 rounded-2xl p-6 text-white shadow-xl border border-slate-700 sticky top-24">
+                <h2 class="text-lg font-bold mb-4 flex items-center gap-2 border-b border-slate-600 pb-3">
+                    <i class="fas fa-chart-line text-blue-400"></i> {% trans "Market Pulse" %}
+                </h2>
+
+                <p class="text-xs text-slate-400 mb-4 font-medium uppercase tracking-wider">
+                    {% trans "Live Farmer Prices" %}
+                </p>
+
+                <div class="space-y-3 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
+                    {% for crop in market_crops %}
+                    <div class="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition border border-slate-600">
+                        <div>
+                            <p class="font-bold text-sm text-slate-200">{{ crop.name }}</p>
+                            <p class="text-[10px] text-slate-400 flex items-center gap-1">
+                                <i class="fas fa-map-marker-alt text-blue-500"></i> {{ crop.farmer.location }}
+                            </p>
+                        </div>
+                        <span class="font-mono text-xs font-bold text-green-400 bg-slate-900 px-2 py-1 rounded border border-slate-600">
+                            {{ crop.price_per_kg }} ETB
+                        </span>
+                    </div>
+                    {% empty %}
+                    <p class="text-sm text-slate-500 text-center py-4 italic">{% trans "No market data available yet." %}</p>
+                    {% endfor %}
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-600 text-center">
+                    <p class="text-[10px] text-slate-500">
+                        {% trans "Data updated in real-time based on active farmer listings." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

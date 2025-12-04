@@ -1,0 +1,59 @@
+{% load static %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Complete Payment" %}</title>
+
+    <!-- LOCAL TAILWIND CSS -->
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-purple-50 min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl p-8 border-t-8 border-purple-600">
+
+        <div class="text-center mb-8">
+            <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-600 text-3xl">
+                <i class="fas fa-university"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800">{% trans "Complete Transfer" %}</h1>
+            <p class="text-gray-500">
+                {% trans "Please send" %} <span class="font-bold text-purple-600">{{ order.total_price }} {% trans "ETB" %}</span>
+            </p>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 mb-8">
+            <p class="text-xs font-bold text-gray-400 uppercase mb-4">{% trans "Transfer to Seller:" %}</p>
+            <div class="flex justify-between mb-2">
+                <span class="text-gray-600">{% trans "Bank:" %}</span>
+                <span class="font-bold">{% trans "CBE (Commercial Bank)" %}</span>
+            </div>
+            <div class="flex justify-between mb-2">
+                <span class="text-gray-600">{% trans "Account Name:" %}</span>
+                <span class="font-bold">{{ order.seller.first_name }} {{ order.seller.last_name }}</span>
+            </div>
+            <div class="flex justify-between items-center bg-white p-3 rounded-lg border border-gray-200 mt-3">
+                <span class="font-mono text-lg font-bold text-gray-800">100023456789</span>
+                <button class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded hover:bg-purple-200">{% trans "Copy" %}</button>
+            </div>
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label class="block text-sm font-bold text-gray-700 mb-2">{% trans "Upload Screenshot / Receipt" %}</label>
+            <input type="file" name="payment_proof" class="w-full p-3 border border-gray-300 rounded-xl mb-6 bg-white">
+
+            <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-xl shadow-lg transition">
+                {% trans "I have sent the money" %} ✅
+            </button>
+        </form>
+
+    </div>
+
+</body>
+</html>

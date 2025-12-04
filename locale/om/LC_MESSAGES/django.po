@@ -1,0 +1,3752 @@
+# ARBOR TRANSLATION FILE.
+# Copyright (C) 2025 ARBOR
+# This file is distributed under the same license as the PACKAGE package.
+# TRANSLATOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-02 22:11+0300\n"
+"PO-Revision-Date: 2025-12-03 12:00+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Afaan Oromoo <LL@li.org>\n"
+"Language: om\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\core\settings.py:95
+msgid "English"
+msgstr "Ingiliffa"
+
+#: .\core\settings.py:96
+msgid "Amharic"
+msgstr "Amaariffa"
+
+#: .\core\settings.py:97
+msgid "Afaan Oromoo"
+msgstr "Afaan Oromoo"
+
+#: .\core\settings.py:98
+msgid "Somali"
+msgstr "Afaan Somaalee"
+
+#: .\core\settings.py:99
+msgid "Tigrinya"
+msgstr "Tigriffa"
+
+#: .\env\Lib\site-packages\click\_termui_impl.py:613
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr "{editor}: Gulaaluun hin milkoofne"
+
+#: .\env\Lib\site-packages\click\_termui_impl.py:617
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr "{editor}: Gulaaluun hin milkoofne: {e}"
+
+#: .\env\Lib\site-packages\click\core.py:1114
+#: .\env\Lib\site-packages\click\core.py:1151
+#, python-brace-format
+msgid "{text} {deprecated_message}"
+msgstr "{text} {deprecated_message}"
+
+#: .\env\Lib\site-packages\click\core.py:1170
+msgid "Options"
+msgstr "Filannoowwan"
+
+#: .\env\Lib\site-packages\click\core.py:1245
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] "Falmii dabalataa hin eegamne argame ({args})"
+msgstr[1] "Falmiiwwan dabalataa hin eegamne argaman ({args})"
+
+#: .\env\Lib\site-packages\click\core.py:1264
+msgid "DeprecationWarning: The command {name!r} is deprecated.{extra_message}"
+msgstr "DeprecationWarning: Ajajni {name!r} hafeera.{extra_message}"
+
+#: .\env\Lib\site-packages\click\core.py:1448
+msgid "Aborted!"
+msgstr "Kutuudhaan dhaabbate!"
+
+#: .\env\Lib\site-packages\click\core.py:1822
+msgid "Commands"
+msgstr "Ajajoota"
+
+#: .\env\Lib\site-packages\click\core.py:1853
+msgid "Missing command."
+msgstr "Ajajni hin jiru."
+
+#: .\env\Lib\site-packages\click\core.py:1931
+msgid "No such command {name!r}."
+msgstr "Ajajni {name!r} jedhu hin jiru."
+
+#: .\env\Lib\site-packages\click\core.py:2355
+msgid "Value must be an iterable."
+msgstr "Gatiin irra deddeebi'amuu danda'u ta'uu qaba."
+
+#: .\env\Lib\site-packages\click\core.py:2378
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] "Gatii {nargs} fudhata, garuu 1 qofatu kenname."
+msgstr[1] "Gatiiwwan {nargs} fudhata, garuu {len} qofatu kenname."
+
+#: .\env\Lib\site-packages\click\core.py:2567
+msgid ""
+"DeprecationWarning: The {param_type} {name!r} is deprecated.{extra_message}"
+msgstr "DeprecationWarning: {param_type} {name!r} hafeera.{extra_message}"
+
+#: .\env\Lib\site-packages\click\core.py:3015
+#, python-brace-format
+msgid "env var: {var}"
+msgstr "env var: {var}"
+
+#: .\env\Lib\site-packages\click\core.py:3018
+#, python-brace-format
+msgid "default: {default}"
+msgstr "durtii: {default}"
+
+#: .\env\Lib\site-packages\click\core.py:3082
+msgid "(dynamic)"
+msgstr "(jijjiiramaa)"
+
+#: .\env\Lib\site-packages\click\decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr "%(prog)s, varshinii %(version)s"
+
+#: .\env\Lib\site-packages\click\decorators.py:522
+msgid "Show the version and exit."
+msgstr "Varshinii agarsiisiitii bahi."
+
+#: .\env\Lib\site-packages\click\decorators.py:548
+msgid "Show this message and exit."
+msgstr "Ergaa kana agarsiisiitii bahi."
+
+#: .\env\Lib\site-packages\click\exceptions.py:50
+#: .\env\Lib\site-packages\click\exceptions.py:89
+#, python-brace-format
+msgid "Error: {message}"
+msgstr "Dogoggora: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:81
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr "Gargaarsaaf '{command} {option}' yaali."
+
+#: .\env\Lib\site-packages\click\exceptions.py:130
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr "Gatii dogoggoraa: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:132
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr "Gatii dogoggoraa {param_hint} tiif: {message}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:190
+msgid "Missing argument"
+msgstr "Falmiin hin jiru"
+
+#: .\env\Lib\site-packages\click\exceptions.py:192
+msgid "Missing option"
+msgstr "Filannoon hin jiru"
+
+#: .\env\Lib\site-packages\click\exceptions.py:194
+msgid "Missing parameter"
+msgstr "Paaraamiitaariin hin jiru"
+
+#: .\env\Lib\site-packages\click\exceptions.py:196
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr "{param_type} dhabameera"
+
+#: .\env\Lib\site-packages\click\exceptions.py:203
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr "Paaraamiitaariin dhabameera: {param_name}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:223
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr "Filannoon akkasii hin jiru: {name}"
+
+#: .\env\Lib\site-packages\click\exceptions.py:235
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] "{possibility} jechuu keetii?"
+msgstr[1] "(Filannoowwan jiran: {possibilities})"
+
+#: .\env\Lib\site-packages\click\exceptions.py:282
+msgid "unknown error"
+msgstr "dogoggora hin beekamne"
+
+#: .\env\Lib\site-packages\click\exceptions.py:289
+msgid "Could not open file {filename!r}: {message}"
+msgstr "Faayila {filename!r} banuu hin dandeenye: {message}"
+
+#: .\env\Lib\site-packages\click\formatting.py:156
+msgid "Usage:"
+msgstr "Haala Itti Fayyadamaa:"
+
+#: .\env\Lib\site-packages\click\parser.py:199
+msgid "Argument {name!r} takes {nargs} values."
+msgstr "Falmiin {name!r} gatiiwwan {nargs} fudhata."
+
+#: .\env\Lib\site-packages\click\parser.py:381
+msgid "Option {name!r} does not take a value."
+msgstr "Filannoon {name!r} gatii hin fudhatu."
+
+#: .\env\Lib\site-packages\click\parser.py:444
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] "Filannoon {name!r} falmii tokko barbaada."
+msgstr[1] "Filannoon {name!r} falmiiwwan {nargs} barbaada."
+
+#: .\env\Lib\site-packages\click\shell_completion.py:332
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr "Guutiinsi Shell (Shell completion) Bash varshinii 4.4 gadiitiif hin deeggaru."
+
+#: .\env\Lib\site-packages\click\shell_completion.py:339
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr "Varshinii Bash adda baasuun hin danda'amne, guutiinsi shell hin deeggaru."
+
+#: .\env\Lib\site-packages\click\termui.py:165
+msgid "Repeat for confirmation"
+msgstr "Mirkaneessuuf irra deebi'i"
+
+#: .\env\Lib\site-packages\click\termui.py:181
+msgid "Error: The value you entered was invalid."
+msgstr "Dogoggora: Gatiin ati galchite sirrii miti."
+
+#: .\env\Lib\site-packages\click\termui.py:183
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr "Dogoggora: {e.message}"
+
+#: .\env\Lib\site-packages\click\termui.py:194
+msgid "Error: The two entered values do not match."
+msgstr "Dogoggora: Gatiiwwan lameen galchite wal hin siman."
+
+#: .\env\Lib\site-packages\click\termui.py:253
+msgid "Error: invalid input"
+msgstr "Dogoggora: galtee sirrii hin taane"
+
+#: .\env\Lib\site-packages\click\termui.py:872
+msgid "Press any key to continue..."
+msgstr "Ittifufuuf furtuu kamiyyuu tuqi..."
+
+#: .\env\Lib\site-packages\click\types.py:332
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+"Kanarraa filadhu:\n"
+"\t{choices}"
+
+#: .\env\Lib\site-packages\click\types.py:369
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] "{value!r} filannoo {choice} miti."
+msgstr[1] "{value!r} filannoowwan {choices} keessaa miti."
+
+#: .\env\Lib\site-packages\click\types.py:460
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] "{value!r} foormaat {format} wajjin wal hin simu."
+msgstr[1] "{value!r} foormaatota {formats} wajjin wal hin simu."
+
+#: .\env\Lib\site-packages\click\types.py:482
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} akaakuu lakkoofsaa {number_type} sirrii miti."
+
+#: .\env\Lib\site-packages\click\types.py:538
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr "{value} daangaa {range} keessa hin jiru."
+
+#: .\env\Lib\site-packages\click\types.py:719
+msgid "{value!r} is not a valid boolean. Recognized values: {states}"
+msgstr "{value!r} buuliyaanii sirrii miti. Gatiiwwan beekaman: {states}"
+
+#: .\env\Lib\site-packages\click\types.py:747
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} UUID sirrii miti."
+
+#: .\env\Lib\site-packages\click\types.py:937
+msgid "file"
+msgstr "faayila"
+
+#: .\env\Lib\site-packages\click\types.py:939
+msgid "directory"
+msgstr "daayireektarii"
+
+#: .\env\Lib\site-packages\click\types.py:941
+msgid "path"
+msgstr "paasii"
+
+#: .\env\Lib\site-packages\click\types.py:988
+msgid "{name} {filename!r} does not exist."
+msgstr "{name} {filename!r} hin jiru."
+
+#: .\env\Lib\site-packages\click\types.py:997
+msgid "{name} {filename!r} is a file."
+msgstr "{name} {filename!r} faayila."
+
+#: .\env\Lib\site-packages\click\types.py:1005
+msgid "{name} {filename!r} is a directory."
+msgstr "{name} {filename!r} daayireektariidha."
+
+#: .\env\Lib\site-packages\click\types.py:1014
+msgid "{name} {filename!r} is not readable."
+msgstr "{name} {filename!r} dubbisuun hin danda'amu."
+
+#: .\env\Lib\site-packages\click\types.py:1023
+msgid "{name} {filename!r} is not writable."
+msgstr "{name} {filename!r} irratti barreessuun hin danda'amu."
+
+#: .\env\Lib\site-packages\click\types.py:1032
+msgid "{name} {filename!r} is not executable."
+msgstr "{name} {filename!r} raawwachuun hin danda'amu."
+
+#: .\env\Lib\site-packages\click\types.py:1099
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] "Gatiin {len_type} ni barbaadama, garuu {len_value} kenname."
+msgstr[1] "Gatiiwwan {len_type} ni barbaadamu, garuu {len_value} kennaman."
+
+#: .\env\Lib\site-packages\django\contrib\messages\apps.py:16
+msgid "Messages"
+msgstr "Ergaawwan"
+
+#: .\env\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr "Kaartaa Marsariitii"
+
+#: .\env\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr "Faayiloota Staatikii"
+
+#: .\env\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr "Sindiikeeshinii"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: .\env\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr "..."
+
+#: .\env\Lib\site-packages\django\core\paginator.py:32
+msgid "That page number is not an integer"
+msgstr "Lakkoofsi fuula sanaa intiijarii miti"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:33
+msgid "That page number is less than 1"
+msgstr "Lakkoofsi fuula sanaa 1 gadi"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:34
+msgid "That page contains no results"
+msgstr "Fuulli sun bu'aa hin qabu"
+
+#: .\env\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr "Gatii sirrii galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:70
+msgid "Enter a valid domain name."
+msgstr "Maqaa domeenii sirrii galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:153
+#: .\env\Lib\site-packages\django\forms\fields.py:775
+msgid "Enter a valid URL."
+msgstr "URL sirrii galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:200
+msgid "Enter a valid integer."
+msgstr "Intiijarii sirrii galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:211
+msgid "Enter a valid email address."
+msgstr "Teessoo imeelii sirrii galchi."
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\env\Lib\site-packages\django\core\validators.py:289
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"“Slug” sirrii kan qubeewwan, lakkoofsota, underscore yookiin sarara qabu galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:297
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+"“Slug” sirrii kan qubeewwan Yuunikoodii, lakkoofsota, underscore yookiin sarara qabu galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:309
+#: .\env\Lib\site-packages\django\core\validators.py:318
+#: .\env\Lib\site-packages\django\core\validators.py:332
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2220
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr "Teessoo %(protocol)s sirrii galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:311
+msgid "IPv4"
+msgstr "IPv4"
+
+#: .\env\Lib\site-packages\django\core\validators.py:320
+#: .\env\Lib\site-packages\django\utils\ipv6.py:43
+msgid "IPv6"
+msgstr "IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:334
+msgid "IPv4 or IPv6"
+msgstr "IPv4 yookiin IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:375
+msgid "Enter only digits separated by commas."
+msgstr "Lakkoofsota komaadhaan gargar bahan qofa galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:381
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr "Gatiin kun %(limit_value)s ta'uu mirkaneeffadhu (kun %(show_value)s dha)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:416
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Gatiin kun %(limit_value)s gadi yookiin wal-qixa ta'uu mirkaneeffadhu."
+
+#: .\env\Lib\site-packages\django\core\validators.py:425
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Gatiin kun %(limit_value)s ol yookiin wal-qixa ta'uu mirkaneeffadhu."
+
+#: .\env\Lib\site-packages\django\core\validators.py:434
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "Gatiin kun baay'ataa %(limit_value)s ta'uu mirkaneeffadhu."
+
+#: .\env\Lib\site-packages\django\core\validators.py:441
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+"Gatiin kun baay'ataa %(limit_value)s ta'uu, fi %(offset)s irraa kan eegalu ta'uu mirkaneeffadhu. Fkn: %(offset)s, %(valid_value1)s, %(valid_value2)s, fi kkf."
+
+#: .\env\Lib\site-packages\django\core\validators.py:473
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Gatiin kun yoo xiqqaate qubee %(limit_value)d qabaachuu mirkaneeffadhu (amma %(show_value)d qaba)."
+msgstr[1] ""
+"Gatiin kun yoo xiqqaate qubeewwan %(limit_value)d qabaachuu mirkaneeffadhu (amma %(show_value)d qaba)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:491
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Gatiin kun qubee %(limit_value)d hin caalle qabaachuu mirkaneeffadhu (amma %(show_value)d qaba)."
+msgstr[1] ""
+"Gatiin kun qubeewwan %(limit_value)d hin caalle qabaachuu mirkaneeffadhu (amma %(show_value)d qaba)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:514
+#: .\env\Lib\site-packages\django\forms\fields.py:366
+#: .\env\Lib\site-packages\django\forms\fields.py:405
+msgid "Enter a number."
+msgstr "Lakkoofsa galchi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:516
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] "Lakkoofsi waliigalaa %(max)s hin caalle ta'uu mirkaneeffadhu."
+msgstr[1] "Lakkoofsonni waliigalaa %(max)s hin caalle ta'uu mirkaneeffadhu."
+
+#: .\env\Lib\site-packages\django\core\validators.py:521
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] "Iddoon desimaalii %(max)s hin caalle ta'uu mirkaneeffadhu."
+msgstr[1] "Iddoowwan desimaalii %(max)s hin caalle ta'uu mirkaneeffadhu."
+
+#: .\env\Lib\site-packages\django\core\validators.py:526
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+"Qabxii desimaalii dura dijiitii %(max)s hin caalle jiraachuu mirkaneeffadhu."
+msgstr[1] ""
+"Qabxii desimaalii dura dijiitiiwan %(max)s hin caalle jiraachuu mirkaneeffadhu."
+
+#: .\env\Lib\site-packages\django\core\validators.py:597
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+"Gosa faayilaa “%(extension)s” hin eeyyamamu. Gosoonni eeyyamaman: "
+"%(allowed_extensions)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:659
+msgid "Null characters are not allowed."
+msgstr "Qubeewwan duwwaa hin eeyyamaman."
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1600
+#: .\env\Lib\site-packages\django\forms\models.py:908
+msgid "and"
+msgstr "fi"
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1602
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(model_name)s kan %(field_labels)s kana qabu kanaan dura jira."
+
+#: .\env\Lib\site-packages\django\db\models\constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr "Danqaan “%(name)s” cabera."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "Gatiin %(value)r filannoo sirrii miti."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:135
+msgid "This field cannot be null."
+msgstr "Dirreen kun duwwaa ta'uu hin danda'u."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:136
+msgid "This field cannot be blank."
+msgstr "Dirreen kun banaa ta'uu hin danda'u."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "%(model_name)s kan %(field_label)s kana qabu kanaan dura jira."
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"%(field_label)s %(date_field_label)s %(lookup_type)s tiif adda ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "Gosa dirree: %(field_type)s"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1162
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr "Gatiin “%(value)s” Dhugaa (True) yookiin Soba (False) ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1163
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "Gatiin “%(value)s” Dhugaa, Soba, yookiin Duwwaa (None) ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1165
+msgid "Boolean (Either True or False)"
+msgstr "Buuliyaanii (Dhugaa yookiin Soba)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1215
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "Jechoota (hanga %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1217
+msgid "String (unlimited)"
+msgstr "Jechoota (daangaa hin qabne)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1326
+msgid "Comma-separated integers"
+msgstr "Intiijaroota komaan gargar bahan"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1427
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+"Gatiin “%(value)s” foormaatii guyyaa sirrii hin qabu. Foormaatii YYYY-MM-DD ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1431
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1566
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+"Gatiin “%(value)s” foormaatii sirrii (YYYY-MM-DD) qaba, garuu guyyaan sirrii miti."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1435
+msgid "Date (without time)"
+msgstr "Guyyaa (yeroo malee)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1562
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
+msgstr ""
+"Gatiin “%(value)s” foormaatii sirrii hin qabu. YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1570
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+"Gatiin “%(value)s” foormaatii sirrii qaba garuu guyyaa/yeroo sirrii miti."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1575
+msgid "Date (with time)"
+msgstr "Guyyaa (yeroo wajjin)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1702
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr "Gatiin “%(value)s” lakkoofsa desimaalii ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1704
+msgid "Decimal number"
+msgstr "Lakkoofsa desimaalii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1864
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
+msgstr ""
+"Gatiin “%(value)s” foormaatii sirrii hin qabu. [DD] [[HH:]MM:]ss[.uuuuuu] ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1868
+msgid "Duration"
+msgstr "Turtii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1920
+msgid "Email address"
+msgstr "Teessoo Imeelii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1945
+msgid "File path"
+msgstr "Teessoo Faayilaa"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2023
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr "Gatiin “%(value)s” lakkoofsa 'float' ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2025
+msgid "Floating point number"
+msgstr "Lakkoofsa 'Floating point'"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2065
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr "Gatiin “%(value)s” intiijarii ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2067
+msgid "Integer"
+msgstr "Intiijarii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2163
+msgid "Big (8 byte) integer"
+msgstr "Intiijarii Guddaa (8 byte)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2180
+msgid "Small integer"
+msgstr "Intiijarii Xiqqaa"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2188
+msgid "IPv4 address"
+msgstr "Teessoo IPv4"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2219
+msgid "IP address"
+msgstr "Teessoo IP"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2310
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2311
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr "Gatiin “%(value)s” Duwwaa, Dhugaa yookiin Soba ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2313
+msgid "Boolean (Either True, False or None)"
+msgstr "Buuliyaanii (Dhugaa, Soba yookiin Duwwaa)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2364
+msgid "Positive big integer"
+msgstr "Intiijarii guddaa pozitiivii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2379
+msgid "Positive integer"
+msgstr "Intiijarii pozitiivii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2394
+msgid "Positive small integer"
+msgstr "Intiijarii xiqqaa pozitiivii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2410
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Slug (hanga %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2446
+msgid "Text"
+msgstr "Barreeffama"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2526
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+"Gatiin “%(value)s” foormaatii sirrii hin qabu. HH:MM[:ss[.uuuuuu]] ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2530
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+"Gatiin “%(value)s” foormaatii sirrii qaba garuu yeroo sirrii miti."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2534
+msgid "Time"
+msgstr "Yeroo"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2642
+msgid "URL"
+msgstr "URL"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2666
+msgid "Raw binary data"
+msgstr "Daataa baayinarii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2731
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr "“%(value)s” UUID sirrii miti."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2733
+msgid "Universally unique identifier"
+msgstr "Adda baasaa addunyaa (UUID)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:244
+msgid "File"
+msgstr "Faayila"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:420
+msgid "Image"
+msgstr "Fakkii"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:24
+msgid "A JSON object"
+msgstr "Objeektii JSON"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:26
+msgid "Value must be valid JSON."
+msgstr "Gatiin JSON sirrii ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:979
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
+msgstr "%(model)s kan %(field)s %(value)r qabu filannoo sirrii miti."
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:982
+msgid "Foreign Key (type determined by related field)"
+msgstr "Foreign Key (kan dirree wal-qabatuun murtaa'u)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1276
+msgid "One-to-one relationship"
+msgstr "Walitti dhufeenya Tokkoo-Tokko"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1333
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "Walitti dhufeenya %(from)s-%(to)s"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1335
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "Walitti dhufeenyota %(from)s-%(to)s"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1383
+msgid "Many-to-many relationship"
+msgstr "Walitti dhufeenya Baay'ee-Baay'ee"
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: .\env\Lib\site-packages\django\forms\boundfield.py:185
+msgid ":?.!"
+msgstr ":?.!"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:95
+msgid "This field is required."
+msgstr "Dirree haguuguun dirqama."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:315
+msgid "Enter a whole number."
+msgstr "Lakkoofsa guutuu galchi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:486
+#: .\env\Lib\site-packages\django\forms\fields.py:1267
+msgid "Enter a valid date."
+msgstr "Guyyaa sirrii galchi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:509
+#: .\env\Lib\site-packages\django\forms\fields.py:1268
+msgid "Enter a valid time."
+msgstr "Yeroo sirrii galchi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:536
+msgid "Enter a valid date/time."
+msgstr "Guyyaa/Yeroo sirrii galchi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:570
+msgid "Enter a valid duration."
+msgstr "Turtii sirrii galchi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:571
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr "Lakkoofsi guyyootaa {min_days} fi {max_days} gidduu ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:640
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr "Faayilli hin galfamne. Gosa 'encoding' foormii sanaa ilaali."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:641
+msgid "No file was submitted."
+msgstr "Faayilli hin galfamne."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:642
+msgid "The submitted file is empty."
+msgstr "Faayilli galfame duwwaadha."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:644
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+"Maqaan faayilaa kun qubee %(max)d hin caalle qabaachuu mirkaneeffadhu (amma %(length)d qaba)."
+msgstr[1] ""
+"Maqaan faayilaa kun qubeewwan %(max)d hin caalle qabaachuu mirkaneeffadhu (amma %(length)d qaba)."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:649
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr "Maaloo faayila galchi yookiin saanduqa 'clear' filadhu, lamaanuu miti."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:717
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+"Fakkii sirrii ol fe'i. Faayilli ati feete fakkii miti yookiin fakkii badeedha."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:889
+#: .\env\Lib\site-packages\django\forms\fields.py:975
+#: .\env\Lib\site-packages\django\forms\models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "Filannoo sirrii filadhu. %(value)s filannoowwan jiran keessaa miti."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:977
+#: .\env\Lib\site-packages\django\forms\fields.py:1096
+#: .\env\Lib\site-packages\django\forms\models.py:1590
+msgid "Enter a list of values."
+msgstr "Tarree gatiiwwanii galchi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1097
+msgid "Enter a complete value."
+msgstr "Gatii guutuu galchi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1339
+msgid "Enter a valid UUID."
+msgstr "UUID sirrii galchi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1369
+msgid "Enter a valid JSON."
+msgstr "JSON sirrii galchi."
+
+#. Translators: This is the default suffix added to form field labels
+#: .\env\Lib\site-packages\django\forms\forms.py:97
+msgid ":"
+msgstr ":"
+
+#: .\env\Lib\site-packages\django\forms\forms.py:239
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(Dirree dhokataa %(name)s) %(error)s"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+"Daataan ManagementForm dhabameera yookiin jijjiirameera. Dirreewwan dhabaman: %(field_names)s. Rakkoon kun yoo itti fufe gabaasa rakkoo (bug report) gochuu qabda."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] "Maaloo foormii %(num)d hin caalle galchi."
+msgstr[1] "Maaloo foormiiwwan %(num)d hin caalle galchi."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] "Maaloo foormii yoo xiqqaate %(num)d galchi."
+msgstr[1] "Maaloo foormiiwwan yoo xiqqaate %(num)d galchi."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:484
+#: .\env\Lib\site-packages\django\forms\formsets.py:491
+#: .\templates\dashboard.html:85
+msgid "Order"
+msgstr "Ajaja"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:499
+#: .\templates\dashboard.html:182
+msgid "Delete"
+msgstr "Haqi"
+
+#: .\env\Lib\site-packages\django\forms\models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "Maaloo daataa irra deebi'ame %(field)s tiif sirreessi."
+
+#: .\env\Lib\site-packages\django\forms\models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr "Maaloo daataa irra deebi'ame %(field)s tiif sirreessi, adda ta'uu qaba."
+
+#: .\env\Lib\site-packages\django\forms\models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+"Maaloo daataa irra deebi'ame %(field_name)s tiif sirreessi, kan %(lookup)s %(date_field)s keessatti adda ta'uu qabu."
+
+#: .\env\Lib\site-packages\django\forms\models.py:922
+msgid "Please correct the duplicate values below."
+msgstr "Maaloo gatiiwwan irra deebi'aman armaan gadii sirreessi."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr "Gatiin 'inline' warra isaa wajjin wal hin simu."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1450
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "Filannoo sirrii filadhu. Filannoon sun kanneen jiran keessaa miti."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1594
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr "“%(pk)s” gatii sirrii miti."
+
+#: .\env\Lib\site-packages\django\forms\utils.py:229
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+"%(datetime)s zoonii yeroo %(current_timezone)s keessatti hiikamuu hin dandeenye; ifa miti yookiin hin jiru ta'a."
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:527
+#: .\templates\home.html:422
+msgid "Clear"
+msgstr "Qulqulleessi"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:528
+msgid "Currently"
+msgstr "Amma"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:529
+msgid "Change"
+msgstr "Jijjiiri"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:866
+msgid "Unknown"
+msgstr "Hin beekamu"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:867
+msgid "Yes"
+msgstr "Eeyyee"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:868
+msgid "No"
+msgstr "Lakki"
+
+#. Translators: Please do not add spaces around commas.
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr "eeyyee,lakki,tarii"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:903
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] "%(size)d baayitii"
+msgstr[1] "%(size)d baayitiiwwan"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr "%s KB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr "%s TB"
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr "%s PB"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:74
+msgid "p.m."
+msgstr "wb"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:75
+msgid "a.m."
+msgstr "wd"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:80
+msgid "PM"
+msgstr "WB"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:81
+msgid "AM"
+msgstr "WD"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:153
+msgid "midnight"
+msgstr "halkan walakkaa"
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:155
+msgid "noon"
+msgstr "guyyaa walakkaa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr "Wiixata"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr "Kibxata"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr "Roobii"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr "Kamisa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr "Jimaata"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:12
+msgid "Saturday"
+msgstr "Sanbata"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr "Dilbata"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr "Wix"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr "Kib"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr "Rob"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr "Kam"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr "Jim"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:21
+msgid "Sat"
+msgstr "San"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr "Dil"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:25
+msgid "January"
+msgstr "Amajjii"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:26
+msgid "February"
+msgstr "Guraandhala"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:27
+msgid "March"
+msgstr "Bitootessa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:28
+msgid "April"
+msgstr "Ebla"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:29
+msgid "May"
+msgstr "Caamsaa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:30
+msgid "June"
+msgstr "Waxabajjii"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:31
+msgid "July"
+msgstr "Adooleessa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:32
+msgid "August"
+msgstr "Hagayya"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:33
+msgid "September"
+msgstr "Fulbaana"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:34
+msgid "October"
+msgstr "Onkololeessa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:35
+msgid "November"
+msgstr "Sadaasa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:36
+msgid "December"
+msgstr "Muddee"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:39
+msgid "jan"
+msgstr "amaj"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:40
+msgid "feb"
+msgstr "gur"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:41
+msgid "mar"
+msgstr "bit"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:42
+msgid "apr"
+msgstr "ebl"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:43
+msgid "may"
+msgstr "caam"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:44
+msgid "jun"
+msgstr "wax"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:45
+msgid "jul"
+msgstr "adol"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr "hag"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:47
+msgid "sep"
+msgstr "ful"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:48
+msgid "oct"
+msgstr "onk"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:49
+msgid "nov"
+msgstr "sad"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:50
+msgid "dec"
+msgstr "mud"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "Amaj."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "Gur."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "Bit."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "Ebl."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "Caam."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "Wax."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "Adol."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "Hag."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "Ful."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "Onk."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "Sad."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "Mud."
+
+#: .\env\Lib\site-packages\django\utils\dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr "Amajjii"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr "Guraandhala"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr "Bitootessa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr "Ebla"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr "Caamsaa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr "Waxabajjii"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr "Adooleessa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr "Hagayya"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr "Fulbaana"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr "Onkololeessa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr "Sadaasa"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr "Muddee"
+
+#: .\env\Lib\site-packages\django\utils\ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr "Kun teessoo IPv6 sirrii miti."
+
+#: .\env\Lib\site-packages\django\utils\text.py:76
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr "%(truncated_text)s..."
+
+#: .\env\Lib\site-packages\django\utils\text.py:287
+msgid "or"
+msgstr "yookiin"
+
+#. Translators: This string is used as a separator between list elements
+#: .\env\Lib\site-packages\django\utils\text.py:306
+#: .\env\Lib\site-packages\django\utils\timesince.py:135
+msgid ", "
+msgstr ", "
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] "waggaa %(num)d"
+msgstr[1] "waggoota %(num)d"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] "ji'a %(num)d"
+msgstr[1] "ji'oota %(num)d"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] "torban %(num)d"
+msgstr[1] "torbanneen %(num)d"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] "guyyaa %(num)d"
+msgstr[1] "guyyoota %(num)d"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] "sa'aatii %(num)d"
+msgstr[1] "sa'aatii %(num)d"
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] "daqiiqaa %(num)d"
+msgstr[1] "daqiiqaa %(num)d"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:29
+msgid "Forbidden"
+msgstr "Dhoorkamaa"
+
+#: .\env\Lib\site-packages\django\views\csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr "Mirkaneessi CSRF hin milkoofne. Gaaffiin kuteera."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+"Ergaa kana kan argituuf marsariitiin HTTPS kun 'Referer header' akka biraawzarii keetiin ergamu waan gaafatuuf, garuu homaa hin ergamne. Headeriin kun nageenyaaf barbaachisaadha."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+"Biraawzarii kee 'Referer' headers akka hin ergine yoo goote, maaloo deebisiitii eeyyami."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+"Tag <meta name=\"referrer\" content=\"no-referrer\"> fayyadamaa jirta yoo ta'e, maaloo irraa kaasi."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+"Ergaa kana kan argituuf marsariitiin kun yeroo foormii galchitu CSRF cookie waan barbaaduufi."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+"Biraawzarii kee cookies akka hin fudhanne yoo goote, maaloo deebisiitii eeyyami."
+
+#: .\env\Lib\site-packages\django\views\csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr "Odeeffannoon dabalataa yeroo DEBUG=True ta'u ni jiraata."
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:44
+msgid "No year specified"
+msgstr "Waggaan hin ibsamne"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:64
+#: .\env\Lib\site-packages\django\views\generic\dates.py:115
+#: .\env\Lib\site-packages\django\views\generic\dates.py:214
+msgid "Date out of range"
+msgstr "Guyyaan daangaa ala"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:94
+msgid "No month specified"
+msgstr "Ji'i hin ibsamne"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:147
+msgid "No day specified"
+msgstr "Guyyaan hin ibsamne"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:194
+msgid "No week specified"
+msgstr "Torban hin ibsamne"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:353
+#: .\env\Lib\site-packages\django\views\generic\dates.py:384
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "%(verbose_name_plural)s hin jiru"
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:680
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
+msgstr ""
+"%(verbose_name_plural)s gara fuulduraa hin jiru sababiinsaa %(class_name)s.allow_future Soba waan ta'eef."
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:720
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr "Guyyaan “%(datestr)s” foormaatii “%(format)s” wajjin hin deemu."
+
+#: .\env\Lib\site-packages\django\views\generic\detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr "%(verbose_name)s barbaacha wajjin wal simu hin argamne"
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr "Fuulli “last” miti, yookiin gara intiijariitti jijjiiramuu hin danda'u."
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr "Fuula dogoggoraa (%(page_number)s): %(message)s"
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:173
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr "Tarree duwwaa fi “%(class_name)s.allow_empty” Soba dha."
+
+#: .\env\Lib\site-packages\django\views\static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr "Indeeksii daayireektarii asitti hin eeyyamamu."
+
+#: .\env\Lib\site-packages\django\views\static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr "“%(path)s” hin jiru"
+
+#: .\env\Lib\site-packages\django\views\static.py:68
+#: .\env\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\env\Lib\site-packages\django\views\templates\directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "Indeeksii %(directory)s"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr "Fe'iinsi milkaa'inaan hojjeteera! Baga Gammaddan!"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+"<a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">Ibsa gadi-lakkisaa (release notes)</a> Django %(version)s ilaali"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+"Fuula kana kan argituuf faayila settings kee keessatti <a href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener\">DEBUG=True</a> waan jiruufi, fi URL tokkoyyuu waan hin qopheessiniif."
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:217
+msgid "Django Documentation"
+msgstr "Dokumenteeshinii Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr "Mata-dureewwan, wabiiwwan, &amp; akkamitti akka hojjetamu"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr "Leenjii: Appii Filannoo"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:227
+msgid "Get started with Django"
+msgstr "Django eegali"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:235
+msgid "Django Community"
+msgstr "Hawaasa Django"
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr "Wal-qunnami, gargaarsa argadhu, yookiin gumaachi"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:14
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:54
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:62
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:72
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:82
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:86
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:118
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:137
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:364
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:369
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:379
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:399
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:416
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:435
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:441
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:458
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:470
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:478
+msgid "title"
+msgstr "mata-duree"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:18
+msgid "password"
+msgstr "jecha darbii"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:245
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:264
+msgid "title a"
+msgstr "mata-duree a"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:249
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:275
+msgid "title b"
+msgstr "mata-duree b"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:253
+msgid "title c"
+msgstr "mata-duree c"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:257
+msgid "title d"
+msgstr "mata-duree d"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:380
+msgid "visits"
+msgstr "dawwannaawwan"
+
+#: .\env\Lib\site-packages\modeltranslation\tests\translation.py:62
+msgid "Sorry, translation is not available."
+msgstr "Dhiifama, hiikkaan hin jiru."
+
+#: .\env\Lib\site-packages\modeltranslation\widgets.py:32
+msgid "None"
+msgstr "Duwwaa"
+
+#: .\marketplace\models.py:23 .\templates\add_crop.html:59
+#: .\templates\add_input.html:57 .\templates\supplier_dashboard.html:74
+msgid "Product Name"
+msgstr "Maqaa Oomishaa"
+
+#: .\templates\add_crop.html:10
+msgid "Upload Harvest | Arbor"
+msgstr "Oomisha Olchanuu | Arbor"
+
+#: .\templates\add_crop.html:31
+msgid "Upload Harvest"
+msgstr "Oomisha Olchanuu"
+
+#: .\templates\add_crop.html:48
+msgid "Take a Photo"
+msgstr "Suuraa Kaasi"
+
+#: .\templates\add_crop.html:52
+msgid "Tap to select image"
+msgstr "Suuraa filachuuf tuqi"
+
+#: .\templates\add_crop.html:59
+msgid "Optional"
+msgstr "Filannoo"
+
+#: .\templates\add_crop.html:62
+msgid "If you don't know the English name, leave it blank. Admin will fix it."
+msgstr "Maqaa Ingiliffaa hin beektu yoo ta'e, duwwaa dhiisi. Bulchaan ni sirreessa."
+
+#: .\templates\add_crop.html:70 .\templates\add_input.html:65
+#: .\templates\edit_crop.html:34
+msgid "Price (ETB)"
+msgstr "Gatii (ETB)"
+
+#: .\templates\add_crop.html:75 .\templates\home.html:533
+msgid "/kg"
+msgstr "/kg"
+
+#: .\templates\add_crop.html:83 .\templates\checkout.html:94
+#: .\templates\group_buy_market.html:187
+msgid "Quantity"
+msgstr "Baay'ina"
+
+#: .\templates\add_crop.html:88 .\templates\buyer_dashboard.html:106
+#: .\templates\dashboard.html:162 .\templates\group_buy_market.html:196
+msgid "kg"
+msgstr "kg"
+
+#: .\templates\add_crop.html:97 .\templates\register.html:174
+msgid "Farm Location"
+msgstr "Iddoo Qonnaa"
+
+#: .\templates\add_crop.html:105
+msgid "List on Market"
+msgstr "Gabaarratti Galmeessi"
+
+#: .\templates\add_input.html:10
+msgid "Add Inventory - Arbor"
+msgstr "Inveentarii Dabaluu - Arbor"
+
+#: .\templates\add_input.html:45
+msgid "Add Inventory"
+msgstr "Inveentarii Dabaluu"
+
+#: .\templates\add_input.html:48 .\templates\checkout.html:45
+#: .\templates\confirm_purchase.html:72 .\templates\create_group.html:89
+#: .\templates\edit_order.html:43 .\templates\join_group.html:45
+#: .\templates\my_orders.html:224 .\templates\post_trip.html:53
+msgid "Cancel"
+msgstr "Haqi"
+
+#: .\templates\add_input.html:71
+msgid "Stock Qty"
+msgstr "Baay'ina Isitoo"
+
+#: .\templates\add_input.html:79
+msgid "Photo (Optional)"
+msgstr "Suuraa (Filannoo)"
+
+#: .\templates\add_input.html:86
+msgid "Add to Store"
+msgstr "Suuqeetti Dabali"
+
+#: .\templates\bank_transfer.html:9
+msgid "Complete Payment"
+msgstr "Kaffaltii Xumuri"
+
+#: .\templates\bank_transfer.html:24
+msgid "Complete Transfer"
+msgstr "Dabarsa Xumuri"
+
+#: .\templates\bank_transfer.html:26
+msgid "Please send"
+msgstr "Maaloo ergi"
+
+#: .\templates\bank_transfer.html:26 .\templates\buyer_dashboard.html:106
+#: .\templates\checkout.html:81 .\templates\checkout.html:147
+#: .\templates\confirm_purchase.html:36 .\templates\create_group.html:171
+#: .\templates\dashboard.html:88 .\templates\delivery_dashboard.html:206
+#: .\templates\edit_order.html:27 .\templates\farmer_storefront.html:65
+#: .\templates\group_buy_market.html:296 .\templates\home.html:531
+#: .\templates\input_market.html:219 .\templates\my_orders.html:167
+#: .\templates\order_detail.html:91 .\templates\order_detail.html:100
+#: .\templates\order_detail.html:109 .\templates\order_detail.html:126
+#: .\templates\order_detail.html:133 .\templates\order_detail.html:137
+#: .\templates\order_detail.html:141 .\templates\product_detail.html:131
+#: .\templates\product_detail.html:199 .\templates\supplier_dashboard.html:95
+#: .\templates\supplier_dashboard.html:136 .\templates\telebirr_pay.html:34
+msgid "ETB"
+msgstr "Birr"
+
+#: .\templates\bank_transfer.html:31
+msgid "Transfer to Seller:"
+msgstr "Gurguraaf Dabarsi:"
+
+#: .\templates\bank_transfer.html:33
+msgid "Bank:"
+msgstr "Baankii:"
+
+#: .\templates\bank_transfer.html:34
+msgid "CBE (Commercial Bank)"
+msgstr "CBE (Baankii Daldalaa)"
+
+#: .\templates\bank_transfer.html:37
+msgid "Account Name:"
+msgstr "Maqaa Akkaawuntii:"
+
+#: .\templates\bank_transfer.html:42
+msgid "Copy"
+msgstr "Koppii"
+
+#: .\templates\bank_transfer.html:48
+msgid "Upload Screenshot / Receipt"
+msgstr "Nagahee / Screenshot Ol fe'i"
+
+#: .\templates\bank_transfer.html:52
+msgid "I have sent the money"
+msgstr "Maallaqa ergeera"
+
+#: .\templates\buyer_dashboard.html:10
+msgid "Fresh Market - Arbor"
+msgstr "Gabaa Kuduraa - Arbor"
+
+#: .\templates\buyer_dashboard.html:65 .\templates\product_detail.html:9
+msgid "Arbor Market"
+msgstr "Gabaa Arbor"
+
+#: .\templates\buyer_dashboard.html:68
+msgid "Welcome,"
+msgstr "Baga nagaan dhufte,"
+
+#: .\templates\buyer_dashboard.html:69 .\templates\dashboard.html:52
+#: .\templates\dedicated_manifest.html:43 .\templates\home.html:271
+#: .\templates\input_market.html:127 .\templates\my_orders.html:87
+msgid "Logout"
+msgstr "Ba'i"
+
+#: .\templates\buyer_dashboard.html:80
+msgid "Fresh Organic Food"
+msgstr "Nyaata Uumamaa Firesh Ta'e"
+
+#: .\templates\buyer_dashboard.html:81
+msgid "Direct from Ethiopia's Best Farmers"
+msgstr "Qotee Bultoota Itoophiyaa irraa kallattiin"
+
+#: .\templates\buyer_dashboard.html:88
+msgid "Now"
+msgstr "Amma"
+
+#: .\templates\buyer_dashboard.html:89
+msgid "Available Harvests"
+msgstr "Oomishoota Jiran"
+
+#: .\templates\buyer_dashboard.html:119
+msgid "kg Stock"
+msgstr "kg Isitoo"
+
+#: .\templates\buyer_dashboard.html:123 .\templates\product_detail.html:168
+msgid "Buy Now"
+msgstr "Amma Biti"
+
+#: .\templates\buyer_dashboard.html:131
+msgid "No crops listed yet. Farmers are planting! 🌱"
+msgstr "Oomishni hin galmoofne. Qotee bultoonni dhaabaa jiru! 🌱"
+
+#: .\templates\checkout.html:10
+msgid "Checkout - Arbor"
+msgstr "Checkout - Arbor"
+
+#: .\templates\checkout.html:40 .\templates\create_group.html:78
+#: .\templates\group_buy_market.html:74 .\templates\home.html:201
+#: .\templates\home.html:656 .\templates\input_market.html:102
+#: .\templates\input_market.html:291 .\templates\liked_farmers.html:74
+#: .\templates\login.html:72 .\templates\my_orders.html:64
+#: .\templates\select_role.html:92
+msgid "Arbor"
+msgstr "Arbor"
+
+#: .\templates\checkout.html:43
+msgid "Checkout"
+msgstr "Checkout"
+
+#: .\templates\checkout.html:56
+msgid "Review Order"
+msgstr "Ajaja Irra Deebi'ii Ilaali"
+
+#: .\templates\checkout.html:70 .\templates\product_detail.html:147
+msgid "Sold by"
+msgstr "Kan gurgure"
+
+#: .\templates\checkout.html:80 .\templates\confirm_purchase.html:35
+msgid "Unit Price"
+msgstr "Gatii Tokkoo"
+
+#: .\templates\checkout.html:87
+msgid "Order Details"
+msgstr "Bal'ina Ajajaa"
+
+#: .\templates\checkout.html:99
+msgid "MAX"
+msgstr "OL'AANAA"
+
+#: .\templates\checkout.html:106
+msgid "Select Payment Method"
+msgstr "Mala Kaffaltii Filadhu"
+
+#: .\templates\checkout.html:114
+msgid "Cash on Delivery"
+msgstr "Yeroo Fudhatan Kaffaluu"
+
+#: .\templates\checkout.html:125
+msgid "Telebirr / M-Pesa"
+msgstr "Telebirr / M-Pesa"
+
+#: .\templates\checkout.html:136
+msgid "Mobile Banking"
+msgstr "Baankii Mobaayilaa"
+
+#: .\templates\checkout.html:146
+msgid "Total to Pay"
+msgstr "Waliigala Kaffalamu"
+
+#: .\templates\checkout.html:151 .\templates\confirm_purchase.html:27
+msgid "Confirm Order"
+msgstr "Ajaja Mirkaneessi"
+
+#: .\templates\confirm_purchase.html:10
+msgid "Confirm Purchase"
+msgstr "Bittuu Mirkaneessi"
+
+#: .\templates\confirm_purchase.html:28
+msgid "Review details before payment"
+msgstr "Osoon hin kaffalin bal'ina isaa ilaali"
+
+#: .\templates\confirm_purchase.html:32
+msgid "Product"
+msgstr "Oomisha"
+
+#: .\templates\confirm_purchase.html:44
+msgid "Quantity Needed"
+msgstr "Baay'ina Barbaadamu"
+
+#: .\templates\confirm_purchase.html:53
+msgid "Choose Payment Method"
+msgstr "Mala Kaffaltii Filadhu"
+
+#: .\templates\confirm_purchase.html:59
+msgid "Mobile Money"
+msgstr "Maallaqa Mobaayilaa"
+
+#: .\templates\confirm_purchase.html:66
+msgid "Pay Cash on Delivery"
+msgstr "Yeroo Fudhattu Kaffali"
+
+#: .\templates\create_group.html:9
+msgid "Start Group Buy - Arbor"
+msgstr "Gareen Bituu Eegali - Arbor"
+
+#: .\templates\create_group.html:84 .\templates\create_group.html:189
+msgid "Launch Group"
+msgstr "Garee Eegali"
+
+#: .\templates\create_group.html:109
+msgid "Start New Group"
+msgstr "Garee Haaraa Eegali"
+
+#: .\templates\create_group.html:115
+msgid "Urban Group:"
+msgstr "Garee Magaalaa:"
+
+#: .\templates\create_group.html:115
+msgid "Fresh Food"
+msgstr "Nyaata Firesh"
+
+#: .\templates\create_group.html:117
+msgid "Farmer Co-op:"
+msgstr "Waldaa Qotee Bulaa:"
+
+#: .\templates\create_group.html:117
+msgid "Farm Inputs"
+msgstr "Galtee Qonnaa"
+
+#: .\templates\create_group.html:128
+msgid "Group Name"
+msgstr "Maqaa Garee"
+
+#: .\templates\create_group.html:136
+msgid "Drop-off Location (For Buyers)"
+msgstr "Iddoo Itti Buusu (Bittaadhaa)"
+
+#: .\templates\create_group.html:138
+msgid "Collection Warehouse (For Farmers)"
+msgstr "Galma Walitti Qabaa (Qotee Bulaaf)"
+
+#: .\templates\create_group.html:151
+msgid "Where will the truck unload the food?"
+msgstr "Konkolaataan eessatti buusa?"
+
+#: .\templates\create_group.html:153
+msgid "Where will the truck drop the fertilizer?"
+msgstr "Konkolaataan Xao'o eessatti buusa?"
+
+#: .\templates\create_group.html:161
+msgid "Target Goal"
+msgstr "Kaayyoo"
+
+#: .\templates\create_group.html:164
+msgid "Units"
+msgstr "Yuniitii"
+
+#: .\templates\create_group.html:169
+msgid "Target Price"
+msgstr "Gatii Kaayyoo"
+
+#: .\templates\create_group.html:181
+msgid "Deadline Date"
+msgstr "Guyyaa Dhumaa"
+
+#: .\templates\create_group.html:193
+msgid "Cancel & Return Home"
+msgstr "Haqiitii Gara Manaa Deebi'i"
+
+#: .\templates\create_group.html:202
+msgid "Arbor Marketplace. Connecting communities."
+msgstr "Gabaa Arbor. Hawaasa walitti fiduuf."
+
+#: .\templates\dashboard.html:10
+msgid "Farmer Dashboard - Arbor"
+msgstr "Daashboordii Qotee Bulaa - Arbor"
+
+#: .\templates\dashboard.html:38 .\templates\product_detail.html:72
+msgid "Market"
+msgstr "Gabaa"
+
+#: .\templates\dashboard.html:42
+msgid "My Farm Command"
+msgstr "Ajaja Qonnaa Koo"
+
+#: .\templates\dashboard.html:71
+msgid "Payment Verification Needed"
+msgstr "Kaffaltii Mirkaneessuun Barbaachisaadha"
+
+#: .\templates\dashboard.html:72
+msgid "Buyers have sent money via Mobile Banking. Please check receipts."
+msgstr "Bittaazonni Baankii Mobaayilaan maallaqa erganiiru. Maaloo nagahee ilaali."
+
+#: .\templates\dashboard.html:98
+msgid "View Receipt"
+msgstr "Nagahee Ilaali"
+
+#: .\templates\dashboard.html:107
+msgid "Confirm Receipt"
+msgstr "Nagahee Mirkaneessi"
+
+#: .\templates\dashboard.html:109
+msgid "Report Issue"
+msgstr "Rakkoo Gabaasi"
+
+#: .\templates\dashboard.html:126
+msgid "Your Harvest"
+msgstr "Oomisha Kee"
+
+#: .\templates\dashboard.html:127
+msgid "Manage your active listings and stock."
+msgstr "Oomishoota kee fi isitoo bulchi."
+
+#: .\templates\dashboard.html:130
+msgid "List New Crop"
+msgstr "Oomisha Haaraa Galmeessi"
+
+#: .\templates\dashboard.html:140
+msgid "Active Inventory"
+msgstr "Inveentarii Hojii Irra Jiru"
+
+#: .\templates\dashboard.html:160
+msgid "ETB/kg"
+msgstr "Birr/kg"
+
+#: .\templates\dashboard.html:162
+msgid "Stock:"
+msgstr "Isitoo:"
+
+#: .\templates\dashboard.html:164 .\templates\home.html:543
+msgid "Sold Out"
+msgstr "Dhumera"
+
+#: .\templates\dashboard.html:166 .\templates\delivery_dashboard.html:176
+#: .\templates\supplier_dashboard.html:99
+msgid "Active"
+msgstr "Hojii Irra"
+
+#: .\templates\dashboard.html:175 .\templates\edit_crop.html:9
+#: .\templates\my_orders.html:221
+msgid "Edit"
+msgstr "Gulaali"
+
+#: .\templates\dashboard.html:179
+msgid "Are you sure you want to delete this crop? This cannot be undone."
+msgstr "Oomisha kana haquu barbaaddaa? Kun deebi'uu hin danda'u."
+
+#: .\templates\dashboard.html:193
+msgid "Your fields are empty."
+msgstr "Maasiin kee duwwaadha."
+
+#: .\templates\dashboard.html:194
+msgid "List a crop to start selling!"
+msgstr "Gurguruu eegaluuf oomisha galmeessi!"
+
+#: .\templates\dashboard.html:195
+msgid "Start Listing"
+msgstr "Galmeessuu Eegali"
+
+#: .\templates\dashboard.html:213
+msgid "Need Supplies?"
+msgstr "Galtee Barbaadduu?"
+
+#: .\templates\dashboard.html:214
+msgid "Buy Fertilizers, Seeds, and Tools from verified suppliers."
+msgstr "Xao'o, sanyii fi meeshaalee qonnaa dhiyeessitoota beekamoo irraa bitaa."
+
+#: .\templates\dashboard.html:216
+msgid "Open Material Store"
+msgstr "Suuqii Meeshaalee Bani"
+
+#: .\templates\dashboard.html:224
+msgid "Market Trends"
+msgstr "Haala Gabaa"
+
+#: .\templates\dashboard.html:243
+msgid "No market data available."
+msgstr "Daataan gabaa hin jiru."
+
+#: .\templates\dedicated_manifest.html:10
+msgid "Fleet Manifest - Arbor"
+msgstr "Maniifestii Konkolaataa - Arbor"
+
+#: .\templates\dedicated_manifest.html:32
+msgid "Arbor Fleet"
+msgstr "Konkolaataa Arbor"
+
+#: .\templates\dedicated_manifest.html:33
+msgid "Official Logistics"
+msgstr "Geejjiba Seera Qabeessa"
+
+#: .\templates\dedicated_manifest.html:39
+msgid "Driver ID:"
+msgstr "ID Konkolaachisaa:"
+
+#: .\templates\dedicated_manifest.html:55
+msgid "Daily Route"
+msgstr "Karaa Guyyaa"
+
+#: .\templates\dedicated_manifest.html:59
+msgid "Assignments"
+msgstr "Ramaddiiwwan"
+
+#: .\templates\dedicated_manifest.html:92
+#: .\templates\delivery_dashboard.html:89
+#: .\templates\delivery_dashboard.html:166
+msgid "Order #"
+msgstr "Ajaja #"
+
+#: .\templates\dedicated_manifest.html:92 .\templates\my_orders.html:159
+#: .\templates\product_detail.html:131
+msgid "KG"
+msgstr "KG"
+
+#: .\templates\dedicated_manifest.html:101
+msgid "Pickup From"
+msgstr "Eessaa Fudhatama"
+
+#: .\templates\dedicated_manifest.html:111
+msgid "Deliver To"
+msgstr "Eessatti Geessama"
+
+#: .\templates\dedicated_manifest.html:124 .\templates\order_detail.html:209
+msgid "Confirm Pickup"
+msgstr "Fudhachuu Mirkaneessi"
+
+#: .\templates\dedicated_manifest.html:132
+msgid "Enter Buyer Code"
+msgstr "Koodii Bitaa Galchi"
+
+#: .\templates\dedicated_manifest.html:135
+msgid "Verify"
+msgstr "Mirkaneessi"
+
+#: .\templates\dedicated_manifest.html:142
+msgid "Completed"
+msgstr "Xumurameera"
+
+#: .\templates\dedicated_manifest.html:157
+msgid "All Clear"
+msgstr "Hundi Qulqulluudha"
+
+#: .\templates\dedicated_manifest.html:158
+msgid "Your manifest is empty."
+msgstr "Maniifestiin kee duwwaadha."
+
+#: .\templates\delivery_dashboard.html:11
+msgid "Logistics Dashboard - Arbor"
+msgstr "Daashboordii Geejjibaa - Arbor"
+
+#: .\templates\delivery_dashboard.html:37
+msgid "Dispatch"
+msgstr "Ergi"
+
+#: .\templates\delivery_dashboard.html:46
+msgid "SCORE"
+msgstr "QABXII"
+
+#: .\templates\delivery_dashboard.html:75
+msgid "Your Manifest"
+msgstr "Maniifestii Kee"
+
+#: .\templates\delivery_dashboard.html:105
+#: .\templates\delivery_dashboard.html:209
+msgid "View Details"
+msgstr "Bal'ina Ilaali"
+
+#: .\templates\delivery_dashboard.html:111
+msgid "No active manifest."
+msgstr "Maniifestiin hojii irra jiru hin jiru."
+
+#: .\templates\delivery_dashboard.html:126
+msgid "Total"
+msgstr "Waliigala"
+
+#: .\templates\delivery_dashboard.html:130
+msgid "My Jobs"
+msgstr "Hojiiwwan Koo"
+
+#: .\templates\delivery_dashboard.html:134
+msgid "Post Trip"
+msgstr "Imala Galmeessi"
+
+#: .\templates\delivery_dashboard.html:139
+msgid "Order Feed"
+msgstr "Dhiyeessii Ajajaa"
+
+#: .\templates\delivery_dashboard.html:163
+msgid "Assigned to you"
+msgstr "Siif ramadame"
+
+#: .\templates\delivery_dashboard.html:172
+msgid "Open"
+msgstr "Banaa"
+
+#: .\templates\delivery_dashboard.html:180
+msgid "Done"
+msgstr "Xumurame"
+
+#: .\templates\delivery_dashboard.html:184
+msgid "Taken"
+msgstr "Fudhatame"
+
+#: .\templates\delivery_dashboard.html:192
+msgid "From"
+msgstr "Eessaa"
+
+#: .\templates\delivery_dashboard.html:199
+msgid "To"
+msgstr "Eessatti"
+
+#: .\templates\delivery_dashboard.html:217
+msgid "No orders found."
+msgstr "Ajajni hin argamne."
+
+#: .\templates\delivery_dashboard.html:218
+msgid "Wait for new requests."
+msgstr "Gaaffiiwwan haaraa eegi."
+
+#: .\templates\delivery_pending.html:9
+msgid "Application Received - Arbor"
+msgstr "Iyyanni Fudhatameera - Arbor"
+
+#: .\templates\delivery_pending.html:24
+msgid "Application Pending"
+msgstr "Iyyanni Eegaa Jira"
+
+#: .\templates\delivery_pending.html:27
+msgid "We have received your application."
+msgstr "Iyyata kee arganneerra."
+
+#: .\templates\delivery_pending.html:28
+msgid "Please wait for Admin approval."
+msgstr "Maaloo hanga Bulchaan mirkaneessutti eegi."
+
+#: .\templates\delivery_pending.html:32
+msgid "Status:"
+msgstr "Haala:"
+
+#: .\templates\delivery_pending.html:32
+msgid "In Review..."
+msgstr "Ilaalamaa jira..."
+
+#: .\templates\delivery_pending.html:34
+msgid ""
+"An admin must verify your account before you can access the Delivery "
+"Dashboard."
+msgstr ""
+"Osoo Daashboordii Geejjibaa hin seenin dura Bulchaan akkaawuntii kee mirkaneessuu qaba."
+
+#: .\templates\delivery_pending.html:40
+msgid "Check Status (Login)"
+msgstr "Haala Ilaali (Seeni)"
+
+#: .\templates\delivery_pending.html:44
+msgid "Back to Home Page"
+msgstr "Gara Fuula Duraatti Deebi'i"
+
+#: .\templates\edit_crop.html:20
+msgid "Edit Product"
+msgstr "Oomisha Gulaali"
+
+#: .\templates\edit_crop.html:28
+msgid "Crop Name"
+msgstr "Maqaa Oomishaa"
+
+#: .\templates\edit_crop.html:38
+msgid "Stock (kg)"
+msgstr "Isitoo (kg)"
+
+#: .\templates\edit_crop.html:44
+msgid "Update Photo"
+msgstr "Suuraa Haaromsi"
+
+#: .\templates\edit_crop.html:49
+msgid "Save Changes"
+msgstr "Jijjiirama Galchi"
+
+#: .\templates\edit_order.html:9
+msgid "Edit Order #"
+msgstr "Ajaja # Gulaali"
+
+#: .\templates\edit_order.html:21
+msgid "Edit Order"
+msgstr "Ajaja Gulaali"
+
+#: .\templates\edit_order.html:27
+msgid "Current Total:"
+msgstr "Waliigala Ammaa:"
+
+#: .\templates\edit_order.html:34
+msgid "New Quantity"
+msgstr "Baay'ina Haaraa"
+
+#: .\templates\edit_order.html:40
+msgid "Update Order"
+msgstr "Ajaja Haaromsi"
+
+#: .\templates\farmer_storefront.html:10
+msgid "'s Farm - Arbor"
+msgstr "Qonnaa - Arbor"
+
+#: .\templates\farmer_storefront.html:23
+msgid "Back to Market"
+msgstr "Gara Gabaatti Deebi'i"
+
+#: .\templates\farmer_storefront.html:25
+msgid "Farm Profile"
+msgstr "Piroofayilii Qonnaa"
+
+#: .\templates\farmer_storefront.html:45
+msgid "Active Listings"
+msgstr "Galmeewwan Hojii Irra Jiran"
+
+#: .\templates\farmer_storefront.html:51
+msgid "Full Harvest List"
+msgstr "Tarree Oomishaa Guutuu"
+
+#: .\templates\farmer_storefront.html:72
+msgid "kg left"
+msgstr "kg hafe"
+
+#: .\templates\farmer_storefront.html:73 .\templates\home.html:541
+#: .\templates\input_market.html:230
+msgid "In Stock"
+msgstr "Isitoo Keessa"
+
+#: .\templates\farmer_storefront.html:81
+msgid "This farmer has no other active listings."
+msgstr "Qotee bulaan kun galmee biraa hojii irra jiru hin qabu."
+
+#: .\templates\group_buy_market.html:10
+msgid "Community Hub - Arbor"
+msgstr "Wiirtuu Hawaasaa - Arbor"
+
+#: .\templates\group_buy_market.html:65 .\templates\liked_farmers.html:65
+msgid "My Farm"
+msgstr "Qonnaa Koo"
+
+#: .\templates\group_buy_market.html:66 .\templates\liked_farmers.html:66
+msgid "Command Center"
+msgstr "Wiirtuu Ajajaa"
+
+#: .\templates\group_buy_market.html:81
+msgid "Community Hub"
+msgstr "Wiirtuu Hawaasaa"
+
+#: .\templates\group_buy_market.html:89
+msgid "Sell"
+msgstr "Gurguri"
+
+#: .\templates\group_buy_market.html:93 .\templates\home.html:246
+#: .\templates\my_orders.html:78 .\templates\order_detail.html:24
+msgid "Dashboard"
+msgstr "Daashboordii"
+
+#: .\templates\group_buy_market.html:99 .\templates\liked_farmers.html:88
+msgid "Groups"
+msgstr "Gareewwan"
+
+#: .\templates\group_buy_market.html:104 .\templates\my_orders.html:81
+msgid "Orders"
+msgstr "Ajajoota"
+
+#: .\templates\group_buy_market.html:111 .\templates\home.html:265
+#: .\templates\liked_farmers.html:98 .\templates\supplier_dashboard.html:45
+msgid "Profile"
+msgstr "Piroofayilii"
+
+#: .\templates\group_buy_market.html:115 .\templates\liked_farmers.html:102
+#: .\templates\supplier_dashboard.html:48
+msgid "Sign Out"
+msgstr "Ba'i"
+
+#: .\templates\group_buy_market.html:140
+msgid "Group Buying Center"
+msgstr "Wiirtuu Gareen Bituu"
+
+#: .\templates\group_buy_market.html:141
+msgid "Join forces with neighbors. Buy together. Save together."
+msgstr "Ollaawwan wajjin ta'aa. Waliin bitaa. Waliin qusadaa."
+
+#: .\templates\group_buy_market.html:151
+msgid "Groups You Manage"
+msgstr "Gareewwan Ati Bulchitu"
+
+#: .\templates\group_buy_market.html:164
+msgid "Delivery:"
+msgstr "Geejjiba:"
+
+#: .\templates\group_buy_market.html:180 .\templates\my_groups.html:54
+msgid "Member List"
+msgstr "Tarree Miseensotaa"
+
+#: .\templates\group_buy_market.html:185 .\templates\register_delivery.html:177
+msgid "Name"
+msgstr "Maqaa"
+
+#: .\templates\group_buy_market.html:186 .\templates\my_groups.html:62
+msgid "Phone"
+msgstr "Bilbila"
+
+#: .\templates\group_buy_market.html:188 .\templates\my_groups.html:64
+msgid "Action"
+msgstr "Tarkaanfii"
+
+#: .\templates\group_buy_market.html:199
+msgid "Kick this member?"
+msgstr "Miseensa kana ari'uu?"
+
+#: .\templates\group_buy_market.html:200
+msgid "Kick"
+msgstr "Ari'i"
+
+#: .\templates\group_buy_market.html:203
+msgid "Locked"
+msgstr "Cufameera"
+
+#: .\templates\group_buy_market.html:208
+msgid "No members yet."
+msgstr "Ammatti miseensi hin jiru."
+
+#: .\templates\group_buy_market.html:218
+msgid "Total Order:"
+msgstr "Waliigala Ajajaa:"
+
+#: .\templates\group_buy_market.html:220 .\templates\my_groups.html:98
+msgid "Goal"
+msgstr "Kaayyoo"
+
+#: .\templates\group_buy_market.html:225
+msgid "Finalize order?"
+msgstr "Ajaja xumuruu?"
+
+#: .\templates\group_buy_market.html:226 .\templates\my_groups.html:104
+msgid "Place Final Order"
+msgstr "Ajaja Dhumaa Dabarsi"
+
+#: .\templates\group_buy_market.html:229 .\templates\my_groups.html:108
+msgid "Waiting for members..."
+msgstr "Miseensota eegaa jira..."
+
+#: .\templates\group_buy_market.html:233
+msgid "Order Placed"
+msgstr "Ajajni Darbeera"
+
+#: .\templates\group_buy_market.html:248
+msgid "Available Groups to Join"
+msgstr "Gareewwan Makaamuuf Jiran"
+
+#: .\templates\group_buy_market.html:259
+msgid "Input Co-op"
+msgstr "Gamtaa Galtee"
+
+#: .\templates\group_buy_market.html:259
+msgid "Urban Group"
+msgstr "Garee Magaalaa"
+
+#: .\templates\group_buy_market.html:266
+msgid "Leader:"
+msgstr "Hogganaa:"
+
+#: .\templates\group_buy_market.html:274
+msgid "Pickup Location"
+msgstr "Iddoo Fudhatamaa"
+
+#: .\templates\group_buy_market.html:282
+msgid "committed"
+msgstr "waadaa galame"
+
+#: .\templates\group_buy_market.html:283 .\templates\join_group.html:23
+msgid "Target:"
+msgstr "Kaayyoo:"
+
+#: .\templates\group_buy_market.html:293
+msgid "Group Price"
+msgstr "Gatii Garee"
+
+#: .\templates\group_buy_market.html:300 .\templates\join_group.html:21
+msgid "Join"
+msgstr "Makaami"
+
+#: .\templates\group_buy_market.html:308
+msgid "No active groups found."
+msgstr "Gareen hojii irra jiru hin argamne."
+
+#: .\templates\group_buy_market.html:309
+msgid "Be the first to start a community group!"
+msgstr "Garee hawaasaa eegaluuf jalqaba ta'i!"
+
+#: .\templates\group_buy_market.html:324 .\templates\liked_farmers.html:213
+msgid "Official Payment Partners"
+msgstr "Michoota Kaffaltii Seera Qabeessa"
+
+#: .\templates\group_buy_market.html:325 .\templates\liked_farmers.html:214
+msgid "Secure transactions via Ethiopia's trusted financial institutions."
+msgstr "Dhaabbilee faayinaansii Itoophiyaa amanamoo ta'an karaa nagaa kaffalaa."
+
+#: .\templates\group_buy_market.html:362 .\templates\liked_farmers.html:231
+msgid "Arbor Marketplace. All Rights Reserved."
+msgstr "Gabaa Arbor. Mirgi Qabameera."
+
+#: .\templates\home.html:20
+msgid "Arbor - The Grand Market | Farm Direct"
+msgstr "Arbor - Gabaa Guddaa | Kallattiin Qonnaarraa"
+
+#: .\templates\home.html:21
+msgid ""
+"Ethiopia's premier farm-to-table marketplace. Buy fresh, sell direct, and "
+"grow together."
+msgstr ""
+"Gabaa jalqabaa Itoophiyaa qonnaa-gara-maaddii. Firesh bitaa, kallattiin gurguraa, waliin guddadhaa."
+
+#: .\templates\home.html:160
+msgid "Cultivating..."
+msgstr "Misoomsaa jira..."
+
+#: .\templates\home.html:214
+msgid "Type to pop up products..."
+msgstr "Oomishoota argachuuf barreessi..."
+
+#: .\templates\home.html:250
+msgid "Supplier Dashboard"
+msgstr "Daashboordii Dhiyeessaa"
+
+#: .\templates\home.html:254
+msgid "Delivery Dashboard"
+msgstr "Daashboordii Geejjibaa"
+
+#: .\templates\home.html:258
+msgid "Cart"
+msgstr "Kaartii"
+
+#: .\templates\home.html:277 .\templates\input_market.html:129
+#: .\templates\select_role.html:97 .\templates\select_role.html:124
+msgid "Login"
+msgstr "Seeni"
+
+#: .\templates\home.html:280 .\templates\input_market.html:130
+msgid "Join Now"
+msgstr "Amma Makaami"
+
+#: .\templates\home.html:292
+msgid "Search..."
+msgstr "Barbaadi..."
+
+#: .\templates\home.html:314
+msgid "Live Market • Addis Ababa"
+msgstr "Gabaa Kellii • Finfinnee"
+
+#: .\templates\home.html:319
+msgid "The Heart of"
+msgstr "Onnee"
+
+#: .\templates\home.html:320
+msgid "Ethiopia's Harvest"
+msgstr "Oomisha Itoophiyaa"
+
+#: .\templates\home.html:325
+msgid ""
+"Direct from the soil to your table. We connect you with local farmers for "
+"the freshest produce at fair, transparent prices."
+msgstr ""
+"Biyyoo irraa kallattiin gara maaddii keessanii. Nuti qotee bultoota naannoo wajjin wal isin qunnamsiifna, oomisha firesh gatii madaalawaadhaan."
+
+#: .\templates\home.html:334
+msgid "List Harvest"
+msgstr "Oomisha Galmeessi"
+
+#: .\templates\home.html:337
+msgid "Buy Inputs"
+msgstr "Galtee Bitaa"
+
+#: .\templates\home.html:343
+msgid "List Material"
+msgstr "Meeshaa Galmeessi"
+
+#: .\templates\home.html:346
+msgid "View Input Market"
+msgstr "Gabaa Galtee Ilaali"
+
+#: .\templates\home.html:352
+msgid "View Routes"
+msgstr "Karaa Ilaali"
+
+#: .\templates\home.html:355
+msgid "Active Orders"
+msgstr "Ajajoota Hojii Irra Jiran"
+
+#: .\templates\home.html:361 .\templates\my_orders.html:251
+#: .\templates\register_buyer.html:192
+msgid "Start Shopping"
+msgstr "Gabaa Eegali"
+
+#: .\templates\home.html:364
+msgid "Join Group Buy"
+msgstr "Gareen Bituutti Makaami"
+
+#: .\templates\home.html:374
+msgid "Select Your Language / ቋንቋ ይምረጡ"
+msgstr "Afaan Filadhu / ቋንቋ ይምረጡ"
+
+#: .\templates\home.html:415
+msgid "Filtering by:"
+msgstr "Kanaan calaluun:"
+
+#: .\templates\home.html:417
+msgid "Browse by Category"
+msgstr "Gosaan Barbaadi"
+
+#: .\templates\home.html:454
+msgid "All"
+msgstr "Hunda"
+
+#: .\templates\home.html:523
+msgid "Fresh Harvest"
+msgstr "Oomisha Firesh"
+
+#: .\templates\home.html:563 .\templates\input_market.html:241
+msgid "Buy"
+msgstr "Biti"
+
+#: .\templates\home.html:572 .\templates\input_market.html:244
+msgid "Group"
+msgstr "Garee"
+
+#: .\templates\home.html:582
+msgid "Marketplace Empty"
+msgstr "Gabaan Duwwaadha"
+
+#: .\templates\home.html:583
+msgid "Check back soon!"
+msgstr "Yeroo dhiyootti deebi'ii ilaali!"
+
+#: .\templates\home.html:590
+msgid "Load More Harvests"
+msgstr "Oomisha Dabalataa Ilaali"
+
+#: .\templates\home.html:602
+msgid "Farm to Table in 3 Steps"
+msgstr "Qonnaa irraa gara Maaddiitti Tarkaanfii 3n"
+
+#: .\templates\home.html:603
+msgid "Simple, Transparent, and Fast."
+msgstr "Salphaa, Ifaa, fi Saffisaa."
+
+#: .\templates\home.html:609
+msgid "Choose Fresh"
+msgstr "Firesh Filadhu"
+
+#: .\templates\home.html:610
+msgid ""
+"Browse hundreds of daily listings directly from verified Ethiopian farmers."
+msgstr ""
+"Galmeewwan dhibbaan lakkaa'aman kallattiin qotee bultoota Itoophiyaa mirkanaa'an irraa ilaali."
+
+#: .\templates\home.html:615
+msgid "Group & Save"
+msgstr "Gareen Biti & Qusadhu"
+
+#: .\templates\home.html:616
+msgid ""
+"Buy individually or join a Group Buy to unlock wholesale prices with "
+"neighbors."
+msgstr ""
+"Kophaa bitaa yookiin Gareen Bituutti makaamaa gatii jumlaa ollaawwan wajjin argachuuf."
+
+#: .\templates\home.html:621
+msgid "Fast Delivery"
+msgstr "Geejjiba Saffisaa"
+
+#: .\templates\home.html:622
+msgid "We collect from the farm and deliver to your doorstep within 24 hours."
+msgstr "Qonnaarraa fuunee sa'aatii 24 keessatti balbala keessanitti geessina."
+
+#: .\templates\home.html:638 .\templates\input_market.html:272
+msgid "Join the Harvest"
+msgstr "Oomishatti Makaami"
+
+#: .\templates\home.html:639 .\templates\input_market.html:273
+msgid ""
+"Get weekly market price updates, seasonal alerts, and exclusive group-buying "
+"deals delivered to your inbox."
+msgstr ""
+"Odeeffannoo gatii gabaa torbanii, akeekkachiisa waqtii, fi dhiyeessii gareen bituu addaa email keessanirratti argadhaa."
+
+#: .\templates\home.html:642 .\templates\input_market.html:276
+msgid "your@email.com"
+msgstr "email@keessan.com"
+
+#: .\templates\home.html:644 .\templates\input_market.html:278
+msgid "Subscribe"
+msgstr "Galmaa'i"
+
+#: .\templates\home.html:657 .\templates\input_market.html:292
+#: .\templates\my_orders.html:65
+msgid "Grand Market"
+msgstr "Gabaa Guddaa"
+
+#: .\templates\home.html:660
+msgid "Empowering Ethiopia's farmers through digital sovereignty."
+msgstr "Qotee bultoota Itoophiyaa birmadummaa dijitaalaan cimsuu."
+
+#: .\templates\home.html:668 .\templates\input_market.html:307
+msgid "Marketplace"
+msgstr "Iddoo Gabaa"
+
+#: .\templates\home.html:670 .\templates\input_market.html:309
+msgid "All Products"
+msgstr "Oomishoota Hunda"
+
+#: .\templates\home.html:671 .\templates\input_market.html:310
+msgid "Fresh Vegetables"
+msgstr "Kuduraa Firesh"
+
+#: .\templates\home.html:675 .\templates\input_market.html:317
+msgid "Support"
+msgstr "Deeggarsa"
+
+#: .\templates\home.html:677 .\templates\input_market.html:319
+msgid "Help Center"
+msgstr "Wiirtuu Gargaarsaa"
+
+#: .\templates\home.html:678 .\templates\input_market.html:320
+msgid "Track Order"
+msgstr "Ajaja Hordofi"
+
+#: .\templates\home.html:682 .\templates\input_market.html:326
+msgid "Legal"
+msgstr "Seera"
+
+#: .\templates\home.html:684 .\templates\input_market.html:328
+msgid "Privacy Policy"
+msgstr "Imaammata Dhuunfaa"
+
+#: .\templates\home.html:685 .\templates\input_market.html:329
+msgid "Terms of Service"
+msgstr "Waliigaltee Tajaajilaa"
+
+#: .\templates\home.html:691 .\templates\input_market.html:337
+msgid "All rights reserved."
+msgstr "Mirgi hundi qabameera."
+
+#: .\templates\input_market.html:19
+msgid "Arbor - Input Supplies | Farm Materials"
+msgstr "Arbor - Dhiyeessii Galtee | Meeshaalee Qonnaa"
+
+#: .\templates\input_market.html:82
+msgid "Loading Supplies..."
+msgstr "Dhiyeessii Fe'aa Jira..."
+
+#: .\templates\input_market.html:112
+msgid "Search fertilizers, seeds, tools..."
+msgstr "Xao'o, sanyii, meeshaalee barbaadi..."
+
+#: .\templates\input_market.html:139
+msgid "Search inputs..."
+msgstr "Galtee barbaadi..."
+
+#: .\templates\input_market.html:155
+msgid "Certified Inputs"
+msgstr "Galtee Mirkanaa'e"
+
+#: .\templates\input_market.html:160
+msgid "Fuel Your"
+msgstr "Humneessi"
+
+#: .\templates\input_market.html:161
+msgid "Farm's Growth"
+msgstr "Guddina Qonnaa"
+
+#: .\templates\input_market.html:166
+msgid ""
+"Premium seeds, fertilizers, and machinery from verified suppliers. Delivered "
+"directly to your cooperative."
+msgstr ""
+"Sanyii, xao'o, fi maashinoota qulqulluu dhiyeessitoota mirkanaa'an irraa. Kallattiin gara gamtaa keessaniitti dhihaata."
+
+#: .\templates\input_market.html:173
+msgid "List New Material"
+msgstr "Meeshaa Haaraa Galmeessi"
+
+#: .\templates\input_market.html:185
+msgid "Available Supplies"
+msgstr "Dhiyeessiiwwan Jiran"
+
+#: .\templates\input_market.html:206 .\templates\select_role.html:187
+msgid "Supplier"
+msgstr "Dhiyeessaa"
+
+#: .\templates\input_market.html:214
+msgid "General"
+msgstr "Waliigala"
+
+#: .\templates\input_market.html:221
+msgid "/unit"
+msgstr "/yuniitii"
+
+#: .\templates\input_market.html:224
+msgid "left"
+msgstr "hafe"
+
+#: .\templates\input_market.html:232
+msgid "Restocking"
+msgstr "Deebisanii Guutuu"
+
+#: .\templates\input_market.html:251
+msgid "No Supplies Found"
+msgstr "Dhiyeessiin hin argamne"
+
+#: .\templates\input_market.html:252
+msgid "Try searching for a different item."
+msgstr "Meeshaa biraa barbaaduu yaali."
+
+#: .\templates\input_market.html:296
+msgid ""
+"Empowering Ethiopia's farmers through digital sovereignty. Direct farm-to-"
+"table connections, fair prices, and community-driven commerce."
+msgstr ""
+"Qotee bultoota Itoophiyaa birmadummaa dijitaalaan cimsuu. Qunnampii kallatti qonnaa-gara-maaddii, gatii madaalawaa, fi daldala hawaasaan hogganamu."
+
+#: .\templates\input_market.html:311
+msgid "Fruits & Berries"
+msgstr "Fuduraalee & Berries"
+
+#: .\templates\input_market.html:312
+msgid "Bulk Grains"
+msgstr "Midhaan Jumlaa"
+
+#: .\templates\input_market.html:321
+msgid "Become a Farmer"
+msgstr "Qotee Bulaa Ta'i"
+
+#: .\templates\input_market.html:338
+msgid "Made with 💚 for Ethiopia."
+msgstr "Itoophiyaaf 💚 dhaan hojjetame."
+
+#: .\templates\join_group.html:9
+msgid "Join Group - Arbor"
+msgstr "Gareetti Makaami - Arbor"
+
+#: .\templates\join_group.html:22
+msgid "ETB / unit"
+msgstr "Birr / yuniitii"
+
+#: .\templates\join_group.html:23 .\templates\my_groups.html:72
+#: .\templates\supplier_dashboard.html:96
+msgid "units"
+msgstr "yuniitii"
+
+#: .\templates\join_group.html:29
+msgid "collected so far"
+msgstr "hanga ammaatti walitti qabame"
+
+#: .\templates\join_group.html:36
+msgid "How much do you want?"
+msgstr "Hagam barbaadda?"
+
+#: .\templates\join_group.html:42
+msgid "Commit to Buy"
+msgstr "Bituuf Waadaa Gali"
+
+#: .\templates\liked_farmers.html:10
+msgid "My Favorite Farmers - Arbor"
+msgstr "Qotee Bultoota Jaalladhu - Arbor"
+
+#: .\templates\liked_farmers.html:81
+msgid "Trusted Growers"
+msgstr "Qotee Bultoota Amanamoo"
+
+#: .\templates\liked_farmers.html:93
+msgid "Likes"
+msgstr "Jaallatama"
+
+#: .\templates\liked_farmers.html:126
+msgid "Your Trusted Growers"
+msgstr "Qotee Bultoota Ati Amantu"
+
+#: .\templates\liked_farmers.html:127
+msgid "Support the hands that feed you."
+msgstr "Harka si nyaachisu deeggari."
+
+#: .\templates\liked_farmers.html:161
+msgid "Currently Growing"
+msgstr "Oomishaa Jira"
+
+#: .\templates\liked_farmers.html:170
+msgid "No crops listed currently."
+msgstr "Ammatti oomishni galmaa'e hin jiru."
+
+#: .\templates\liked_farmers.html:178
+msgid "Unfollow"
+msgstr "Hordofuu Dhiisi"
+
+#: .\templates\liked_farmers.html:183
+msgid "View Shop"
+msgstr "Suuqii Ilaali"
+
+#: .\templates\liked_farmers.html:187
+msgid "Empty Shop"
+msgstr "Suuqii Duwwaa"
+
+#: .\templates\liked_farmers.html:196
+msgid "No favorites yet"
+msgstr "Ammatti jaallatamaan hin jiru"
+
+#: .\templates\liked_farmers.html:197
+msgid "Follow farmers to see their latest harvest here."
+msgstr "Oomisha isaanii haaraa asitti arguuf qotee bultoota hordofi."
+
+#: .\templates\liked_farmers.html:199
+msgid "Browse the Market"
+msgstr "Gabaa Ilaali"
+
+#: .\templates\login.html:10
+msgid "Login | Arbor"
+msgstr "Seeni | Arbor"
+
+#: .\templates\login.html:105
+msgid "Welcome Back"
+msgstr "Baga Deebite"
+
+#: .\templates\login.html:106
+msgid "Enter your credentials to access your account."
+msgstr "Akkaawuntii kee seenuuf odeeffannoo kee galchi."
+
+#: .\templates\login.html:131 .\templates\register.html:164
+#: .\templates\register_buyer.html:151 .\templates\register_delivery.html:189
+msgid "Phone Number"
+msgstr "Lakkoofsa Bilbilaa"
+
+#: .\templates\login.html:141
+msgid "4-Digit PIN"
+msgstr "PIN Dijiitii-4"
+
+#: .\templates\login.html:151
+msgid "Sign In"
+msgstr "Seeni"
+
+#: .\templates\login.html:159
+msgid "Don't have an account?"
+msgstr "Akkaawuntii hin qabduu?"
+
+#: .\templates\login.html:161
+msgid "Create New Account"
+msgstr "Akkaawuntii Haaraa Uumi"
+
+#: .\templates\login.html:171 .\templates\my_orders.html:272
+#: .\templates\product_detail.html:214 .\templates\select_role.html:220
+msgid "Arbor Marketplace"
+msgstr "Gabaa Arbor"
+
+#: .\templates\my_groups.html:9
+msgid "Manage My Groups"
+msgstr "Gareewwan Koo Bulchuu"
+
+#: .\templates\my_groups.html:21 .\templates\profile.html:19
+msgid "Home"
+msgstr "Mana"
+
+#: .\templates\my_groups.html:22
+msgid "My Managed Groups"
+msgstr "Gareewwan Ani Bulchu"
+
+#: .\templates\my_groups.html:37
+msgid "Deliver to:"
+msgstr "Eessatti Geessama:"
+
+#: .\templates\my_groups.html:41
+msgid "Current Status"
+msgstr "Haala Ammaa"
+
+#: .\templates\my_groups.html:61
+msgid "Member Name"
+msgstr "Maqaa Miseensaa"
+
+#: .\templates\my_groups.html:63
+msgid "Committed Qty"
+msgstr "Baay'ina Waadaa Galame"
+
+#: .\templates\my_groups.html:75
+msgid "Kick this member out?"
+msgstr "Miseensa kana ari'uu?"
+
+#: .\templates\my_groups.html:76
+msgid "Remove"
+msgstr "Kaasi"
+
+#: .\templates\my_groups.html:85
+msgid "No members have joined yet."
+msgstr "Miseensi tokkoyyuu hin makamne."
+
+#: .\templates\my_groups.html:96
+msgid "Total Quantity:"
+msgstr "Baay'ina Waliigalaa:"
+
+#: .\templates\my_groups.html:103
+msgid "This will finalize the group and send the order to delivery. Proceed?"
+msgstr "Kun garee xumuree ajaja gara geejjibaatti erga. Itti fufuu?"
+
+#: .\templates\my_groups.html:113
+msgid "Sent to Delivery"
+msgstr "Gara Geejjibaatti Ergame"
+
+#: .\templates\my_groups.html:122
+msgid "You haven't created any groups yet."
+msgstr "Garee tokkoyyuu hin uumne."
+
+#: .\templates\my_orders.html:9
+msgid "My Orders | Arbor Market"
+msgstr "Ajajoota Koo | Gabaa Arbor"
+
+#: .\templates\my_orders.html:72
+msgid "My Orders"
+msgstr "Ajajoota Koo"
+
+#: .\templates\my_orders.html:80 .\templates\product_detail.html:171
+msgid "Group Buy"
+msgstr "Gareen Bituu"
+
+#: .\templates\my_orders.html:112
+msgid "Order History"
+msgstr "Seenaa Ajajaa"
+
+#: .\templates\my_orders.html:113
+msgid "Track your farm-fresh deliveries in real-time."
+msgstr "Geejjiba oomisha firesh yeroo sirrii (real-time) hordofi."
+
+#: .\templates\my_orders.html:120
+#, python-format
+msgid "%(count)s Active Order"
+msgid_plural "%(count)s Active Orders"
+msgstr[0] "Ajaja Hojii Irra Jiru %(count)s"
+msgstr[1] "Ajajoota Hojii Irra Jiran %(count)s"
+
+#: .\templates\my_orders.html:137
+msgid "Pending"
+msgstr "Eegaa Jira"
+
+#: .\templates\my_orders.html:139
+msgid "Assigned"
+msgstr "Ramadame"
+
+#: .\templates\my_orders.html:141
+msgid "On Way"
+msgstr "Karaa Irra"
+
+#: .\templates\my_orders.html:143
+msgid "Delivered"
+msgstr "Gahera"
+
+#: .\templates\my_orders.html:166
+msgid "Total Cost"
+msgstr "Waliigala Gatii"
+
+#: .\templates\my_orders.html:170
+msgid "Placed On"
+msgstr "Ajajame"
+
+#: .\templates\my_orders.html:181
+msgid "Delivery To"
+msgstr "Geessamu"
+
+#: .\templates\my_orders.html:195
+msgid "Driver"
+msgstr "Konkolaachisaa"
+
+#: .\templates\my_orders.html:208
+msgid "Secure Delivery PIN"
+msgstr "PIN Geejjiba Nageenyaa"
+
+#: .\templates\my_orders.html:212
+#, python-format
+msgid "Give this code to %(name)s"
+msgstr "Koodii kana %(name)s tiif kenni"
+
+#: .\templates\my_orders.html:223
+msgid "Cancel this order?"
+msgstr "Ajaja kana haquu?"
+
+#: .\templates\my_orders.html:248
+msgid "No active orders"
+msgstr "Ajajni hojii irra jiru hin jiru"
+
+#: .\templates\my_orders.html:249
+msgid ""
+"Fresh produce is waiting. Start exploring the market to fill your basket."
+msgstr ""
+"Oomishni firesh eegaa jira. Gabaa ilaaluu eegaliitii guuboo kee guuti."
+
+#: .\templates\my_orders.html:263
+msgid "Trusted Payments"
+msgstr "Kaffaltii Amanamaa"
+
+#: .\templates\my_orders.html:264
+msgid "Secured by Ethiopia's financial network."
+msgstr "Networkii faayinaansii Itoophiyaatiin eegamaa."
+
+#: .\templates\order_detail.html:9
+#, python-format
+msgid "Manifest #%(id)s - Arbor"
+msgstr "Maniifestii #%(id)s - Arbor"
+
+#: .\templates\order_detail.html:26
+#, python-format
+msgid "Manifest #%(id)s"
+msgstr "Maniifestii #%(id)s"
+
+#: .\templates\order_detail.html:54
+msgid "Ordered On"
+msgstr "Ajajame"
+
+#: .\templates\order_detail.html:67 .\templates\supplier_dashboard.html:77
+msgid "Status"
+msgstr "Haala"
+
+#: .\templates\order_detail.html:85
+msgid "CASH HANDLING INSTRUCTIONS"
+msgstr "QAJEELFAMA MAALLAQA QABUU"
+
+#: .\templates\order_detail.html:90
+msgid "Step 1: Collect from Buyer"
+msgstr "Tarkaanfii 1: Bitaa irraa fuudhi"
+
+#: .\templates\order_detail.html:92
+msgid "Total Order Value"
+msgstr "Gatii Waliigala Ajajaa"
+
+#: .\templates\order_detail.html:99
+msgid "Step 2: Pay to Seller"
+msgstr "Tarkaanfii 2: Gurguraaf kaffali"
+
+#: .\templates\order_detail.html:101
+msgid "Hand this cash to Farmer"
+msgstr "Maallaqa kana Qotee Bulaaf kenni"
+
+#: .\templates\order_detail.html:108
+msgid "Step 3: Platform Fee"
+msgstr "Tarkaanfii 3: Kaffaltii Pilaatfoormii"
+
+#: .\templates\order_detail.html:110
+msgid "Keep for Arbor Office"
+msgstr "Waajjira Arbor tiif qabi"
+
+#: .\templates\order_detail.html:115
+msgid ""
+"⚠️ IMPORTANT: Do not give the full amount to the seller. Only give the 'Pay "
+"to Seller' amount."
+msgstr ""
+"⚠️ BARBAACHISAA: Maallaqa guutuu gurguraaf hin kennin. Hammi 'Gurguraaf kaffali' jedhu qofa kenni."
+
+#: .\templates\order_detail.html:123
+msgid "Cargo Details"
+msgstr "Bal'ina Fe'umsaa"
+
+#: .\templates\order_detail.html:124
+msgid "Item:"
+msgstr "Meeshaa:"
+
+#: .\templates\order_detail.html:125
+msgid "Quantity:"
+msgstr "Baay'ina:"
+
+#: .\templates\order_detail.html:125
+msgid "unit(s)"
+msgstr "yuniitii"
+
+#: .\templates\order_detail.html:126
+msgid "Value:"
+msgstr "Gatii:"
+
+#: .\templates\order_detail.html:130
+msgid "Payout Details"
+msgstr "Bal'ina Kaffaltii"
+
+#: .\templates\order_detail.html:132
+msgid "Total Paid:"
+msgstr "Waliigala Kaffalame:"
+
+#: .\templates\order_detail.html:136
+#, python-format
+msgid "Platform Fee (5%%):"
+msgstr "Kaffaltii Pilaatfoormii (5%%):"
+
+#: .\templates\order_detail.html:140
+msgid "Your Earnings:"
+msgstr "Galii Kee:"
+
+#: .\templates\order_detail.html:148
+msgid "Payment & Notes"
+msgstr "Kaffaltii & Yaadannoo"
+
+#: .\templates\order_detail.html:149
+msgid "Method:"
+msgstr "Mala:"
+
+#: .\templates\order_detail.html:150
+msgid "Note:"
+msgstr "Hubachiisa:"
+
+#: .\templates\order_detail.html:150
+msgid "Handle with care."
+msgstr "Of eeggannoon qabi."
+
+#: .\templates\order_detail.html:164
+msgid "Origin (Seller)"
+msgstr "Ka'umsa (Gurguraa)"
+
+#: .\templates\order_detail.html:184
+msgid "Transport"
+msgstr "Geejjiba"
+
+#: .\templates\order_detail.html:216
+msgid "Enter Buyer PIN"
+msgstr "PIN Bitaa Galchi"
+
+#: .\templates\order_detail.html:234
+msgid "Verify & Complete"
+msgstr "Mirkaneessi & Xumuri"
+
+#: .\templates\order_detail.html:237
+msgid "Ask Buyer for 4-digit code"
+msgstr "Koodii dijiitii-4 Bitaa gaafadhu"
+
+#: .\templates\order_detail.html:242
+msgid "Job Complete"
+msgstr "Hojiin Xumurameera"
+
+#: .\templates\order_detail.html:251
+msgid "No Driver"
+msgstr "Konkolaachisaan Hin Jiru"
+
+#: .\templates\order_detail.html:252
+msgid "Waiting for assignment..."
+msgstr "Ramaddii eegaa jira..."
+
+#: .\templates\order_detail.html:256
+msgid "Assign to Me"
+msgstr "Anaaf Ramadi"
+
+#: .\templates\order_detail.html:258
+msgid "Auto-fill my details"
+msgstr "Bal'ina koo ofiin guuti"
+
+#: .\templates\order_detail.html:265
+msgid "Destination (Buyer)"
+msgstr "Bakka Gahumsaa (Bitaa)"
+
+#: .\templates\post_trip.html:8
+msgid "Post a Trip - Arbor CDN"
+msgstr "Imala Galmeessi - Arbor CDN"
+
+#: .\templates\post_trip.html:20
+msgid "Post a Trip"
+msgstr "Imala Galmeessi"
+
+#: .\templates\post_trip.html:21
+msgid "Tell us where you are going to get matched."
+msgstr "Eessa akka deemtu nutti himi akka wal si qunnamsiifnu."
+
+#: .\templates\post_trip.html:29
+msgid "Origin"
+msgstr "Ka'umsa"
+
+#: .\templates\post_trip.html:33
+msgid "Destination"
+msgstr "Bakka Gahumsaa"
+
+#: .\templates\post_trip.html:39
+msgid "Available Capacity (KG)"
+msgstr "Dandeettii Jiru (KG)"
+
+#: .\templates\post_trip.html:44
+msgid "Departure Date/Time"
+msgstr "Guyyaa/Yeroo Ka'umsaa"
+
+#: .\templates\post_trip.html:50
+msgid "Publish Trip"
+msgstr "Imala Maxxansi"
+
+#: .\templates\product_detail.html:131
+msgid "Unit"
+msgstr "Yuniitii"
+
+#: .\templates\product_detail.html:147
+msgid "Grown by"
+msgstr "Kan oomishe"
+
+#: .\templates\product_detail.html:159
+msgid "Visit Farm"
+msgstr "Qonnaa Dawwadhu"
+
+#: .\templates\product_detail.html:182
+msgid "You might also like"
+msgstr "Kanaas jaallachuu dandeessa"
+
+#: .\templates\profile.html:8
+msgid "My Profile - Arbor"
+msgstr "Piroofayilii Koo - Arbor"
+
+#: .\templates\profile.html:21
+msgid "My Profile Settings"
+msgstr "Qindoomina Piroofayilii Koo"
+
+#: .\templates\profile.html:37
+msgid "Profile Picture"
+msgstr "Suuraa Piroofayilii"
+
+#: .\templates\profile.html:55
+msgid "No Location Set"
+msgstr "Iddoon Hin Guutamne"
+
+#: .\templates\profile.html:59
+msgid "Banking Info:"
+msgstr "Odeeffannoo Baankii:"
+
+#: .\templates\profile.html:64
+msgid "⚠️ No bank details added."
+msgstr "⚠️ Bal'inni baankii hin dabalamne."
+
+#: .\templates\profile.html:73
+msgid "Edit Details"
+msgstr "Bal'ina Gulaali"
+
+#: .\templates\profile.html:81
+msgid "Personal Information"
+msgstr "Odeeffannoo Dhuunfaa"
+
+#: .\templates\profile.html:84 .\templates\register.html:145
+#: .\templates\register_buyer.html:134 .\templates\register_delivery.html:176
+#: .\templates\register_supplier.html:164
+msgid "First Name"
+msgstr "Maqaa"
+
+#: .\templates\profile.html:88 .\templates\register.html:153
+#: .\templates\register_buyer.html:141 .\templates\register_delivery.html:181
+#: .\templates\register_supplier.html:171
+msgid "Last Name"
+msgstr "Maqaa Abbaa"
+
+#: .\templates\profile.html:95
+msgid "Location / Address"
+msgstr "Iddoo / Teessoo"
+
+#: .\templates\profile.html:100
+msgid "Change Photo"
+msgstr "Suuraa Jijjiiri"
+
+#: .\templates\profile.html:110
+msgid "Banking Details"
+msgstr "Bal'ina Baankii"
+
+#: .\templates\profile.html:112
+msgid "Buyers will see this to transfer money to you via Mobile Banking."
+msgstr "Bittaazonni Baankii Mobaayilaan maallaqa siif erguuf kana ni argu."
+
+#: .\templates\profile.html:116
+msgid "Bank Name"
+msgstr "Maqaa Baankii"
+
+#: .\templates\profile.html:120
+msgid "Account Number"
+msgstr "Lakkoofsa Akkaawuntii"
+
+#: .\templates\profile.html:128
+msgid "Save Changes 💾"
+msgstr "Jijjiirama Galchi 💾"
+
+#: .\templates\register.html:9
+msgid "Join as Farmer | Arbor"
+msgstr "Akka Qotee Bulaatti Makaami | Arbor"
+
+#: .\templates\register.html:89 .\templates\register_buyer.html:84
+#: .\templates\register_delivery.html:105 .\templates\register_supplier.html:88
+msgid "Back to"
+msgstr "Gara Deebi'i"
+
+#: .\templates\register.html:90 .\templates\register_buyer.html:85
+#: .\templates\register_delivery.html:106 .\templates\register_supplier.html:89
+msgid "Roles"
+msgstr "Gahee"
+
+#: .\templates\register.html:134
+msgid "Farmer Registration"
+msgstr "Galmee Qotee Bulaa"
+
+#: .\templates\register.html:135
+msgid "Join the network. Sell your harvest."
+msgstr "Networkiitti makaami. Oomisha kee gurguri."
+
+#: .\templates\register.html:148
+msgid "Abebe"
+msgstr "Abebe"
+
+#: .\templates\register.html:156
+msgid "Kebede"
+msgstr "Kebede"
+
+#: .\templates\register.html:177
+msgid "e.g. Bishoftu"
+msgstr "Fkn. Bishooftuu"
+
+#: .\templates\register.html:186
+msgid "PIN"
+msgstr "PIN"
+
+#: .\templates\register.html:193
+msgid "Confirm"
+msgstr "Mirkaneessi"
+
+#: .\templates\register.html:217
+msgid "Register Farm"
+msgstr "Qonnaa Galmeessi"
+
+#: .\templates\register.html:225 .\templates\register_buyer.html:200
+#: .\templates\register_delivery.html:291
+#: .\templates\register_supplier.html:230
+msgid "Already have an account?"
+msgstr "Akkaawuntii qabdaa?"
+
+#: .\templates\register.html:227 .\templates\register_buyer.html:202
+#: .\templates\register_delivery.html:293
+#: .\templates\register_supplier.html:232
+msgid "Login Here"
+msgstr "Asitti Seeni"
+
+#: .\templates\register.html:235
+msgid "Secure & Verified"
+msgstr "Eegamaa & Mirkanaa'aa"
+
+#: .\templates\register_buyer.html:9
+msgid "Join as Buyer | Arbor"
+msgstr "Akka Bitaatti Makaami | Arbor"
+
+#: .\templates\register_buyer.html:123
+msgid "Buyer Registration"
+msgstr "Galmee Bitaa"
+
+#: .\templates\register_buyer.html:124
+msgid "Access farm-fresh prices directly."
+msgstr "Gatii qonnaa firesh kallattiin argadhu."
+
+#: .\templates\register_buyer.html:161 .\templates\register_supplier.html:191
+msgid "PIN (4 Digits)"
+msgstr "PIN (Dijiitii 4)"
+
+#: .\templates\register_buyer.html:168 .\templates\register_supplier.html:198
+msgid "Confirm PIN"
+msgstr "PIN Mirkaneessi"
+
+#: .\templates\register_buyer.html:210
+msgid "Fair Prices • Farm Direct"
+msgstr "Gatii Madaalawaa • Kallattiin Qonnaarraa"
+
+#: .\templates\register_delivery.html:9
+msgid "Join Logistics | Arbor"
+msgstr "Geejjibatti Makaami | Arbor"
+
+#: .\templates\register_delivery.html:122
+#: .\templates\register_supplier.html:106
+msgid "Language"
+msgstr "Afaan"
+
+#: .\templates\register_delivery.html:159
+msgid "Delivery Partner"
+msgstr "Michuu Geejjibaa"
+
+#: .\templates\register_delivery.html:160
+msgid "Join the Crowd-Delivery Network."
+msgstr "Networkii Geejjiba Hawaasaatti Makaami."
+
+#: .\templates\register_delivery.html:171
+msgid "Personal Details"
+msgstr "Bal'ina Dhuunfaa"
+
+#: .\templates\register_delivery.html:182
+msgid "Surname"
+msgstr "Maqaa Akaakayyuu"
+
+#: .\templates\register_delivery.html:196
+msgid "Create PIN"
+msgstr "PIN Uumi"
+
+#: .\templates\register_delivery.html:209
+msgid "Vehicle Information"
+msgstr "Odeeffannoo Konkolaataa"
+
+#: .\templates\register_delivery.html:214
+msgid "Vehicle Model"
+msgstr "Moodela Konkolaataa"
+
+#: .\templates\register_delivery.html:218
+msgid "Type your vehicle (e.g. Isuzu FSR)"
+msgstr "Gosa konkolaataa kee barreessi (Fkn Isuzu FSR)"
+
+#: .\templates\register_delivery.html:222
+msgid "Please type the specific name of your vehicle."
+msgstr "Maaloo maqaa konkolaataa kee adda ta'e barreessi."
+
+#: .\templates\register_delivery.html:226
+msgid "Capacity (KG)"
+msgstr "Dandeettii (KG)"
+
+#: .\templates\register_delivery.html:239
+msgid "Legal Verification"
+msgstr "Mirkaneessa Seeraa"
+
+#: .\templates\register_delivery.html:243
+msgid "Driving License Number"
+msgstr "Lakkoofsa Hayyama Konkolaachisummaa"
+
+#: .\templates\register_delivery.html:244
+msgid "License #"
+msgstr "Hayyama #"
+
+#: .\templates\register_delivery.html:250
+msgid "National ID"
+msgstr "Waraqaa Eenyummaa"
+
+#: .\templates\register_delivery.html:254
+msgid "Clear photo of ID Front"
+msgstr "Suuraa ID Fuulduraa Qulqulluu"
+
+#: .\templates\register_delivery.html:258
+msgid "Driving License"
+msgstr "Hayyama Konkolaachisummaa"
+
+#: .\templates\register_delivery.html:262
+msgid "Clear photo of License"
+msgstr "Suuraa Hayyamaa Qulqulluu"
+
+#: .\templates\register_delivery.html:283
+msgid "Submit Application"
+msgstr "Iyyata Galchi"
+
+#: .\templates\register_supplier.html:9
+msgid "Join as Supplier | Arbor"
+msgstr "Akka Dhiyeessaatti Makaami | Arbor"
+
+#: .\templates\register_supplier.html:144
+msgid "Supplier Partner"
+msgstr "Michuu Dhiyeessaa"
+
+#: .\templates\register_supplier.html:145
+msgid "Connect with thousands of farmers."
+msgstr "Qotee bultoota kumootaan lakkaa'aman wajjin wal qunnami."
+
+#: .\templates\register_supplier.html:154
+msgid "Business / Shop Name"
+msgstr "Maqaa Daldalaa / Suuqii"
+
+#: .\templates\register_supplier.html:181
+msgid "Business Phone"
+msgstr "Bilbila Daldalaa"
+
+#: .\templates\register_supplier.html:222
+msgid "Join Network"
+msgstr "Networkiitti Makaami"
+
+#: .\templates\register_supplier.html:240
+msgid "Verified Business Network"
+msgstr "Networkii Daldalaa Mirkanaa'e"
+
+#: .\templates\select_role.html:9
+msgid "Select Your Role | Arbor"
+msgstr "Gahee Kee Filadhu | Arbor"
+
+#: .\templates\select_role.html:124
+msgid "Have an account?"
+msgstr "Akkaawuntii qabdaa?"
+
+#: .\templates\select_role.html:138
+msgid "Join the"
+msgstr "Kanatti Makaami"
+
+#: .\templates\select_role.html:139
+msgid "Digital Harvest"
+msgstr "Oomisha Dijitaalaa"
+
+#: .\templates\select_role.html:142
+msgid ""
+"Connect directly with Ethiopia's agricultural ecosystem. Choose your path to "
+"start growing."
+msgstr ""
+"Sirna qonnaa Itoophiyaa wajjin kallattiin wal qunnami. Guddachuuf karaa kee filadhu."
+
+#: .\templates\select_role.html:155
+msgid "Farmer"
+msgstr "Qotee Bulaa"
+
+#: .\templates\select_role.html:157
+msgid ""
+"List your crops, manage your harvest, and sell directly to buyers with zero "
+"middlemen."
+msgstr ""
+"Oomisha kee galmeessi, oomisha kee bulchi, fi kallattiin bittaadhaaf gurguri daldalaa gidduu malee."
+
+#: .\templates\select_role.html:160
+msgid "Join as Farmer"
+msgstr "Akka Qotee Bulaatti Makaami"
+
+#: .\templates\select_role.html:171
+msgid "Buyer"
+msgstr "Bitaa"
+
+#: .\templates\select_role.html:173
+msgid ""
+"Access fresh produce at fair prices. Buy individually or start a Group Buy "
+"with neighbors."
+msgstr ""
+"Oomisha firesh gatii madaalawaan argadhu. Kophaa biti yookiin ollaawwan wajjin Gareen Bituu eegali."
+
+#: .\templates\select_role.html:176
+msgid "Join as Buyer"
+msgstr "Akka Bitaatti Makaami"
+
+#: .\templates\select_role.html:189
+msgid ""
+"Sell fertilizers, seeds, and equipment directly to thousands of Ethiopian "
+"farmers."
+msgstr ""
+"Xao'o, sanyii, fi meeshaalee qotee bultoota Itoophiyaa kumootaan lakkaa'amaniif kallattiin gurguri."
+
+#: .\templates\select_role.html:192
+msgid "Join as Supplier"
+msgstr "Akka Dhiyeessaatti Makaami"
+
+#: .\templates\select_role.html:203
+msgid "Logistics"
+msgstr "Geejjiba"
+
+#: .\templates\select_role.html:205
+msgid ""
+"Manage fleets, accept delivery jobs, and bridge the gap between farm and "
+"table."
+msgstr ""
+"Konkolaattota bulchi, hojii geejjibaa fudhadhu, fi qonnaa fi maaddii walitti fiigi."
+
+#: .\templates\select_role.html:208
+msgid "Join Logistics"
+msgstr "Geejjibatti Makaami"
+
+#: .\templates\select_role.html:222
+msgid "Terms"
+msgstr "Haalota"
+
+#: .\templates\select_role.html:224
+msgid "Privacy"
+msgstr "Dhuunfaa"
+
+#: .\templates\select_role.html:226
+msgid "Help"
+msgstr "Gargaarsa"
+
+#: .\templates\supplier_dashboard.html:8
+msgid "Supplier Command - Arbor"
+msgstr "Ajaja Dhiyeessaa - Arbor"
+
+#: .\templates\supplier_dashboard.html:33
+msgid "Main Market"
+msgstr "Gabaa Guddaa"
+
+#: .\templates\supplier_dashboard.html:61
+msgid "My Warehouse"
+msgstr "Galma Koo"
+
+#: .\templates\supplier_dashboard.html:62
+msgid "Manage your stock and prices."
+msgstr "Isitoo fi gatii kee bulchi."
+
+#: .\templates\supplier_dashboard.html:65
+msgid "Add Product"
+msgstr "Oomisha Dabali"
+
+#: .\templates\supplier_dashboard.html:75
+msgid "Price / Unit"
+msgstr "Gatii / Yuniitii"
+
+#: .\templates\supplier_dashboard.html:76
+msgid "Current Stock"
+msgstr "Isitoo Ammaa"
+
+#: .\templates\supplier_dashboard.html:101
+msgid "Out of Stock"
+msgstr "Dhumera"
+
+#: .\templates\supplier_dashboard.html:112
+msgid "Your warehouse is empty"
+msgstr "Galmi kee duwwaadha"
+
+#: .\templates\supplier_dashboard.html:113
+msgid "Start adding fertilizers or seeds to sell."
+msgstr "Xao'o yookiin sanyii gurguramu dabaluu eegali."
+
+#: .\templates\supplier_dashboard.html:115
+msgid "Add First Item"
+msgstr "Meeshaa Jalqabaa Dabali"
+
+#: .\templates\supplier_dashboard.html:124
+msgid "Market Intelligence"
+msgstr "Odeeffannoo Gabaa"
+
+#: .\templates\supplier_dashboard.html:127
+msgid "Live Farmer Prices"
+msgstr "Gatii Qotee Bulaa Yeroo Ammaa"
+
+#: .\templates\supplier_dashboard.html:139
+msgid "No market data available yet."
+msgstr "Ammatti daataan gabaa hin jiru."
+
+#: .\templates\telebirr_pay.html:8
+msgid "Telebirr Payment"
+msgstr "Kaffaltii Telebirr"
+
+#: .\templates\telebirr_pay.html:28
+msgid "Telebirr Logo"
+msgstr "Asxaa Telebirr"
+
+#: .\templates\telebirr_pay.html:31
+msgid "Confirm Telebirr Payment"
+msgstr "Kaffaltii Telebirr Mirkaneessi"
+
+#: .\templates\telebirr_pay.html:33
+#, python-format
+msgid "Amount Due for Order #%(id)s:"
+msgstr "Maallaqa Ajaja #%(id)s tiif Kaffalamu:"
+
+#: .\templates\telebirr_pay.html:42
+msgid "Enter Telebirr PIN"
+msgstr "PIN Telebirr Galchi"
+
+#: .\templates\telebirr_pay.html:57
+msgid "Pay Now & Verify"
+msgstr "Amma Kaffali & Mirkaneessi"
+
+#: .\templates\telebirr_pay.html:64
+msgid "Cancel Transaction"
+msgstr "Dabarsa Haqi"

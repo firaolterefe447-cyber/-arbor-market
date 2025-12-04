@@ -1,0 +1,47 @@
+{% extends "admin/login.html" %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style>
+        /* 1. The whole background screen */
+        body {
+            background-color: #f0f2f5; /* Light Grey */
+            /* You can also use an image URL here like this:
+               background-image: url('https://source.unsplash.com/random/1600x900'); 
+            */
+            background-size: cover;
+        }
+
+        /* 2. The Login Box */
+        #content-main {
+            float: none;
+            margin: 100px auto; /* Centers the box */
+            max-width: 400px;
+            background: white;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Drop shadow */
+            padding: 30px;
+        }
+
+        /* 3. The Submit Button */
+        .submit-row input {
+            background: #8e44ad; /* Matches your Purple Header */
+            color: white;
+            border: none;
+            height: 40px;
+            width: 100%; /* Full width button */
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* 4. Button Hover effect */
+        .submit-row input:hover {
+            background: #732d91; /* Darker purple when you touch it */
+        }
+        
+        /* Hide the default messy header on login page */
+        #header { display: none; }
+    </style>
+{% endblock %}

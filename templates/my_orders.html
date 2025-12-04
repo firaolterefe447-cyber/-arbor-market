@@ -1,0 +1,387 @@
+{% load static tailwind_tags humanize i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" class="scroll-smooth" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "My Orders | Arbor Market" %}</title>
+
+    <!-- ASSETS -->
+    {% tailwind_css %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* DYNAMIC THEME VARIABLES */
+        :root {
+            {% if request.user.user_type == 'farmer' %}
+                /* Industrial Blue Theme */
+                --bg-body: #f8fafc;       /* Slate-50 */
+                --text-main: #0f172a;     /* Slate-900 */
+                --accent-color: #2563eb;  /* Blue-600 */
+                --nav-start: #0f172a;     /* Slate-900 */
+                --nav-mid: #1e3a8a;       /* Blue-900 */
+                --nav-end: #0f172a;       /* Slate-900 */
+                --badge-pending: #e2e8f0; /* Slate-200 */
+                --badge-text: #475569;    /* Slate-600 */
+            {% else %}
+                /* Fresh Green Theme */
+                --bg-body: #fafaf9;       /* Stone-50 */
+                --text-main: #1c1917;     /* Stone-900 */
+                --accent-color: #15803d;  /* Green-700 */
+                --nav-start: #166534;     /* Green-800 */
+                --nav-mid: #047857;       /* Emerald-700 */
+                --nav-end: #166534;       /* Green-800 */
+                --badge-pending: #e7e5e4; /* Stone-200 */
+                --badge-text: #57534e;    /* Stone-600 */
+            {% endif %}
+        }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-body); color: var(--text-main); }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; }
+        ::-webkit-scrollbar-thumb { background: var(--accent-color); border-radius: 4px; }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .progress-bar { transition: width 1.5s ease-out; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- 1. BACKGROUND ACCENTS (CONDITIONAL) -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 right-0 rtl:right-auto rtl:left-0 w-[600px] h-[600px] rounded-full blur-[100px]
+            {% if request.user.user_type == 'farmer' %} bg-blue-100/40 {% else %} bg-green-100/40 {% endif %}">
+        </div>
+        <div class="absolute bottom-0 left-0 rtl:left-auto rtl:right-0 w-[500px] h-[500px] rounded-full blur-[100px]
+            {% if request.user.user_type == 'farmer' %} bg-slate-200/60 {% else %} bg-amber-50/60 {% endif %}">
+        </div>
+    </div>
+
+    <!-- 2. NAVIGATION (CONDITIONAL GRADIENT) -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/10 shadow-lg backdrop-blur-md"
+         style="background: linear-gradient(to right, var(--nav-start), var(--nav-mid), var(--nav-end));">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20 gap-4">
+
+                <!-- LOGO -->
+                <a href="{% if request.user.user_type == 'farmer' %}{% url 'input_market' %}{% else %}{% url 'home' %}{% endif %}" class="flex items-center gap-3 group">
+                    <div class="bg-white/10 p-2 rounded-xl border border-white/20 group-hover:bg-white/20 transition">
+                        {% if request.user.user_type == 'farmer' %}
+                            <span class="text-2xl">🚜</span>
+                        {% else %}
+                            <span class="text-2xl">🌱</span>
+                        {% endif %}
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="text-xl font-black text-white tracking-widest uppercase block leading-none">{% trans "Arbor" %}</span>
+                        <span class="text-[9px] font-bold uppercase tracking-widest
+                            {% if request.user.user_type == 'farmer' %} text-blue-200 {% else %} text-green-200 {% endif %}">
+                            {% if request.user.user_type == 'farmer' %}{% trans "Industrial" %}{% else %}{% trans "Grand Market" %}{% endif %}
+                        </span>
+                    </div>
+                </a>
+
+                <!-- TITLE (Centered) -->
+                <div class="hidden md:flex items-center gap-2 bg-black/20 px-6 py-2 rounded-full border border-white/10">
+                    <i class="fas fa-receipt {% if request.user.user_type == 'farmer' %} text-blue-300 {% else %} text-amber-400 {% endif %}"></i>
+                    <span class="text-sm font-bold text-white uppercase tracking-wider">{% trans "Order History" %}</span>
+                </div>
+
+                <!-- ACTIONS -->
+                <div class="flex items-center gap-4">
+                    {% if request.user.user_type == 'farmer' %}
+                        <a href="{% url 'input_market' %}" class="text-white hover:text-blue-300 transition" title="{% trans 'Market' %}"><i class="fas fa-store text-xl"></i></a>
+                        <a href="{% url 'dashboard' %}" class="text-white hover:text-blue-300 transition" title="{% trans 'Dashboard' %}"><i class="fas fa-chart-pie text-xl"></i></a>
+                    {% else %}
+                        <a href="{% url 'home' %}" class="text-white hover:text-amber-400 transition" title="{% trans 'Market' %}"><i class="fas fa-store text-xl"></i></a>
+                        <a href="{% url 'group_buy_market' %}" class="text-white hover:text-amber-400 transition" title="{% trans 'Group Buy' %}"><i class="fas fa-users text-xl"></i></a>
+                    {% endif %}
+
+                    <a href="{% url 'profile' %}" class="text-white hover:opacity-80 transition"><i class="fas fa-user-circle text-xl"></i></a>
+
+                    <a href="{% url 'logout' %}" class="px-4 py-1.5 rounded-lg text-xs font-bold transition border
+                        {% if request.user.user_type == 'farmer' %}
+                            bg-blue-800 hover:bg-blue-700 text-blue-100 border-blue-600
+                        {% else %}
+                            bg-red-600/20 hover:bg-red-600 text-red-100 border-red-500/30
+                        {% endif %}">
+                        {% trans "Logout" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. MESSAGES -->
+    {% if messages %}
+    <div class="container mx-auto px-4 mt-24 relative z-50">
+        {% for message in messages %}
+        <div class="bg-white border-l-4 rtl:border-l-0 rtl:border-r-4 rounded-r-xl rtl:rounded-r-none rtl:rounded-l-xl shadow-md p-4 flex items-center gap-3 animate-fade-up
+            {% if request.user.user_type == 'farmer' %} border-blue-500 {% else %} border-green-500 {% endif %}">
+            <i class="fas fa-check-circle text-xl {% if request.user.user_type == 'farmer' %} text-blue-500 {% else %} text-green-500 {% endif %}"></i>
+            <p class="text-stone-700 font-medium">{{ message }}</p>
+            <button onclick="this.parentElement.remove()" class="ml-auto rtl:ml-0 rtl:mr-auto text-stone-400 hover:text-red-500"><i class="fas fa-times"></i></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- 4. MAIN CONTENT -->
+    <main class="container mx-auto px-4 py-8 relative z-10 {% if not messages %}mt-20{% endif %} mb-20">
+
+        <!-- HEADER -->
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4 animate-fade-up">
+            <div>
+                <h1 class="text-3xl font-black tracking-tight
+                    {% if request.user.user_type == 'farmer' %} text-slate-900 {% else %} text-stone-900 {% endif %}">
+                    {% trans "Your Orders" %}
+                </h1>
+                <p class="text-sm mt-1 {% if request.user.user_type == 'farmer' %} text-slate-500 {% else %} text-stone-500 {% endif %}">
+                    {% if request.user.user_type == 'farmer' %}
+                        {% trans "Track heavy machinery and input deliveries." %}
+                    {% else %}
+                        {% trans "Track your farm-fresh deliveries in real-time." %}
+                    {% endif %}
+                </p>
+            </div>
+
+            <div class="bg-white px-5 py-2 rounded-full border shadow-sm flex items-center gap-2
+                {% if request.user.user_type == 'farmer' %} border-slate-200 {% else %} border-stone-200 {% endif %}">
+                <span class="flex h-3 w-3 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75
+                        {% if request.user.user_type == 'farmer' %} bg-blue-400 {% else %} bg-green-400 {% endif %}"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3
+                        {% if request.user.user_type == 'farmer' %} bg-blue-600 {% else %} bg-green-500 {% endif %}"></span>
+                </span>
+                <span class="font-bold text-sm
+                    {% if request.user.user_type == 'farmer' %} text-slate-700 {% else %} text-stone-700 {% endif %}">
+                    {% blocktrans count count=orders.count %}{{ count }} Active{% plural %}{{ count }} Active{% endblocktrans %}
+                </span>
+            </div>
+        </div>
+
+        <!-- ORDERS GRID -->
+        {% if orders %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for order in orders %}
+            <!-- ORDER CARD -->
+            <div class="bg-white rounded-2xl border shadow-xl overflow-hidden card-hover flex flex-col h-full animate-fade-up
+                {% if request.user.user_type == 'farmer' %} border-slate-200 shadow-slate-200/50 {% else %} border-stone-100 shadow-stone-200/50 {% endif %}"
+                style="animation-delay: {{ forloop.counter }}00ms;">
+
+                <!-- Card Header -->
+                <div class="px-5 py-3 border-b flex justify-between items-center
+                    {% if request.user.user_type == 'farmer' %} bg-slate-50/80 border-slate-200 {% else %} bg-stone-50/50 border-stone-100 {% endif %}">
+
+                    <span class="font-mono text-xs font-bold {% if request.user.user_type == 'farmer' %} text-slate-400 {% else %} text-stone-400 {% endif %}">#{{ order.id }}</span>
+
+                    <!-- Dynamic Status Badge -->
+                    {% if order.status == 'pending' %}
+                        <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider" style="background-color: var(--badge-pending); color: var(--badge-text);">{% trans "Pending" %}</span>
+                    {% elif order.status == 'assigned' %}
+                        <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-blue-700 flex items-center gap-1"><i class="fas fa-truck-loading"></i> {% trans "Assigned" %}</span>
+                    {% elif order.status == 'picked_up' %}
+                        <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-purple-100 text-purple-700 flex items-center gap-1"><i class="fas fa-route"></i> {% trans "On Way" %}</span>
+                    {% elif order.status == 'delivered' %}
+                        <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700 flex items-center gap-1"><i class="fas fa-check"></i> {% trans "Delivered" %}</span>
+                    {% endif %}
+                </div>
+
+                <!-- Main Content -->
+                <div class="p-5 flex-grow">
+                    <!-- Product & Seller -->
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-lg font-black leading-tight mb-1
+                                {% if request.user.user_type == 'farmer' %} text-slate-800 {% else %} text-stone-800 {% endif %}">
+                                {{ order.product_name }}
+                            </h3>
+                            <p class="text-xs font-bold flex items-center gap-1
+                                {% if request.user.user_type == 'farmer' %} text-slate-500 {% else %} text-stone-500 {% endif %}">
+                                <i class="fas fa-store {% if request.user.user_type == 'farmer' %} text-blue-500 {% else %} text-amber-500 {% endif %}"></i>
+                                {{ order.seller.business_name|default:order.seller.first_name }}
+                            </p>
+                        </div>
+                        <div class="border rounded-lg px-2.5 py-1.5 text-center
+                            {% if request.user.user_type == 'farmer' %} bg-slate-100 border-slate-200 text-slate-600 {% else %} bg-amber-50 border-amber-100 text-amber-600 {% endif %}">
+                            <span class="block text-xl font-black leading-none">{{ order.quantity }}</span>
+                            <span class="text-[9px] font-bold uppercase opacity-60">{% if request.user.user_type == 'farmer' %}{% trans "Unit" %}{% else %}{% trans "KG" %}{% endif %}</span>
+                        </div>
+                    </div>
+
+                    <!-- Price & Date -->
+                    <div class="flex items-center justify-between py-3 border-t border-b mb-4
+                        {% if request.user.user_type == 'farmer' %} border-slate-100 {% else %} border-stone-50 {% endif %}">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold {% if request.user.user_type == 'farmer' %} text-slate-400 {% else %} text-stone-400 {% endif %}">{% trans "Total Cost" %}</p>
+                            <p class="text-lg font-black {% if request.user.user_type == 'farmer' %} text-blue-700 {% else %} text-green-700 {% endif %}">
+                                {{ order.total_price|intcomma }} <span class="text-xs font-normal text-gray-400">{% trans "ETB" %}</span>
+                            </p>
+                        </div>
+                        <div class="text-right rtl:text-left">
+                            <p class="text-[10px] uppercase font-bold {% if request.user.user_type == 'farmer' %} text-slate-400 {% else %} text-stone-400 {% endif %}">{% trans "Placed On" %}</p>
+                            <p class="text-sm font-bold {% if request.user.user_type == 'farmer' %} text-slate-600 {% else %} text-stone-600 {% endif %}">{{ order.created_at|date:"M d, Y" }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Info -->
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center
+                            {% if request.user.user_type == 'farmer' %} bg-slate-100 text-slate-400 {% else %} bg-stone-100 text-stone-400 {% endif %}">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="overflow-hidden">
+                            <p class="text-[10px] uppercase font-bold {% if request.user.user_type == 'farmer' %} text-slate-400 {% else %} text-stone-400 {% endif %}">{% trans "Delivery To" %}</p>
+                            <p class="text-sm font-bold truncate {% if request.user.user_type == 'farmer' %} text-slate-700 {% else %} text-stone-700 {% endif %}">{{ order.delivery_location }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Driver Section -->
+                    {% if order.driver %}
+                    <div class="border rounded-xl p-3 flex items-center gap-3 mb-4
+                        {% if request.user.user_type == 'farmer' %} bg-slate-50 border-slate-200 {% else %} bg-blue-50 border-blue-100 {% endif %}">
+                        {% if order.driver.profile_picture %}
+                             <img src="{{ order.driver.profile_picture.url }}" class="w-8 h-8 rounded-full shadow-sm object-cover">
+                        {% else %}
+                             <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs
+                                {% if request.user.user_type == 'farmer' %} bg-slate-200 text-slate-600 {% else %} bg-blue-200 text-blue-600 {% endif %}">
+                                {{ order.driver.first_name|slice:":1" }}
+                             </div>
+                        {% endif %}
+                        <div class="flex-grow">
+                            <p class="text-[10px] uppercase font-bold {% if request.user.user_type == 'farmer' %} text-slate-400 {% else %} text-blue-400 {% endif %}">{% trans "Driver" %}</p>
+                            <p class="text-xs font-bold {% if request.user.user_type == 'farmer' %} text-slate-900 {% else %} text-blue-900 {% endif %}">{{ order.driver.first_name }}</p>
+                        </div>
+                        <a href="tel:{{ order.driver.phone_number }}" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm hover:scale-110 transition
+                            {% if request.user.user_type == 'farmer' %} text-blue-600 {% else %} text-green-600 {% endif %}">
+                            <i class="fas fa-phone text-xs"></i>
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    <!-- 🔐 POD Code (Only Shows When Picked Up) -->
+                    {% if order.status == 'picked_up' %}
+                    <div class="border border-dashed rounded-xl p-4 text-center mb-4 relative overflow-hidden group
+                        {% if request.user.user_type == 'farmer' %} bg-slate-100 border-slate-300 {% else %} bg-amber-100 border-amber-300 {% endif %}">
+                        <p class="text-[9px] font-bold uppercase mb-1
+                            {% if request.user.user_type == 'farmer' %} text-slate-600 {% else %} text-amber-800 {% endif %}">
+                            {% trans "Secure Delivery PIN" %}
+                        </p>
+                        <p class="text-3xl font-mono font-black tracking-[0.3em] drop-shadow-sm select-all
+                            {% if request.user.user_type == 'farmer' %} text-slate-800 {% else %} text-stone-900 {% endif %}">
+                            {{ order.delivery_pin }}
+                        </p>
+                        <p class="text-[9px] mt-1 italic opacity-70">{% blocktrans with name=order.driver.first_name %}Give this code to {{ name }}{% endblocktrans %}</p>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Footer / Actions -->
+                {% if order.status == 'pending' %}
+                <div class="p-3 border-t flex gap-2
+                    {% if request.user.user_type == 'farmer' %} bg-slate-50 border-slate-200 {% else %} bg-stone-50 border-stone-100 {% endif %}">
+
+                    <a href="{% url 'edit_order' order.id %}" class="flex-1 bg-white border py-2 rounded-lg text-center text-xs font-bold uppercase transition shadow-sm
+                        {% if request.user.user_type == 'farmer' %} border-slate-300 text-slate-600 hover:text-blue-600 hover:border-blue-400 {% else %} border-stone-200 text-stone-600 hover:text-amber-600 hover:border-amber-300 {% endif %}">
+                        {% trans "Edit" %}
+                    </a>
+                    <a href="{% url 'cancel_order' order.id %}" onclick="return confirm('{% trans "Cancel this order?" %}');" class="flex-1 bg-white border border-stone-200 text-stone-600 hover:text-red-600 hover:border-red-300 py-2 rounded-lg text-center text-xs font-bold uppercase transition shadow-sm">
+                        {% trans "Cancel" %}
+                    </a>
+                </div>
+                {% else %}
+                <!-- Progress Bar Visual -->
+                <div class="h-1.5 w-full bg-gray-100" dir="ltr">
+                    <div class="h-full progress-bar
+                        {% if order.status == 'assigned' %} bg-blue-500 w-1/3
+                        {% elif order.status == 'picked_up' %} bg-purple-500 w-2/3
+                        {% elif order.status == 'delivered' %} bg-green-500 w-full
+                        {% endif %}
+                    "></div>
+                </div>
+                {% endif %}
+
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- EMPTY STATE (Conditional) -->
+        <div class="py-24 text-center bg-white rounded-3xl border-2 border-dashed animate-fade-up
+            {% if request.user.user_type == 'farmer' %} border-slate-300 {% else %} border-stone-200 {% endif %}">
+
+            <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-4xl
+                {% if request.user.user_type == 'farmer' %} bg-slate-100 {% else %} bg-green-50 {% endif %}">
+                {% if request.user.user_type == 'farmer' %}🚜{% else %}🥬{% endif %}
+            </div>
+
+            <h2 class="text-2xl font-bold mb-2 {% if request.user.user_type == 'farmer' %} text-slate-800 {% else %} text-stone-800 {% endif %}">
+                {% trans "No active orders" %}
+            </h2>
+
+            <p class="mb-8 max-w-sm mx-auto {% if request.user.user_type == 'farmer' %} text-slate-500 {% else %} text-stone-500 {% endif %}">
+                {% if request.user.user_type == 'farmer' %}
+                    {% trans "Stock up on inputs to boost your harvest." %}
+                {% else %}
+                    {% trans "Fresh produce is waiting. Fill your basket." %}
+                {% endif %}
+            </p>
+
+            <a href="{% if request.user.user_type == 'farmer' %}{% url 'input_market' %}{% else %}{% url 'home' %}{% endif %}"
+               class="text-white px-8 py-3 rounded-full font-bold shadow-lg transition transform hover:-translate-y-1 inline-flex items-center gap-2
+               {% if request.user.user_type == 'farmer' %}
+                   bg-blue-600 hover:bg-blue-700 shadow-blue-600/30
+               {% else %}
+                   bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-orange-500/30
+               {% endif %}">
+                {% trans "Start Shopping" %} <i class="fas fa-arrow-right rtl:rotate-180"></i>
+            </a>
+        </div>
+        {% endif %}
+
+    </main>
+
+    <!-- 5. FOOTER (CONDITIONAL BACKGROUND) -->
+    <footer class="pt-16 pb-8 border-t mt-auto
+        {% if request.user.user_type == 'farmer' %}
+            bg-slate-900 text-slate-300 border-slate-800
+        {% else %}
+            bg-[#022c22] text-white border-green-900
+        {% endif %}">
+
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
+                <div class="text-center md:text-left rtl:text-right">
+                    <h4 class="font-bold text-lg mb-1">{% trans "Trusted Payments" %}</h4>
+                    <p class="text-xs opacity-60">{% trans "Secured by Ethiopia's financial network." %}</p>
+                </div>
+                <div class="flex gap-3">
+                    <div class="bg-white/10 px-4 py-2 rounded-lg text-xs font-bold border border-white/10">TELEBIRR</div>
+                    <div class="bg-white/10 px-4 py-2 rounded-lg text-xs font-bold border border-white/10">CBE BIRR</div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 text-center text-xs opacity-40">
+                &copy; {% now "Y" %} {% trans "Arbor Marketplace" %}.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Fleet Manifest - Arbor" %}</title>
+
+    <!-- LOCAL TAILWIND CSS -->
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; }
+        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen font-sans">
+
+    <!-- 🔵 CORPORATE HEADER -->
+    <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-lg border-b border-slate-700">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 p-2 rounded-lg">
+                    <i class="fas fa-shipping-fast text-white"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-none">{% trans "Arbor Fleet" %}</h1>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest">{% trans "Official Logistics" %}</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="text-right hidden sm:block">
+                    <p class="text-xs text-slate-400">{% trans "Driver ID:" %} {{ request.user.id }}</p>
+                    <p class="font-bold">{{ request.user.first_name }} {{ request.user.last_name }}</p>
+                </div>
+                <a href="{% url 'logout' %}" class="bg-slate-800 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-xs font-bold transition">
+                    {% trans "Logout" %}
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 📋 MANIFEST CONTENT -->
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <!-- Date Header -->
+        <div class="flex justify-between items-end mb-6">
+            <div>
+                <p class="text-slate-500 font-bold text-sm uppercase">{% trans "Daily Route" %}</p>
+                <h2 class="text-3xl font-extrabold text-slate-800">{{ today|date:"l, F jS" }}</h2>
+            </div>
+            <div class="bg-white px-4 py-2 rounded-xl shadow-sm border border-slate-200">
+                <span class="text-xs text-slate-400 font-bold uppercase">{% trans "Assignments" %}</span>
+                <p class="text-2xl font-bold text-blue-600 text-center">{{ manifest.count }}</p>
+            </div>
+        </div>
+
+        <!-- THE LIST -->
+        <div class="space-y-6">
+            {% for order in manifest %}
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border-l-8
+                {% if order.status == 'assigned' or order.status == 'pending' %} border-blue-500
+                {% elif order.status == 'picked_up' %} border-yellow-500
+                {% elif order.status == 'delivered' %} border-green-500
+                {% endif %} relative">
+
+                <!-- Status Badge (Top Right) -->
+                <div class="absolute top-4 right-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide
+                        {% if order.status == 'assigned' or order.status == 'pending' %} bg-blue-100 text-blue-800
+                        {% elif order.status == 'picked_up' %} bg-yellow-100 text-yellow-800
+                        {% elif order.status == 'delivered' %} bg-green-100 text-green-800
+                        {% endif %}">
+                        {{ order.get_status_display }}
+                    </span>
+                </div>
+
+                <div class="p-6">
+                    <!-- Stop Number & Product -->
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 font-extrabold text-xl border-2 border-slate-200">
+                            {{ forloop.counter }}
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">{{ order.product_name }}</h3>
+                            <p class="text-slate-500 text-sm">{% trans "Order #" %}{{ order.id }} • {{ order.weight_kg }} {% trans "KG" %}</p>
+                        </div>
+                    </div>
+
+                    <!-- Address Flow -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
+                        <!-- FROM -->
+                        <div class="relative pl-6 border-l-2 border-slate-300">
+                            <div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-slate-400"></div>
+                            <p class="text-xs text-slate-400 uppercase font-bold mb-1">{% trans "Pickup From" %}</p>
+                            <p class="font-bold text-slate-700">{{ order.pickup_location }}</p>
+                            <a href="tel:{{ order.pickup_phone }}" class="text-blue-600 text-sm hover:underline">
+                                <i class="fas fa-phone mr-1"></i> {{ order.pickup_phone }}
+                            </a>
+                        </div>
+
+                        <!-- TO -->
+                        <div class="relative pl-6 border-l-2 border-slate-300">
+                            <div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-blue-500"></div>
+                            <p class="text-xs text-slate-400 uppercase font-bold mb-1">{% trans "Deliver To" %}</p>
+                            <p class="font-bold text-slate-700">{{ order.delivery_location }}</p>
+                            <a href="tel:{{ order.delivery_phone }}" class="text-blue-600 text-sm hover:underline">
+                                <i class="fas fa-phone mr-1"></i> {{ order.delivery_phone }}
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ACTION BUTTONS -->
+                    <div class="flex gap-3">
+                        <!-- 👇 UPDATED: Show button for Pending OR Assigned -->
+                        {% if order.status == 'assigned' or order.status == 'pending' %}
+                            <a href="{% url 'update_status' order.id 'picked_up' %}" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold text-center shadow-lg transition transform active:scale-95 flex items-center justify-center">
+                                <i class="fas fa-box-open mr-2"></i> {% trans "Confirm Pickup" %}
+                            </a>
+
+                        {% elif order.status == 'picked_up' %}
+                            <!-- 🔐 POD VERIFICATION FORM -->
+                            <form action="{% url 'verify_delivery' order.id %}" method="post" class="flex-1">
+                                {% csrf_token %}
+                                <div class="flex gap-2">
+                                    <input type="text" name="pod_code" placeholder="{% trans 'Enter Buyer Code' %}" maxlength="4" required
+                                        class="flex-1 px-4 py-3 border-2 border-green-500 rounded-xl text-center font-mono text-lg font-bold text-slate-700 focus:outline-none focus:ring-4 focus:ring-green-500/20">
+                                    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold shadow-lg transition">
+                                        {% trans "Verify" %}
+                                    </button>
+                                </div>
+                            </form>
+
+                        {% elif order.status == 'completed' or order.status == 'delivered' %}
+                             <button disabled class="flex-1 bg-gray-200 text-gray-500 py-3 rounded-xl font-bold text-center cursor-not-allowed">
+                                <i class="fas fa-check-double mr-2"></i> {% trans "Completed" %}
+                            </button>
+                        {% endif %}
+
+                        <!-- Map Link -->
+                        <button class="bg-slate-200 hover:bg-slate-300 text-slate-700 w-12 rounded-xl flex items-center justify-center transition">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            {% empty %}
+            <div class="text-center py-20 bg-white rounded-3xl border-2 border-dashed border-slate-200">
+                <i class="fas fa-clipboard-check text-6xl text-slate-200 mb-4"></i>
+                <h3 class="text-xl font-bold text-slate-400">{% trans "All Clear" %}</h3>
+                <p class="text-slate-400">{% trans "Your manifest is empty." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% trans "Logistics Dashboard - Arbor" %}</title>
+
+    <!-- LOCAL TAILWIND CSS -->
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Smooth scrolling and cleaner scrollbars */
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .fade-in { animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="min-h-screen font-sans bg-gray-50 text-gray-800 pb-20">
+
+    <!-- 🟠 TOP NAV -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg border-b border-gray-800">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="{% url 'home' %}" class="flex items-center justify-center w-9 h-9 rounded-full bg-gray-800 text-gray-400 hover:text-white transition">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span class="text-lg font-bold tracking-tight flex items-center gap-2">
+                    <i class="fas fa-truck-fast text-blue-500"></i> {% trans "Dispatch" %}
+                </span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="text-right hidden sm:block">
+                    <p class="text-[10px] text-gray-400 font-bold uppercase">{{ profile.get_workforce_type_display }}</p>
+                    <p class="text-sm font-bold">{{ request.user.first_name }}</p>
+                </div>
+                <div class="bg-blue-600 px-3 py-1 rounded-lg shadow-inner">
+                    <span class="text-[10px] text-blue-200 block leading-none">{% trans "SCORE" %}</span>
+                    <span class="font-bold text-white text-sm">{{ profile.reliability_score }}</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🔔 MESSAGES -->
+    {% if messages %}
+    <div class="container mx-auto px-4 mt-4 space-y-2">
+        {% for message in messages %}
+        <div class="p-3 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm
+            {% if message.tags == 'success' %} bg-green-100 text-green-800 border border-green-200
+            {% elif message.tags == 'error' %} bg-red-100 text-red-800 border border-red-200
+            {% else %} bg-blue-100 text-blue-800 border border-blue-200 {% endif %}">
+            <i class="fas fa-info-circle"></i> {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="container mx-auto px-4 py-6 fade-in">
+
+        <!-- ========================== -->
+        <!-- 👨‍✈️ DEDICATED FLEET VIEW -->
+        <!-- ========================== -->
+        {% if mode == 'DEDICATED' %}
+
+        <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+            <i class="fas fa-clipboard-list text-blue-600"></i> {% trans "Your Manifest" %}
+        </h2>
+
+        <div class="space-y-4">
+            {% for order in manifest %}
+            <!-- CLICKABLE CARD -->
+            <a href="{% url 'order_detail' order.id %}" class="block bg-white rounded-xl shadow-sm border-l-4 border-blue-600 hover:shadow-lg transition-all duration-200 p-5 group relative">
+
+                <div class="flex justify-between items-start mb-2">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                            {{ forloop.counter }}
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition">{% trans "Order #" %}{{ order.id }}</h3>
+                            <p class="text-xs text-gray-500">{{ order.product_name }}</p>
+                        </div>
+                    </div>
+                    <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider">
+                        {{ order.get_status_display }}
+                    </span>
+                </div>
+
+                <div class="mt-3 pl-11">
+                    <div class="text-sm text-gray-600 flex flex-col gap-1">
+                        <p><i class="fas fa-circle text-[8px] text-green-500 mr-2"></i> {{ order.pickup_location }}</p>
+                        <p><i class="fas fa-location-dot text-[8px] text-red-500 mr-2"></i> {{ order.delivery_location }}</p>
+                    </div>
+
+                    <div class="mt-4 flex items-center text-blue-600 text-xs font-bold gap-1 group-hover:translate-x-1 transition">
+                        {% trans "View Details" %} <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+            {% empty %}
+            <div class="text-center p-10 bg-white rounded-xl shadow-sm">
+                <p class="text-gray-400">{% trans "No active manifest." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% else %}
+
+        <!-- ========================== -->
+        <!-- 🚛 CDN / FREELANCER VIEW -->
+        <!-- ========================== -->
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-3 mb-6">
+            <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 text-center">
+                <span class="block text-2xl font-bold text-gray-800">{{ all_orders.count }}</span>
+                <span class="text-[10px] text-gray-400 font-bold uppercase">{% trans "Total" %}</span>
+            </div>
+            <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 text-center">
+                <span class="block text-2xl font-bold text-blue-600">{{ my_jobs.count }}</span>
+                <span class="text-[10px] text-gray-400 font-bold uppercase">{% trans "My Jobs" %}</span>
+            </div>
+            <a href="{% url 'post_trip' %}" class="bg-gray-900 hover:bg-gray-800 text-white rounded-xl shadow-md flex flex-col items-center justify-center">
+                <i class="fas fa-route text-lg mb-1"></i>
+                <span class="text-[10px] font-bold uppercase">{% trans "Post Trip" %}</span>
+            </a>
+        </div>
+
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-bold text-gray-800">{% trans "Order Feed" %}</h3>
+            <span class="text-xs bg-gray-200 px-2 py-1 rounded-full text-gray-600 font-bold">{{ all_orders.count }}</span>
+        </div>
+
+        <div class="space-y-4">
+            {% for order in all_orders %}
+
+            <!-- 🔗 CLICKABLE MAIN CARD -->
+            <a href="{% url 'order_detail' order.id %}" class="block bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 group">
+
+                <!-- Status Strip (Color Coded) -->
+                <div class="h-1 w-full
+                    {% if order.driver == request.user %} bg-blue-500
+                    {% elif order.status == 'pending' %} bg-green-500
+                    {% elif order.status == 'delivered' %} bg-gray-400
+                    {% else %} bg-orange-400 {% endif %}">
+                </div>
+
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h4 class="font-bold text-gray-800 text-lg group-hover:text-blue-600 transition">{{ order.product_name }}</h4>
+                                {% if order.driver == request.user %}
+                                    <i class="fas fa-user-tag text-blue-500" title="{% trans 'Assigned to you' %}"></i>
+                                {% endif %}
+                            </div>
+                            <p class="text-xs text-gray-500">{% trans "Order #" %}{{ order.id }} • {{ order.weight_kg }}kg</p>
+                        </div>
+
+                        <!-- Status Badge -->
+                        {% if order.status == 'pending' %}
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-[10px] font-bold uppercase border border-green-200">
+                                {% trans "Open" %}
+                            </span>
+                        {% elif order.driver == request.user and order.status != 'delivered' %}
+                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-[10px] font-bold uppercase border border-blue-200">
+                                {% trans "Active" %}
+                            </span>
+                        {% elif order.status == 'delivered' %}
+                             <span class="bg-gray-100 text-gray-500 px-2 py-1 rounded text-[10px] font-bold uppercase border border-gray-200">
+                                {% trans "Done" %}
+                            </span>
+                        {% else %}
+                            <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-[10px] font-bold uppercase border border-orange-200">
+                                {% trans "Taken" %}
+                            </span>
+                        {% endif %}
+                    </div>
+
+                    <!-- Route -->
+                    <div class="bg-gray-50 rounded-lg p-3 mb-3 border border-gray-100 flex items-center justify-between">
+                        <div class="w-5/12">
+                            <p class="text-[9px] uppercase text-gray-400 font-bold">{% trans "From" %}</p>
+                            <p class="text-xs font-bold truncate">{{ order.pickup_location }}</p>
+                        </div>
+                        <div class="text-gray-300">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </div>
+                        <div class="w-5/12 text-right">
+                            <p class="text-[9px] uppercase text-gray-400 font-bold">{% trans "To" %}</p>
+                            <p class="text-xs font-bold truncate">{{ order.delivery_location }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="flex justify-between items-center pt-2 border-t border-gray-50">
+                        <span class="font-bold text-gray-900 text-sm">{% trans "ETB" %} {{ order.total_price|intcomma }}</span>
+
+                        <span class="text-xs font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">
+                            {% trans "View Details" %} <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            {% empty %}
+            <div class="text-center py-12 bg-white rounded-xl border border-dashed border-gray-300">
+                <i class="fas fa-search text-gray-300 text-4xl mb-3"></i>
+                <p class="text-gray-500 text-sm font-bold">{% trans "No orders found." %}</p>
+                <p class="text-gray-400 text-xs">{% trans "Wait for new requests." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% endif %}
+    </div>
+
+</body>
+</html>

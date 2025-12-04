@@ -1,0 +1,210 @@
+{% load static %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Edit Profile - Arbor" %}</title>
+
+    <!-- TAILWIND & ASSETS -->
+    {% tailwind_css %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-soil: #fafaf9;
+            --color-text: #1c1917;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-soil);
+            color: var(--color-text);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0,0); }
+            50% { transform: translate(20px, -20px); }
+            100% { transform: translate(0,0); }
+        }
+
+        /* Shine Effect */
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+        .group:hover .animate-shine {
+            animation: shine 1.5s infinite linear;
+        }
+
+        .leaf-shape {
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+        /* Form Input Styling */
+        input, select, textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e5e7eb;
+            background-color: #f9fafb;
+            margin-top: 0.4rem;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        input:focus {
+            outline: none;
+            border-color: #16a34a;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+        }
+        label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #78716c; /* Stone-500 */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-left: 0.25rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <!-- 1. BACKGROUND ENGINE -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-green-200/30 rounded-full blur-[100px] mix-blend-multiply animate-[floatOrb_20s_infinite_ease-in-out]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-amber-100/40 rounded-full blur-[80px] mix-blend-multiply animate-[floatOrb_25s_infinite_ease-in-out_reverse]"></div>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <nav class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="{% url 'home' %}" class="flex items-center gap-2 group">
+                <span class="text-2xl">🌱</span>
+                <span class="text-xl font-black text-stone-800 tracking-widest uppercase">{% trans "Arbor" %}</span>
+            </a>
+            <a href="{% url 'logout' %}" class="text-xs font-bold text-stone-500 hover:text-red-600 transition uppercase tracking-wide">
+                <i class="fas fa-sign-out-alt"></i> {% trans "Logout" %}
+            </a>
+        </div>
+    </nav>
+
+    <!-- 3. MAIN CONTENT -->
+    <div class="container mx-auto px-4 py-10 relative z-10 flex-grow flex flex-col items-center justify-center">
+
+        <!-- PROFILE CARD -->
+        <div class="w-full max-w-2xl bg-white rounded-3xl shadow-xl border border-stone-100 overflow-hidden animate-fade-up">
+
+            <!-- A. Header Banner -->
+            <div class="h-32 bg-gradient-to-r from-green-700 via-emerald-600 to-green-800 relative">
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            </div>
+
+            <!-- B. Avatar & Info -->
+            <div class="px-8 pb-8 text-center relative">
+                <!-- Avatar -->
+                <div class="relative -mt-16 inline-block">
+                    <div class="w-32 h-32 rounded-full border-4 border-white shadow-lg bg-stone-100 flex items-center justify-center text-5xl overflow-hidden group">
+                        {% if user.profile_picture %}
+                            <img src="{{ user.profile_picture.url }}" alt="Profile" class="w-full h-full object-cover">
+                        {% else %}
+                            <span>👤</span>
+                        {% endif %}
+                        <!-- Visual Indicator that this is editable via the form below -->
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <i class="fas fa-camera text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <!-- Role Badge -->
+                    <div class="absolute bottom-1 right-1 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest text-white shadow-md
+                        {% if user.user_type == 'farmer' %} bg-green-600
+                        {% elif user.user_type == 'buyer' %} bg-amber-500
+                        {% elif user.user_type == 'supplier' %} bg-blue-600
+                        {% else %} bg-stone-500 {% endif %}">
+                        {{ user.get_user_type_display }}
+                    </div>
+                </div>
+
+                <h1 class="text-2xl font-black text-stone-900 mt-4 capitalize">{% trans "Edit Profile" %}</h1>
+                <p class="text-stone-400 text-xs font-bold uppercase tracking-wide mb-8">{% trans "Update your details below" %}</p>
+
+                <!-- ======================================================== -->
+                <!-- C. THE "MY GROUPS" BUTTON (Big & Animated)               -->
+                <!-- ======================================================== -->
+                {% if user.user_type == 'farmer' or user.user_type == 'buyer' %}
+                <div class="mb-10 px-2">
+                    <a href="{% url 'group_buy_market' %}" class="group relative w-full block bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-2xl shadow-2xl shadow-orange-500/30 overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="px-6 py-5 flex items-center justify-between relative z-10">
+                            <div class="flex items-center gap-5">
+                                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl border-2 border-white/30 group-hover:rotate-12 transition duration-500">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="text-xl font-black uppercase tracking-tight leading-none drop-shadow-sm">{% trans "My Groups" %}</h3>
+                                    <p class="text-[10px] text-orange-100 font-bold uppercase tracking-widest mt-1 opacity-90">{% trans "Track Orders & Savings" %}</p>
+                                </div>
+                            </div>
+                            <div class="bg-white/20 w-10 h-10 flex items-center justify-center rounded-full group-hover:bg-white group-hover:text-orange-500 transition-all duration-300">
+                                <i class="fas fa-chevron-right text-lg"></i>
+                            </div>
+                        </div>
+
+                        <!-- Moving Shine Effect -->
+                        <div class="absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 animate-shine pointer-events-none"></div>
+                    </a>
+                </div>
+                {% endif %}
+                <!-- ======================================================== -->
+
+                <!-- D. EDIT FORM (Directly Visible) -->
+                <form method="post" enctype="multipart/form-data" class="text-left space-y-5 px-2">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                    <div class="group">
+                        <label>{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.help_text %}
+                            <p class="text-[10px] text-stone-400 mt-1">{{ field.help_text }}</p>
+                        {% endif %}
+                        {% if field.errors %}
+                            <p class="text-red-500 text-xs mt-1 font-bold">{{ field.errors.0 }}</p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-4 pt-6">
+                        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-xl transition text-sm flex-grow shadow-lg shadow-green-600/30 flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                            <i class="fas fa-save"></i> {% trans "Save Changes" %}
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Bottom Link -->
+        <div class="mt-8 text-center animate-fade-up" style="animation-delay: 0.2s;">
+            <a href="{% url 'home' %}" class="text-stone-400 hover:text-green-600 text-sm font-bold transition flex items-center gap-2 justify-center">
+                <i class="fas fa-arrow-left"></i> {% trans "Return to Market" %}
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

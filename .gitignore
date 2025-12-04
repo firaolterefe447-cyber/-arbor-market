@@ -1,0 +1,16 @@
+# Python stuff
+__pycache__/
+*.py[cod]
+venv/
+env/
+.env
+
+# Database (We use a real one on the server, not this file)
+db.sqlite3
+
+# Node.js stuff (Tailwind is heavy, we install it on the server instead)
+node_modules/
+package-lock.json
+
+# Static files
+staticfiles/

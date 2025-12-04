@@ -1,0 +1,175 @@
+{% load static %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" class="scroll-smooth" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% trans "Login | Arbor" %}</title>
+
+    <!-- LOCAL TAILWIND CSS -->
+    {% tailwind_css %}
+
+    <!-- ASSETS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-soil: #fafaf9;
+            --color-text: #1c1917;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-soil);
+            color: var(--color-text);
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* ANIMATIONS */
+        @keyframes floatOrb {
+            0% { transform: translate(0,0); }
+            33% { transform: translate(30px, -30px); }
+            66% { transform: translate(-20px, 20px); }
+            100% { transform: translate(0,0); }
+        }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-pop-in { animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+        /* Glass Utility */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .safe-pb { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen relative justify-center">
+
+    <!-- 1. BACKGROUND ENGINE -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute -top-[10%] -left-[10%] w-[50vh] h-[50vh] md:w-[800px] md:h-[800px] bg-green-200/40 rounded-full blur-[60px] md:blur-[100px] animate-[floatOrb_25s_infinite_ease-in-out]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40vh] h-[40vh] md:w-[700px] md:h-[700px] bg-amber-100/50 rounded-full blur-[80px] md:blur-[120px] animate-[floatOrb_30s_infinite_ease-in-out_reverse]"></div>
+    </div>
+
+    <!-- 2. NAVBAR (Minimal) -->
+    <nav class="absolute top-0 w-full z-50 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="{% url 'home' %}" class="flex items-center gap-3 group">
+                <div class="bg-white/80 p-2 rounded-xl border border-white/50 shadow-sm group-hover:scale-105 transition">
+                    <span class="text-2xl">🌱</span>
+                </div>
+                <span class="text-xl font-black text-stone-800 tracking-widest uppercase hidden sm:block">{% trans "Arbor" %}</span>
+            </a>
+
+            <!-- Language Selector (Compact) -->
+            <form action="{% url 'set_language' %}" method="post" class="relative group">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.path }}">
+                <div class="relative overflow-hidden bg-white/60 hover:bg-white border border-stone-200 rounded-full px-4 py-2 transition flex items-center gap-2 cursor-pointer shadow-sm">
+                    <i class="fas fa-globe text-stone-400 text-sm"></i>
+                    <span class="text-xs font-bold text-stone-600 uppercase">{{ LANGUAGE_CODE }}</span>
+                    <select name="language" onchange="this.form.submit()" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+                        {% get_available_languages as LANGUAGES %}
+                        {% for lang_code, lang_name in LANGUAGES %}
+                            <option value="{{ lang_code }}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
+                                {{ lang_code|upper }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <!-- 3. LOGIN CARD -->
+    <main class="relative z-10 w-full max-w-md mx-auto px-4 sm:px-6 safe-pb">
+
+        <div class="glass-panel rounded-3xl p-8 md:p-10 animate-pop-in">
+
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-green-100 text-green-600 mb-6 shadow-sm transform hover:scale-110 transition duration-300">
+                    <i class="fas fa-unlock-alt text-2xl"></i>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-black text-stone-900 tracking-tight mb-2">{% trans "Welcome Back" %}</h1>
+                <p class="text-sm text-stone-500 font-medium">{% trans "Enter your credentials to access your account." %}</p>
+            </div>
+
+            <!-- Messages -->
+            {% if messages %}
+                <div class="mb-6 space-y-3">
+                    {% for message in messages %}
+                    <div class="flex items-center gap-3 p-3 rounded-xl text-xs font-bold shadow-sm
+                        {% if message.tags == 'error' %} bg-red-50 text-red-600 border border-red-100 {% endif %}
+                        {% if message.tags == 'success' %} bg-green-50 text-green-600 border border-green-100 {% endif %}">
+                        <i class="fas
+                            {% if message.tags == 'error' %} fa-exclamation-circle {% endif %}
+                            {% if message.tags == 'success' %} fa-check-circle {% endif %}"></i>
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <!-- Form -->
+            <form method="post" class="space-y-5">
+                {% csrf_token %}
+
+                <!-- Phone -->
+                <div class="space-y-1.5">
+                    <label class="text-xs font-bold text-stone-500 uppercase tracking-wider ml-1">{% trans "Phone Number" %}</label>
+                    <div class="relative group">
+                        <span class="absolute left-4 top-3.5 text-stone-400 group-focus-within:text-green-600 transition"><i class="fas fa-phone"></i></span>
+                        <input type="tel" name="phone_number" placeholder="09..." required
+                            class="w-full pl-10 pr-4 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:border-green-500 focus:ring-2 focus:ring-green-500/20 outline-none transition font-bold text-stone-800 placeholder-stone-400 text-sm">
+                    </div>
+                </div>
+
+                <!-- PIN -->
+                <div class="space-y-1.5">
+                    <label class="text-xs font-bold text-stone-500 uppercase tracking-wider ml-1">{% trans "4-Digit PIN" %}</label>
+                    <div class="relative group">
+                        <span class="absolute left-4 top-3.5 text-stone-400 group-focus-within:text-green-600 transition"><i class="fas fa-key"></i></span>
+                        <input type="password" name="password" placeholder="****" required maxlength="4" inputmode="numeric"
+                            class="w-full pl-10 pr-4 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:border-green-500 focus:ring-2 focus:ring-green-500/20 outline-none transition font-bold text-stone-800 placeholder-stone-400 text-sm tracking-widest">
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-green-500/30 transform active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 mt-2">
+                    <span>{% trans "Sign In" %}</span>
+                    <i class="fas fa-arrow-right text-xs"></i>
+                </button>
+
+            </form>
+
+            <!-- Footer Links -->
+            <div class="mt-8 pt-6 border-t border-stone-100 text-center">
+                <p class="text-stone-400 text-xs mb-3">{% trans "Don't have an account?" %}</p>
+                <a href="{% url 'select_role' %}" class="inline-block text-sm font-bold text-stone-700 hover:text-green-700 transition decoration-2 underline-offset-4 hover:underline">
+                    {% trans "Create New Account" %}
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- 4. FOOTER -->
+    <footer class="absolute bottom-4 w-full text-center">
+        <p class="text-[10px] font-bold text-stone-300 uppercase tracking-widest">&copy; {% now "Y" %} {% trans "Arbor Marketplace" %}</p>
+    </footer>
+
+</body>
+</html>

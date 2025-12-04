@@ -1,0 +1,206 @@
+{% load static %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Start Group Buy - Arbor" %}</title>
+
+    <!-- LOCAL TAILWIND CSS -->
+    {% tailwind_css %}
+
+    <!-- ASSETS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ARBOR THEME VARIABLES */
+        :root {
+            --color-soil: #fafaf9;
+            --color-text: #1c1917;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', sans-serif;
+            background-color: var(--color-soil);
+            color: var(--color-text);
+            overflow-x: hidden;
+        }
+
+        /* Leaf Shape for Buttons */
+        .leaf-shape {
+            border-top-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-top-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        /* Animations */
+        @keyframes floatOrb {
+            0% { transform: translate(0,0); }
+            33% { transform: translate(30px, -30px); }
+            66% { transform: translate(-20px, 20px); }
+            100% { transform: translate(0,0); }
+        }
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; }
+
+        /* Form Styling Overrides */
+        input, select, textarea {
+            background-color: #fafaf9; /* Stone-50 */
+            border: 1px solid #e7e5e4; /* Stone-200 */
+            border-radius: 0.75rem;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+            width: 100%;
+            color: #1c1917;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #16a34a; /* Green-600 */
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col relative">
+
+    <!-- 1. BACKGROUND ORBS (Matches Home Page) -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-[10%] -left-[10%] w-[800px] h-[800px] bg-amber-200/40 rounded-full blur-[100px] mix-blend-multiply animate-[floatOrb_25s_infinite_ease-in-out]"></div>
+        <div class="absolute top-[5%] -right-[15%] w-[600px] h-[600px] bg-emerald-200/30 rounded-full blur-[90px] mix-blend-multiply animate-[floatOrb_20s_infinite_ease-in-out_reverse]"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[700px] h-[700px] bg-orange-100/50 rounded-full blur-[120px] mix-blend-multiply animate-[floatOrb_30s_infinite_ease-in-out]"></div>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <nav class="sticky top-0 w-full z-50 bg-gradient-to-r from-green-700 via-emerald-600 to-green-700 border-b border-white/20 shadow-xl shadow-green-900/10">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <a href="{% url 'home' %}" class="flex items-center gap-2 group">
+                <div class="bg-white/90 p-1.5 rounded-lg shadow-lg border border-green-200 group-hover:scale-105 transition">
+                    <span class="text-xl text-emerald-600">🌱</span>
+                </div>
+                <span class="text-xl font-black text-white tracking-widest uppercase drop-shadow-md hidden sm:block">{% trans "Arbor" %}</span>
+            </a>
+
+            <!-- REQUESTED BUTTON: See Available Groups -->
+            <a href="{% url 'group_buy_market' %}" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg shadow-amber-900/20 transition flex items-center gap-2 leaf-shape border-b-2 border-amber-700">
+                <i class="fas fa-users"></i> <span>{% trans "See Available Groups" %}</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- 3. MAIN CONTENT -->
+    <div class="flex-grow flex items-center justify-center p-4 relative z-10 py-12">
+
+        <!-- Card Container -->
+        <div class="bg-white/80 backdrop-blur-xl w-full max-w-lg p-8 rounded-3xl shadow-2xl border border-white/60 relative overflow-hidden animate-fade-up">
+
+            <!-- Green Accent Line -->
+            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-600 via-emerald-500 to-green-600"></div>
+
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4 shadow-inner">
+                    <i class="fas fa-rocket text-2xl"></i>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-black text-stone-900 tracking-tight leading-tight">{% trans "Start New Group" %}</h1>
+
+                <!-- Dynamic Item Badge -->
+                <div class="mt-3 inline-block bg-stone-50 border border-stone-200 rounded-xl px-4 py-2 shadow-sm">
+                    <p class="text-sm text-stone-500 font-medium">
+                        {% if item_type == 'crop' %}
+                            {% trans "Target Product:" %} <span class="font-bold text-emerald-700">🥬 {{ target_item.name }}</span>
+                        {% else %}
+                            {% trans "Target Product:" %} <span class="font-bold text-blue-700">🚜 {{ target_item.name }}</span>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form method="post" class="space-y-5">
+                {% csrf_token %}
+
+                <!-- Title Field -->
+                <div>
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1.5 ml-1">{% trans "Group Name" %}</label>
+                    {{ form.title }}
+                </div>
+
+                <!-- Location Field -->
+                <div>
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1.5 ml-1">
+                        {% if item_type == 'crop' %}
+                            {% trans "Pickup Location" %}
+                        {% else %}
+                            {% trans "Delivery Warehouse" %}
+                        {% endif %}
+                    </label>
+                    <div class="relative group">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-stone-400 group-focus-within:text-green-600 transition">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <!-- Custom CSS forces padding left on the widget -->
+                        <div class="[&>input]:pl-10">
+                            {{ form.delivery_location }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid for Numbers -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Quantity -->
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1.5 ml-1">{% trans "Goal (Kg)" %}</label>
+                        {{ form.target_quantity }}
+                    </div>
+                    <!-- Price -->
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1.5 ml-1">{% trans "Price (ETB)" %}</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 right-4 flex items-center text-xs font-bold text-stone-400 pointer-events-none">ETB</span>
+                            {{ form.discount_price }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deadline -->
+                <div>
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1.5 ml-1">{% trans "Deadline" %}</label>
+                    {{ form.deadline }}
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="leaf-shape w-full bg-gradient-to-r from-green-700 to-emerald-600 hover:from-green-600 hover:to-emerald-500 text-white font-bold py-3.5 shadow-lg shadow-green-900/20 transition transform hover:-translate-y-1 active:scale-95 text-sm flex items-center justify-center gap-2 mt-4">
+                    <span>{% trans "Launch Group Buy" %}</span> <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <!-- Cancel Link -->
+                <div class="text-center pt-2">
+                    <a href="{% url 'home' %}" class="text-xs font-bold text-stone-400 hover:text-red-500 transition">
+                        {% trans "Cancel" %}
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Helper Text -->
+        <div class="absolute bottom-4 text-center w-full">
+            <p class="text-[10px] text-stone-400 font-medium">
+                {% trans "Tip: Check available groups first to save time!" %} <br>
+                <a href="{% url 'group_buy_market' %}" class="underline hover:text-green-600">{% trans "View Active Groups" %}</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

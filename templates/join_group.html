@@ -1,0 +1,51 @@
+{% load static %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Join Group - Arbor" %}</title>
+
+    <!-- LOCAL TAILWIND CSS -->
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-indigo-50 min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl border-t-8 border-green-500">
+
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-extrabold text-gray-900 mb-2">{% trans "Join" %} "{{ group.title }}"</h1>
+            <p class="text-green-600 font-bold text-xl">{{ group.discount_price }} {% trans "ETB / unit" %}</p>
+            <p class="text-gray-400 text-sm mt-2">{% trans "Target:" %} {{ group.target_quantity }} {% trans "units" %}</p>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-200 rounded-full h-2 mt-4">
+                <div class="bg-green-500 h-2 rounded-full" style="width: {{ group.progress_percent }}%"></div>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">{{ group.current_quantity }} {% trans "collected so far" %}</p>
+        </div>
+
+        <form method="post" class="space-y-6">
+            {% csrf_token %}
+
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-1">{% trans "How much do you want?" %}</label>
+                {{ form.quantity_committed }}
+            </div>
+
+            <button type="submit"
+                class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02] text-lg">
+                {% trans "Commit to Buy" %} 🤝
+            </button>
+
+             <a href="{% url 'group_buy_market' %}" class="block text-center text-sm text-gray-400 hover:text-green-600 mt-4">{% trans "Cancel" %}</a>
+        </form>
+
+    </div>
+
+</body>
+</html>

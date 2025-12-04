@@ -1,0 +1,172 @@
+{% extends "admin/base.html" %}
+
+{% block title %} {{ site_title }} | {{ site_header }} {% endblock %}
+
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">
+            <span style="color: white; font-size: 20px; background:rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">📊</span>
+            <span style="font-family: 'Segoe UI', sans-serif; font-weight: 600; margin-left: 8px;">Arbor DataSheet</span>
+        </a>
+    </h1>
+{% endblock %}
+
+{% block extrastyle %}
+    <style>
+        /* =========================================
+           1. CORE RESET & BACKGROUND
+           ========================================= */
+        :root {
+            --excel-green: #217346;
+            --excel-header: #fafafa;
+            --excel-border: #d4d4d4;
+            --excel-hover: #e6f2ea;
+            --bg-page: #f0f2f5; /* Light Grey Background for the "Distance" effect */
+        }
+
+        body {
+            font-family: 'Segoe UI', Calibri, Arial, sans-serif !important;
+            font-size: 13px !important;
+            background-color: var(--bg-page) !important; /* Grey Background */
+            color: #333 !important;
+            margin: 0;
+        }
+
+        /* --- 2. HEADER (Full Width) --- */
+        #header {
+            background: var(--excel-green) !important;
+            padding: 12px 40px !important;
+            border-bottom: 4px solid #1e5c35;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #branding h1 a { color: white !important; text-decoration: none; }
+        #user-tools a { color: white !important; font-weight: bold; opacity: 0.9; }
+
+        /* --- 3. THE "PAPER SHEET" LAYOUT (Distance from Screen) --- */
+        #content {
+            background: white !important;
+
+            /* THIS CREATES THE DISTANCE */
+            max-width: 1400px !important;   /* Don't stretch too wide on huge screens */
+            width: 92% !important;          /* Leave space on sides on laptops */
+            margin: 30px auto !important;   /* Center it horizontally + 30px top margin */
+
+            /* Styling the "Sheet" */
+            padding: 30px !important;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Nice 3D Drop Shadow */
+            border: 1px solid #d1d5db;
+        }
+
+        /* Remove default Django breadcrumb background to fit the white sheet */
+        div.breadcrumbs {
+            background: transparent !important;
+            padding: 0 0 20px 0 !important;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px !important;
+        }
+
+        /* --- 4. RESPONSIVE TABLE CONTAINER --- */
+        /* If screen is small, allow table to scroll sideways */
+        #changelist-form {
+            overflow-x: auto;
+            border: 1px solid #ccc; /* Border around the scroll area */
+        }
+
+        /* --- 5. EXCEL TABLE STYLING --- */
+        table {
+            width: 100%;
+            border-collapse: collapse !important;
+            background: white;
+            min-width: 600px; /* Force table to keep shape even on mobile */
+        }
+
+        /* Header Row */
+        thead th {
+            background: var(--excel-header) !important;
+            color: #444 !important;
+            border: 1px solid #bbb !important;
+            padding: 10px 12px !important;
+            font-weight: 700;
+            text-transform: none !important;
+            font-size: 13px !important;
+            text-align: left;
+            white-space: nowrap; /* Don't wrap header text */
+        }
+
+        thead th a { color: #333 !important; }
+
+        /* Data Rows */
+        tbody td, tbody th {
+            border: 1px solid var(--excel-border) !important;
+            padding: 8px 12px !important;
+            color: #333;
+            vertical-align: middle;
+        }
+
+        /* Row Hover */
+        tbody tr:hover td {
+            background-color: var(--excel-hover) !important;
+            border-top: 1px solid var(--excel-green) !important;
+            border-bottom: 1px solid var(--excel-green) !important;
+        }
+
+        /* Links */
+        tbody a { color: #2b579a; text-decoration: none; font-weight: 500; }
+        tbody a:hover { text-decoration: underline; }
+
+        /* --- 6. FILTERS (Responsive) --- */
+        #changelist-filter {
+            position: relative !important;
+            float: right !important;
+            width: 240px !important;
+            background: #f9fafb !important;
+            border: 1px solid #e5e7eb;
+            margin: 0 0 0 20px !important;
+            padding: 0 !important;
+            border-radius: 4px;
+        }
+
+        /* Hide filters on very small screens to save space */
+        @media (max-width: 768px) {
+            #changelist-filter { display: none; }
+        }
+
+        #changelist-filter h2 {
+            background: white !important;
+            padding: 12px !important;
+            font-size: 13px !important;
+            border-bottom: 1px solid #e5e7eb;
+            margin: 0 !important;
+            color: #333 !important;
+            font-weight: bold;
+        }
+
+        #changelist-filter li { list-style: none; padding: 4px 12px; }
+        #changelist-filter a { color: #555 !important; }
+        #changelist-filter li.selected a { color: var(--excel-green) !important; font-weight: bold; }
+
+        /* --- 7. BUTTONS & TOOLS --- */
+        .submit-row input, .button {
+            background: var(--excel-green) !important;
+            color: white !important;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .object-tools a.addlink {
+            background: #f3f4f6 !important;
+            color: var(--excel-green) !important;
+            border: 1px solid var(--excel-green) !important;
+            border-radius: 4px;
+            padding: 6px 15px;
+            font-weight: 600;
+        }
+        .object-tools a.addlink:hover { background: var(--excel-green) !important; color: white !important; }
+
+    </style>
+{% endblock %}

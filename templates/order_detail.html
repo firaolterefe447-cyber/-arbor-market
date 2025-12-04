@@ -1,0 +1,288 @@
+{% load static tailwind_tags humanize i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% blocktrans with id=order.id %}Manifest #{{ id }} - Arbor{% endblocktrans %}</title>
+    {% tailwind_css %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .profile-img { object-fit: cover; width: 100%; height: 100%; }
+        /* Remove arrows from number input */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans pb-20">
+
+    <nav class="bg-slate-900 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="{% url 'delivery_dashboard' %}" class="flex items-center gap-2 hover:text-orange-300 transition">
+                <i class="fas fa-arrow-left rtl:rotate-180"></i> <span class="hidden sm:inline">{% trans "Dashboard" %}</span>
+            </a>
+            <h1 class="text-lg font-bold tracking-widest uppercase">{% blocktrans with id=order.id %}Manifest #{{ id }}{% endblocktrans %}</h1>
+        </div>
+    </nav>
+
+    <!-- 🔔 MESSAGES (Essential for PIN Errors) -->
+    {% if messages %}
+    <div class="container mx-auto px-6 mt-6 max-w-6xl">
+        {% for message in messages %}
+        <div class="p-4 rounded-xl shadow-md text-sm font-bold flex items-center gap-3
+            {% if message.tags == 'success' %} bg-green-100 text-green-800 border-l-4 rtl:border-l-0 rtl:border-r-4 border-green-500
+            {% elif message.tags == 'error' %} bg-red-100 text-red-800 border-l-4 rtl:border-l-0 rtl:border-r-4 border-red-500
+            {% else %} bg-blue-100 text-blue-800 border-l-4 rtl:border-l-0 rtl:border-r-4 border-blue-500 {% endif %}">
+            <i class="fas {% if message.tags == 'error' %}fa-exclamation-triangle{% else %}fa-check-circle{% endif %}"></i>
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="container mx-auto p-6 max-w-6xl">
+
+        <!-- HEADER INFO -->
+        <div class="bg-white rounded-2xl shadow-md p-6 mb-8 flex flex-col md:flex-row justify-between items-center border-b-4 border-slate-900">
+            <div class="flex items-center gap-4 mb-4 md:mb-0">
+                <div class="bg-slate-100 p-3 rounded-xl text-slate-600">
+                    <i class="fas fa-calendar-alt text-2xl"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-500 uppercase font-bold">{% trans "Ordered On" %}</p>
+                    <p class="font-bold text-slate-800">{{ order.created_at|date:"l, F j, Y" }}</p>
+                    <p class="text-xs text-gray-400">{{ order.created_at|date:"g:i A" }}</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 bg-slate-50 px-6 py-3 rounded-full border border-slate-200">
+                <span class="text-sm font-bold text-blue-700">{{ order.seller.location }}</span>
+                <i class="fas fa-long-arrow-alt-right rtl:rotate-180 text-gray-400"></i>
+                <span class="text-sm font-bold text-green-700">{{ order.buyer.location }}</span>
+            </div>
+
+            <div class="text-right rtl:text-left">
+                <p class="text-xs text-gray-500 uppercase font-bold">{% trans "Status" %}</p>
+                <span class="px-4 py-1 rounded-full text-sm font-bold text-white
+                    {% if order.status == 'pending' %} bg-gray-400
+                    {% elif order.status == 'assigned' %} bg-yellow-500
+                    {% elif order.status == 'picked_up' %} bg-blue-500
+                    {% elif order.status == 'delivered' %} bg-green-500
+                    {% endif %}">
+                    {{ order.get_status_display }}
+                </span>
+            </div>
+        </div>
+
+        <!-- CASH INSTRUCTIONS (Only for Delivery Team) -->
+        {% if request.user.user_type == 'delivery' %}
+        <div class="bg-gray-900 text-white rounded-2xl shadow-2xl p-6 mb-8 border-l-8 rtl:border-l-0 rtl:border-r-8 border-yellow-400 relative overflow-hidden">
+            <i class="fas fa-coins text-8xl text-white/5 absolute -right-4 rtl:right-auto rtl:-left-4 -bottom-4"></i>
+
+            <h3 class="text-xl font-bold text-yellow-400 mb-4 flex items-center gap-2">
+                <i class="fas fa-wallet"></i> {% trans "CASH HANDLING INSTRUCTIONS" %}
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white/10 p-4 rounded-xl border border-white/20">
+                    <p class="text-xs uppercase text-gray-400 font-bold mb-1">{% trans "Step 1: Collect from Buyer" %}</p>
+                    <p class="text-3xl font-extrabold text-green-400">{{ order.total_price|intcomma }} <span class="text-sm">{% trans "ETB" %}</span></p>
+                    <p class="text-xs text-gray-400 mt-1">{% trans "Total Order Value" %}</p>
+                </div>
+
+                <div class="bg-white/10 p-4 rounded-xl border border-white/20 relative">
+                    <div class="absolute -left-3 rtl:left-auto rtl:-right-3 top-1/2 -translate-y-1/2 text-yellow-400 text-xl hidden md:block">
+                        <i class="fas fa-arrow-right rtl:rotate-180"></i>
+                    </div>
+                    <p class="text-xs uppercase text-gray-400 font-bold mb-1">{% trans "Step 2: Pay to Seller" %}</p>
+                    <p class="text-3xl font-extrabold text-white">{{ order.seller_earnings|intcomma }} <span class="text-sm">{% trans "ETB" %}</span></p>
+                    <p class="text-xs text-gray-400 mt-1">{% trans "Hand this cash to Farmer" %}</p>
+                </div>
+
+                <div class="bg-white/10 p-4 rounded-xl border border-red-500/50 relative">
+                    <div class="absolute -left-3 rtl:left-auto rtl:-right-3 top-1/2 -translate-y-1/2 text-yellow-400 text-xl hidden md:block">
+                        <i class="fas fa-arrow-right rtl:rotate-180"></i>
+                    </div>
+                    <p class="text-xs uppercase text-red-300 font-bold mb-1">{% trans "Step 3: Platform Fee" %}</p>
+                    <p class="text-3xl font-extrabold text-red-400">{{ order.commission_fee|intcomma }} <span class="text-sm">{% trans "ETB" %}</span></p>
+                    <p class="text-xs text-gray-400 mt-1">{% trans "Keep for Arbor Office" %}</p>
+                </div>
+            </div>
+
+            <div class="mt-4 bg-yellow-400/20 p-3 rounded-lg text-sm text-yellow-200 text-center font-medium border border-yellow-400/30">
+                {% trans "⚠️ IMPORTANT: Do not give the full amount to the seller. Only give the 'Pay to Seller' amount." %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- DETAILS GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-slate-700">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">📦 {% trans "Cargo Details" %}</h2>
+                <p class="text-lg text-gray-600 mb-2">{% trans "Item:" %} <span class="font-bold text-slate-900">{{ order.product_name }}</span></p>
+                <p class="text-lg text-gray-600 mb-4">{% trans "Quantity:" %} <span class="font-bold">{{ order.quantity }} {% trans "unit(s)" %}</span></p>
+                <p class="text-lg text-gray-600">{% trans "Value:" %} <span class="font-bold">{{ order.total_price|intcomma }} {% trans "ETB" %}</span></p>
+
+                {% if request.user == order.seller or request.user.is_superuser %}
+                    <div class="mt-3 bg-yellow-50 p-3 rounded-lg border border-yellow-200 text-sm">
+                        <p class="font-bold text-yellow-800 border-b border-yellow-200 pb-1 mb-1">💰 {% trans "Payout Details" %}</p>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">{% trans "Total Paid:" %}</span>
+                            <span class="font-bold">{{ order.total_price|intcomma }} {% trans "ETB" %}</span>
+                        </div>
+                        <div class="flex justify-between text-red-500">
+                            <span>{% trans "Platform Fee (5%):" %}</span>
+                            <span class="text-left rtl:text-right" dir="ltr">-{{ order.commission_fee|intcomma }} {% trans "ETB" %}</span>
+                        </div>
+                        <div class="flex justify-between font-bold text-green-700 mt-1 pt-1 border-t border-yellow-200">
+                            <span>{% trans "Your Earnings:" %}</span>
+                            <span>{{ order.seller_earnings|intcomma }} {% trans "ETB" %}</span>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-slate-700">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">💳 {% trans "Payment & Notes" %}</h2>
+                <p class="text-lg text-gray-600 mb-2">{% trans "Method:" %} <span class="font-bold text-slate-900">{{ order.payment_method|default:"N/A"|title }}</span></p>
+                <p class="text-lg text-gray-600">{% trans "Note:" %} <span class="text-gray-500 italic">{% trans "Handle with care." %}</span></p>
+            </div>
+        </div>
+
+        <!-- ========================== -->
+        <!-- 3-COLUMN MANIFEST VIEW -->
+        <!-- ========================== -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative mt-12">
+
+            <!-- Decorative Line -->
+            <div class="hidden md:block absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-blue-300 via-yellow-300 to-green-300 -z-10 transform translate-y-2"></div>
+
+            <!-- 1. SELLER CARD -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-blue-500 flex flex-col items-center p-6 text-center transform hover:-translate-y-1 transition">
+                <div class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-4 bg-blue-50 px-3 py-1 rounded-full">{% trans "Origin (Seller)" %}</div>
+
+                <div class="w-24 h-24 rounded-full border-4 border-blue-100 overflow-hidden mb-4 shadow-sm">
+                    {% if order.seller.profile_picture %}
+                        <img src="{{ order.seller.profile_picture.url }}" class="profile-img">
+                    {% else %}
+                        <div class="w-full h-full bg-blue-50 flex items-center justify-center text-blue-300 text-3xl font-bold">{{ order.seller.first_name|slice:":1" }}</div>
+                    {% endif %}
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-800">{{ order.seller.first_name }} {{ order.seller.last_name }}</h3>
+                <p class="text-sm text-gray-500 mb-4">{{ order.seller.phone_number }}</p>
+
+                <div class="w-full bg-blue-50 rounded-xl p-3 text-sm text-blue-800 font-medium">
+                    <i class="fas fa-map-marker-alt mr-2 rtl:ml-2 rtl:mr-0"></i> {{ order.seller.location }}
+                </div>
+            </div>
+
+            <!-- 2. TRANSPORT CARD (CENTER - ACTION HUB) -->
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-t-8 border-yellow-500 flex flex-col items-center p-6 text-center scale-105 z-10">
+                <div class="text-xs font-bold text-yellow-600 uppercase tracking-widest mb-4 bg-yellow-50 px-3 py-1 rounded-full">{% trans "Transport" %}</div>
+
+                {% if order.driver %}
+                    <div class="w-28 h-28 rounded-full border-4 border-yellow-200 overflow-hidden mb-4 shadow-md relative">
+                        {% if order.driver.profile_picture %}
+                            <img src="{{ order.driver.profile_picture.url }}" class="profile-img">
+                        {% else %}
+                            <div class="w-full h-full bg-yellow-50 flex items-center justify-center text-yellow-600 text-4xl font-bold">{{ order.driver.first_name|slice:":1" }}</div>
+                        {% endif %}
+                        <div class="absolute bottom-0 right-0 rtl:right-auto rtl:left-0 bg-green-500 w-6 h-6 rounded-full border-2 border-white"></div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-800">{{ order.driver.first_name }} {{ order.driver.last_name }}</h3>
+                    <p class="text-sm text-gray-500 mb-4">{{ order.driver.phone_number }}</p>
+
+                    <div class="w-full bg-yellow-50 rounded-xl p-3 text-sm text-yellow-800 font-medium mb-4">
+                        <i class="fas fa-map-marker-alt mr-2 rtl:ml-2 rtl:mr-0"></i> {{ order.driver.location }}
+                    </div>
+
+                    <!-- DRIVER ACTIONS -->
+                    {% if request.user == order.driver %}
+                        <div class="w-full mt-2">
+
+                            {% if order.status == 'assigned' %}
+                                <a href="{% url 'update_status' order.id 'picked_up' %}" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition transform active:scale-95 flex items-center justify-center gap-2">
+                                    <i class="fas fa-box-open"></i> {% trans "Confirm Pickup" %}
+                                </a>
+
+                            {% elif order.status == 'picked_up' %}
+                                <!-- 🔐 PIN VERIFICATION FORM -->
+                                <div class="bg-yellow-50 p-4 rounded-xl border-2 border-yellow-200 animate-pulse-slow">
+                                    <p class="text-xs font-bold text-yellow-700 uppercase mb-2">
+                                        <i class="fas fa-lock"></i> {% trans "Enter Buyer PIN" %}
+                                    </p>
+                                    <form action="{% url 'verify_delivery' order.id %}" method="post" class="flex flex-col gap-3">
+                                        {% csrf_token %}
+
+                                        <!-- Big Input -->
+                                        <input type="text"
+                                               name="pod_code"
+                                               placeholder="0 0 0 0"
+                                               maxlength="4"
+                                               pattern="[0-9]*"
+                                               inputmode="numeric"
+                                               required
+                                               autocomplete="off"
+                                               class="w-full bg-white border border-gray-300 text-center text-3xl font-mono font-bold py-2 rounded-lg tracking-[0.5em] focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 text-gray-800">
+
+                                        <!-- Verify Button -->
+                                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg shadow-md transition flex items-center justify-center gap-1">
+                                            {% trans "Verify & Complete" %} <i class="fas fa-check-double rtl:mr-1"></i>
+                                        </button>
+                                    </form>
+                                    <p class="text-[10px] text-gray-400 mt-2">{% trans "Ask Buyer for 4-digit code" %}</p>
+                                </div>
+
+                            {% else %}
+                                <div class="bg-green-50 border border-green-200 text-green-700 font-bold py-3 rounded-xl flex items-center justify-center gap-2">
+                                    <i class="fas fa-flag-checkered"></i> {% trans "Job Complete" %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+
+                {% else %}
+                    <!-- NO DRIVER -->
+                    <div class="w-28 h-28 rounded-full border-4 border-gray-100 bg-gray-50 flex items-center justify-center mb-4 text-gray-300 text-5xl">?</div>
+                    <h3 class="text-xl font-bold text-gray-400">{% trans "No Driver" %}</h3>
+                    <p class="text-sm text-gray-400 mb-6">{% trans "Waiting for assignment..." %}</p>
+
+                    {% if request.user.user_type == 'delivery' %}
+                        <a href="{% url 'update_status' order.id 'assigned' %}" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-xl shadow-lg transition transform hover:scale-105 flex items-center justify-center gap-2">
+                            <i class="fas fa-hand-paper"></i> {% trans "Assign to Me" %}
+                        </a>
+                        <p class="text-xs text-gray-400 mt-2">{% trans "Auto-fill my details" %}</p>
+                    {% endif %}
+                {% endif %}
+            </div>
+
+            <!-- 3. BUYER CARD -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-green-500 flex flex-col items-center p-6 text-center transform hover:-translate-y-1 transition">
+                <div class="text-xs font-bold text-green-600 uppercase tracking-widest mb-4 bg-green-50 px-3 py-1 rounded-full">{% trans "Destination (Buyer)" %}</div>
+
+                <div class="w-24 h-24 rounded-full border-4 border-green-100 overflow-hidden mb-4 shadow-sm">
+                    {% if order.buyer.profile_picture %}
+                        <img src="{{ order.buyer.profile_picture.url }}" class="profile-img">
+                    {% else %}
+                        <div class="w-full h-full bg-green-50 flex items-center justify-center text-green-300 text-3xl font-bold">{{ order.buyer.first_name|slice:":1" }}</div>
+                    {% endif %}
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-800">{{ order.buyer.first_name }} {{ order.buyer.last_name }}</h3>
+                <p class="text-sm text-gray-500 mb-4">{{ order.buyer.phone_number }}</p>
+
+                <div class="w-full bg-green-50 rounded-xl p-3 text-sm text-green-800 font-medium">
+                    <i class="fas fa-map-pin mr-2 rtl:ml-2 rtl:mr-0"></i> {{ order.buyer.location }}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

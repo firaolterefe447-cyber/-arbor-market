@@ -1,0 +1,380 @@
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" class="scroll-smooth" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <!--
+        =======================================================================
+        ARBOR INPUT MARKET - COMPACT & ANIMATED
+        "Solid Blue | No Header Text | Amber Action Button"
+        =======================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% trans "Arbor - Input Supplies | Farm Materials" %}</title>
+
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-bg: #eff6ff;         /* Blue-50 */
+            --color-card: #ffffff;       /* White */
+            --color-text: #0f172a;       /* Slate-900 */
+            --color-primary: #2563eb;    /* Blue-600 */
+            --color-border: #bfdbfe;     /* Blue-200 */
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbars */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #dbeafe; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border: 2px solid #dbeafe; border-radius: 6px; }
+
+        /* Animations */
+        @keyframes slideDown { 0% { transform: translateY(-100%); } 100% { transform: translateY(0); } }
+        .animate-slide-down { animation: slideDown 0.5s ease-out forwards; }
+
+        @keyframes popIn { 0% { opacity: 0; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1); } }
+        .animate-pop-in { animation: popIn 0.3s ease-out forwards; }
+
+        /* Button Shine Animation */
+        @keyframes sheen {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
+        }
+        .btn-shine { position: relative; overflow: hidden; }
+        .btn-shine::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
+            transform: skewX(-25deg); animation: sheen 3s infinite;
+        }
+
+        /* Utilities */
+        .solid-panel { background-color: #ffffff; border: 1px solid var(--color-border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .leaf-shape { border-top-left-radius: 12px; border-bottom-right-radius: 12px; border-top-right-radius: 4px; border-bottom-left-radius: 4px; }
+
+        /* Loader */
+        #preloader { position: fixed; inset: 0; z-index: 9999; background: #eff6ff; display: flex; justify-content: center; align-items: center; }
+        .gear-loader { font-size: 3rem; animation: spin 2s linear infinite; color: #2563eb; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- 0. PRELOADER -->
+    <div id="preloader">
+        <div class="text-center">
+            <div class="gear-loader">🚜</div>
+            <p class="mt-4 text-blue-900 font-bold text-xs tracking-[0.3em] uppercase animate-pulse">{% trans "Loading..." %}</p>
+        </div>
+    </div>
+
+    <!-- 1. BACKGROUND -->
+    <div class="fixed inset-0 bg-blue-50 z-0 pointer-events-none"></div>
+
+    <!-- 2. NAVIGATION -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-blue-600 border-b-4 border-blue-700 shadow-xl animate-slide-down">
+        <div class="container mx-auto px-2 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20 gap-2 md:gap-4">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 md:gap-3 cursor-pointer group" onclick="window.location.href='{% url 'home' %}'">
+                    <div class="bg-white p-1.5 md:p-2 rounded-xl border border-blue-200 shadow-md group-hover:bg-blue-50 transition">
+                        <span class="text-xl md:text-2xl text-blue-700">🚜</span>
+                    </div>
+                    <span class="text-xl font-black text-white tracking-widest uppercase hidden sm:block">{% trans "Arbor" %}</span>
+                    <span class="text-[10px] text-blue-100 font-bold uppercase border-l border-blue-400 pl-2 hidden md:block">{% trans "Inputs" %}</span>
+                </div>
+
+                <!-- Search -->
+                {% if request.user.is_authenticated %}
+                <div class="hidden md:flex flex-grow max-w-lg relative mx-4">
+                    <form method="get" action="{% url 'input_market' %}" class="w-full relative flex shadow-sm">
+                        <input type="text" id="live-search-input" name="q" value="{{ search_query|default:'' }}"
+                            placeholder="{% trans "Search machinery, seeds, tools..." %}" autocomplete="off"
+                            class="w-full pl-5 pr-14 py-2.5 bg-white border border-blue-200 text-slate-900 font-bold rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all text-sm">
+                        <button type="submit" class="absolute right-1 top-1 bottom-1 bg-blue-700 hover:bg-blue-800 text-white px-4 rounded-full transition">
+                            <i id="search-icon-desktop" class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                {% endif %}
+
+                <!-- Buttons (No Language) -->
+                <div class="flex items-center gap-2">
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.user_type == 'supplier' %}
+                            <a href="{% url 'supplier_dashboard' %}" class="bg-white text-blue-900 hover:bg-blue-50 px-3 py-2 rounded-lg font-bold text-xs border border-white shadow-sm transition">
+                                <i class="fas fa-clipboard-list mr-1"></i> {% trans "Dash" %}
+                            </a>
+                        {% else %}
+                            <a href="{% url 'my_orders' %}" class="bg-white text-blue-900 hover:bg-blue-50 px-3 py-2 rounded-lg font-bold text-xs border border-white shadow-sm transition relative">
+                                <i class="fas fa-shopping-cart mr-1"></i> {% trans "Cart" %}
+                            </a>
+                        {% endif %}
+                        <a href="{% url 'logout' %}" class="text-blue-100 hover:text-white text-xs font-bold uppercase px-2">{% trans "Exit" %}</a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="text-white font-bold text-xs hover:text-blue-100">{% trans "Login" %}</a>
+                        <a href="{% url 'select_role' %}" class="bg-white text-blue-700 hover:bg-blue-50 px-4 py-2 rounded-full font-bold text-xs shadow-md">{% trans "Join" %}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Search -->
+        <div class="md:hidden px-4 pb-3 bg-blue-700">
+            <form method="get" action="{% url 'input_market' %}" class="relative">
+                <input type="text" id="live-search-input-mobile" name="q" placeholder="{% trans "Search inputs..." %}"
+                    class="w-full pl-4 pr-10 py-2.5 bg-blue-800 border border-blue-500 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:bg-blue-900 text-sm">
+                <button type="button" class="absolute right-3 top-2.5 text-blue-200">
+                     <i id="search-icon-mobile" class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- =========================================================================
+         3. HERO SECTION (NO TEXT - JUST ACTION)
+         ========================================================================= -->
+    <header class="relative pt-32 pb-16 md:pt-40 md:pb-24 z-10 bg-blue-100 border-b border-blue-200">
+        <div class="container mx-auto px-4 text-center">
+
+            <!-- Badge (Kept as a small header) -->
+            <div class="inline-flex items-center gap-2 bg-white border border-blue-200 rounded-full px-4 py-1.5 mb-12 shadow-sm animate-pop-in">
+                <span class="flex h-2 w-2 relative">
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                </span>
+                <span class="text-[10px] font-bold text-blue-800 uppercase tracking-widest">{% trans "Verified Industrial Supplies" %}</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-6 animate-pop-in">
+                {% if request.user.user_type == 'supplier' %}
+                    <a href="{% url 'add_input' %}" class="bg-blue-700 hover:bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-sm shadow-lg border-b-4 border-blue-900 transition transform hover:-translate-y-1 active:border-b-0 active:translate-y-0 flex items-center justify-center gap-2">
+                        <span>{% trans "List Inventory" %}</span> <i class="fas fa-plus-circle"></i>
+                    </a>
+                {% else %}
+                    <!-- START BUYING BUTTON REMOVED HERE -->
+
+                    <a href="{% if request.user.is_authenticated %}{% url 'group_buy_market' %}{% else %}{% url 'select_role' %}{% endif %}" class="bg-white text-blue-900 hover:bg-blue-50 px-10 py-4 rounded-full font-bold text-sm shadow-lg border-b-4 border-blue-200 transition transform hover:-translate-y-1 active:border-b-0 active:translate-y-0 flex items-center justify-center gap-2">
+                        <i class="fas fa-users text-blue-500"></i> {% trans "Bulk Co-op" %}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <!-- (NO CATEGORY RAIL) -->
+
+    <!-- =========================================================================
+         5. MARKETPLACE
+         ========================================================================= -->
+    <main id="market" class="container mx-auto px-4 pb-24 relative z-20 pt-12">
+        <div class="flex items-end justify-between mb-4 border-b-2 border-blue-200 pb-2">
+            <h3 class="font-black text-slate-700 uppercase tracking-widest text-sm">{% trans "Inventory" %}</h3>
+            <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full">{% trans "Live" %}</span>
+        </div>
+
+        <div id="product-grid-container" class="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 space-y-4 pt-2">
+            {% for input in inputs %}
+            <article class="break-inside-avoid bg-white rounded-2xl border border-blue-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition duration-300 flex flex-col group overflow-hidden mb-4 relative animate-pop-in">
+                <a href="{% url 'product_detail' 'input' input.id %}" class="block w-full relative">
+                    <div class="w-full relative overflow-hidden bg-slate-100 group-hover:bg-white transition-colors">
+                        {% if input.image %}
+                            <img src="{{ input.image.url }}" alt="{{ input.name }}" loading="lazy" class="w-full h-auto object-contain p-2 group-hover:scale-105 transition duration-500 block">
+                        {% else %}
+                            <div class="aspect-square flex items-center justify-center bg-slate-100 text-slate-300 text-5xl">📦</div>
+                        {% endif %}
+                        <div class="absolute bottom-2 left-2 z-20 bg-blue-700 text-white text-[9px] font-bold px-2.5 py-1 rounded-full shadow-md border border-white">
+                            <i class="fas fa-industry mr-1"></i> {{ input.supplier.business_name|default:"Supplier" }}
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-white border-t border-slate-100">
+                        <div class="mb-2">
+                            <h4 class="text-sm md:text-[15px] font-black text-slate-900 leading-tight group-hover:text-blue-700 transition line-clamp-2">{{ input.name }}</h4>
+                            <p class="text-[10px] md:text-xs text-slate-500 mt-1 font-bold bg-blue-50 px-2 py-0.5 rounded w-fit border border-blue-100">{{ input.category }}</p>
+                        </div>
+                        <div class="mb-3 flex items-baseline justify-between border-b border-slate-100 pb-2">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-[10px] text-slate-500 font-bold uppercase">{% trans "ETB" %}</span>
+                                <span class="text-lg font-black text-blue-800">{{ input.price_per_unit|intcomma }}</span>
+                            </div>
+                            {% if input.stock_quantity > 0 %}
+                                <div class="text-[9px] font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded border border-green-200">{{ input.stock_quantity }} {% trans "left" %}</div>
+                            {% endif %}
+                        </div>
+                        <div class="text-[10px] flex items-center justify-between">
+                            {% if input.stock_quantity > 0 %}
+                                <span class="text-blue-700 font-bold flex items-center gap-1"><i class="fas fa-check-circle"></i> {% trans "In Stock" %}</span>
+                            {% else %}
+                                <span class="text-red-600 font-bold bg-red-100 px-2 py-0.5 rounded-full border border-red-200">{% trans "Backorder" %}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </a>
+                <div class="p-3 pt-0 mt-auto grid grid-cols-2 gap-2">
+                    <a href="{% url 'create_order' 'input' input.id %}" class="leaf-shape bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-2.5 shadow-md transition transform active:scale-95 text-xs border-b-4 border-blue-800 flex items-center justify-center gap-1">
+                        <span>{% trans "Order" %}</span>
+                    </a>
+                    <a href="{% url 'create_group' 'input' input.id %}" class="leaf-shape bg-white text-slate-800 hover:bg-slate-50 text-center font-bold py-2.5 shadow-md border border-slate-200 border-b-4 border-slate-300 transition transform active:scale-95 text-xs flex items-center justify-center gap-1">
+                        <span>{% trans "Co-op" %}</span>
+                    </a>
+                </div>
+            </article>
+            {% empty %}
+            <div class="w-full py-24 text-center bg-white border-2 border-dashed border-slate-300 rounded-3xl col-span-full">
+                <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-slate-300">⚙️</div>
+                <h3 class="text-lg font-bold text-slate-700">{% trans "Catalog Empty" %}</h3>
+                <p class="text-slate-500 text-sm">{% trans "No matching supplies found." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="text-center mt-12">
+            <button class="bg-white border-2 border-blue-200 text-blue-700 hover:bg-blue-50 font-bold py-3 px-8 rounded-full shadow-sm transition duration-300 text-sm flex items-center gap-2 mx-auto uppercase tracking-wide">
+                <span>{% trans "Load More Items" %}</span> <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- =========================================================================
+         6. HOW IT WORKS
+         ========================================================================= -->
+    <section class="bg-blue-50 py-16 border-t border-blue-200 relative z-20">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-black text-slate-900 mb-2 reveal-text">{% trans "Procurement in 3 Steps" %}</h2>
+                <p class="text-slate-500 text-sm reveal-text delay-100">{% trans "Industrial grade efficiency." %}</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-100 text-center relative overflow-hidden reveal-text delay-200">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 relative z-10"><i class="fas fa-search"></i></div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2 relative z-10">{% trans "Select" %}</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed relative z-10">{% trans "Browse verified machinery and inputs." %}</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-100 text-center relative overflow-hidden reveal-text delay-200">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 relative z-10"><i class="fas fa-handshake"></i></div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2 relative z-10">{% trans "Negotiate" %}</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed relative z-10">{% trans "Order individually or pool resources in a co-op." %}</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-100 text-center relative overflow-hidden reveal-text delay-200">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 relative z-10"><i class="fas fa-truck"></i></div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2 relative z-10">{% trans "Deploy" %}</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed relative z-10">{% trans "Heavy-duty logistics to your farm gate." %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         7. FOOTER
+         ========================================================================= -->
+    <footer class="bg-white text-slate-800 pt-20 pb-10 relative z-20 border-t-4 border-blue-600 overflow-hidden font-sans">
+        <div class="container mx-auto px-6 relative z-30">
+            <!-- Newsletter -->
+            <div class="bg-blue-600 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 mb-16 shadow-lg">
+                <div class="text-center md:text-left max-w-lg">
+                    <h3 class="text-2xl font-bold text-white mb-2">{% trans "Industrial Updates" %}</h3>
+                    <p class="text-blue-100 text-sm">{% trans "Get price alerts on fertilizer and machinery." %}</p>
+                </div>
+                <form class="flex w-full md:w-auto max-w-md bg-white p-1.5 rounded-full border border-blue-200 focus-within:ring-4 focus-within:ring-blue-300 transition duration-300">
+                    <input type="email" placeholder="{% trans "your@email.com" %}" class="bg-transparent border-none text-slate-800 px-4 py-2 w-full focus:ring-0 placeholder-slate-400 text-sm font-bold">
+                    <button type="button" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-8 py-2.5 rounded-full transition duration-300 text-sm shadow-lg">
+                        {% trans "Subscribe" %}
+                    </button>
+                </form>
+            </div>
+
+            <!-- Links -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 text-sm mb-12">
+                <div class="col-span-2 lg:col-span-2 space-y-6">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div class="bg-blue-600 p-2.5 rounded-xl shadow-md">
+                            <span class="text-3xl text-white">🚜</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-black tracking-wider text-slate-900 uppercase block leading-none">{% trans "Arbor" %}</span>
+                            <span class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">{% trans "Industrial" %}</span>
+                        </div>
+                    </a>
+                    <p class="text-slate-500 leading-relaxed max-w-xs font-medium">{% trans "Empowering Ethiopia's farms with professional grade inputs." %}</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-slate-900 uppercase tracking-widest text-xs mb-2 border-l-4 border-blue-600 pl-3">{% trans "Catalog" %}</h4>
+                    <ul class="space-y-3 text-slate-600">
+                        <li><a href="#" class="hover:text-blue-600 transition">{% trans "Machinery" %}</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition">{% trans "Fertilizer" %}</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-slate-900 uppercase tracking-widest text-xs mb-2 border-l-4 border-blue-600 pl-3">{% trans "Support" %}</h4>
+                    <ul class="space-y-3 text-slate-600">
+                        <li><a href="#" class="hover:text-blue-600 transition">{% trans "Help Center" %}</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition">{% trans "Logistics" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-xs text-slate-500 font-medium text-center md:text-left">
+                    <p>&copy; {% now "Y" %} Arbor Inputs. {% trans "All rights reserved." %}</p>
+                </div>
+                <div class="flex gap-3 text-slate-400 font-bold">
+                    <div class="bg-slate-100 px-3 py-1 rounded border border-slate-300 text-slate-600">TELEBIRR</div>
+                    <div class="bg-slate-100 px-3 py-1 rounded border border-slate-300 text-slate-600">CBE</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            window.addEventListener('load', () => setTimeout(() => { preloader.style.display = 'none'; }, 500));
+        }
+
+        const handleSearch = (inputSelector) => {
+            const input = document.getElementById(inputSelector);
+            const gridContainer = document.getElementById('product-grid-container');
+            if (!input || !gridContainer) return;
+            let debounceTimer;
+            input.addEventListener('input', (e) => {
+                clearTimeout(debounceTimer);
+                const query = e.target.value;
+                debounceTimer = setTimeout(() => {
+                    const url = new URL(window.location.href);
+                    url.searchParams.set('q', query);
+                    window.history.pushState({}, '', url);
+                    fetch(url).then(res => res.text()).then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const newGrid = doc.getElementById('product-grid-container');
+                        if (newGrid) gridContainer.innerHTML = newGrid.innerHTML;
+                    });
+                }, 300);
+            });
+        };
+        handleSearch('live-search-input');
+        handleSearch('live-search-input-mobile');
+    });
+    </script>
+</body>
+</html>

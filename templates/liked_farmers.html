@@ -1,0 +1,237 @@
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "My Favorite Farmers - Arbor" %}</title>
+
+    <!-- LOCAL TAILWIND CSS -->
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 🔵 BLUEPRINT STYLES START */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .animate-shimmer {
+            background: linear-gradient(to right, #ffffff, #fbbf24, #ffffff);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+        }
+        /* 🔵 BLUEPRINT STYLES END */
+    </style>
+</head>
+<body class="min-h-screen font-sans bg-gradient-to-br from-orange-500 via-yellow-500 to-emerald-700 relative overflow-x-hidden text-gray-800">
+
+<!-- 🌌 BACKGROUND PARTICLES (Strictly from Blueprint) -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+    <div class="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-yellow-200/40 via-orange-300/20 to-transparent blur-[100px] mix-blend-overlay"></div>
+    <div class="fixed top-10 left-10 text-9xl opacity-10 animate-pulse text-white select-none">🌽</div>
+    <div class="fixed top-20 right-20 text-8xl opacity-10 text-white select-none animate-float">☀️</div>
+    <div class="fixed bottom-10 left-20 text-9xl opacity-5 rotate-12 text-white select-none">🚜</div>
+    <div class="fixed bottom-40 right-10 text-8xl opacity-10 -rotate-12 text-white select-none">🍅</div>
+</div>
+
+<!-- 🟢 NAVIGATION (Strictly from Blueprint) -->
+<nav class="bg-gradient-to-r from-orange-600/80 via-yellow-500/80 to-emerald-600/80 backdrop-blur-xl border-b border-white/20 sticky top-0 z-50 shadow-xl">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+
+    {% if request.user.user_type == 'farmer' %}
+        <a href="{% url 'dashboard' %}" class="flex items-center gap-2 group">
+            <div class="bg-white/20 p-2 rounded-full border border-white/30 shadow-glow group-hover:scale-110 transition">
+                <span class="text-2xl">🌾</span>
+            </div>
+            <div>
+                <span class="text-xl font-black tracking-widest text-white drop-shadow-md uppercase block leading-none">{% trans "My Farm" %}</span>
+                <span class="text-[10px] text-yellow-200 font-bold uppercase tracking-wider">{% trans "Command Center" %}</span>
+            </div>
+        </a>
+    {% else %}
+        <a href="{% url 'home' %}" class="flex items-center gap-2 group">
+            <div class="bg-gradient-to-br from-emerald-500 to-green-800 p-2 rounded-full border border-yellow-300 shadow-glow group-hover:scale-110 transition">
+                <span class="text-2xl text-white">🌱</span>
+            </div>
+            <span class="text-2xl font-black tracking-widest text-white drop-shadow-md uppercase">{% trans "Arbor" %}</span>
+        </a>
+    {% endif %}
+
+    <!-- Page Title -->
+    <div class="hidden md:flex flex-grow justify-center">
+        <h1 class="text-2xl font-black text-white drop-shadow-md uppercase tracking-widest flex items-center gap-3">
+            <i class="fas fa-heart text-yellow-300"></i> {% trans "Trusted Growers" %}
+        </h1>
+    </div>
+
+    <div class="flex items-center gap-6">
+        <a href="{% url 'group_buy_market' %}" class="hidden sm:flex flex-col items-center text-white hover:text-yellow-400 transition group">
+            <span class="text-xl group-hover:scale-110 transition"><i class="fas fa-users"></i></span>
+            <span class="text-[10px] uppercase font-bold">{% trans "Groups" %}</span>
+        </a>
+
+        <a href="{% url 'liked_farmers' %}" class="flex flex-col items-center text-yellow-200 transition group drop-shadow-md border-b-2 border-yellow-300 pb-0.5">
+            <span class="text-xl group-hover:scale-110 transition"><i class="fas fa-heart"></i></span>
+            <span class="text-[10px] uppercase font-bold">{% trans "Likes" %}</span>
+        </a>
+
+        <a href="{% url 'profile' %}" class="flex flex-col items-center text-white hover:text-yellow-100 transition group drop-shadow-md">
+            <span class="text-xl group-hover:scale-110 transition"><i class="fas fa-user-circle"></i></span>
+            <span class="text-[10px] uppercase font-bold">{% trans "Profile" %}</span>
+        </a>
+
+        <a href="{% url 'logout' %}" class="bg-white/20 hover:bg-white/30 text-white px-4 py-1.5 rounded-full text-xs font-bold border border-white/20 transition ml-2 shadow-sm backdrop-blur-md">
+            {% trans "Sign Out" %}
+        </a>
+    </div>
+</div>
+</nav>
+
+<!-- ⚡ MESSAGES BLOCK -->
+{% if messages %}
+<div class="container mx-auto px-4 mt-4 relative z-50">
+    {% for message in messages %}
+    <div class="rounded-2xl p-4 mb-4 shadow-xl border-l-8 flex items-center gap-4 animate-bounce-in bg-white/95 backdrop-blur text-emerald-800 border-emerald-500">
+        <div class="text-2xl animate-pulse">🎉</div>
+        <p class="font-bold text-lg">{{ message }}</p>
+        <button onclick="this.parentElement.remove()" class="ml-auto text-gray-400 hover:text-orange-500"><i class="fas fa-times"></i></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- 📦 MAIN CONTENT -->
+<div class="container mx-auto px-4 py-8 relative z-10">
+
+    <!-- Header Section -->
+    <div class="text-center mb-10">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-2">{% trans "Your Trusted Growers" %}</h2>
+        <p class="text-yellow-100 text-lg font-medium animate-shimmer">{% trans "Support the hands that feed you." %}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for follow in follows %}
+        <!-- Farmer Card -->
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-yellow-400/30 transition duration-300 flex flex-col group border border-white/10 hover:border-yellow-400/50 overflow-hidden transform hover:-translate-y-2">
+
+            <!-- Card Header / Profile -->
+            <div class="p-6 flex items-center gap-4 border-b border-gray-100 relative">
+                <!-- Decorative background blob -->
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-orange-100 to-transparent rounded-bl-full opacity-50"></div>
+
+                <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-orange-400 to-yellow-400 shadow-md">
+                    <div class="w-full h-full rounded-full overflow-hidden bg-white">
+                        {% if follow.farmer.profile_picture %}
+                            <img src="{{ follow.farmer.profile_picture.url }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        {% else %}
+                            <div class="w-full h-full flex items-center justify-center text-3xl font-bold text-orange-500 bg-orange-50">
+                                {{ follow.farmer.first_name|slice:":1" }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-black text-xl text-gray-800 leading-tight">{{ follow.farmer.first_name }} {{ follow.farmer.last_name }}</h3>
+                    <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mt-1">
+                        <i class="fas fa-map-marker-alt text-emerald-500 mr-1"></i> {{ follow.farmer.location }}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Body: Available Crops -->
+            <div class="p-6 flex-grow bg-gradient-to-b from-white to-gray-50">
+                <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3">{% trans "Currently Growing" %}</p>
+                <div class="flex flex-wrap gap-2">
+                    {% for crop in follow.farmer.crops.all|slice:":3" %}
+                        {% if crop.is_active %}
+                        <span class="bg-emerald-100 text-emerald-800 border border-emerald-200 px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                            🌱 {{ crop.name }}
+                        </span>
+                        {% endif %}
+                    {% empty %}
+                        <span class="text-gray-400 text-sm italic">{% trans "No crops listed currently." %}</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="p-4 bg-white border-t border-gray-100 flex items-center gap-3">
+                <a href="{% url 'toggle_follow' follow.farmer.id %}" class="px-4 py-2 rounded-xl border border-red-200 text-red-500 hover:bg-red-50 font-bold text-xs uppercase tracking-wide transition">
+                    {% trans "Unfollow" %}
+                </a>
+
+                {% if follow.farmer.crops.first %}
+                    <a href="{% url 'product_detail' follow.farmer.crops.first.id %}" class="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-2.5 rounded-xl shadow-md text-center text-sm transition transform active:scale-95">
+                        {% trans "View Shop" %} <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                {% else %}
+                    <button disabled class="flex-1 bg-gray-200 text-gray-400 font-bold py-2.5 rounded-xl text-center text-sm cursor-not-allowed">
+                        {% trans "Empty Shop" %}
+                    </button>
+                {% endif %}
+            </div>
+
+        </div>
+        {% empty %}
+        <div class="col-span-full py-20 text-center bg-white/20 backdrop-blur rounded-3xl border border-white/30 shadow-xl">
+            <i class="far fa-heart text-6xl text-white/50 mb-4 animate-float"></i>
+            <h2 class="text-3xl font-bold text-white drop-shadow-md mb-2">{% trans "No favorites yet" %}</h2>
+            <p class="text-yellow-100 mb-8">{% trans "Follow farmers to see their latest harvest here." %}</p>
+            <a href="{% url 'home' %}" class="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-3 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                {% trans "Browse the Market" %} 🚜
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<!-- 🏙️ FOOTER (Strictly from Blueprint) -->
+<footer class="bg-black/40 backdrop-blur-2xl text-white mt-20 pt-10 pb-8 border-t border-white/20 relative z-10">
+    <div class="h-1 w-full bg-gradient-to-r from-orange-500 via-yellow-500 to-emerald-600 absolute top-0"></div>
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+            <div class="text-center md:text-left">
+                <h4 class="font-bold text-lg text-yellow-300 mb-1">{% trans "Official Payment Partners" %}</h4>
+                <p class="text-xs text-gray-300">{% trans "Secure transactions via Ethiopia's trusted financial institutions." %}</p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <div class="bg-white h-12 px-3 rounded-lg flex items-center justify-center shadow-glow opacity-90 hover:opacity-100">
+                    <span class="text-black font-bold text-xs">TELEBIRR</span>
+                </div>
+                <div class="bg-white h-12 px-3 rounded-lg flex items-center justify-center shadow-glow opacity-90 hover:opacity-100">
+                    <span class="text-purple-900 font-bold text-xs">CBE BIRR</span>
+                </div>
+                <div class="bg-white h-12 px-3 rounded-lg flex items-center justify-center shadow-glow opacity-90 hover:opacity-100">
+                    <span class="text-blue-900 font-bold text-xs">AWASH</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-6 text-center text-sm text-gray-400">
+            <p>&copy; {% now "Y" %} {% trans "Arbor Marketplace. All Rights Reserved." %}</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
