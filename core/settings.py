@@ -1,6 +1,6 @@
 """
 Django settings for the Core Project.
-Final Version: Database + Cloudinary + Fix for Missing Styles
+Final Version: Safe Mode (Guarantees CSS Copying)
 """
 
 import os
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # WhiteNoise must be directly after SecurityMiddleware
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -107,15 +106,16 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# *** FIX APPLIED HERE ***
-# We switched to CompressedStaticFilesStorage.
-# The 'Manifest' version fails if any file is missing, causing your "0 files copied" error.
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# *** FIX: SAFE MODE STORAGE ***
+# We use standard Django storage instead of Whitenoise Compressed storage
+# This prevents silent failures if a file reference is slightly wrong.
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-# Only add the static directory if it actually exists to prevent errors
-STATICFILES_DIRS = []
-if (BASE_DIR / 'static').exists():
-    STATICFILES_DIRS = [BASE_DIR / 'static']
+# *** FIX: HARDCODED DIRECTORY ***
+# We do not use 'if exists'. We assume it exists (build.sh will ensure it does).
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 # --- MEDIA FILES (IMAGES - CLOUDINARY) ---
 MEDIA_URL = '/media/'
@@ -128,7 +128,7 @@ else:
     # If Local: Use computer folder
     DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
-# Cloudinary Configuration (Read from Environment)
+# Cloudinary Configuration
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
@@ -142,7 +142,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 if 'RENDER' in os.environ:
     NPM_BIN_PATH = 'npm'
 else:
-    # Adjust this path if your local windows path is different
     NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd"
 
 # --- TELEBIRR ---
