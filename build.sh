@@ -2,28 +2,33 @@
 # Exit on error
 set -o errexit
 
+echo "--- STARTING BUILD SCRIPT ---"
+
 # 1. Install Python packages
 pip install -r requirements.txt
 
-# 2. Create the missing static folder (Crucial Fix)
-# This prevents Django from complaining if the folder is missing from Git
-mkdir -p static
-mkdir -p staticfiles
-
-# 3. Install Node.js & Build Tailwind CSS
+# 2. Build Tailwind
+# Ensure the theme app is installed and compiled
 python -m pip install django-tailwind
 python manage.py tailwind install
 python manage.py tailwind build
 
-# 4. NUCLEAR RESET of Static Files
-# We delete the destination folder completely to force a fresh copy
+echo "--- CLEARING OLD STATIC FILES ---"
+# Force delete the folder to ensure collectstatic cannot skip files
 rm -rf staticfiles
-mkdir staticfiles
+rm -rf static
 
-# 5. Collect static files
-# We use --no-input to prevent prompts
-# We use --clear to be double safe
-python manage.py collectstatic --no-input --clear
+# Create the folder structure fresh
+mkdir -p static
+mkdir -p staticfiles
 
-# 6. Set up the database
+echo "--- COLLECTING STATIC FILES ---"
+# --no-input: Do not ask for confirmation
+# --clear: Delete the destination before copying (Double check)
+# --verbosity 2: Show us exactly what files are being copied
+python manage.py collectstatic --no-input --clear --verbosity 2
+
+echo "--- MIGRATING DATABASE ---"
 python manage.py migrate
+
+echo "--- BUILD FINISHED ---"
