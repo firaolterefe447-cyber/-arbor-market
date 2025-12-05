@@ -1,6 +1,10 @@
 """
 Django settings for the Core Project.
-Fixed: Static Files, Tailwind, and Render Deployment.
+Final Configuration:
+- Database: PostgreSQL (Render) or SQLite (Local)
+- Static Files: Whitenoise (Compressed & Safe)
+- Media Files: Cloudinary (Persistent Images)
+- Auth: Custom Phone/PIN User Model
 """
 
 import os
@@ -9,34 +13,39 @@ from django.utils.translation import gettext_lazy as _
 import dj_database_url
 
 # --- BASE CONFIGURATION ---
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- SECURITY ---
+# Local dev key fallback, Render uses the Environment Variable
 SECRET_KEY = os.environ.get('SECRET_KEY', "django-insecure-local-key")
-# Debug is FALSE on Render
+
+# DEBUG is True locally, False on Render
 DEBUG = 'RENDER' not in os.environ
+
 ALLOWED_HOSTS = ['*']
 
 INTERNAL_IPS = ["127.0.0.1"]
 
 # --- APPS ---
 INSTALLED_APPS = [
-    # Jazzmin must be before admin
+    # Jazzmin (Must be before admin)
     'jazzmin',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles', # Required for collectstatic
+    'django.contrib.staticfiles',
     'django.contrib.humanize',
 
-    # Third Party
+    # Third Party Apps
     'tailwind',
-    'theme', # Your tailwind app
+    'theme', # Your Tailwind App
     'django_browser_reload',
     'widget_tweaks',
+
+    # Cloudinary (Images)
     'cloudinary_storage',
     'cloudinary',
 
@@ -47,7 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # Whitenoise is CRITICAL here
+    # Whitenoise (Must be immediately after SecurityMiddleware)
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -80,6 +89,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "core.wsgi.application"
 
 # --- DATABASE ---
+# Automatically switches between SQLite (Local) and PostgreSQL (Render)
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///' + str(BASE_DIR / 'db.sqlite3'),
@@ -106,35 +116,38 @@ LANGUAGES = [
 ]
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
-# --- STATIC FILES (THE CRITICAL FIX) ---
+# --- STATIC FILES (CSS/JS) ---
 STATIC_URL = '/static/'
-# Where files are collected TO
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Where files come FROM (Manually added directory)
+# 1. Source Directory (Where Tailwind puts the files)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-# EXPLICIT FINDERS: This tells Django exactly how to find files.
-# It prevents "0 files copied" errors by forcing a scan of folders and apps.
+# 2. Finders (Helps Django locate files in 'static' and app folders)
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-# USE SIMPLE STORAGE: This prevents silent failures during deployment.
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# 3. Storage Engine
+# CompressedStaticFilesStorage is the best balance.
+# It compresses CSS for speed but doesn't crash if a file is missing.
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
-# --- MEDIA FILES (CLOUDINARY) ---
+
+# --- MEDIA FILES (IMAGES - CLOUDINARY) ---
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# If running on Render, use Cloudinary. Otherwise, use local folder.
 if 'RENDER' in os.environ:
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 else:
     DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
+# Cloudinary Keys (Must be set in Render Environment Variables)
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
@@ -148,9 +161,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 if 'RENDER' in os.environ:
     NPM_BIN_PATH = 'npm'
 else:
+    # Update this if your local path is different
     NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd"
 
-# --- JAZZMIN SETTINGS (Keep existing configs) ---
+# --- JAZZMIN (ADMIN THEME) ---
 JAZZMIN_SETTINGS = {
     "site_title": "Arbor Marketplace Control",
     "site_header": "Arbor Market",
@@ -171,6 +185,11 @@ JAZZMIN_SETTINGS = {
     "sidebar_small_text": False,
     "sidebar_disable_expand": False,
     "sidebar_nav_flat_style": True,
+    "button_classes": {
+        "primary": "btn-primary",
+        "success": "btn-success",
+        "danger": "btn-danger",
+    },
     "disable_user_sidebar": False,
 }
 
