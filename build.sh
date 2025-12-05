@@ -26,6 +26,7 @@ echo "--- 7. DATABASE MIGRATION ---"
 python manage.py migrate
 
 echo "--- 8. CREATING ADMIN USER ---"
+# This now runs the fixed script without email
 python create_superuser.py
 
 echo "--- BUILD FINISHED ---"
