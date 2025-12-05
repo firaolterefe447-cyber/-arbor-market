@@ -1,6 +1,6 @@
 """
 Django settings for the Core Project.
-Final Version: Safe Mode (Guarantees CSS Copying)
+Fixed: Static Files, Tailwind, and Render Deployment.
 """
 
 import os
@@ -9,10 +9,12 @@ from django.utils.translation import gettext_lazy as _
 import dj_database_url
 
 # --- BASE CONFIGURATION ---
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- SECURITY ---
 SECRET_KEY = os.environ.get('SECRET_KEY', "django-insecure-local-key")
+# Debug is FALSE on Render
 DEBUG = 'RENDER' not in os.environ
 ALLOWED_HOSTS = ['*']
 
@@ -20,30 +22,32 @@ INTERNAL_IPS = ["127.0.0.1"]
 
 # --- APPS ---
 INSTALLED_APPS = [
+    # Jazzmin must be before admin
     'jazzmin',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles', # Required for collectstatic
+    'django.contrib.humanize',
+
+    # Third Party
     'tailwind',
-    'theme',
+    'theme', # Your tailwind app
     'django_browser_reload',
     'widget_tweaks',
-
-    # Cloudinary (Must be before django.contrib.staticfiles)
     'cloudinary_storage',
     'cloudinary',
 
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    'django.contrib.humanize',
-
+    # Local Apps
     'users.apps.UsersConfig',
     'marketplace.apps.MarketplaceConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # Whitenoise is CRITICAL here
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -60,7 +64,7 @@ ROOT_URLCONF = "core.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -100,35 +104,37 @@ LANGUAGES = [
     ('so', _('Somali')),
     ('ti', _('Tigrinya')),
 ]
-LOCALE_PATHS = [BASE_DIR / 'locale']
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
-# --- STATIC FILES (CSS/JS) ---
+# --- STATIC FILES (THE CRITICAL FIX) ---
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Where files are collected TO
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# *** FIX: SAFE MODE STORAGE ***
-# We use standard Django storage instead of Whitenoise Compressed storage
-# This prevents silent failures if a file reference is slightly wrong.
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-
-# *** FIX: HARDCODED DIRECTORY ***
-# We do not use 'if exists'. We assume it exists (build.sh will ensure it does).
+# Where files come FROM (Manually added directory)
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    os.path.join(BASE_DIR, 'static'),
 ]
 
-# --- MEDIA FILES (IMAGES - CLOUDINARY) ---
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# EXPLICIT FINDERS: This tells Django exactly how to find files.
+# It prevents "0 files copied" errors by forcing a scan of folders and apps.
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
 
-# If on Server: Use Cloudinary for images
+# USE SIMPLE STORAGE: This prevents silent failures during deployment.
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+# --- MEDIA FILES (CLOUDINARY) ---
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 if 'RENDER' in os.environ:
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 else:
-    # If Local: Use computer folder
     DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
-# Cloudinary Configuration
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
@@ -144,14 +150,7 @@ if 'RENDER' in os.environ:
 else:
     NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd"
 
-# --- TELEBIRR ---
-TELEBIRR_APP_ID = 'your-app-id'
-TELEBIRR_APP_KEY = 'your-app-key'
-TELEBIRR_PUBLIC_KEY = 'your-public-key'
-TELEBIRR_NOTIFY_URL = 'http://127.0.0.1:8000/telebirr/notify/'
-TELEBIRR_RETURN_URL = 'http://127.0.0.1:8000/telebirr/success/'
-
-# --- JAZZMIN ---
+# --- JAZZMIN SETTINGS (Keep existing configs) ---
 JAZZMIN_SETTINGS = {
     "site_title": "Arbor Marketplace Control",
     "site_header": "Arbor Market",
@@ -172,11 +171,6 @@ JAZZMIN_SETTINGS = {
     "sidebar_small_text": False,
     "sidebar_disable_expand": False,
     "sidebar_nav_flat_style": True,
-    "button_classes": {
-        "primary": "btn-primary",
-        "success": "btn-success",
-        "danger": "btn-danger",
-    },
     "disable_user_sidebar": False,
 }
 
