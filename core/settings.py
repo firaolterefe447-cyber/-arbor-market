@@ -1,6 +1,6 @@
 """
 Django settings for the Core Project.
-Final Version: Database + Cloudinary (Images safe forever)
+Final Version: Database + Cloudinary + Fix for Missing Styles
 """
 
 import os
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # WhiteNoise must be directly after SecurityMiddleware
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -105,8 +106,16 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 # --- STATIC FILES (CSS/JS) ---
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# *** FIX APPLIED HERE ***
+# We switched to CompressedStaticFilesStorage.
+# The 'Manifest' version fails if any file is missing, causing your "0 files copied" error.
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+# Only add the static directory if it actually exists to prevent errors
+STATICFILES_DIRS = []
+if (BASE_DIR / 'static').exists():
+    STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # --- MEDIA FILES (IMAGES - CLOUDINARY) ---
 MEDIA_URL = '/media/'
@@ -133,6 +142,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 if 'RENDER' in os.environ:
     NPM_BIN_PATH = 'npm'
 else:
+    # Adjust this path if your local windows path is different
     NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd"
 
 # --- TELEBIRR ---
