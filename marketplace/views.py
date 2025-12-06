@@ -15,6 +15,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 
+from django.db.models import Sum
+from django.utils import timezone
+from datetime import timedelta
+
 # Local App Imports
 from users.models import CustomUser, FarmerFollow
 from .models import (
@@ -229,9 +233,14 @@ def input_market(request):
 
 
 @login_required
-def product_detail(request, item_type, item_id):
-    related_items = []
 
+
+
+
+
+
+def product_detail(request, item_type, item_id):
+    # --- 1. EXISTING PRODUCT FETCHING LOGIC ---
     if item_type == 'crop':
         item = get_object_or_404(Crop, id=item_id)
         seller = item.farmer
@@ -259,12 +268,77 @@ def product_detail(request, item_type, item_id):
 
         related_items = list(same_name_items) + list(same_letter_items)
 
+    # --- 2. NEW GAMIFICATION & REWARDS LOGIC ---
+    user_stats = {
+        'total_kg': 0,
+        'wallet_balance': 0,
+        'active_days': 0,
+        'consecutive_days': 0,
+        'packages_bought_cycle': 0,
+    }
+
+    if request.user.is_authenticated:
+        # Filter for orders that are actually completed/delivered
+        # We use 'delivered' from your STATUS_CHOICES to ensure they don't get points for pending orders
+        completed_orders = Order.objects.filter(
+            buyer=request.user,
+            status='delivered'
+        )
+
+        # A. Calculate Total KG (Rule: 500 KG -> 1000 Birr)
+        # Your Order model has a 'weight_kg' field, so we sum that.
+        total_weight_data = completed_orders.aggregate(Sum('weight_kg'))
+        total_weight = total_weight_data['weight_kg__sum']
+
+        # If total_weight is None (no orders), default to 0
+        user_stats['total_kg'] = int(total_weight) if total_weight else 0
+
+        # B. Wallet Balance
+        # Assuming you have a Profile model attached to User.
+        # If your wallet logic is different, change 'profile.wallet_balance' below.
+        if hasattr(request.user, 'profile'):
+            user_stats['wallet_balance'] = getattr(request.user.profile, 'wallet_balance', 0)
+
+        # C. Active Days & Streak (Rule: 30 days)
+        # Get unique dates from the 'created_at' field of completed orders
+        order_dates = completed_orders.values_list('created_at__date', flat=True).distinct().order_by(
+            '-created_at__date')
+        user_stats['active_days'] = order_dates.count()
+
+        # Calculate Consecutive Streak
+        streak = 0
+        today = timezone.now().date()
+        date_list = list(order_dates)
+
+        if date_list:
+            # Check if the most recent order was today or yesterday
+            if date_list[0] == today or date_list[0] == today - timedelta(days=1):
+                streak = 1
+                previous_date = date_list[0]
+
+                # Iterate backwards to find consecutive days
+                for date in date_list[1:]:
+                    if date == previous_date - timedelta(days=1):
+                        streak += 1
+                        previous_date = date
+                    else:
+                        break  # Streak broken
+
+        user_stats['consecutive_days'] = streak
+
+        # D. Packages Cycle (Rule: Buy 5 -> Get 1 Free)
+        # We count the number of individual Order objects
+        total_orders_count = completed_orders.count()
+        user_stats['packages_bought_cycle'] = total_orders_count % 5
+
+    # --- 3. CONTEXT ---
     context = {
         'item': item,
         'item_type': item_type,
         'seller': seller,
         'seller_other_items': seller_other_items,
         'related_items': related_items[:10],
+        'user_stats': user_stats,  # Passed to template
     }
     return render(request, 'product_detail.html', context)
 

@@ -21,11 +21,13 @@
                 --color-soil: #f8fafc; /* Slate-50 */
                 --color-text: #0f172a; /* Slate-900 */
                 --scrollbar-thumb: #2563eb; /* Blue */
+                --theme-primary: #2563eb;
             {% else %}
                 /* Urban/Fresh Market Theme (Green/Soil) */
                 --color-soil: #fafaf9; /* Stone-50 */
                 --color-text: #1c1917; /* Stone-900 */
                 --scrollbar-thumb: #15803d; /* Green */
+                --theme-primary: #15803d;
             {% endif %}
         }
 
@@ -55,6 +57,12 @@
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(4px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Progress Bar Stripes */
+        .progress-striped {
+            background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+            background-size: 1rem 1rem;
         }
 
         ::-webkit-scrollbar { width: 8px; }
@@ -241,9 +249,153 @@
             </div>
         </div>
 
+        <!-- NEW: REWARDS & GAMIFICATION SECTION -->
+        <!-- Note: Assuming 'user_stats' is passed in context with fields: total_kg, balance, active_days, consecutive_days, pkg_count -->
+        <!-- Variables used here are placeholders. Please map them to your backend logic -->
+        <div class="mt-6 bg-white rounded-3xl shadow-xl border overflow-hidden animate-fade-up
+            {% if request.user.user_type == 'farmer' %} border-slate-200 {% else %} border-stone-100 {% endif %}" style="animation-delay: 0.1s;">
+
+            <div class="p-6 md:p-8">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="fas fa-trophy text-xl {% if request.user.user_type == 'farmer' %} text-blue-500 {% else %} text-yellow-500 {% endif %}"></i>
+                    <h2 class="text-xl font-black uppercase tracking-tight
+                        {% if request.user.user_type == 'farmer' %} text-slate-900 {% else %} text-stone-900 {% endif %}">
+                        {% trans "Your Rewards Status" %}
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- SECTION 1: WALLET & STATS -->
+                    <div class="flex flex-col gap-4">
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- KG Bought -->
+                            <div class="p-4 rounded-2xl border flex flex-col items-center text-center
+                                {% if request.user.user_type == 'farmer' %} bg-slate-50 border-slate-200 {% else %} bg-stone-50 border-stone-200 {% endif %}">
+                                <span class="text-xs font-bold uppercase tracking-wider mb-1 text-gray-400">{% trans "Bought" %}</span>
+                                <div class="text-2xl font-black
+                                    {% if request.user.user_type == 'farmer' %} text-slate-800 {% else %} text-stone-800 {% endif %}">
+                                    {{ user_stats.total_kg|default:"0" }} <span class="text-sm">KG</span>
+                                </div>
+                            </div>
+
+                            <!-- Balance -->
+                            <div class="p-4 rounded-2xl border flex flex-col items-center text-center
+                                {% if request.user.user_type == 'farmer' %} bg-blue-50 border-blue-100 {% else %} bg-green-50 border-green-100 {% endif %}">
+                                <span class="text-xs font-bold uppercase tracking-wider mb-1 text-gray-400">{% trans "Balance" %}</span>
+                                <div class="text-2xl font-black
+                                    {% if request.user.user_type == 'farmer' %} text-blue-700 {% else %} text-green-700 {% endif %}">
+                                    {{ user_stats.wallet_balance|default:"0" }} <span class="text-xs">ETB</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cash Out Button Logic -->
+                        <div class="mt-auto">
+                            <!-- Helper Text -->
+                            <p class="text-[10px] text-center mb-2 font-bold uppercase tracking-wider
+                                {% if user_stats.total_kg >= 500 %} text-green-600 {% else %} text-gray-400 {% endif %}">
+                                {% if user_stats.total_kg >= 500 %}
+                                    <i class="fas fa-check-circle"></i> {% trans "Cash out unlocked!" %}
+                                {% else %}
+                                    <i class="fas fa-lock"></i> {% trans "Reach 500KG to unlock cash out" %}
+                                {% endif %}
+                            </p>
+
+                            {% if user_stats.total_kg >= 500 %}
+                            <a href="{% url 'rewards_cashout' %}" class="w-full block py-3 rounded-xl text-center font-bold text-white shadow-lg transform transition hover:-translate-y-0.5 active:translate-y-0
+                                {% if request.user.user_type == 'farmer' %} bg-blue-600 hover:bg-blue-700 shadow-blue-500/30 {% else %} bg-green-600 hover:bg-green-700 shadow-green-500/30 {% endif %}">
+                                {% trans "Cash Out 1000 Birr" %}
+                            </a>
+                            {% else %}
+                            <button disabled class="w-full py-3 rounded-xl text-center font-bold text-gray-400 bg-gray-100 cursor-not-allowed border border-gray-200">
+                                {% trans "Cash Out Locked" %}
+                            </button>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: GAMIFICATION & PROGRESS -->
+                    <div class="flex flex-col gap-6">
+
+                        <!-- Activity Status -->
+                        <div class="flex items-center justify-between p-3 rounded-xl border
+                             {% if request.user.user_type == 'farmer' %} bg-slate-50 border-slate-200 {% else %} bg-stone-50 border-stone-200 {% endif %}">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white border shadow-sm">
+                                    <i class="fas fa-fire text-orange-500"></i>
+                                </div>
+                                <div class="leading-tight">
+                                    <div class="text-sm font-bold">{{ user_stats.active_days|default:"0" }} {% trans "Active Buy Date" %}</div>
+                                    <div class="text-[10px] text-gray-400 font-bold uppercase">{% trans "Consecutive Streak" %}</div>
+                                </div>
+                            </div>
+                            <!-- Reward Logic: 30 days -->
+                            {% if user_stats.consecutive_days >= 30 %}
+                                <span class="text-xs font-bold text-white bg-orange-500 px-2 py-1 rounded-md">{% trans "Reward Ready!" %}</span>
+                            {% else %}
+                                <span class="text-[10px] font-bold text-gray-400">{{ user_stats.consecutive_days|default:"0" }}/30 {% trans "Days" %}</span>
+                            {% endif %}
+                        </div>
+
+                        <!-- Rule 1: 500 KG Goal -->
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1.5 uppercase text-gray-500">
+                                <span>{% trans "Cash-Back Goal" %}</span>
+                                <span>{{ user_stats.total_kg|default:"0" }}/500 KG</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-4 overflow-hidden">
+                                <!-- Calculate width percentage in backend or simplify here. Assuming max 100% -->
+                                <div class="h-full rounded-full transition-all duration-1000 progress-striped
+                                    {% if request.user.user_type == 'farmer' %} bg-blue-500 {% else %} bg-green-500 {% endif %}"
+                                    style="width: {% widthratio user_stats.total_kg|default:0 500 100 %}%;"></div>
+                            </div>
+                            <p class="text-[10px] text-gray-400 mt-1">{% trans "Reach 500 KG total to get 1000 Birr cash-back." %}</p>
+                        </div>
+
+                        <!-- Rule 2: Buy 5 Packages -> Get 1 Free -->
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2 uppercase text-gray-500">
+                                <span>{% trans "Loyalty Bonus" %}</span>
+                                <span>{% trans "Buy 5, Get 1 Free" %}</span>
+                            </div>
+                            <div class="flex justify-between gap-2">
+                                <!-- Loop 5 times for steps -->
+                                {% with ''|center:5 as range %}
+                                {% for _ in range %}
+                                    <div class="flex-1 h-2 rounded-full transition-all duration-300
+                                        {% if forloop.counter <= user_stats.packages_bought_cycle|default:0 %}
+                                            {% if request.user.user_type == 'farmer' %} bg-blue-500 {% else %} bg-orange-500 {% endif %}
+                                        {% else %}
+                                            bg-gray-200
+                                        {% endif %}">
+                                    </div>
+                                {% endfor %}
+                                {% endwith %}
+                                <!-- The Reward Step -->
+                                <div class="w-6 h-6 -mt-2 rounded-full flex items-center justify-center border-2 border-white shadow-sm
+                                    {% if user_stats.packages_bought_cycle >= 5 %} bg-green-500 text-white animate-bounce {% else %} bg-gray-200 text-gray-400 {% endif %}">
+                                    <i class="fas fa-gift text-[10px]"></i>
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-gray-400 mt-2">
+                                {% if user_stats.packages_bought_cycle >= 5 %}
+                                    <span class="text-green-600 font-bold">{% trans "You have a free delivery/item waiting!" %}</span>
+                                {% else %}
+                                    {% trans "Free delivery/item in" %} {{ 5|add:user_stats.packages_bought_cycle|default:"0"|stringformat:"s"|slice:"-" }} {% trans "purchases" %}
+                                {% endif %}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- 4. RELATED ITEMS -->
         {% if related_items %}
-        <div class="mt-12 animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="mt-12 animate-fade-up" style="animation-delay: 0.2s;">
             <h3 class="font-bold text-xs uppercase tracking-[0.2em] mb-4 border-b pb-2
                 {% if request.user.user_type == 'farmer' %} text-slate-400 border-slate-200 {% else %} text-stone-400 border-stone-200 {% endif %}">
                 {% trans "You might also like" %}
